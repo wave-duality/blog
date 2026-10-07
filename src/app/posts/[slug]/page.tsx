@@ -12,7 +12,11 @@ export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
-  return posts.map((post) => ({ slug: post.slug }));
+  // Next 15's static exporter requires at least one generated parameter.
+  // With no published posts, this missing slug resolves to notFound(), not an article.
+  return posts.length
+    ? posts.map((post) => ({ slug: post.slug }))
+    : [{ slug: "__empty__" }];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
