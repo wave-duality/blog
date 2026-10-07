@@ -22,7 +22,6 @@ export default function HomePage() {
         <Header
           name="Owen Zhang"
           bio="19, yale, jane street, prev sea12"
-          tagline="writing about things i want to write about"
         />
 
         <section className="posts">
