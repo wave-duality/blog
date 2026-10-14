@@ -64,7 +64,7 @@ const processor = remark()
       ...defaultSchema.attributes,
       div: [
         ...(defaultSchema.attributes?.div ?? []),
-        ["className", "book-list", "book", "book-rating", "book-title", "book-author"],
+        ["className", "book-list", "book", "book-rating", "book-title", "book-author", "claim"],
         ["dataStars", "1", "2", "3", "4", "5"],
       ],
       code: [["className", /^language-./, "math-inline", "math-display"]],

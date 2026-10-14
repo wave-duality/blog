@@ -223,7 +223,11 @@ These are computational safeguards rather than strategic rules:
 
 There are now two interesting claims that we can make. <b>These have extremely important implications for the training.</b>
 
+<div class="claim">
+
 **Claim 1: Player-to-player trading cannot strictly improve both players’ expected results under a common evaluation**
+
+</div>
 
 We exclude player-to-player trading from our environment. The motivation is that two-player Catan, scored as **+1 for a win, 0 for a draw, and −1 for a loss**, is a zero-sum game. There is a finite amount of states in Catan (even with stochasticity), and thus there exists some optimal move for each player at every state. Under this solved paradigm, since the probability of win for both players must sum to 1, there can not exist a trade that improves both player's probability of winning.
 
@@ -231,7 +235,11 @@ A trade may help both players build more efficiently in the short-run, but it ca
 
 This argument has limits. Players can disagree about a trade’s value because of private information, different beliefs, or imperfect evaluation; myopically, a trade may seem good for both players, even if they are perfectly rational. **Removing trading is therefore a reasonable modeling choice.**
 
+<div class="claim">
+
 **Claim 2: The resources that players hold is exactly deducible by both players under our environment’s information rules.**
+
+</div>
 
 Our environment exposes the bank’s remaining supply of each resource. Because there are exactly **19 cards of each resource**, distributed between the bank and the two players, either player can reconstruct the opponent’s holdings:
 
@@ -253,7 +261,7 @@ Resource hands remain deducible after every development-card effect and robber e
 - **Road Building and victory-point cards:** neither changes resource holdings.
 
 Consequently, after each resolved event, the same conservation equation still applies: **opponent’s holdings = 19 − bank holdings − own holdings**, separately for each resource. Unplayed development cards remain hidden, but their resource effects become observable when resolved.
-We supply these resource counts directly to the network. This claim depends on the information our implementation exposes; two-player play alone does not guarantee it. 
+We supply these resource counts directly to the network. This claim is unique to our implementation exposes (it's slightly dubious how Colonist specifically implements this).
 
 **Development-card identities remain private**, so the game still contains hidden information.
 

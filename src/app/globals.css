@@ -257,6 +257,17 @@
 .post-content details th { background: #f0f0f0; }
 .post-content details > :last-child { margin-bottom: 0; }
 
+.post-content .claim {
+  margin: 1.5rem 0 1rem;
+  padding: 0.85rem 1.1rem;
+  background: #f2f6f1;
+  border: 1px solid #dbe5d7;
+  border-left: 3px solid #8aa180;
+  border-radius: 4px;
+  color: #30432f;
+}
+.post-content .claim p { margin: 0; line-height: 1.55; }
+
 .paper-abstract { margin: 0 0 3rem; font-size: 0.95em; }
 .paper-abstract h2 { text-align: center; font-weight: 600; margin-bottom: 0.75rem; }
 .paper-abstract p { white-space: pre-line; }
