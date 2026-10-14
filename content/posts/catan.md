@@ -229,17 +229,17 @@ There are now two interesting claims that we can make. <b>These have extremely i
 
 </div>
 
-Notably, we exclude player-to-player trading from our environment. The motivation is that two-player Catan, scored as **+1 for a win, 0 for a draw, and −1 for a loss**, is a zero-sum game. There is a finite amount of states in Catan (even with stochasticity), and thus there exists some optimal move for each player at every state. Under this solved paradigm, since the probability of win for both players must sum to 1, there can not exist a trade that improves both player's probability of winning.
+Notably, we exclude player-to-player trading from our environment. The motivation is that two-player Catan is a zero-sum game. There is a finite amount of states in Catan (even with stochasticity), and thus there exists some optimal move for each player at every state. Under this solved paradigm, since the probability of win for both players must sum to 1, there can not exist a trade that improves both player's probability of winning.
 
 A trade may help both players build more efficiently in the short-run, but it can not possibly establish a mutual improvement in their expected result. This follows directly from the definition of [zero-sum utility](https://www.cs.cmu.edu/~15281/coursenotes/gametheory/index.html).
 
-Players can disagree about a trade’s value because of private information, different beliefs, or imperfect evaluation; myopically, a trade may seem good for both players. However, under optimal play, either player can reject every trade and retain their original guaranteed outcome. If (v) is Player A’s minimax value without trading, A’s ability to refuse trades guarantees (V_{\text{trade}}\geq v), while B’s ability to refuse guarantees (V_{\text{trade}}\leq v). Thus,
+Players can disagree about a trade’s value because of private information, different beliefs, or imperfect evaluation; myopically, a trade may seem good for both players. However, under optimal play, either player can reject every trade and retain their original guaranteed outcome. If $v$ is Player A’s minimax value without trading, A’s ability to refuse trades guarantees $V_{\text{trade}}\geq v$, while B’s ability to refuse guarantees $V_{\text{trade}}\leq v$. Thus,
 
-[
+$$
 v\leq V_{\text{trade}}\leq v
 \quad\Rightarrow\quad
 V_{\text{trade}}=v.
-]
+$$
 
 **Removing trading is therefore a reasonable modeling choice that preserves the game’s equilibrium value.**
 
