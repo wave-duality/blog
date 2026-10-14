@@ -14,6 +14,15 @@ This creates a Markdown file in `content/posts/`. Open that file in your editor 
 
 Set `excerpt` in each article's header to a short summary. It appears beneath the title on the homepage and archive, above the reading time and estimated token count. Leave it empty to omit the summary.
 
+For paragraph breaks, use a YAML block with two-space indentation and a blank line between paragraphs:
+
+```yaml
+excerpt: |-
+  First paragraph of the summary.
+
+  Second paragraph of the summary.
+```
+
 ```markdown
 ---
 title: "My next post"

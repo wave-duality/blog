@@ -217,10 +217,18 @@
   font-size: 0.85em;
 }
 
+.article-layout {
+  width: 100%;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .article-layout { width: 85%; }
+}
+
 .paper-article {
   font-size: 1.1rem;
   line-height: 1.8;
-  max-width: 68ch;
   margin-inline: auto;
   overflow-wrap: break-word;
 }

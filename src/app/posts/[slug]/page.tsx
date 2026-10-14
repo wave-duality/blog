@@ -47,7 +47,7 @@ export default async function PostPage({ params }: Props) {
   if (!post) notFound();
 
   return (
-    <main className={post.paper ? "max-w-[760px] mx-auto" : "max-w-[680px] mx-auto xl:ml-[420px]"}>
+    <main className="article-layout">
       <BackLink />
       {!post.published && (
         <p className="mb-6 rounded border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">Draft preview — visible locally only. Set published: true to include it on the website.</p>

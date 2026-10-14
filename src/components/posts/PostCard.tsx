@@ -29,7 +29,13 @@ export default function PostCard({
           {title}
         </Link>
       </h2>
-      {excerpt && <p className="text-[#555] text-[0.95rem] leading-relaxed">{excerpt}</p>}
+      {excerpt.trim() && (
+        <div className="space-y-3 text-[#555] text-[0.95rem] leading-relaxed">
+          {excerpt.trim().split(/\r?\n\s*\r?\n/).map((paragraph, index) => (
+            <p key={index} className="whitespace-pre-line">{paragraph}</p>
+          ))}
+        </div>
+      )}
       <ReadingTime minutes={readingMinutes} tokens={tokenCount} />
     </article>
   );
