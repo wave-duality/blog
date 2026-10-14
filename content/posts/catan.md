@@ -31,13 +31,15 @@ Catan, in its canonical four-player format, is difficult to model within an RL e
 
 It is not completely unreasonable to try to model Catan with these restrictions, but because Catan remains computationally demanding even after simplifying its social elements. We therefore use a two-player environment with several modifications:
 
-- **Two players, no player-to-player trading.** Trading with the bank and ports remains available.
+Catan remains computationally demanding even after simplifying its social elements. We therefore use a two-player environment with several modifications:
+
+- **Two players.**
 - **15 victory points to win.**
 - **Public resource hands.** Both players can see exactly which resources the opponent holds. Development-card identities remain private.
 - **A higher discard threshold.** Players discard on a seven only when holding **10 or more resource cards**.
 - **Friendly robber protection.** Players with **two or fewer public victory points** are protected from robber placement and theft, subject to the exceptional placement case described below.
 
-The following specifies the environment used throughout our project. Standard Catan building and connectivity rules otherwise apply.
+The following specifies the environment used throughout the environment. Standard Catan building and connectivity rules otherwise apply.
 
 <details>
 <summary><strong>Board composition, number tokens, and ports</strong></summary>
@@ -104,6 +106,143 @@ Each player has the following pieces. Starting pieces count toward these limits.
 | Piece | Supply per player | Resource cost | Victory points |
 |---|---:|---|---:|
 | Road | 15 | 1 wood + 1 brick | 0 |
+| Settlement | 5 | 1 wood + 1 brick + 1 sheep + 1 wheat | 1 |
+| City | 4 | 2 wheat + 3 ore | 2 |
+
+Cities replace settlements and return the settlement piece to the player’s supply. A city is worth **two points total**, increasing the previous settlement’s score by one.
+
+The shared bank starts with **19 cards of each resource**, or **95 resource cards total**. Resource supply is finite; spent and discarded resources return to the bank.
+
+Additional scoring:
+
+| Source | Points | Requirement |
+|---|---:|---|
+| Longest Road | 2 | A qualifying road of at least 5 segments |
+| Largest Army | 2 | At least 3 played knights |
+| Victory-point development card | 1 each | Held privately |
+
+The usual bonus ownership rules apply: surpassing the holder transfers the bonus; matching them does not.
+
+A player wins upon reaching **at least 15 total points on their own turn**, including hidden victory-point cards.
+
+**Buildings alone provide at most 13 points:** five settlements plus four cities. Winning therefore requires Longest Road, Largest Army, victory-point cards, or some combination of them.
+
+</details>
+
+<details>
+<summary><strong>Development deck and information available to players</strong></summary>
+
+There is one shared **25-card development deck**, drawn without replacement.
+
+| Card | Count | Effect |
+|---|---:|---|
+| Knight | 14 | Move the robber; eligible theft; counts toward Largest Army |
+| Victory point | 5 | Add one hidden victory point |
+| Road Building | 2 | Place up to two free roads |
+| Year of Plenty | 2 | Take up to two available resource cards from the bank |
+| Monopoly | 2 | Take all of one chosen resource from the opponent |
+| **Total** | **25** | |
+
+A development card costs **1 sheep + 1 wheat + 1 ore**.
+
+Information is divided as follows:
+
+- **Public:** board contents, pieces, ports, robber location, both resource-hand compositions, bank inventory, public scores, played development cards, development-card hand sizes, and how many cards were bought this turn.
+- **Private:** the identities of each player’s unplayed development cards.
+- **Unknown to either player:** the exact composition of the remaining development deck, except where it can be deduced from known cards.
+
+Each player sees their own development cards. Hidden victory-point cards count toward winning immediately, including when purchased, but do **not** contribute to the public score used for friendly robber protection.
+
+</details>
+
+<details>
+<summary><strong>Sevens, discarding, and the friendly robber</strong></summary>
+
+When a seven is rolled:
+
+- A player with **9 or fewer resource cards** discards nothing.
+- A player with **10 or more** chooses and discards **half their resource cards, rounded down**.
+- For example, hands of 10 and 11 both discard 5; a hand of 12 discards 6.
+- Development cards do not count toward the threshold.
+- If both players must discard, the current player discards first.
+
+The friendly robber uses **public victory points**: points from buildings, Longest Road, and Largest Army.
+
+- A player with **two or fewer public points** is protected.
+- The robber normally cannot move onto a hex adjoining **either protected player’s buildings**, including the moving player’s own buildings.
+- Hidden victory-point cards do not remove protection.
+- Protection does not prevent discarding on a seven.
+- The same protection applies whether the robber moves because of a seven or a knight.
+
+**Exceptional case:** if protection would leave no legal destination other than the robber’s current hex, the placement restriction is relaxed so the robber can move. Stealing from a protected opponent remains forbidden.
+
+Otherwise, an eligible theft selects one resource card uniformly from the opponent’s hand. This samples individual cards, so resources held in greater quantities are more likely to be stolen.
+
+</details>
+
+<details>
+<summary><strong>Trading and other implementation-specific details</strong></summary>
+
+**Bank and port trading**
+
+Player-to-player trades are unavailable. Bank trades exchange identical resources for one different resource:
+
+- **4:1** without a relevant port.
+- **3:1** with a generic port.
+- **2:1** when giving the resource associated with an owned resource-specific port.
+
+The requested resource must be available in the bank.
+
+**Development-card timing**
+
+Only a **knight** can be played before rolling. Road Building, Year of Plenty, and Monopoly must wait until after the roll.
+
+**Bank shortages during production**
+
+For each resource, the bank must cover the **entire payout owed to both players**. If it cannot, neither player receives that resource on that roll.
+
+This also applies when only one player is owed that resource: they do not receive a partial payout. Other resources are resolved independently.
+
+**Partially resolvable development cards**
+
+Road Building places as many of its two roads as legal locations and remaining pieces allow. Year of Plenty takes as many of its two cards as the bank can supply. The card is consumed even if no benefit can be obtained. Monopoly may legally name a resource the opponent does not hold.
+
+</details>
+
+<details>
+<summary><strong>Simulation limits used during training</strong></summary>
+
+These are computational safeguards rather than strategic rules:
+
+- Gen37 self-play stops an unfinished game when its turn counter reaches **500**, or after **50,000 engine steps**.
+- A turn means **one player’s turn**, not a complete round. Engine steps also include individual actions and chance resolutions.
+- If stopped at these limits, the player with more **total victory points, including hidden cards**, receives the win; equal scores produce a draw.
+- Early resignation was disabled for Gen37’s final training update.
+- Separately, the rules engine has an emergency draw limit for games continuing past **5,000 player turns**.
+
+</details>
+
+There are now two interesting claims that we can make.
+
+**Claim 1: Player-to-player trading cannot strictly improve both players’ expected results under a common evaluation.**
+
+We exclude player-to-player trading from our environment. The motivation is that two-player Catan, scored as **+1 for a win, 0 for a draw, and −1 for a loss**, is a zero-sum game. When a trade and its rejection are evaluated under the same beliefs and assumptions about subsequent play, an increase in one player’s expected reward necessarily produces an equal decrease in the other’s. A trade may help both players build more efficiently, but this does not establish a mutual improvement in their expected match results. This follows directly from the definition of [zero-sum utility](https://www.cs.cmu.edu/~15281/coursenotes/gametheory/index.html).
+
+This argument has limits. Players can disagree about a trade’s value because of private information, different beliefs, or imperfect evaluation. A player may also benefit by exploiting an opponent’s mistaken acceptance, and trades that leave both players indifferent remain possible. **Removing trading is therefore a modeling choice motivated by opposing incentives, rather than a proof that every trade is irrational or strategically irrelevant.**
+
+**Claim 2: Resource-hand composition is exactly deducible by both players under our environment’s information rules.**
+
+Our environment exposes the bank’s remaining supply of each resource. Because there are exactly **19 cards of each resource**, distributed between the bank and the two players, either player can reconstruct the opponent’s holdings:
+
+$$
+\text{Opponent’s cards of resource }r
+=
+19-\text{Bank’s cards of }r-\text{Own cards of }r.
+$$
+
+For example, if the bank contains 11 wheat and I hold 3, my opponent must hold the remaining 5. Building costs, discards, trades, and development-card effects preserve this accounting: resource cards move between the bank and players rather than leaving circulation.
+
+We supply these resource counts directly to the network. This claim depends on the information our implementation exposes; two-player play alone does not guarantee it. **Development-card identities remain private**, so the game still contains hidden information.
 
 
 ## Representation 
