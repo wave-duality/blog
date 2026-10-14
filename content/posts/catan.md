@@ -35,11 +35,10 @@ Catan remains computationally demanding even after simplifying its social elemen
 
 - **Two players.**
 - **15 victory points to win.**
-- **Public resource hands.** Both players can see exactly which resources the opponent holds. Development-card identities remain private.
 - **A higher discard threshold.** Players discard on a seven only when holding **10 or more resource cards**.
 - **Friendly robber protection.** Players with **two or fewer public victory points** are protected from robber placement and theft, subject to the exceptional placement case described below.
 
-The following specifies the environment used throughout the environment. Standard Catan building and connectivity rules otherwise apply.
+The following specifies the environment used throughout the project. Standard Catan building and connectivity rules otherwise apply.
 
 <details>
 <summary><strong>Board composition, number tokens, and ports</strong></summary>
@@ -222,15 +221,17 @@ These are computational safeguards rather than strategic rules:
 
 </details>
 
-There are now two interesting claims that we can make.
+There are now two interesting claims that we can make. <b>These have extremely important implications for the training.</b>
 
-**Claim 1: Player-to-player trading cannot strictly improve both players’ expected results under a common evaluation.**
+**Claim 1: Player-to-player trading cannot strictly improve both players’ expected results under a common evaluation**
 
-We exclude player-to-player trading from our environment. The motivation is that two-player Catan, scored as **+1 for a win, 0 for a draw, and −1 for a loss**, is a zero-sum game. When a trade and its rejection are evaluated under the same beliefs and assumptions about subsequent play, an increase in one player’s expected reward necessarily produces an equal decrease in the other’s. A trade may help both players build more efficiently, but this does not establish a mutual improvement in their expected match results. This follows directly from the definition of [zero-sum utility](https://www.cs.cmu.edu/~15281/coursenotes/gametheory/index.html).
+We exclude player-to-player trading from our environment. The motivation is that two-player Catan, scored as **+1 for a win, 0 for a draw, and −1 for a loss**, is a zero-sum game. There is a finite amount of states in Catan (even with stochasticity), and thus there exists some optimal move for each player at every state. Under this solved paradigm, since the probability of win for both players must sum to 1, there can not exist a trade that improves both player's probability of winning.
 
-This argument has limits. Players can disagree about a trade’s value because of private information, different beliefs, or imperfect evaluation. A player may also benefit by exploiting an opponent’s mistaken acceptance, and trades that leave both players indifferent remain possible. **Removing trading is therefore a modeling choice motivated by opposing incentives, rather than a proof that every trade is irrational or strategically irrelevant.**
+A trade may help both players build more efficiently in the short-run, but it can not possibly establish a mutual improvement in their expected result. This follows directly from the definition of [zero-sum utility](https://www.cs.cmu.edu/~15281/coursenotes/gametheory/index.html).
 
-**Claim 2: Resource-hand composition is exactly deducible by both players under our environment’s information rules.**
+This argument has limits. Players can disagree about a trade’s value because of private information, different beliefs, or imperfect evaluation; myopically, a trade may seem good for both players, even if they are perfectly rational. **Removing trading is therefore a reasonable modeling choice.**
+
+**Claim 2: The resources that players hold is exactly deducible by both players under our environment’s information rules.**
 
 Our environment exposes the bank’s remaining supply of each resource. Because there are exactly **19 cards of each resource**, distributed between the bank and the two players, either player can reconstruct the opponent’s holdings:
 
@@ -242,8 +243,21 @@ $$
 
 For example, if the bank contains 11 wheat and I hold 3, my opponent must hold the remaining 5. Building costs, discards, trades, and development-card effects preserve this accounting: resource cards move between the bank and players rather than leaving circulation.
 
-We supply these resource counts directly to the network. This claim depends on the information our implementation exposes; two-player play alone does not guarantee it. **Development-card identities remain private**, so the game still contains hidden information.
+Resource hands remain deducible after every development-card effect and robber event:
 
+- **Discarding after a seven:** discarded cards return to the bank. Changes in the bank’s resource counts reveal what was discarded. Our engine resolves players’ discards sequentially.
+- **Year of Plenty:** the chosen resources leave the bank and enter the player’s hand, so changes in bank inventory reveal the selection.
+- **Monopoly:** resources move directly between the two players. Both participants know which resource was taken and how many cards changed hands.
+- **Robber theft, including a knight’s effect:** the stolen card moves directly between the two players. With only two players, both are participants in every theft and know the transferred resource.
+- **Buying a development card:** its resource cost is fixed and paid into the bank. The purchased card’s identity remains private, but the resource expenditure is known.
+- **Road Building and victory-point cards:** neither changes resource holdings.
+
+Consequently, after each resolved event, the same conservation equation still applies: **opponent’s holdings = 19 − bank holdings − own holdings**, separately for each resource. Unplayed development cards remain hidden, but their resource effects become observable when resolved.
+We supply these resource counts directly to the network. This claim depends on the information our implementation exposes; two-player play alone does not guarantee it. 
+
+**Development-card identities remain private**, so the game still contains hidden information.
+
+Okay, that's it for the rules. It's not particularly imperative to understand all of these to follow the actually interesting learning part of this post, except for those two claims above.
 
 ## Representation 
 
