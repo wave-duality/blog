@@ -1,11 +1,14 @@
 import Link from "next/link";
 import { formatDate } from "@/lib/utils";
+import ReadingTime from "./ReadingTime";
 
 interface PostCardProps {
   title: string;
   slug: string;
   excerpt: string;
   publishedAt: Date | string;
+  readingMinutes: number;
+  tokenCount: number;
 }
 
 export default function PostCard({
@@ -13,6 +16,8 @@ export default function PostCard({
   slug,
   excerpt,
   publishedAt,
+  readingMinutes,
+  tokenCount,
 }: PostCardProps) {
   return (
     <article className="mb-8">
@@ -24,7 +29,8 @@ export default function PostCard({
           {title}
         </Link>
       </h2>
-      <p className="text-[#555] text-[0.95rem] leading-relaxed">{excerpt}</p>
+      {excerpt && <p className="text-[#555] text-[0.95rem] leading-relaxed">{excerpt}</p>}
+      <ReadingTime minutes={readingMinutes} tokens={tokenCount} />
     </article>
   );
 }

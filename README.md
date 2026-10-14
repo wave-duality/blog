@@ -12,6 +12,8 @@ npm run new:post -- "My next post"
 
 This creates a Markdown file in `content/posts/`. Open that file in your editor and write below the `---` header. To edit an existing post, open its file in that same folder. Your bio is `content/pages/about.md`.
 
+Set `excerpt` in each article's header to a short summary. It appears beneath the title on the homepage and archive, above the reading time and estimated token count. Leave it empty to omit the summary.
+
 ```markdown
 ---
 title: "My next post"

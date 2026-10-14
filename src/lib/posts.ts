@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { renderMarkdown } from "./markdown";
+import { calculateReadingStats } from "./reading-time";
 
 const postsDirectory = path.join(process.cwd(), "content/posts");
 const pagesDirectory = path.join(process.cwd(), "content/pages");
@@ -16,6 +17,8 @@ export interface Post {
   author: string;
   abstract: string;
   published: boolean;
+  readingMinutes: number;
+  tokenCount: number;
 }
 
 export interface Page {
@@ -65,6 +68,7 @@ export function getPostBySlug(slug: string): Post | null {
     date,
     excerpt: text(data.excerpt),
     content: renderMarkdown(content),
+    ...calculateReadingStats(content),
     paper: data.paper === true,
     author: text(data.author) || "Owen Zhang",
     abstract: text(data.abstract),

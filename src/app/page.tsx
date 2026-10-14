@@ -21,7 +21,7 @@ export default function HomePage() {
       <main className="max-w-[680px] mx-auto xl:ml-[420px]">
         <Header
           name="Owen Zhang"
-          bio="19, yale, jane street, prev sea12"
+          bio="19, CS + Math & Yale, Jane Street"
         />
 
         <section className="posts">
@@ -32,6 +32,8 @@ export default function HomePage() {
               slug={post.slug}
               excerpt={post.excerpt}
               publishedAt={post.date}
+              readingMinutes={post.readingMinutes}
+              tokenCount={post.tokenCount}
             />
           ))}
         </section>

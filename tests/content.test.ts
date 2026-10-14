@@ -34,7 +34,7 @@ test("publication controls hide drafts from lists and direct access", async () =
       Object.assign(process.env, { NODE_ENV: "development" });
       assert.equal(getPostBySlug("draft")?.published, false);
     } finally {
-      if (previousEnvironment === undefined) delete process.env.NODE_ENV;
+      if (previousEnvironment === undefined) Reflect.deleteProperty(process.env, "NODE_ENV");
       else Object.assign(process.env, { NODE_ENV: previousEnvironment });
     }
   } finally {

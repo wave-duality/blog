@@ -28,6 +28,8 @@ export default function ArchivePage() {
             slug={post.slug}
             excerpt={post.excerpt}
             publishedAt={post.date}
+            readingMinutes={post.readingMinutes}
+            tokenCount={post.tokenCount}
           />
         ))}
       </section>
