@@ -8,6 +8,7 @@ import rehypeKatex from "rehype-katex";
 import rehypeStringify from "rehype-stringify";
 import type { Root, Element } from "hast";
 import { withBasePath } from "./site";
+import { normalizeLatex } from "./latex";
 
 export interface ArticleSection { id: string; title: string }
 
@@ -51,7 +52,32 @@ function prefixLocalUrls() {
   };
 }
 
-// Preserve existing book markup and math markers, but never executable HTML.
+// Only local, standalone figures may execute scripts inside an isolated frame.
+function localFigureEmbeds() {
+  return (tree: Root) => {
+    const walk = (parent: Root | Element) => {
+      parent.children = parent.children.filter(node => {
+        if (node.type !== "element") return true;
+        if (node.tagName === "iframe") {
+          const src = node.properties.src;
+          if (typeof src !== "string" || !/^\/figures\/[a-z0-9][a-z0-9-]*\.html$/.test(src)) return false;
+          node.properties = {
+            src,
+            title: typeof node.properties.title === "string" ? node.properties.title : "Interactive figure",
+            className: ["figure-embed"], width: "100%", height: "1200",
+            loading: "lazy", sandbox: ["allow-scripts"], referrerPolicy: "no-referrer",
+          };
+          node.children = [];
+        } else walk(node);
+        return true;
+      });
+    };
+    walk(tree);
+  };
+}
+
+// Preserve book markup and math markers; scripts remain prohibited in the article.
+
 // Sanitize before KaTeX so its generated MathML and styles remain intact.
 const processor = remark()
   .use(remarkGfm)
@@ -60,8 +86,10 @@ const processor = remark()
   .use(rehypeRaw)
   .use(rehypeSanitize, {
     ...defaultSchema,
+    tagNames: [...(defaultSchema.tagNames ?? []), "iframe"],
     attributes: {
       ...defaultSchema.attributes,
+      iframe: ["src", "title"],
       div: [
         ...(defaultSchema.attributes?.div ?? []),
         ["className", "book-list", "book", "book-rating", "book-title", "book-author", "claim"],
@@ -70,16 +98,17 @@ const processor = remark()
       code: [["className", /^language-./, "math-inline", "math-display"]],
     },
   })
+  .use(localFigureEmbeds)
   .use(articleSections)
   .use(rehypeKatex, { trust: false, strict: "warn" })
   .use(prefixLocalUrls)
   .use(rehypeStringify);
 
 export function renderMarkdown(markdown: string): string {
-  return processor.processSync(markdown).toString();
+  return processor.processSync(normalizeLatex(markdown)).toString();
 }
 
 export function renderArticleMarkdown(markdown: string) {
-  const file = processor.processSync(markdown);
+  const file = processor.processSync(normalizeLatex(markdown));
   return { content: file.toString(), sections: file.data.sections as ArticleSection[] };
 }

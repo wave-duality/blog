@@ -303,3 +303,12 @@
     padding: 0 !important;
   }
 }
+
+/* Local interactive figures report their content height to PostContent. */
+.post-content iframe.figure-embed {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+  margin: 1.5rem 0;
+}

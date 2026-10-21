@@ -71,6 +71,21 @@ Set `paper: true` for serif typography, a centered title, author, and abstract. 
 
 Inline math: `$E = mc^2$`. Escape literal currency as `\$` when it might be interpreted as math.
 
+Native LaTeX math delimiters also work: `\(E = mc^2\)` for inline math and `\[ ... \]` for display math. Use a single backslash in the Markdown file. For example:
+
+```latex
+\[
+V(s) = \mathbb{E}[R \mid s]
+\]
+
+\begin{align*}
+Q(s,a) &= r(s,a) + \gamma V(s') \\
+V(s) &= \max_a Q(s,a)
+\end{align*}
+```
+
+Standalone math environments include `equation`, `align`, `alignat`, `gather` (and their starred forms), `aligned`, `alignedat`, `gathered`, `split`, `cases`, `dcases`, `array`, and matrix variants. They do not need surrounding dollar signs. `displaymath` and `math` are also supported. Rendering uses KaTeX, not a full LaTeX document compiler: use Markdown for lists and sections, and do not add `\documentclass` or `\usepackage`. Code blocks and inline code keep their literal LaTeX source.
+
 Display math:
 
 ```markdown
