@@ -15,6 +15,8 @@ abstract: ""
 
 Thank you to Alex Wa ([djdumpling](https://djdumpling.github.io/)) for the continued support and motivation, and [Modal](https://modal.com/) for nearly $1000 in compute credits to support the training process. Congratulations on the Series D!
 
+(This article is currently a DRAFT.)
+
 ## Introduction
 
 Among board games that can be picked up without having to digest an unreasonable amount of rules, Catan might be one of my favorite. I think the game teaches several important lessons about trading and strategy games in general. (Feel free to skip this section since it is not prerequisite to our training setup.)
