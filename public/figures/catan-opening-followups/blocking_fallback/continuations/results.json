@@ -1,0 +1,71 @@
+{
+  "schema": "opening-denial-continuations-v1",
+  "model_sha256": "fbc5209b17a14a1d7b649087efdb1503185c7dfab9d9f5b443d0957431272158",
+  "paired_boards": 1024,
+  "games": 2048,
+  "completed_pairs": 1024,
+  "terminal_games": 2048,
+  "truncated_games": 0,
+  "metrics": {
+    "B_win_completed_pairs": {
+      "high_denial": 0.3134765625,
+      "low_denial": 0.2939453125,
+      "paired_difference": {
+        "n": 1024,
+        "mean": 0.01953125,
+        "ci95": [
+          -0.014596444655289371,
+          0.05365894465528937
+        ]
+      }
+    },
+    "turns_completed_pairs": {
+      "high_denial": 79.1083984375,
+      "low_denial": 78.2431640625,
+      "paired_difference": {
+        "n": 1024,
+        "mean": 0.865234375,
+        "ci95": [
+          -0.16811358613174376,
+          1.8985823361317438
+        ]
+      }
+    },
+    "all_pairs_B_win_difference_censoring_bounds": [
+      0.01953125,
+      0.01953125
+    ]
+  },
+  "mean_best_reply_pips_loss_high": 1.24609375,
+  "mean_best_reply_pips_loss_low": 0.033203125,
+  "screened_heldout_boards": 20000,
+  "eligible_heldout_boards": 1315,
+  "selection_rng_seed": 121437,
+  "selection": "Uniform sample of1024 eligible held-out boards without replacement, fixed RNG seed121437. Within each board choose highest difference in best-A2-pip loss; then highest common total pips, then smallest high/low vertex IDs. Selection never uses network logits, values or outcomes.",
+  "matching_features": [
+    "wood_pips",
+    "brick_pips",
+    "sheep_pips",
+    "wheat_pips",
+    "ore_pips",
+    "wood_starting_cards",
+    "brick_starting_cards",
+    "sheep_starting_cards",
+    "wheat_starting_cards",
+    "ore_starting_cards",
+    "adjacent_hexes",
+    "direct_port",
+    "generic_port",
+    "wood_port",
+    "brick_port",
+    "sheep_port",
+    "wheat_port",
+    "ore_port"
+  ],
+  "policy": "Both seats frozen Generation37, greedy legal decisions, no search/no noise/no resignation. Complete B2 road and A2 settlement/road greedily, then play to terminal or500turn cap. Within each pair use same initial seed/RNG state; later stochastic events can desynchronize streams.",
+  "uncertainty": "One continuation per condition per independent board. Paired board mean difference and normal95%CI; conditional on matched selection and this frozen policy. Selection fixed before outcome evaluation.",
+  "interpretation": "A comparison of forced complete-game counterfactuals matched on own production, starting resource cards and direct-port type. Differences in geometry, number identities/correlations, distant ports, road opportunities and chosen followup actions remain, so the win-rate difference cannot be attributed solely to denial.",
+  "script_sha256": "2d10d01971ca7c87223454764a735f98ba895949e8d7651dda4ec5a1fbcfdee6",
+  "pairs_sha256": "c608258cd7db0b1c81a2d032b4f1e089bc65f7545bd974989b06a667bc7a3534",
+  "helper_sha256": "384135eb9f824651c2f098cc2c6926d2e4caf90e3b54d464e5d2c786494b3dee"
+}

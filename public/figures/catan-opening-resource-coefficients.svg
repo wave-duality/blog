@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="662.4pt" height="403.2pt" viewBox="0 0 662.4 403.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-29T17:04:35.092981</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 403.2 
+L 662.4 403.2 
+L 662.4 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 59.616 171.36 
+L 315.936 171.36 
+L 315.936 60.48 
+L 59.616 60.48 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 63.684571 171.36 
+L 63.684571 60.48 
+" clip-path="url(#pb1c9a52eb0)" style="fill: none; stroke: #e8e8e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #666666" x="63.684571" y="182.457656" transform="rotate(-0 63.684571 182.457656)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 145.056 171.36 
+L 145.056 60.48 
+" clip-path="url(#pb1c9a52eb0)" style="fill: none; stroke: #e8e8e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #666666" x="145.056" y="182.457656" transform="rotate(-0 145.056 182.457656)">1</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 226.427429 171.36 
+L 226.427429 60.48 
+" clip-path="url(#pb1c9a52eb0)" style="fill: none; stroke: #e8e8e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #666666" x="226.427429" y="182.457656" transform="rotate(-0 226.427429 182.457656)">2</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 267.113143 171.36 
+L 267.113143 60.48 
+" clip-path="url(#pb1c9a52eb0)" style="fill: none; stroke: #e8e8e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #666666" x="267.113143" y="182.457656" transform="rotate(-0 267.113143 182.457656)">2.5</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_9"/>
+     <g id="text_5">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #282828" x="56.116" y="78.139219" transform="rotate(-0 56.116 78.139219)">Wood</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_10"/>
+     <g id="text_6">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #282828" x="56.116" y="99.462296" transform="rotate(-0 56.116 99.462296)">Brick</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_11"/>
+     <g id="text_7">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #282828" x="56.116" y="120.785373" transform="rotate(-0 56.116 120.785373)">Sheep</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_12"/>
+     <g id="text_8">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #282828" x="56.116" y="142.10845" transform="rotate(-0 56.116 142.10845)">Wheat</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_13"/>
+     <g id="text_9">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #282828" x="56.116" y="163.431136" transform="rotate(-0 56.116 163.431136)">Ore</text>
+     </g>
+    </g>
+   </g>
+   <g id="LineCollection_1">
+    <path d="M 207.093477 74.34 
+L 209.047595 74.34 
+" clip-path="url(#pb1c9a52eb0)" style="fill: none; stroke: #3e6fa8; stroke-width: 2"/>
+    <path d="M 233.794419 95.663077 
+L 236.160504 95.663077 
+" clip-path="url(#pb1c9a52eb0)" style="fill: none; stroke: #3e6fa8; stroke-width: 2"/>
+    <path d="M 206.590657 116.986154 
+L 208.841359 116.986154 
+" clip-path="url(#pb1c9a52eb0)" style="fill: none; stroke: #3e6fa8; stroke-width: 2"/>
+    <path d="M 223.009051 138.309231 
+L 226.690395 138.309231 
+" clip-path="url(#pb1c9a52eb0)" style="fill: none; stroke: #3e6fa8; stroke-width: 2"/>
+    <path d="M 232.975973 159.632308 
+L 236.651208 159.632308 
+" clip-path="url(#pb1c9a52eb0)" style="fill: none; stroke: #3e6fa8; stroke-width: 2"/>
+   </g>
+   <g id="line2d_14">
+    <defs>
+     <path id="md5c117ab65" d="M 0 2.25 
+C 0.596707 2.25 1.169055 2.012926 1.59099 1.59099 
+C 2.012926 1.169055 2.25 0.596707 2.25 0 
+C 2.25 -0.596707 2.012926 -1.169055 1.59099 -1.59099 
+C 1.169055 -2.012926 0.596707 -2.25 0 -2.25 
+C -0.596707 -2.25 -1.169055 -2.012926 -1.59099 -1.59099 
+C -2.012926 -1.169055 -2.25 -0.596707 -2.25 0 
+C -2.25 0.596707 -2.012926 1.169055 -1.59099 1.59099 
+C -1.169055 2.012926 -0.596707 2.25 0 2.25 
+z
+" style="stroke: #3e6fa8"/>
+    </defs>
+    <g clip-path="url(#pb1c9a52eb0)">
+     <use xlink:href="#md5c117ab65" x="208.082462" y="74.34" style="fill: #3e6fa8; stroke: #3e6fa8"/>
+     <use xlink:href="#md5c117ab65" x="234.973382" y="95.663077" style="fill: #3e6fa8; stroke: #3e6fa8"/>
+     <use xlink:href="#md5c117ab65" x="207.656375" y="116.986154" style="fill: #3e6fa8; stroke: #3e6fa8"/>
+     <use xlink:href="#md5c117ab65" x="224.78793" y="138.309231" style="fill: #3e6fa8; stroke: #3e6fa8"/>
+     <use xlink:href="#md5c117ab65" x="234.756456" y="159.632308" style="fill: #3e6fa8; stroke: #3e6fa8"/>
+    </g>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="307.798857" y="76.677891" transform="rotate(-0 307.798857 76.677891)">1.775</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="307.798857" y="98.000968" transform="rotate(-0 307.798857 98.000968)">2.105</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="307.798857" y="119.324044" transform="rotate(-0 307.798857 119.324044)">1.769</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="307.798857" y="140.647121" transform="rotate(-0 307.798857 140.647121)">1.980</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="307.798857" y="161.970198" transform="rotate(-0 307.798857 161.970198)">2.102</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #282828" x="59.616" y="51.48" transform="rotate(-0 59.616 51.48)">A1: A’s first settlement</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_3">
+    <path d="M 392.832 171.36 
+L 649.152 171.36 
+L 649.152 60.48 
+L 392.832 60.48 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_5">
+     <g id="line2d_15">
+      <path d="M 396.900571 171.36 
+L 396.900571 60.48 
+" clip-path="url(#p7ead7e93d6)" style="fill: none; stroke: #e8e8e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16"/>
+     <g id="text_16">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #666666" x="396.900571" y="182.457656" transform="rotate(-0 396.900571 182.457656)">0</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_17">
+      <path d="M 478.272 171.36 
+L 478.272 60.48 
+" clip-path="url(#p7ead7e93d6)" style="fill: none; stroke: #e8e8e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18"/>
+     <g id="text_17">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #666666" x="478.272" y="182.457656" transform="rotate(-0 478.272 182.457656)">1</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_19">
+      <path d="M 559.643429 171.36 
+L 559.643429 60.48 
+" clip-path="url(#p7ead7e93d6)" style="fill: none; stroke: #e8e8e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20"/>
+     <g id="text_18">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #666666" x="559.643429" y="182.457656" transform="rotate(-0 559.643429 182.457656)">2</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_21">
+      <path d="M 600.329143 171.36 
+L 600.329143 60.48 
+" clip-path="url(#p7ead7e93d6)" style="fill: none; stroke: #e8e8e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22"/>
+     <g id="text_19">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #666666" x="600.329143" y="182.457656" transform="rotate(-0 600.329143 182.457656)">2.5</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_6">
+     <g id="line2d_23"/>
+     <g id="text_20">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #282828" x="389.332" y="78.139219" transform="rotate(-0 389.332 78.139219)">Wood</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_24"/>
+     <g id="text_21">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #282828" x="389.332" y="99.462296" transform="rotate(-0 389.332 99.462296)">Brick</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_25"/>
+     <g id="text_22">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #282828" x="389.332" y="120.785373" transform="rotate(-0 389.332 120.785373)">Sheep</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_26"/>
+     <g id="text_23">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #282828" x="389.332" y="142.10845" transform="rotate(-0 389.332 142.10845)">Wheat</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_27"/>
+     <g id="text_24">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #282828" x="389.332" y="163.431136" transform="rotate(-0 389.332 163.431136)">Ore</text>
+     </g>
+    </g>
+   </g>
+   <g id="LineCollection_2">
+    <path d="M 519.268636 74.34 
+L 521.38261 74.34 
+" clip-path="url(#p7ead7e93d6)" style="fill: none; stroke: #a85343; stroke-width: 2"/>
+    <path d="M 539.230113 95.663077 
+L 541.888163 95.663077 
+" clip-path="url(#p7ead7e93d6)" style="fill: none; stroke: #a85343; stroke-width: 2"/>
+    <path d="M 532.123021 116.986154 
+L 534.443251 116.986154 
+" clip-path="url(#p7ead7e93d6)" style="fill: none; stroke: #a85343; stroke-width: 2"/>
+    <path d="M 542.145649 138.309231 
+L 545.232027 138.309231 
+" clip-path="url(#p7ead7e93d6)" style="fill: none; stroke: #a85343; stroke-width: 2"/>
+    <path d="M 553.188416 159.632308 
+L 556.628837 159.632308 
+" clip-path="url(#p7ead7e93d6)" style="fill: none; stroke: #a85343; stroke-width: 2"/>
+   </g>
+   <g id="line2d_28">
+    <defs>
+     <path id="ma51b835240" d="M 0 2.25 
+C 0.596707 2.25 1.169055 2.012926 1.59099 1.59099 
+C 2.012926 1.169055 2.25 0.596707 2.25 0 
+C 2.25 -0.596707 2.012926 -1.169055 1.59099 -1.59099 
+C 1.169055 -2.012926 0.596707 -2.25 0 -2.25 
+C -0.596707 -2.25 -1.169055 -2.012926 -1.59099 -1.59099 
+C -2.012926 -1.169055 -2.25 -0.596707 -2.25 0 
+C -2.25 0.596707 -2.012926 1.169055 -1.59099 1.59099 
+C -1.169055 2.012926 -0.596707 2.25 0 2.25 
+z
+" style="stroke: #a85343"/>
+    </defs>
+    <g clip-path="url(#p7ead7e93d6)">
+     <use xlink:href="#ma51b835240" x="520.3135" y="74.34" style="fill: #a85343; stroke: #a85343"/>
+     <use xlink:href="#ma51b835240" x="540.594252" y="95.663077" style="fill: #a85343; stroke: #a85343"/>
+     <use xlink:href="#ma51b835240" x="533.272473" y="116.986154" style="fill: #a85343; stroke: #a85343"/>
+     <use xlink:href="#ma51b835240" x="543.727646" y="138.309231" style="fill: #a85343; stroke: #a85343"/>
+     <use xlink:href="#ma51b835240" x="554.790329" y="159.632308" style="fill: #a85343; stroke: #a85343"/>
+    </g>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="641.014857" y="76.677891" transform="rotate(-0 641.014857 76.677891)">1.517</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="641.014857" y="98.000968" transform="rotate(-0 641.014857 98.000968)">1.766</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="641.014857" y="119.324044" transform="rotate(-0 641.014857 119.324044)">1.676</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="641.014857" y="140.647121" transform="rotate(-0 641.014857 140.647121)">1.804</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="641.014857" y="161.970198" transform="rotate(-0 641.014857 161.970198)">1.940</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #282828" x="392.832" y="51.48" transform="rotate(-0 392.832 51.48)">B1: B’s first settlement</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_4">
+    <path d="M 59.616 326.592 
+L 315.936 326.592 
+L 315.936 215.712 
+L 59.616 215.712 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_5">
+    <g id="xtick_9">
+     <g id="line2d_29">
+      <path d="M 63.684571 326.592 
+L 63.684571 215.712 
+" clip-path="url(#p20583243a6)" style="fill: none; stroke: #e8e8e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_30"/>
+     <g id="text_31">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #666666" x="63.684571" y="337.689656" transform="rotate(-0 63.684571 337.689656)">0</text>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_31">
+      <path d="M 145.056 326.592 
+L 145.056 215.712 
+" clip-path="url(#p20583243a6)" style="fill: none; stroke: #e8e8e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_32"/>
+     <g id="text_32">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #666666" x="145.056" y="337.689656" transform="rotate(-0 145.056 337.689656)">1</text>
+     </g>
+    </g>
+    <g id="xtick_11">
+     <g id="line2d_33">
+      <path d="M 226.427429 326.592 
+L 226.427429 215.712 
+" clip-path="url(#p20583243a6)" style="fill: none; stroke: #e8e8e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_34"/>
+     <g id="text_33">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #666666" x="226.427429" y="337.689656" transform="rotate(-0 226.427429 337.689656)">2</text>
+     </g>
+    </g>
+    <g id="xtick_12">
+     <g id="line2d_35">
+      <path d="M 267.113143 326.592 
+L 267.113143 215.712 
+" clip-path="url(#p20583243a6)" style="fill: none; stroke: #e8e8e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_36"/>
+     <g id="text_34">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #666666" x="267.113143" y="337.689656" transform="rotate(-0 267.113143 337.689656)">2.5</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_6">
+    <g id="ytick_11">
+     <g id="line2d_37"/>
+     <g id="text_35">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #282828" x="56.116" y="233.371219" transform="rotate(-0 56.116 233.371219)">Wood</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_38"/>
+     <g id="text_36">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #282828" x="56.116" y="254.694296" transform="rotate(-0 56.116 254.694296)">Brick</text>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_39"/>
+     <g id="text_37">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #282828" x="56.116" y="276.017373" transform="rotate(-0 56.116 276.017373)">Sheep</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_40"/>
+     <g id="text_38">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #282828" x="56.116" y="297.34045" transform="rotate(-0 56.116 297.34045)">Wheat</text>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_41"/>
+     <g id="text_39">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #282828" x="56.116" y="318.663136" transform="rotate(-0 56.116 318.663136)">Ore</text>
+     </g>
+    </g>
+   </g>
+   <g id="LineCollection_3">
+    <path d="M 218.751963 229.572 
+L 224.855193 229.572 
+" clip-path="url(#p20583243a6)" style="fill: none; stroke: #a85343; stroke-width: 2"/>
+    <path d="M 253.227104 250.895077 
+L 259.513853 250.895077 
+" clip-path="url(#p20583243a6)" style="fill: none; stroke: #a85343; stroke-width: 2"/>
+    <path d="M 182.424644 272.218154 
+L 187.471353 272.218154 
+" clip-path="url(#p20583243a6)" style="fill: none; stroke: #a85343; stroke-width: 2"/>
+    <path d="M 208.378863 293.541231 
+L 215.471726 293.541231 
+" clip-path="url(#p20583243a6)" style="fill: none; stroke: #a85343; stroke-width: 2"/>
+    <path d="M 231.2902 314.864308 
+L 238.77214 314.864308 
+" clip-path="url(#p20583243a6)" style="fill: none; stroke: #a85343; stroke-width: 2"/>
+   </g>
+   <g id="line2d_42">
+    <g clip-path="url(#p20583243a6)">
+     <use xlink:href="#ma51b835240" x="221.896195" y="229.572" style="fill: #a85343; stroke: #a85343"/>
+     <use xlink:href="#ma51b835240" x="256.423638" y="250.895077" style="fill: #a85343; stroke: #a85343"/>
+     <use xlink:href="#ma51b835240" x="185.141045" y="272.218154" style="fill: #a85343; stroke: #a85343"/>
+     <use xlink:href="#ma51b835240" x="211.892306" y="293.541231" style="fill: #a85343; stroke: #a85343"/>
+     <use xlink:href="#ma51b835240" x="235.187097" y="314.864308" style="fill: #a85343; stroke: #a85343"/>
+    </g>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="307.798857" y="231.909891" transform="rotate(-0 307.798857 231.909891)">1.944</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="307.798857" y="253.232968" transform="rotate(-0 307.798857 253.232968)">2.369</text>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="307.798857" y="274.556044" transform="rotate(-0 307.798857 274.556044)">1.493</text>
+   </g>
+   <g id="text_43">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="307.798857" y="295.879121" transform="rotate(-0 307.798857 295.879121)">1.821</text>
+   </g>
+   <g id="text_44">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="307.798857" y="317.202198" transform="rotate(-0 307.798857 317.202198)">2.108</text>
+   </g>
+   <g id="text_45">
+    <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #282828" x="59.616" y="206.712" transform="rotate(-0 59.616 206.712)">B2: B’s second settlement</text>
+   </g>
+  </g>
+  <g id="axes_4">
+   <g id="patch_5">
+    <path d="M 392.832 326.592 
+L 649.152 326.592 
+L 649.152 215.712 
+L 392.832 215.712 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_7">
+    <g id="xtick_13">
+     <g id="line2d_43">
+      <path d="M 396.900571 326.592 
+L 396.900571 215.712 
+" clip-path="url(#pe7fba694c5)" style="fill: none; stroke: #e8e8e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_44"/>
+     <g id="text_46">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #666666" x="396.900571" y="337.689656" transform="rotate(-0 396.900571 337.689656)">0</text>
+     </g>
+    </g>
+    <g id="xtick_14">
+     <g id="line2d_45">
+      <path d="M 478.272 326.592 
+L 478.272 215.712 
+" clip-path="url(#pe7fba694c5)" style="fill: none; stroke: #e8e8e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_46"/>
+     <g id="text_47">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #666666" x="478.272" y="337.689656" transform="rotate(-0 478.272 337.689656)">1</text>
+     </g>
+    </g>
+    <g id="xtick_15">
+     <g id="line2d_47">
+      <path d="M 559.643429 326.592 
+L 559.643429 215.712 
+" clip-path="url(#pe7fba694c5)" style="fill: none; stroke: #e8e8e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_48"/>
+     <g id="text_48">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #666666" x="559.643429" y="337.689656" transform="rotate(-0 559.643429 337.689656)">2</text>
+     </g>
+    </g>
+    <g id="xtick_16">
+     <g id="line2d_49">
+      <path d="M 600.329143 326.592 
+L 600.329143 215.712 
+" clip-path="url(#pe7fba694c5)" style="fill: none; stroke: #e8e8e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_50"/>
+     <g id="text_49">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #666666" x="600.329143" y="337.689656" transform="rotate(-0 600.329143 337.689656)">2.5</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_8">
+    <g id="ytick_16">
+     <g id="line2d_51"/>
+     <g id="text_50">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #282828" x="389.332" y="233.371219" transform="rotate(-0 389.332 233.371219)">Wood</text>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_52"/>
+     <g id="text_51">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #282828" x="389.332" y="254.694296" transform="rotate(-0 389.332 254.694296)">Brick</text>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_53"/>
+     <g id="text_52">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #282828" x="389.332" y="276.017373" transform="rotate(-0 389.332 276.017373)">Sheep</text>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_54"/>
+     <g id="text_53">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #282828" x="389.332" y="297.34045" transform="rotate(-0 389.332 297.34045)">Wheat</text>
+     </g>
+    </g>
+    <g id="ytick_20">
+     <g id="line2d_55"/>
+     <g id="text_54">
+      <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #282828" x="389.332" y="318.663136" transform="rotate(-0 389.332 318.663136)">Ore</text>
+     </g>
+    </g>
+   </g>
+   <g id="LineCollection_4">
+    <path d="M 553.83345 229.572 
+L 560.998315 229.572 
+" clip-path="url(#pe7fba694c5)" style="fill: none; stroke: #3e6fa8; stroke-width: 2"/>
+    <path d="M 571.902123 250.895077 
+L 579.525635 250.895077 
+" clip-path="url(#pe7fba694c5)" style="fill: none; stroke: #3e6fa8; stroke-width: 2"/>
+    <path d="M 538.568244 272.218154 
+L 544.567828 272.218154 
+" clip-path="url(#pe7fba694c5)" style="fill: none; stroke: #3e6fa8; stroke-width: 2"/>
+    <path d="M 561.139539 293.541231 
+L 570.444344 293.541231 
+" clip-path="url(#pe7fba694c5)" style="fill: none; stroke: #3e6fa8; stroke-width: 2"/>
+    <path d="M 564.434255 314.864308 
+L 572.914704 314.864308 
+" clip-path="url(#pe7fba694c5)" style="fill: none; stroke: #3e6fa8; stroke-width: 2"/>
+   </g>
+   <g id="line2d_56">
+    <g clip-path="url(#pe7fba694c5)">
+     <use xlink:href="#md5c117ab65" x="557.426693" y="229.572" style="fill: #3e6fa8; stroke: #3e6fa8"/>
+     <use xlink:href="#md5c117ab65" x="575.667377" y="250.895077" style="fill: #3e6fa8; stroke: #3e6fa8"/>
+     <use xlink:href="#md5c117ab65" x="541.492636" y="272.218154" style="fill: #3e6fa8; stroke: #3e6fa8"/>
+     <use xlink:href="#md5c117ab65" x="565.999891" y="293.541231" style="fill: #3e6fa8; stroke: #3e6fa8"/>
+     <use xlink:href="#md5c117ab65" x="568.688975" y="314.864308" style="fill: #3e6fa8; stroke: #3e6fa8"/>
+    </g>
+   </g>
+   <g id="text_55">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="641.014857" y="231.909891" transform="rotate(-0 641.014857 231.909891)">1.973</text>
+   </g>
+   <g id="text_56">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="641.014857" y="253.232968" transform="rotate(-0 641.014857 253.232968)">2.197</text>
+   </g>
+   <g id="text_57">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="641.014857" y="274.556044" transform="rotate(-0 641.014857 274.556044)">1.777</text>
+   </g>
+   <g id="text_58">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="641.014857" y="295.879121" transform="rotate(-0 641.014857 295.879121)">2.078</text>
+   </g>
+   <g id="text_59">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="641.014857" y="317.202198" transform="rotate(-0 641.014857 317.202198)">2.111</text>
+   </g>
+   <g id="text_60">
+    <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #282828" x="392.832" y="206.712" transform="rotate(-0 392.832 206.712)">A2: A’s second settlement</text>
+   </g>
+  </g>
+  <g id="text_61">
+   <text style="font-size: 15px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #282828" x="59.616" y="19.461656" transform="rotate(-0 59.616 19.461656)">How the five-resource regression weights each pip</text>
+  </g>
+  <g id="text_62">
+   <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #666666" x="59.616" y="30.24" transform="rotate(-0 59.616 30.24)">Each panel fits all five resource pip counts together. Bars: 95% training-board bootstrap intervals.</text>
+  </g>
+  <g id="text_63">
+   <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #282828" x="331.2" y="364.269422" transform="rotate(-0 331.2 364.269422)">Fitted relative-score change (logit units per pip)</text>
+  </g>
+  <g id="text_64">
+   <text style="font-size: 8.7px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #666666" x="59.616" y="389.088" transform="rotate(-0 59.616 389.088)">These are regression coefficients approximating Generation 37’s scores, not neural weights or changes in win probability.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pb1c9a52eb0">
+   <rect x="59.616" y="60.48" width="256.32" height="110.88"/>
+  </clipPath>
+  <clipPath id="p7ead7e93d6">
+   <rect x="392.832" y="60.48" width="256.32" height="110.88"/>
+  </clipPath>
+  <clipPath id="p20583243a6">
+   <rect x="59.616" y="215.712" width="256.32" height="110.88"/>
+  </clipPath>
+  <clipPath id="pe7fba694c5">
+   <rect x="392.832" y="215.712" width="256.32" height="110.88"/>
+  </clipPath>
+ </defs>
+</svg>

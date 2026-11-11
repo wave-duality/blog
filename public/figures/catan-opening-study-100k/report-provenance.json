@@ -1,0 +1,37 @@
+[
+  {
+    "label": "Analysis source",
+    "original_path": "/Users/owenzhang/CatanRL/run/analysis/opening-study-100k-20261029/source/opening_study_scale_analysis.py",
+    "sha256": "a2430c35f2770cc4adf054f136ed1964bc55b5b06b8e877ad814662e1510dac5",
+    "expected_sha256": "a2430c35f2770cc4adf054f136ed1964bc55b5b06b8e877ad814662e1510dac5",
+    "matches_recorded_hash": true
+  },
+  {
+    "label": "Board-generation source",
+    "original_path": "/Users/owenzhang/CatanRL/run/analysis/opening-study-100k-20261029/source/opening_study_scale.py",
+    "sha256": "fadc229d9fd6a205247376464f602a615319600205b40b692f6d83fa031925af",
+    "expected_sha256": null,
+    "matches_recorded_hash": true
+  },
+  {
+    "label": "Original feature definitions",
+    "original_path": "/Users/owenzhang/CatanRL/run/analysis/opening-study-100k-20261029/source/opening_network_study.py",
+    "sha256": "862ea1368002b8a3f286aaa4320dadb1c7e207a8f3e7ec4d1b151f85fe9e7613",
+    "expected_sha256": null,
+    "matches_recorded_hash": true
+  },
+  {
+    "label": "Study protocol",
+    "original_path": "/Users/owenzhang/CatanRL/run/analysis/opening-study-100k-20261029/source/experiments/opening-scale-100k-protocol.md",
+    "sha256": "435457203d24739bc4533b54841ba47df048d84972a61d72d30ac8bd412a958a",
+    "expected_sha256": null,
+    "matches_recorded_hash": true
+  },
+  {
+    "label": "Report-generation source",
+    "original_path": "/Users/owenzhang/CatanRL/opening_study_scale_report.py",
+    "sha256": "72116e9ec6c668c2259371673edfc5d2025abeda306f3bd4efdec437ad87a1c3",
+    "expected_sha256": null,
+    "matches_recorded_hash": true
+  }
+]

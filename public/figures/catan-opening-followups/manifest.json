@@ -1,0 +1,43 @@
+{
+  "schema": "opening-followups-publication-v1",
+  "experiments": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "full_games": 6144,
+  "plans_games": 4096,
+  "denial_games": 2048,
+  "all_games_terminal": true,
+  "sources": {
+    "opening_followup_denial_continuations.py": "2d10d01971ca7c87223454764a735f98ba895949e8d7651dda4ec5a1fbcfdee6",
+    "opening_followup_remote_context.py": "9701cfd122203acb78ec65b6042d48d796a5ccd4665a559e4cb9e3dd5d684f5d",
+    "opening_followup_ports_numbers.py": "92ae8d387ec8f56f9c8b005b04c06cdebd7b40d9a6138a4d0c2b38e2a8139951",
+    "opening_followup_hands_roads.py": "5dad47903eccf0d5310e88a814079963c0eca850743b46bac3d295fbfb18b1c2",
+    "opening_followup_opponent_relocation.py": "d9c951cb7cc632e2419bb007ddcb96a71231f5c06d15cc16db369247defd16b7",
+    "opening_followup_plans.py": "384135eb9f824651c2f098cc2c6926d2e4caf90e3b54d464e5d2c786494b3dee",
+    "opening_followup_blocking_fallback.py": "00799f370bfde011e83ce3893bd78f8cdec1e6dd6804e92675580d6dc7e9d669",
+    "validate_followup_plans.py": "c6e7a43d21c44e14c9ffb276dfcb4c7888401f6a54d367ad033c1be07cb44499",
+    "build_followup_race_view.py": "574fa07e3ac807e2795d5d648b5b1773846ba8182431d5510943f404bcf537f9"
+  },
+  "assets": {
+    "data-and-methods.zip": "f74b11ee47522ce92517b079cd951973d67d80cae46f9e67e65ff146f81b19fd",
+    "README.md": "e2eda45225ef85f83f8ce24500d1dd6cd3eba5b94ab1ba36effc0a69ee4b1d6d",
+    "blocking_fallback/remote-context-pairs.json": "febef40b5d5d53bfe446d1ed5cd20a18c45311ac73dde3a3aeeb30beae0aae6e",
+    "blocking_fallback/remote-context.json": "bbfcefed90de0d177ff996acb9e81c54fb2fc8969b0d4f0c2c9ccc8678180c23",
+    "blocking_fallback/fallback-exhaustive-validation.json": "304cb7eaafc88be2ad080c51826bef78aa3892ffac6081f2e8f550e0084bf9d0",
+    "blocking_fallback/results.json": "49bfa0f7b29bf1d4e2d9496807c4619158981854ce542d59e4fb68e31f8a6706",
+    "blocking_fallback/opponent-relocation.json": "4a01520c769b23dc261b644f5baca315bb725bf23c76966556a462ce51e49e45",
+    "hands_roads/examples.json": "da120d64f429c6b80d95b53b52480ed59ebbc8e8233333ff6be605e3720a0a0e",
+    "hands_roads/results.json": "ee2203b19def514435a735a9077aced382a37a82aa6eb73706d63960ecebc089",
+    "hands_roads/validation.json": "b14702a053508e27b931e00b86d70f0a1f96734cac74c5e1b0e2d0b9adcc3d01",
+    "plans/results.json": "e947c5c4f7aa6913d678963dd19aacc1c12195d69bf1db7d4ed58a26b44f7d58",
+    "plans/validation.json": "57f2f6732f410cecdd4b2678e09e900c3785720acdd65220eae67e245b8cda13",
+    "ports_numbers/results.json": "3fefa1c3adfe0ed895a2ec397cf551b51cd4b3e5c402ca193901a7705c871203",
+    "blocking_fallback/continuations/results.json": "9e77c055f6e272d707ab3c7b2c3712add085915d4a433e0c7ab045d0e7ee5d31"
+  }
+}

@@ -1,0 +1,321 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Three opening decisions</title>
+<link rel="stylesheet" href="article-figure-typography.css"><style>
+*{box-sizing:border-box}html,body{margin:0;background:#fff;color:#282725;color-scheme:light}body{font:16px/1.55 Palatino,Georgia,serif}h3{font-size:19px;line-height:1.3;margin:0 0 10px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}button{font:inherit;font-size:14px;background:#fff;border:1px solid #d9d6cf;border-radius:4px;padding:7px 10px;cursor:pointer;color:inherit}button[aria-pressed=true]{background:#f1f5ef;border-color:#899480}button:focus-visible{outline:2px solid #3e6fa8;outline-offset:2px}.layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:20px;align-items:center}.board{width:100%;height:auto;display:block}.meta{font-size:13px;color:#6f6d68;margin:0 0 7px}.note{margin:0 0 12px}.legend{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;font-size:13px;margin:4px 0 12px}.a{color:#3e6fa8}.b{color:#bc503b}.alt{color:#826b43}.table-scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}th,td{padding:5px 4px;text-align:right;border-bottom:1px solid #e7e5e1}th:first-child,td:first-child{text-align:left}thead th{font-weight:600;line-height:1.3}.total{font-weight:600}.foot{font-size:13px;color:#6f6d68;margin:12px 0 0}#figure{padding-block:6px}
+@media(max-width:600px){.layout{grid-template-columns:1fr;gap:8px}.board-wrap{width:100%;max-width:450px;margin:auto}.tabs{gap:5px}button{font-size:13px;padding:7px 8px}}
+</style></head><body><div id="figure"><h3>What would you choose?</h3><div class="tabs" id="tabs" aria-label="Opening examples"></div><div class="layout"><div class="board-wrap"><svg id="board" class="board" role="img"></svg><div class="legend"><span class="a">A (first player)</span><span class="b">B (second player)</span><span class="alt">Dashed: alternative</span></div></div><div><p class="meta" id="meta"></p><p class="note" id="note"></p><div class="table-scroll"><table id="stats"></table></div></div></div><p class="foot">Generation 37, without search. Policy percentages are normalized across all legal corners. Shown placements follow A1 → B1 → B2 → A2.</p></div><script>
+const EXAMPLES=[{"seed":3100098,"step":0,"board":[[4,1,2,3,2,3,5,3,0,1,2,4,1,0,0,2,4,0,3],[6,3,8,10,4,11,0,12,5,9,2,4,11,8,3,6,10,5,9],[3,5,5,4,0,2,5,1,5]],"picks":[{"label":"A1","seat":0,"chosen":12,"road":12},{"label":"B1","seat":1,"chosen":41,"road":59},{"label":"B2","seat":1,"chosen":29,"road":35},{"label":"A2","seat":0,"chosen":39,"road":56}],"alt":29,"title":"A1: fewer pips","note":"The chosen corner has 11 pips across sheep, wheat and ore. The 13-pip alternative produces only wood and brick.","chosen_stats":{"vertex":12,"logit":7.627141952514648,"preference":0.4108301272798433},"alt_stats":{"vertex":29,"logit":6.777538776397705,"preference":0.17566462498334837},"legal_count":54,"source":"catan-gen37-openings/3100098.js","sha256":"51fa8a527b381a8f913ed0159236f6ee8fe4df498e0a3469cf3884f7ef046673"},{"seed":3100016,"step":2,"board":[[0,0,4,5,2,3,2,3,2,0,4,3,4,1,0,1,1,3,2],[2,6,10,0,11,4,5,11,10,8,9,8,3,12,3,4,6,9,5],[2,4,5,0,1,5,3,5,5]],"picks":[{"label":"A1","seat":0,"chosen":25,"road":30},{"label":"B1","seat":1,"chosen":24,"road":29},{"label":"B2","seat":1,"chosen":41,"road":59},{"label":"A2","seat":0,"chosen":9,"road":15}],"alt":9,"title":"B2: filling gaps","note":"B1 already supplies wood, wheat and ore. The chosen B2 fills the brick and sheep gaps, covering all five resources with two fewer pips.","chosen_stats":{"vertex":41,"logit":5.192319393157959,"preference":0.927555502824276},"alt_stats":{"vertex":9,"logit":-1.5643982887268066,"preference":0.0010787845083737955},"legal_count":47,"source":"catan-gen37-openings/3100016.js","sha256":"0fa114f637ade8046ac76bb83c19a2897d218cadf1fde34e8b49898a69db5a00"},{"seed":3100098,"step":3,"board":[[4,1,2,3,2,3,5,3,0,1,2,4,1,0,0,2,4,0,3],[6,3,8,10,4,11,0,12,5,9,2,4,11,8,3,6,10,5,9],[3,5,5,4,0,2,5,1,5]],"picks":[{"label":"A1","seat":0,"chosen":12,"road":12},{"label":"B1","seat":1,"chosen":41,"road":59},{"label":"B2","seat":1,"chosen":29,"road":35},{"label":"A2","seat":0,"chosen":39,"road":56}],"alt":44,"title":"A2: the second half","note":"Return to the first board after B\u2019s two picks. A1 already supplies sheep, wheat and ore. A2 adds both wood and brick; the higher-pip alternative would still leave A without brick.","chosen_stats":{"vertex":39,"logit":7.930683612823486,"preference":0.9711176330582193},"alt_stats":{"vertex":44,"logit":3.308953046798706,"preference":0.009551679866069316},"legal_count":42,"source":"catan-gen37-openings/3100098.js","sha256":"51fa8a527b381a8f913ed0159236f6ee8fe4df498e0a3469cf3884f7ef046673"}];
+const GEO={"hex_xy":[[-1.73205,-0.0],[0.0,-0.0],[1.73205,-0.0],[-2.59808,-1.5],[-0.86603,-1.5],[0.86603,-1.5],[2.59808,-1.5],[-3.4641,-3.0],[-1.73205,-3.0],[0.0,-3.0],[1.73205,-3.0],[3.4641,-3.0],[-2.59808,-4.5],[-0.86603,-4.5],[0.86603,-4.5],[2.59808,-4.5],[-1.73205,-6.0],[0.0,-6.0],[1.73205,-6.0]],"vertex_xy":[[-1.73205,1.0],[0.0,1.0],[1.73205,1.0],[-2.59808,0.5],[-0.86603,0.5],[0.86603,0.5],[2.59808,0.5],[-2.59808,-0.5],[-0.86603,-0.5],[0.86603,-0.5],[2.59808,-0.5],[-3.4641,-1.0],[-1.73205,-1.0],[0.0,-1.0],[1.73205,-1.0],[3.4641,-1.0],[-3.4641,-2.0],[-1.73205,-2.0],[0.0,-2.0],[1.73205,-2.0],[3.4641,-2.0],[-4.33013,-2.5],[-2.59808,-2.5],[-0.86603,-2.5],[0.86603,-2.5],[2.59808,-2.5],[4.33013,-2.5],[-4.33013,-3.5],[-2.59808,-3.5],[-0.86603,-3.5],[0.86603,-3.5],[2.59808,-3.5],[4.33013,-3.5],[-3.4641,-4.0],[-1.73205,-4.0],[0.0,-4.0],[1.73205,-4.0],[3.4641,-4.0],[-3.4641,-5.0],[-1.73205,-5.0],[0.0,-5.0],[1.73205,-5.0],[3.4641,-5.0],[-2.59808,-5.5],[-0.86603,-5.5],[0.86603,-5.5],[2.59808,-5.5],[-2.59808,-6.5],[-0.86603,-6.5],[0.86603,-6.5],[2.59808,-6.5],[-1.73205,-7.0],[0.0,-7.0],[1.73205,-7.0]],"path_xy":[[-2.16506,0.75],[-1.29904,0.75],[-0.43301,0.75],[0.43301,0.75],[1.29904,0.75],[2.16506,0.75],[-2.59808,0.0],[-0.86603,0.0],[0.86603,0.0],[2.59808,0.0],[-3.03109,-0.75],[-2.16506,-0.75],[-1.29904,-0.75],[-0.43301,-0.75],[0.43301,-0.75],[1.29904,-0.75],[2.16506,-0.75],[3.03109,-0.75],[-3.4641,-1.5],[-1.73205,-1.5],[-0.0,-1.5],[1.73205,-1.5],[3.4641,-1.5],[-3.89711,-2.25],[-3.03109,-2.25],[-2.16506,-2.25],[-1.29904,-2.25],[-0.43301,-2.25],[0.43301,-2.25],[1.29904,-2.25],[2.16506,-2.25],[3.03109,-2.25],[3.89711,-2.25],[-4.33013,-3.0],[-2.59808,-3.0],[-0.86603,-3.0],[0.86603,-3.0],[2.59808,-3.0],[4.33013,-3.0],[-3.89711,-3.75],[-3.03109,-3.75],[-2.16506,-3.75],[-1.29904,-3.75],[-0.43301,-3.75],[0.43301,-3.75],[1.29904,-3.75],[2.16506,-3.75],[3.03109,-3.75],[3.89711,-3.75],[-3.4641,-4.5],[-1.73205,-4.5],[-0.0,-4.5],[1.73205,-4.5],[3.4641,-4.5],[-3.03109,-5.25],[-2.16506,-5.25],[-1.29904,-5.25],[-0.43301,-5.25],[0.43301,-5.25],[1.29904,-5.25],[2.16506,-5.25],[3.03109,-5.25],[-2.59808,-6.0],[-0.86603,-6.0],[0.86603,-6.0],[2.59808,-6.0],[-2.16506,-6.75],[-1.29904,-6.75],[-0.43301,-6.75],[0.43301,-6.75],[1.29904,-6.75],[2.16506,-6.75]],"hex_vertices":[[0,4,8,12,7,3],[1,5,9,13,8,4],[2,6,10,14,9,5],[7,12,17,22,16,11],[8,13,18,23,17,12],[9,14,19,24,18,13],[10,15,20,25,19,14],[16,22,28,33,27,21],[17,23,29,34,28,22],[18,24,30,35,29,23],[19,25,31,36,30,24],[20,26,32,37,31,25],[28,34,39,43,38,33],[29,35,40,44,39,34],[30,36,41,45,40,35],[31,37,42,46,41,36],[39,44,48,51,47,43],[40,45,49,52,48,44],[41,46,50,53,49,45]],"hex_paths":[[1,7,12,11,6,0],[3,8,14,13,7,2],[5,9,16,15,8,4],[11,19,25,24,18,10],[13,20,27,26,19,12],[15,21,29,28,20,14],[17,22,31,30,21,16],[24,34,40,39,33,23],[26,35,42,41,34,25],[28,36,44,43,35,27],[30,37,46,45,36,29],[32,38,48,47,37,31],[41,50,55,54,49,40],[43,51,57,56,50,42],[45,52,59,58,51,44],[47,53,61,60,52,46],[56,63,67,66,62,55],[58,64,69,68,63,57],[60,65,71,70,64,59]],"path_vertices":[[0,3],[0,4],[1,4],[1,5],[2,5],[2,6],[3,7],[4,8],[5,9],[6,10],[7,11],[7,12],[8,12],[8,13],[9,13],[9,14],[10,14],[10,15],[11,16],[12,17],[13,18],[14,19],[15,20],[16,21],[16,22],[17,22],[17,23],[18,23],[18,24],[19,24],[19,25],[20,25],[20,26],[21,27],[22,28],[23,29],[24,30],[25,31],[26,32],[27,33],[28,33],[28,34],[29,34],[29,35],[30,35],[30,36],[31,36],[31,37],[32,37],[33,38],[34,39],[35,40],[36,41],[37,42],[38,43],[39,43],[39,44],[40,44],[40,45],[41,45],[41,46],[42,46],[43,47],[44,48],[45,49],[46,50],[47,51],[48,51],[48,52],[49,52],[49,53],[50,53]],"vertex_hexes":[[0,null,null],[1,null,null],[2,null,null],[0,null,null],[0,1,null],[1,2,null],[2,null,null],[0,3,null],[0,1,4],[1,2,5],[2,6,null],[3,null,null],[0,3,4],[1,4,5],[2,5,6],[6,null,null],[3,7,null],[3,4,8],[4,5,9],[5,6,10],[6,11,null],[7,null,null],[3,7,8],[4,8,9],[5,9,10],[6,10,11],[11,null,null],[7,null,null],[7,8,12],[8,9,13],[9,10,14],[10,11,15],[11,null,null],[7,12,null],[8,12,13],[9,13,14],[10,14,15],[11,15,null],[12,null,null],[12,13,16],[13,14,17],[14,15,18],[15,null,null],[12,16,null],[13,16,17],[14,17,18],[15,18,null],[16,null,null],[16,17,null],[17,18,null],[18,null,null],[16,null,null],[17,null,null],[18,null,null]],"port_vertices":[[0,3],[11,16],[33,38],[47,51],[49,52],[42,46],[26,32],[10,15],[1,5]],"port_paths":[0,18,49,66,69,61,38,17,3],"spiral":[0,1,2,6,11,15,18,17,16,12,7,3,4,5,10,14,13,8,9],"coast":[0,6,10,18,23,33,39,49,54,62,66,67,68,69,70,71,65,61,53,48,38,32,22,17,9,5,4,3,2,1]};
+const NS='http://www.w3.org/2000/svg';let CENTER,BOARD,S;
+const tooltip=document.createElement('div');tooltip.style.cssText='display:none;position:fixed;z-index:10;background:#333;color:white;padding:5px 8px;border-radius:3px;font-size:13px;pointer-events:none';document.body.append(tooltip);
+function showTip(text,event){tooltip.textContent=text;tooltip.style.display='block';tooltip.style.left=Math.min(innerWidth-220,Math.max(4,event.clientX+8))+'px';tooltip.style.top=Math.max(4,event.clientY-32)+'px'}
+function hideTip(){tooltip.style.display='none'}
+const RES = ["wood", "brick", "sheep", "wheat", "ore"];
+const DESERT = 5;
+const TERRAIN = ["Forest", "Hills", "Pasture", "Fields", "Mountains", "Desert"];
+const DEV = ["knight", "victory point", "road building", "year of plenty", "monopoly"];
+const pips = (n) => (n ? 6 - Math.abs(7 - n) : 0);
+// Engine seats stay P0/P1; the human's seat is redrawn for every new game.
+let YOU = 0, BOT = 1;
+
+/* Soft, desaturated terrain, separated by white gaps rather than outlines.
+   Forest and pasture are the confusable pair, so forest is pushed bluer and
+   pasture yellower than a naive palette would put them. */
+const LAND  = ["#74A188", "#E09B7E", "#CFDF9C", "#F2CE7B", "#AEB7C2", "#EFE6D3"];
+/* Tone-on-tone glyph ink: the same hue, several steps darker. */
+const GLYPH = ["#3F6A55", "#A8593A", "#7B9647", "#B9873A", "#6C7784", "#BAA987"];
+const RESDOT = LAND.slice(0, 5);
+const PLAYER = ["#D9583F", "#3E6FA8"];
+
+const SC = 100;
+const X = (p) => p[0] * SC, Y = (p) => -p[1] * SC;
+const VX = (v) => X(GEO.vertex_xy[v]), VY = (v) => Y(GEO.vertex_xy[v]);
+const HX = (h) => X(GEO.hex_xy[h]), HY = (h) => Y(GEO.hex_xy[h]);
+const hexPoly = (h) => GEO.hex_vertices[h].map((v) => `${VX(v)},${VY(v)}`).join(" ");
+
+function el(name, attrs, parent) {
+  const n = document.createElementNS(NS, name);
+  for (const k in attrs) if (attrs[k] != null) n.setAttribute(k, attrs[k]);
+  if (parent) parent.appendChild(n);
+  return n;
+}
+const g = (parent, attrs) => el("g", attrs || {}, parent);
+function txt(parent, x, y, s, attrs) {
+  const n = el("text", Object.assign({ x, y, "text-anchor":"middle", "dominant-baseline":"central" }, attrs), parent);
+  n.textContent = s;
+  return n;
+}
+
+function drawHexes(root) {
+  const layer = g(root);
+  for (let h = 0; h < 19; h++) {
+    el("polygon", {
+      points:hexPoly(h), fill:LAND[BOARD.res[h]],
+      stroke:"#FFFFFF", "stroke-width":5, "stroke-linejoin":"round",
+    }, layer);
+  }
+}
+
+/* --- terrain glyphs ----------------------------------------------------
+   Colour alone cannot carry five resources at this saturation, so each hex
+   also gets a small mark. Tone-on-tone and tucked under the number token, so
+   it identifies the tile without competing with it. */
+const GLYPHS = [
+  function wood(G, c) {
+    el("polygon", { points:"0,-16 -8,-3 8,-3", fill:c }, G);
+    el("polygon", { points:"0,-8 -11,8 11,8", fill:c }, G);
+    el("rect", { x:-1.8, y:7, width:3.6, height:6, rx:1.2, fill:c }, G);
+  },
+  function brick(G, c) {
+    const b = (x, y, w) => el("rect", { x, y, width:w, height:7.5, rx:1.8, fill:c }, G);
+    b(-13, -9, 12); b(1, -9, 12);
+    b(-7, 0.5, 12); b(-15.5, 0.5, 7); b(6, 0.5, 7);
+  },
+  function sheep(G, c) {
+    el("path", { d:"M-4,-9 a9,9 0 0 1 9,0 a8,8 0 0 1 7,7 a8,8 0 0 1 -7,8 l-13,0 a8,8 0 0 1 -7,-8 a8,8 0 0 1 7,-7 z", fill:c }, G);
+    el("circle", { cx:11, cy:-4, r:5.5, fill:c }, G);
+    el("rect", { x:-7, y:5, width:3, height:8, rx:1.4, fill:c }, G);
+    el("rect", { x:3, y:5, width:3, height:8, rx:1.4, fill:c }, G);
+  },
+  function wheat(G, c) {
+    el("path", { d:"M0,14 L0,-6", stroke:c, "stroke-width":2.6, "stroke-linecap":"round", fill:"none" }, G);
+    for (let i = 0; i < 3; i++) {
+      const y = -6 + i * 6;
+      el("path", { d:`M0,${y} q-7,-1 -8,-6`, stroke:c, "stroke-width":2.6, "stroke-linecap":"round", fill:"none" }, G);
+      el("path", { d:`M0,${y} q7,-1 8,-6`, stroke:c, "stroke-width":2.6, "stroke-linecap":"round", fill:"none" }, G);
+    }
+    el("path", { d:"M0,-8 l0,-6", stroke:c, "stroke-width":2.6, "stroke-linecap":"round" }, G);
+  },
+  function ore(G, c) {
+    el("polygon", { points:"-4,-15 -17,9 9,9", fill:c }, G);
+    el("polygon", { points:"7,-6 -3,9 17,9", fill:c, opacity:.72 }, G);
+  },
+  function desert(G, c) {
+    el("path", { d:"M-15,-2 q8,-9 16,-1 q6,6 14,0", stroke:c, "stroke-width":2.6, fill:"none", "stroke-linecap":"round" }, G);
+    el("path", { d:"M-13,8 q9,-8 17,-1 q5,5 11,1", stroke:c, "stroke-width":2.6, fill:"none", "stroke-linecap":"round" }, G);
+  },
+];
+
+/* Development card faces. Same drawing language as the terrain glyphs:
+   one flat shape, no outline, readable at 30px. */
+const DEV_ICON = [
+  function knight(G, c) {          // shield
+    el("path", { d:"M0,-16 L14,-11 L14,1 C14,10 7,15 0,17 C-7,15 -14,10 -14,1 L-14,-11 Z", fill:c }, G);
+    el("path", { d:"M0,-9 L6,-6 L6,1 C6,5 3,8 0,9 C-3,8 -6,5 -6,1 L-6,-6 Z", fill:"#FFFFFF", opacity:.9 }, G);
+  },
+  function victory(G, c) {         // star
+    const pts = [];
+    for (let i = 0; i < 10; i++) {
+      const a = -Math.PI / 2 + i * Math.PI / 5, r = i % 2 ? 6.6 : 16;
+      pts.push(`${(Math.cos(a) * r).toFixed(2)},${(Math.sin(a) * r).toFixed(2)}`);
+    }
+    el("polygon", { points:pts.join(" "), fill:c }, G);
+  },
+  function roads(G, c) {           // two parallel road bars
+    el("rect", { x:-16, y:-13, width:32, height:8, rx:4, fill:c, transform:"rotate(-18)" }, G);
+    el("rect", { x:-16, y:5, width:32, height:8, rx:4, fill:c, transform:"rotate(-18)" }, G);
+  },
+  function plenty(G, c) {          // two cards, one behind the other
+    el("rect", { x:-15, y:-13, width:19, height:25, rx:4, fill:c, opacity:.45 }, G);
+    el("rect", { x:-4, y:-8, width:19, height:25, rx:4, fill:c }, G);
+  },
+  function monopoly(G, c) {        // everything converging on one point
+    for (let i = 0; i < 3; i++) {
+      const a = (-90 + i * 120) * Math.PI / 180;
+      const x = Math.cos(a), y = Math.sin(a);
+      el("path", {
+        d:`M${x * 16},${y * 16} L${x * 7},${y * 7}`, stroke:c,
+        "stroke-width":4, "stroke-linecap":"round",
+      }, G);
+      el("polygon", {
+        points:`${x * 5},${y * 5} ${x * 11 - y * 4.5},${y * 11 + x * 4.5} ${x * 11 + y * 4.5},${y * 11 - x * 4.5}`,
+        fill:c,
+      }, G);
+    }
+    el("circle", { cx:0, cy:0, r:3.4, fill:c }, G);
+  },
+];
+
+function drawGlyphs(root) {
+  const layer = g(root, { opacity:.85 });
+  for (let h = 0; h < 19; h++) {
+    const r = BOARD.res[h], hasToken = BOARD.num[h] !== 0;
+    // Desert carries no number, so its mark takes the centre instead.
+    const dy = hasToken ? 56 : 4;
+    const sc = hasToken ? 0.92 : 1.25;
+    const G = g(layer, { transform:`translate(${HX(h)},${HY(h) + dy}) scale(${sc})` });
+    GLYPHS[r](G, GLYPH[r]);
+  }
+}
+
+function drawTokens(root) {
+  const layer = g(root);
+  for (let h = 0; h < 19; h++) {
+    const n = BOARD.num[h];
+    if (!n) continue;
+    const cx = HX(h), cy = HY(h), hot = n === 6 || n === 8;
+    el("circle", { cx, cy, r:33, fill:"#FFFFFF", filter:"url(#sh)" }, layer);
+    txt(layer, cx, cy - 4, String(n), {
+      class:"tok", "font-size":34, fill:hot ? "#C4402C" : "#161616",
+    });
+    const k = pips(n);
+    for (let i = 0; i < k; i++) {
+      el("circle", { class:"pip", cx:cx + (i - (k - 1) / 2) * 7, cy:cy + 18, r:2.2,
+        fill:hot ? "#C4402C" : "#A6A6A6" }, layer);
+    }
+  }
+}
+
+/* Ports sit off the coast, tethered to the two vertices that actually earn
+   the rate, and carry the resource's own glyph rather than a colour dot. */
+function drawPorts(root) {
+  const layer = g(root);
+  for (let i = 0; i < 9; i++) {
+    const [a, b] = GEO.port_vertices[i], type = BOARD.port[i];
+    const mx = (VX(a) + VX(b)) / 2, my = (VY(a) + VY(b)) / 2;
+    let dx = mx - CENTER[0], dy = my - CENTER[1];
+    const d = Math.hypot(dx, dy); dx /= d; dy /= d;
+    const px = mx + dx * 70, py = my + dy * 70;
+
+    const node = g(layer, { class:"port" });
+    for (const v of [a, b]) {
+      el("line", { class:"tether", x1:VX(v), y1:VY(v), x2:px, y2:py,
+        stroke:"#DCDCDC", "stroke-width":3, "stroke-linecap":"round" }, node);
+    }
+    for (const v of [a, b]) {
+      el("circle", { class:"anchor", cx:VX(v), cy:VY(v), r:6,
+        fill:"#FFFFFF", stroke:"#C9C9C9", "stroke-width":2.5 }, node);
+    }
+    el("circle", { class:"badge", cx:px, cy:py, r:31,
+      fill:"#FFFFFF", stroke:"#E0E0E0", "stroke-width":2.5, filter:"url(#sh)" }, node);
+
+    if (type === 5) {
+      // Generic: three marks, one rate. No single resource to show.
+      for (let k = 0; k < 3; k++) {
+        const ang = (-90 + k * 120) * Math.PI / 180;
+        el("circle", { cx:px + Math.cos(ang) * 13, cy:py + Math.sin(ang) * 13 - 4,
+          r:4.4, fill:"#B4B4B4" }, node);
+      }
+      txt(node, px, py + 19, "3:1", { class:"portlbl", "font-size":11.5, fill:"#6E6E6E" });
+    } else {
+      const G2 = g(node, { transform:`translate(${px},${py - 6}) scale(0.9)` });
+      GLYPHS[type](G2, GLYPH[type]);
+      txt(node, px, py + 20, "2:1", { class:"portlbl", "font-size":11.5, fill:"#6E6E6E" });
+    }
+
+    const name = type === 5
+      ? "3:1 port - trade any 3 alike for 1"
+      : `2:1 ${RES[type]} port - trade 2 ${RES[type]} for 1 of anything`;
+    node.addEventListener("mousemove", (ev) => showTip(name, ev));
+    node.addEventListener("mouseleave", hideTip);
+  }
+}
+
+const ROBBER_DY = -56; // above the number token; the terrain glyph is below it
+
+/** The robbed hex is washed out, because it produces nothing. */
+function drawRobber(root) {
+  const cx = HX(S.robber), cy = HY(S.robber) + ROBBER_DY;
+  const G = g(root);
+  el("polygon", { points:hexPoly(S.robber), fill:"#161616", opacity:.14 }, G);
+  el("circle", { cx, cy, r:15, fill:"#2B2B2B", filter:"url(#sh)" }, G);
+  el("circle", { cx, cy:cy - 3.5, r:5.5, fill:"#FFFFFF", opacity:.92 }, G);
+}
+
+/* The piece placed most recently, so `drawPieces` can animate exactly one
+   thing. Cleared by age rather than by event: `render` runs on every sync and
+   re-adding the class would restart the animation on an unrelated redraw. */
+let justBuilt = null;
+function markBuilt(kind, id) { justBuilt = { kind, id, used:false }; }
+/* True exactly once, for the first render after the piece is placed. `render`
+   runs on every sync - and a placement is usually followed by more of them as
+   chance nodes resolve - so without consuming the flag the animation restarts
+   repeatedly and the piece never settles. */
+function isFresh(kind, id) {
+  if (!justBuilt || justBuilt.used) return false;
+  if (justBuilt.kind !== kind || justBuilt.id !== id) return false;
+  justBuilt.used = true;
+  return true;
+}
+
+function drawPieces(root) {
+  const layer = g(root);
+
+  // Roads: a plank with a lighter centre stripe, so direction and owner read
+  // at a glance instead of a flat bar.
+  for (let e = 0; e < 72; e++) {
+    if (!S.path[e]) continue;
+    const p = S.path[e] - 1, [a, b] = GEO.path_vertices[e];
+    const x1 = VX(a), y1 = VY(a), x2 = VX(b), y2 = VY(b);
+    const ang = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
+    const L = Math.hypot(x2 - x1, y2 - y1) * 0.72;
+    const anchor = g(layer, {
+      transform:`translate(${(x1 + x2) / 2},${(y1 + y2) / 2}) rotate(${ang})`,
+    });
+    const road = g(anchor);
+    if (isFresh("road", e)) road.setAttribute("class", "built");
+    el("rect", { x:-L / 2, y:-7, width:L, height:14, rx:7, fill:PLAYER[p],
+      stroke:"#FFFFFF", "stroke-width":2.5, filter:"url(#sh)" }, road);
+    el("rect", { x:-L / 2 + 5, y:-2.2, width:Math.max(L - 10, 2), height:4.4, rx:2.2,
+      fill:"#FFFFFF", opacity:.30 }, road);
+  }
+
+  for (let v = 0; v < 54; v++) {
+    const o = S.vertex[v];
+    if (!o) continue;
+    const p = o <= 2 ? 0 : 1, city = o === 2 || o === 4;
+    const anchor = g(layer, { transform:`translate(${VX(v)},${VY(v)})` });
+    const seat = g(anchor);
+    if (isFresh(city ? "city" : "settle", v)) seat.setAttribute("class", "built");
+
+    if (city) {
+      // A keep: wide base with a tower, so a city is unmistakably not a
+      // settlement even at a glance across the board.
+      el("rect", { x:-15, y:-3, width:30, height:17, rx:3.5, fill:PLAYER[p],
+        stroke:"#FFFFFF", "stroke-width":3, filter:"url(#sh)" }, seat);
+      el("rect", { x:-13, y:-16, width:13, height:14, rx:2.5, fill:PLAYER[p],
+        stroke:"#FFFFFF", "stroke-width":3 }, seat);
+      el("rect", { x:2, y:2, width:11, height:8, rx:1.5, fill:"#FFFFFF", opacity:.34 }, seat);
+    } else {
+      // A house, not a dot.
+      el("polygon", {
+        points:"0,-15 13,-3 9.5,-3 9.5,11 -9.5,11 -9.5,-3 -13,-3",
+        fill:PLAYER[p], stroke:"#FFFFFF", "stroke-width":3,
+        "stroke-linejoin":"round", filter:"url(#sh)",
+      }, seat);
+      el("rect", { x:-3.5, y:1, width:7, height:10, rx:1.4, fill:"#FFFFFF", opacity:.36 }, seat);
+    }
+  }
+}
+
+
+CENTER=[HX(9),HY(9)];
+
+const COLORS=["#3e6fa8","#bc503b"];
+function ownership(picks){const state={vertex:Array(54).fill(0),path:Array(72).fill(0)};for(const p of picks){state.vertex[p.chosen]=p.seat===0?3:1;if(p.road!=null)state.path[p.road]=p.seat===0?2:1}return state}
+function baseBoard(root,board,picks){BOARD={res:board[0],num:board[1],port:board[2]};S={...ownership(picks),robber:board[0].indexOf(5)};justBuilt=null;root.replaceChildren();root.setAttribute('viewBox','-470 -185 1040 970');const id=root.id+'-shadow',defs=el('defs',{},root),sh=el('filter',{id,x:'-40%',y:'-40%',width:'180%',height:'180%'},defs);el('feDropShadow',{dx:0,dy:1.5,stdDeviation:2.2,'flood-color':'#000','flood-opacity':.16},sh);drawPorts(root);drawHexes(root);drawGlyphs(root);drawTokens(root);drawRobber(root);drawPieces(root);root.querySelectorAll('[filter]').forEach(n=>n.setAttribute('filter',`url(#${id})`))}
+function label(root,p,active=false){const x=VX(p.chosen),y=VY(p.chosen),color=COLORS[p.seat],group=g(root,{});if(active)el('circle',{cx:x,cy:y,r:27,fill:'none',stroke:color,'stroke-width':4},group);el('line',{x1:x+8,y1:y-9,x2:x+23,y2:y-23,stroke:'white','stroke-width':5},group);el('rect',{x:x+12,y:y-51,width:66,height:34,rx:7,fill:'white',stroke:color,'stroke-width':2.5},group);txt(group,x+45,y-33,p.label,{'font-size':27,'font-weight':700,fill:color})}
+function profile(board,v){const values=[0,0,0,0,0];for(const h of GEO.vertex_hexes[v])if(h!=null&&h>=0&&board[0][h]<5)values[board[0][h]]+=pips(board[1][h]);return values}
+const $=id=>document.getElementById(id);
+const pct=n=>n<0.0005?'<0.1%':(n*100).toFixed(1)+'%';
+function render(index){const c=EXAMPLES[index],p=c.picks[c.step];
+ document.querySelectorAll('#tabs button').forEach((b,i)=>b.setAttribute('aria-pressed',String(i===index)));
+ const visible=c.picks.slice(0,c.step+1).map((x,i)=>i===c.step?{...x,road:null}:x);
+ baseBoard($('board'),c.board,visible);visible.forEach(x=>label($('board'),x,x.label===p.label));
+ el('circle',{cx:VX(c.alt),cy:VY(c.alt),r:29,fill:'none',stroke:'#826b43','stroke-width':5,'stroke-dasharray':'8 5'},$('board'));
+ el('rect',{x:VX(c.alt)-31,y:VY(c.alt)+25,width:62,height:36,rx:6,fill:'#fff',stroke:'#826b43','stroke-width':2},$('board'));
+ txt($('board'),VX(c.alt),VY(c.alt)+44,'Alt',{'font-size':25,'text-anchor':'middle','dominant-baseline':'middle',fill:'#6b532e','font-weight':600});
+ $('board').setAttribute('aria-label',`Board ${c.seed}: ${p.label} at corner ${p.chosen}; maximum-pip alternative at corner ${c.alt}`);
+ $('meta').textContent=`Board ${c.seed.toLocaleString()} (${p.label}, player ${p.seat?'B':'A'})`;
+ $('note').textContent=c.note;
+ const a=profile(c.board,p.chosen),b=profile(c.board,c.alt),prior=[0,0,0,0,0];
+ c.picks.slice(0,c.step).filter(x=>x.seat===p.seat).forEach(x=>profile(c.board,x.chosen).forEach((n,i)=>prior[i]+=n));
+ const coverage=x=>x.filter((n,i)=>n+prior[i]>0).length;
+ $('stats').innerHTML=`<thead><tr><th></th><th>Chosen<br>${p.chosen}</th><th>Max pips<br>${c.alt}</th></tr></thead><tbody>`+
+ RES.map((r,i)=>`<tr><td>${r[0].toUpperCase()+r.slice(1)} pips</td><td>${a[i]}</td><td>${b[i]}</td></tr>`).join('')+
+ `<tr class="total"><td>Total pips</td><td>${a.reduce((a,b)=>a+b,0)}</td><td>${b.reduce((a,b)=>a+b,0)}</td></tr><tr><td>Resources covered</td><td>${coverage(a)} / 5</td><td>${coverage(b)} / 5</td></tr><tr class="total"><td>Network policy</td><td>${pct(c.chosen_stats.preference)}</td><td>${pct(c.alt_stats.preference)}</td></tr></tbody>`;
+ measure();
+}
+EXAMPLES.forEach((c,i)=>{const b=document.createElement('button');b.textContent=c.title;b.type='button';b.onclick=()=>render(i);$('tabs').append(b)});
+let last=0;function measure(){const h=Math.ceil($('figure').getBoundingClientRect().height+12);if(last!==h){last=h;parent.postMessage({type:'catan-figure-resize',height:h},'*')}}
+new ResizeObserver(measure).observe($('figure'));addEventListener('message',e=>{if(e.source===parent&&e.data?.type==='catan-figure-measure'){last=0;measure()}});render(0);
+</script></body></html>

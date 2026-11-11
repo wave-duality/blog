@@ -1,0 +1,96 @@
+{
+  "schema": "opening-remote-context-v1",
+  "boards": 1000,
+  "heldout_boards_screened": 1860,
+  "selection_rng_seed": 141237,
+  "model_sha256": "fbc5209b17a14a1d7b649087efdb1503185c7dfab9d9f5b443d0957431272158",
+  "measures": {
+    "mean_absolute_margin_change": {
+      "n": 1000,
+      "mean": 0.49698666858673096,
+      "ci95": [
+        0.466270942756817,
+        0.5277023944166449
+      ]
+    },
+    "mean_robustness_aligned_margin_change": {
+      "n": 1000,
+      "mean": 0.17403860378265382,
+      "ci95": [
+        0.1318870024717392,
+        0.21619020509356843
+      ]
+    },
+    "moves_margin_toward_improved_coverage": {
+      "n": 1000,
+      "mean": 0.605,
+      "ci95": [
+        0.5746861161638993,
+        0.6353138838361007
+      ]
+    },
+    "reverses_focal_ranking": {
+      "n": 1000,
+      "mean": 0.123,
+      "ci95": [
+        0.10263343914038642,
+        0.14336656085961358
+      ]
+    },
+    "changes_full_greedy_choice": {
+      "n": 1000,
+      "mean": 0.173,
+      "ci95": [
+        0.14954469129510398,
+        0.196455308704896
+      ]
+    },
+    "pearson_margin_change_vs_coverage_contrast_change": 0.2532662299440142
+  },
+  "patches": {
+    "hex_only": {
+      "directional_transfer": 0.1559070281533481,
+      "ci95": [
+        0.12458765284540352,
+        0.18722640346129266
+      ],
+      "mean_absolute_margin_shift": 0.13176279616355896
+    },
+    "derived_vertex_only": {
+      "directional_transfer": 0.8371445697588095,
+      "ci95": [
+        0.8008797133853758,
+        0.8734094261322431
+      ],
+      "mean_absolute_margin_shift": 0.4423876004219055
+    },
+    "hex_and_vertex": {
+      "directional_transfer": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "mean_absolute_margin_shift": 0.49698666858673096
+    }
+  },
+  "validation": {
+    "valid_native_board_pairs": 1000,
+    "focal_vertex_rows_unchanged": true,
+    "path_and_global_inputs_unchanged": true,
+    "all_local_total_pips_unchanged": true,
+    "board_resource_pip_totals_unchanged": true,
+    "identity_max_error": 0.0,
+    "full_patch_max_error": 0.0
+  },
+  "methods": {
+    "selection": "Random permutation of original20k held-out boards, seed141237; take first1000 eligible. Focal corners are original top-two A1 logits. Eligible equal-number resource swaps touch neither focal corner and change their exact worst-reply resource-coverage contrast. Choose largest absolute contrast change, then largest all-five-complement-count contrast change, then hex IDs. No evaluation of changed-board policy used in selection.",
+    "control": "Swap two non-desert resource labels at equal-number hexes. All number tokens, resource inventory, every corner total pips, board-wide pips for each resource, ports and both focal raw vertex rows stay fixed. Native engine reconstructs both boards. All path/global input entries also verified identical.",
+    "activation": "At input embedding boundary, replace only changed hex embeddings, only derived vertex embeddings, or both with their donor values; all unchanged rows are equal. Rerun complete trunk and settlement head. Identity and full-change positive controls pass.",
+    "directional_transfer": "sum(patched margin shift \u00d7 full margin shift) / sum(full margin shift\u00b2). Signed projection, not explained variance or percentage of a concept; pathways interact and transfers need not sum to1.",
+    "uncertainty": "One paired board counterfactual each; normal95%CI for board means and delta-method95%CI for projection. Conditional on selected counterfactual family and frozen policy.",
+    "limitation": "Remote resource swaps also change expansion and distant-port opportunities; a relationship with coverage robustness does not isolate a fallback algorithm or prove minimax planning."
+  },
+  "script_sha256": "9701cfd122203acb78ec65b6042d48d796a5ccd4665a559e4cb9e3dd5d684f5d",
+  "source_manifest_sha256": "2efcfc0fcf3a56ea5c8e5546ceee175f82f55d8583178d440782fb092bf390b9",
+  "elapsed_seconds": 12.948613332933746
+}

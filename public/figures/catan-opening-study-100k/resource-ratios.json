@@ -1,0 +1,1861 @@
+{
+  "source_filename": "results.json",
+  "source_sha256": "6cdc05910d2f40fc49086e17f0b79e76783ebbe62557675310dfbcb8f8a1392a",
+  "method": {
+    "model": "resource_pips (five-resource additive logit surrogate)",
+    "ratio": "beta_numerator / beta_denominator; denominator-resource production pips per numerator-resource production pip at equal fitted score",
+    "covariance": "Use marginal SEs and Var(beta_i - beta_j) from published symmetric normal 95% contrast intervals: Cov(i,j) = (Var(i)+Var(j)-Var(i-j))/2.",
+    "interval": "Pointwise 95% log-ratio delta-method interval, exp(log(ratio) +/- z_0.975 * sqrt(g^T Cov(beta) g)), with g_i=1/beta_i and g_j=-1/beta_j.",
+    "sampling_unit": "Whole training board; covariance inherited from the original board-cluster sandwich, including empirical RMS scaling, around the fixed-ridge estimand.",
+    "caveats": [
+      "Production pips, not resource cards in hand or bank-trade exchange rates.",
+      "Describes the fitted additive score surrogate, not a causal intervention or winning-probability equivalence.",
+      "Ratios allow total production to change. A fixed-total-pip resource substitution has fitted score change beta_i-beta_j instead.",
+      "Geometry and other omitted features may correlate with resource pips. The five-pip regression does not hold them fixed.",
+      "These intervals measure board-sampling uncertainty conditional on this frozen checkpoint and fixed analysis specification, not model misspecification or training-run uncertainty.",
+      "Intervals are pointwise; no simultaneous multiple-comparison guarantee.",
+      "All coefficients are positive and their estimates far from zero, making log-delta intervals appropriate here."
+    ]
+  },
+  "resources": [
+    "wood",
+    "brick",
+    "sheep",
+    "wheat",
+    "ore"
+  ],
+  "stages": [
+    {
+      "stage": "A1",
+      "train_boards": 80000,
+      "held_out_r2": 0.8686854259460088,
+      "raw_coefficients": [
+        1.7747200306413893,
+        2.1109165217163217,
+        1.7631846016123944,
+        1.9765829979081666,
+        2.119340805671246
+      ],
+      "coefficient_covariance": [
+        [
+          4.0498234633512547e-07,
+          1.2856533275251593e-07,
+          5.310094019658114e-08,
+          1.411070623633712e-07,
+          1.1808240186757644e-07
+        ],
+        [
+          1.2856533275251593e-07,
+          6.035897240852024e-07,
+          5.280200143967035e-08,
+          1.6850685494255745e-07,
+          1.1720017530933338e-07
+        ],
+        [
+          5.310094019658114e-08,
+          5.280200143967035e-08,
+          4.781710927899882e-07,
+          1.0527763618296214e-07,
+          -4.9972535739723985e-08
+        ],
+        [
+          1.411070623633712e-07,
+          1.6850685494255745e-07,
+          1.0527763618296214e-07,
+          1.1461069355715719e-06,
+          -4.518128697279859e-07
+        ],
+        [
+          1.1808240186757644e-07,
+          1.1720017530933338e-07,
+          -4.9972535739723985e-08,
+          -4.518128697279859e-07,
+          1.336283365408535e-06
+        ]
+      ],
+      "covariance_eigenvalues": [
+        3.1581648332273007e-07,
+        4.484208957790227e-07,
+        4.806506372469455e-07,
+        1.0119334960654466e-06,
+        1.7123119517762773e-06
+      ],
+      "ratios": [
+        {
+          "numerator": "wood",
+          "denominator": "wood",
+          "ratio": 1.0,
+          "log_ratio_standard_error": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "fixed_total_substitution_logit_difference": 0.0,
+          "fixed_total_substitution_difference_ci95": [
+            0.0,
+            0.0
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0
+        },
+        {
+          "numerator": "wood",
+          "denominator": "brick",
+          "ratio": 0.8407343504035956,
+          "log_ratio_standard_error": 0.0004420420573470928,
+          "ci95": [
+            0.8400062649494388,
+            0.8414630669345082
+          ],
+          "fixed_total_substitution_logit_difference": -0.33619649107493244,
+          "fixed_total_substitution_difference_ci95": [
+            -0.33789549996635904,
+            -0.33449748218350583
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.7144827025482702
+        },
+        {
+          "numerator": "wood",
+          "denominator": "sheep",
+          "ratio": 1.0065423830371738,
+          "log_ratio_standard_error": 0.0004984501700247126,
+          "ci95": [
+            1.0055595272873614,
+            1.00752619945157
+          ],
+          "fixed_total_substitution_logit_difference": 0.011535429028994848,
+          "fixed_total_substitution_difference_ci95": [
+            0.009807821602944907,
+            0.013263036455044789
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0116022186590525
+        },
+        {
+          "numerator": "wood",
+          "denominator": "wheat",
+          "ratio": 0.8978727594639787,
+          "log_ratio_standard_error": 0.0005843675834142145,
+          "ci95": [
+            0.8968449790919524,
+            0.8989017176677572
+          ],
+          "fixed_total_substitution_logit_difference": -0.20186296726677733,
+          "fixed_total_substitution_difference_ci95": [
+            -0.20407075613007666,
+            -0.199655178403478
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.8172069043655574
+        },
+        {
+          "numerator": "wood",
+          "denominator": "ore",
+          "ratio": 0.8373924693434537,
+          "log_ratio_standard_error": 0.0006027425531460515,
+          "ci95": [
+            0.8364037967556853,
+            0.8383823105934035
+          ],
+          "fixed_total_substitution_logit_difference": -0.34462077502985666,
+          "fixed_total_substitution_difference_ci95": [
+            -0.34702530890549743,
+            -0.3422162411542159
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.70848897924178
+        },
+        {
+          "numerator": "brick",
+          "denominator": "wood",
+          "ratio": 1.1894363534925732,
+          "log_ratio_standard_error": 0.0004420420573470928,
+          "ci95": [
+            1.1884062881607504,
+            1.1904673116458144
+          ],
+          "fixed_total_substitution_logit_difference": 0.33619649107493244,
+          "fixed_total_substitution_difference_ci95": [
+            0.33449748218350583,
+            0.33789549996635904
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.3996140094552398
+        },
+        {
+          "numerator": "brick",
+          "denominator": "brick",
+          "ratio": 1.0,
+          "log_ratio_standard_error": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "fixed_total_substitution_logit_difference": 0.0,
+          "fixed_total_substitution_difference_ci95": [
+            0.0,
+            0.0
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0
+        },
+        {
+          "numerator": "brick",
+          "denominator": "sheep",
+          "ratio": 1.1972181017154606,
+          "log_ratio_standard_error": 0.0005107780087742898,
+          "ci95": [
+            1.1960201586247257,
+            1.1984172446753099
+          ],
+          "fixed_total_substitution_logit_difference": 0.3477319201039273,
+          "fixed_total_substitution_difference_ci95": [
+            0.3457954629772382,
+            0.3496683772306164
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.4158526372312128
+        },
+        {
+          "numerator": "brick",
+          "denominator": "wheat",
+          "ratio": 1.0679625009171492,
+          "log_ratio_standard_error": 0.0005899494735799891,
+          "ci95": [
+            1.0667283511832988,
+            1.069198078498646
+          ],
+          "fixed_total_substitution_logit_difference": 0.1343335238081551,
+          "fixed_total_substitution_difference_ci95": [
+            0.1320039823557992,
+            0.13666306526051103
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.1437742319735826
+        },
+        {
+          "numerator": "brick",
+          "denominator": "ore",
+          "ratio": 0.9960250451780189,
+          "log_ratio_standard_error": 0.000616902520558747,
+          "ci95": [
+            0.9948214723709629,
+            0.9972300741131764
+          ],
+          "fixed_total_substitution_logit_difference": -0.008424283954924228,
+          "fixed_total_substitution_difference_ci95": [
+            -0.010983874409705031,
+            -0.005864693500143424
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.9916111008914379
+        },
+        {
+          "numerator": "sheep",
+          "denominator": "wood",
+          "ratio": 0.9935001415266463,
+          "log_ratio_standard_error": 0.0004984501700247126,
+          "ci95": [
+            0.9925300210995338,
+            0.9944712101705614
+          ],
+          "fixed_total_substitution_logit_difference": -0.011535429028994848,
+          "fixed_total_substitution_difference_ci95": [
+            -0.013263036455044789,
+            -0.009807821602944907
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.9885308489393864
+        },
+        {
+          "numerator": "sheep",
+          "denominator": "brick",
+          "ratio": 0.8352696961122853,
+          "log_ratio_standard_error": 0.0005107780087742898,
+          "ci95": [
+            0.8344339206091216,
+            0.8361063087346916
+          ],
+          "fixed_total_substitution_logit_difference": -0.3477319201039273,
+          "fixed_total_substitution_difference_ci95": [
+            -0.3496683772306164,
+            -0.3457954629772382
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.7062881925025486
+        },
+        {
+          "numerator": "sheep",
+          "denominator": "sheep",
+          "ratio": 1.0,
+          "log_ratio_standard_error": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "fixed_total_substitution_logit_difference": 0.0,
+          "fixed_total_substitution_difference_ci95": [
+            0.0,
+            0.0
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0
+        },
+        {
+          "numerator": "sheep",
+          "denominator": "wheat",
+          "ratio": 0.8920367136003834,
+          "log_ratio_standard_error": 0.0006218930611259753,
+          "ci95": [
+            0.8909500831277503,
+            0.8931246693613871
+          ],
+          "fixed_total_substitution_logit_difference": -0.21339839629577217,
+          "fixed_total_substitution_difference_ci95": [
+            -0.21572879492069355,
+            -0.2110679976708508
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.8078342349316124
+        },
+        {
+          "numerator": "sheep",
+          "denominator": "ore",
+          "ratio": 0.8319495368060691,
+          "log_ratio_standard_error": 0.0006914218782064768,
+          "ci95": [
+            0.8308228740027239,
+            0.8330777274550143
+          ],
+          "fixed_total_substitution_logit_difference": -0.3561562040588515,
+          "fixed_total_substitution_difference_ci95": [
+            -0.3588680460453275,
+            -0.3534443620723755
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.700363212114076
+        },
+        {
+          "numerator": "wheat",
+          "denominator": "wood",
+          "ratio": 1.113743556043498,
+          "log_ratio_standard_error": 0.0005843675834142145,
+          "ci95": [
+            1.1124686718749932,
+            1.1150199012236108
+          ],
+          "fixed_total_substitution_logit_difference": 0.20186296726677733,
+          "fixed_total_substitution_difference_ci95": [
+            0.199655178403478,
+            0.20407075613007666
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.2236803123639233
+        },
+        {
+          "numerator": "wheat",
+          "denominator": "brick",
+          "ratio": 0.9363624651064208,
+          "log_ratio_standard_error": 0.0005899494735799891,
+          "ci95": [
+            0.935280393885656,
+            0.937445788227829
+          ],
+          "fixed_total_substitution_logit_difference": -0.1343335238081551,
+          "fixed_total_substitution_difference_ci95": [
+            -0.13666306526051103,
+            -0.1320039823557992
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.8742984166328873
+        },
+        {
+          "numerator": "wheat",
+          "denominator": "sheep",
+          "ratio": 1.1210300929923185,
+          "log_ratio_standard_error": 0.0006218930611259753,
+          "ci95": [
+            1.1196645152742586,
+            1.1223973362114983
+          ],
+          "fixed_total_substitution_logit_difference": 0.21339839629577217,
+          "fixed_total_substitution_difference_ci95": [
+            0.2110679976708508,
+            0.21572879492069355
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.2378777189167471
+        },
+        {
+          "numerator": "wheat",
+          "denominator": "wheat",
+          "ratio": 1.0,
+          "log_ratio_standard_error": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "fixed_total_substitution_logit_difference": 0.0,
+          "fixed_total_substitution_difference_ci95": [
+            0.0,
+            0.0
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0
+        },
+        {
+          "numerator": "wheat",
+          "denominator": "ore",
+          "ratio": 0.9326404666106239,
+          "log_ratio_standard_error": 0.0008980947071349247,
+          "ci95": [
+            0.9310002458314866,
+            0.9342835771035035
+          ],
+          "fixed_total_substitution_logit_difference": -0.14275780776307934,
+          "fixed_total_substitution_difference_ci95": [
+            -0.14636436307050843,
+            -0.13915125245565024
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.8669640154249784
+        },
+        {
+          "numerator": "ore",
+          "denominator": "wood",
+          "ratio": 1.1941831776729932,
+          "log_ratio_standard_error": 0.0006027425531460515,
+          "ci95": [
+            1.192773257933131,
+            1.1955947640109783
+          ],
+          "fixed_total_substitution_logit_difference": 0.34462077502985666,
+          "fixed_total_substitution_difference_ci95": [
+            0.3422162411542159,
+            0.34702530890549743
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.4114545593499466
+        },
+        {
+          "numerator": "ore",
+          "denominator": "brick",
+          "ratio": 1.0039908181438055,
+          "log_ratio_standard_error": 0.000616902520558747,
+          "ci95": [
+            1.0027776196874998,
+            1.0052054843736888
+          ],
+          "fixed_total_substitution_logit_difference": 0.008424283954924228,
+          "fixed_total_substitution_difference_ci95": [
+            0.005864693500143424,
+            0.010983874409705031
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0084598680884276
+        },
+        {
+          "numerator": "ore",
+          "denominator": "sheep",
+          "ratio": 1.2019959814378791,
+          "log_ratio_standard_error": 0.0006914218782064768,
+          "ci95": [
+            1.2003681853972015,
+            1.2036259849012312
+          ],
+          "fixed_total_substitution_logit_difference": 0.3561562040588515,
+          "fixed_total_substitution_difference_ci95": [
+            0.3534443620723755,
+            0.3588680460453275
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.4278305637748414
+        },
+        {
+          "numerator": "ore",
+          "denominator": "wheat",
+          "ratio": 1.072224545042713,
+          "log_ratio_standard_error": 0.0008980947071349247,
+          "ci95": [
+            1.0703388398415743,
+            1.0741135724479738
+          ],
+          "fixed_total_substitution_logit_difference": 0.14275780776307934,
+          "fixed_total_substitution_difference_ci95": [
+            0.13915125245565024,
+            0.14636436307050843
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.1534504110990218
+        },
+        {
+          "numerator": "ore",
+          "denominator": "ore",
+          "ratio": 1.0,
+          "log_ratio_standard_error": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "fixed_total_substitution_logit_difference": 0.0,
+          "fixed_total_substitution_difference_ci95": [
+            0.0,
+            0.0
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0
+        }
+      ]
+    },
+    {
+      "stage": "B1",
+      "train_boards": 80000,
+      "held_out_r2": 0.8743476363699134,
+      "raw_coefficients": [
+        1.5085349292605572,
+        1.7686422147839167,
+        1.6672360460670665,
+        1.8010651313986372,
+        1.949336927297199
+      ],
+      "coefficient_covariance": [
+        [
+          4.298530242281593e-07,
+          1.9847956066684755e-07,
+          5.495545707268384e-08,
+          1.1551269952316472e-07,
+          8.49397287166329e-08
+        ],
+        [
+          1.9847956066684755e-07,
+          7.484843353528129e-07,
+          2.9182737643842372e-08,
+          1.4364522286949322e-07,
+          1.2928884025162357e-07
+        ],
+        [
+          5.495545707268384e-08,
+          2.9182737643842372e-08,
+          5.597666003440642e-07,
+          -4.1653526975683314e-08,
+          -6.315518823047105e-10
+        ],
+        [
+          1.1551269952316472e-07,
+          1.4364522286949322e-07,
+          -4.1653526975683314e-08,
+          9.564355762539597e-07,
+          -3.2934547854040827e-07
+        ],
+        [
+          8.49397287166329e-08,
+          1.2928884025162357e-07,
+          -6.315518823047105e-10,
+          -3.2934547854040827e-07,
+          1.3771728683097453e-06
+        ]
+      ],
+      "covariance_eigenvalues": [
+        3.1961805598213733e-07,
+        5.202066217215715e-07,
+        6.276716416009156e-07,
+        1.0425347280710038e-06,
+        1.561681357113113e-06
+      ],
+      "ratios": [
+        {
+          "numerator": "wood",
+          "denominator": "wood",
+          "ratio": 1.0,
+          "log_ratio_standard_error": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "fixed_total_substitution_logit_difference": 0.0,
+          "fixed_total_substitution_difference_ci95": [
+            0.0,
+            0.0
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0
+        },
+        {
+          "numerator": "wood",
+          "denominator": "brick",
+          "ratio": 0.8529339154357243,
+          "log_ratio_standard_error": 0.000528569856955855,
+          "ci95": [
+            0.8520507523114372,
+            0.8538179939715663
+          ],
+          "fixed_total_substitution_logit_difference": -0.2601072855233595,
+          "fixed_total_substitution_difference_ci95": [
+            -0.26183980747866437,
+            -0.2583747635680546
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.7709688675679601
+        },
+        {
+          "numerator": "wood",
+          "denominator": "sheep",
+          "ratio": 0.904811848819561,
+          "log_ratio_standard_error": 0.0005887000804373979,
+          "ci95": [
+            0.9037684509677513,
+            0.9058564512709294
+          ],
+          "fixed_total_substitution_logit_difference": -0.15870111680650933,
+          "fixed_total_substitution_difference_ci95": [
+            -0.16053942167385607,
+            -0.1568628119391626
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.8532513433483108
+        },
+        {
+          "numerator": "wood",
+          "denominator": "wheat",
+          "ratio": 0.8375793317863456,
+          "log_ratio_standard_error": 0.0006314322588776105,
+          "ci95": [
+            0.8365433977596292,
+            0.8386165486625956
+          ],
+          "fixed_total_substitution_logit_difference": -0.29253020213808,
+          "fixed_total_substitution_difference_ci95": [
+            -0.29463683357603465,
+            -0.29042357070012537
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.7463727026440448
+        },
+        {
+          "numerator": "wood",
+          "denominator": "ore",
+          "ratio": 0.7738708009559825,
+          "log_ratio_standard_error": 0.0007025259396797068,
+          "ci95": [
+            0.7728059717490051,
+            0.7749370973633717
+          ],
+          "fixed_total_substitution_logit_difference": -0.4408019980366418,
+          "fixed_total_substitution_difference_ci95": [
+            -0.4433097920102171,
+            -0.43829420406306646
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.6435201122049344
+        },
+        {
+          "numerator": "brick",
+          "denominator": "wood",
+          "ratio": 1.172423773873673,
+          "log_ratio_standard_error": 0.000528569856955855,
+          "ci95": [
+            1.171209797709302,
+            1.1736390083421757
+          ],
+          "fixed_total_substitution_logit_difference": 0.2601072855233595,
+          "fixed_total_substitution_difference_ci95": [
+            0.2583747635680546,
+            0.26183980747866437
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.297069235953099
+        },
+        {
+          "numerator": "brick",
+          "denominator": "brick",
+          "ratio": 1.0,
+          "log_ratio_standard_error": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "fixed_total_substitution_logit_difference": 0.0,
+          "fixed_total_substitution_difference_ci95": [
+            0.0,
+            0.0
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0
+        },
+        {
+          "numerator": "brick",
+          "denominator": "sheep",
+          "ratio": 1.060822922438645,
+          "log_ratio_standard_error": 0.0006487395553430403,
+          "ci95": [
+            1.0594749367217282,
+            1.0621726232178346
+          ],
+          "fixed_total_substitution_logit_difference": 0.10140616871685015,
+          "fixed_total_substitution_difference_ci95": [
+            0.09921496276424181,
+            0.1035973746694585
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.1067260679927486
+        },
+        {
+          "numerator": "brick",
+          "denominator": "wheat",
+          "ratio": 0.9819979210915365,
+          "log_ratio_standard_error": 0.0006662855798520677,
+          "ci95": [
+            0.98071637115719,
+            0.9832811456897129
+          ],
+          "fixed_total_substitution_logit_difference": -0.03242291661472052,
+          "fixed_total_substitution_difference_ci95": [
+            -0.03475653295339612,
+            -0.030089300276044922
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.9680970711547607
+        },
+        {
+          "numerator": "brick",
+          "denominator": "ore",
+          "ratio": 0.907304524947455,
+          "log_ratio_standard_error": 0.0007257406971468128,
+          "ci95": [
+            0.9060148691754523,
+            0.9085960164641754
+          ],
+          "fixed_total_substitution_logit_difference": -0.18069471251328229,
+          "fixed_total_substitution_difference_ci95": [
+            -0.183372829221564,
+            -0.17801659580500057
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.8346901402581067
+        },
+        {
+          "numerator": "sheep",
+          "denominator": "wood",
+          "ratio": 1.1052021492696231,
+          "log_ratio_standard_error": 0.0005887000804373979,
+          "ci95": [
+            1.1039276682271082,
+            1.1064781016965182
+          ],
+          "fixed_total_substitution_logit_difference": 0.15870111680650933,
+          "fixed_total_substitution_difference_ci95": [
+            0.1568628119391626,
+            0.16053942167385607
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.1719876069293034
+        },
+        {
+          "numerator": "sheep",
+          "denominator": "brick",
+          "ratio": 0.9426643965245173,
+          "log_ratio_standard_error": 0.0006487395553430403,
+          "ci95": [
+            0.9414665546269838,
+            0.9438637624541095
+          ],
+          "fixed_total_substitution_logit_difference": -0.10140616871685015,
+          "fixed_total_substitution_difference_ci95": [
+            -0.1035973746694585,
+            -0.09921496276424181
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.9035659581179686
+        },
+        {
+          "numerator": "sheep",
+          "denominator": "sheep",
+          "ratio": 1.0,
+          "log_ratio_standard_error": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "fixed_total_substitution_logit_difference": 0.0,
+          "fixed_total_substitution_difference_ci95": [
+            0.0,
+            0.0
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0
+        },
+        {
+          "numerator": "sheep",
+          "denominator": "wheat",
+          "ratio": 0.9256944776740837,
+          "log_ratio_standard_error": 0.000723856749950486,
+          "ci95": [
+            0.9243820954029537,
+            0.9270087231868692
+          ],
+          "fixed_total_substitution_logit_difference": -0.13382908533157067,
+          "fixed_total_substitution_difference_ci95": [
+            -0.13630788521104373,
+            -0.13135028545209762
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.8747395576491506
+        },
+        {
+          "numerator": "sheep",
+          "denominator": "ore",
+          "ratio": 0.8552836724735565,
+          "log_ratio_standard_error": 0.0007511252078894319,
+          "ci95": [
+            0.8540254687406564,
+            0.8565437298708864
+          ],
+          "fixed_total_substitution_logit_difference": -0.28210088123013244,
+          "fixed_total_substitution_difference_ci95": [
+            -0.28482953023066526,
+            -0.2793722322295996
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.7541975963139378
+        },
+        {
+          "numerator": "wheat",
+          "denominator": "wood",
+          "ratio": 1.193916757553284,
+          "log_ratio_standard_error": 0.0006314322588776105,
+          "ci95": [
+            1.192440098630029,
+            1.1953952450980172
+          ],
+          "fixed_total_substitution_logit_difference": 0.29253020213808,
+          "fixed_total_substitution_difference_ci95": [
+            0.29042357070012537,
+            0.29463683357603465
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.3398132011761335
+        },
+        {
+          "numerator": "wheat",
+          "denominator": "brick",
+          "ratio": 1.018332094724247,
+          "log_ratio_standard_error": 0.0006662855798520677,
+          "ci95": [
+            1.017003127115348,
+            1.019662798959965
+          ],
+          "fixed_total_substitution_logit_difference": 0.03242291661472052,
+          "fixed_total_substitution_difference_ci95": [
+            0.030089300276044922,
+            0.03475653295339612
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.032954266463367
+        },
+        {
+          "numerator": "wheat",
+          "denominator": "sheep",
+          "ratio": 1.0802700287384426,
+          "log_ratio_standard_error": 0.000723856749950486,
+          "ci95": [
+            1.0787385004988967,
+            1.0818037313499493
+          ],
+          "fixed_total_substitution_logit_difference": 0.13382908533157067,
+          "fixed_total_substitution_difference_ci95": [
+            0.13135028545209762,
+            0.13630788521104373
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.1431974137393364
+        },
+        {
+          "numerator": "wheat",
+          "denominator": "wheat",
+          "ratio": 1.0,
+          "log_ratio_standard_error": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "fixed_total_substitution_logit_difference": 0.0,
+          "fixed_total_substitution_difference_ci95": [
+            0.0,
+            0.0
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0
+        },
+        {
+          "numerator": "wheat",
+          "denominator": "ore",
+          "ratio": 0.9239373174425295,
+          "log_ratio_standard_error": 0.0009191753066595599,
+          "ci95": [
+            0.9222742961677184,
+            0.9256033374345031
+          ],
+          "fixed_total_substitution_logit_difference": -0.14827179589856176,
+          "fixed_total_substitution_difference_ci95": [
+            -0.15166219335765194,
+            -0.1448813984394716
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.8621967415545178
+        },
+        {
+          "numerator": "ore",
+          "denominator": "wood",
+          "ratio": 1.2922053639505124,
+          "log_ratio_standard_error": 0.0007025259396797068,
+          "ci95": [
+            1.290427317781504,
+            1.2939858600429963
+          ],
+          "fixed_total_substitution_logit_difference": 0.4408019980366418,
+          "fixed_total_substitution_difference_ci95": [
+            0.43829420406306646,
+            0.4433097920102171
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.5539529861368833
+        },
+        {
+          "numerator": "ore",
+          "denominator": "brick",
+          "ratio": 1.1021657806213556,
+          "log_ratio_standard_error": 0.0007257406971468128,
+          "ci95": [
+            1.1005991462427114,
+            1.103734645006524
+          ],
+          "fixed_total_substitution_logit_difference": 0.18069471251328229,
+          "fixed_total_substitution_difference_ci95": [
+            0.17801659580500057,
+            0.183372829221564
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.198049373975803
+        },
+        {
+          "numerator": "ore",
+          "denominator": "sheep",
+          "ratio": 1.169202724410617,
+          "log_ratio_standard_error": 0.0007511252078894319,
+          "ci95": [
+            1.167482715857062,
+            1.1709252669883456
+          ],
+          "fixed_total_substitution_logit_difference": 0.28210088123013244,
+          "fixed_total_substitution_difference_ci95": [
+            0.2793722322295996,
+            0.28482953023066526
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.3259124729214145
+        },
+        {
+          "numerator": "ore",
+          "denominator": "wheat",
+          "ratio": 1.0823245052684016,
+          "log_ratio_standard_error": 0.0009191753066595599,
+          "ci95": [
+            1.0803763983519141,
+            1.0842761249611437
+          ],
+          "fixed_total_substitution_logit_difference": 0.14827179589856176,
+          "fixed_total_substitution_difference_ci95": [
+            0.1448813984394716,
+            0.15166219335765194
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.1598280900447695
+        },
+        {
+          "numerator": "ore",
+          "denominator": "ore",
+          "ratio": 1.0,
+          "log_ratio_standard_error": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "fixed_total_substitution_logit_difference": 0.0,
+          "fixed_total_substitution_difference_ci95": [
+            0.0,
+            0.0
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0
+        }
+      ]
+    },
+    {
+      "stage": "B2",
+      "train_boards": 80000,
+      "held_out_r2": 0.7239197953441975,
+      "raw_coefficients": [
+        1.9231854832788027,
+        2.407785775836637,
+        1.4848527632411188,
+        1.8216439838100658,
+        2.1295089715375917
+      ],
+      "coefficient_covariance": [
+        [
+          3.704122455290285e-06,
+          -1.3618197795589885e-06,
+          5.593952002182355e-07,
+          4.023216007142986e-07,
+          9.22062020819301e-07
+        ],
+        [
+          -1.3618197795589885e-06,
+          4.114699650671239e-06,
+          -2.545171422401745e-07,
+          -2.3952710229424596e-07,
+          7.43020418409906e-08
+        ],
+        [
+          5.593952002182355e-07,
+          -2.545171422401745e-07,
+          2.573846835936935e-06,
+          -2.2516756394341783e-07,
+          4.4588328209027885e-07
+        ],
+        [
+          4.023216007142986e-07,
+          -2.3952710229424596e-07,
+          -2.2516756394341783e-07,
+          4.645467398484375e-06,
+          -1.3495795621064203e-06
+        ],
+        [
+          9.22062020819301e-07,
+          7.43020418409906e-08,
+          4.4588328209027885e-07,
+          -1.3495795621064203e-06,
+          5.4424018140285245e-06
+        ]
+      ],
+      "covariance_eigenvalues": [
+        2.097354145054686e-06,
+        2.5297130898566756e-06,
+        3.6355817680610794e-06,
+        5.571339452841784e-06,
+        6.646549698597131e-06
+      ],
+      "ratios": [
+        {
+          "numerator": "wood",
+          "denominator": "wood",
+          "ratio": 1.0,
+          "log_ratio_standard_error": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "fixed_total_substitution_logit_difference": 0.0,
+          "fixed_total_substitution_difference_ci95": [
+            0.0,
+            0.0
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0
+        },
+        {
+          "numerator": "wood",
+          "denominator": "brick",
+          "ratio": 0.7987361261865377,
+          "log_ratio_standard_error": 0.0015163796719757918,
+          "ci95": [
+            0.7963657670042201,
+            0.8011135406729453
+          ],
+          "fixed_total_substitution_logit_difference": -0.48460029255783454,
+          "fixed_total_substitution_difference_ci95": [
+            -0.49096413042151,
+            -0.4782364546941591
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.6159433447062572
+        },
+        {
+          "numerator": "wood",
+          "denominator": "sheep",
+          "ratio": 1.2952028180093065,
+          "log_ratio_standard_error": 0.0013330753087578903,
+          "ci95": [
+            1.2918231555956536,
+            1.298591322281832
+          ],
+          "fixed_total_substitution_logit_difference": 0.43833272003768387,
+          "fixed_total_substitution_difference_ci95": [
+            0.43388089195726937,
+            0.44278454811809836
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.5501205778048783
+        },
+        {
+          "numerator": "wood",
+          "denominator": "wheat",
+          "ratio": 1.0557416818934935,
+          "log_ratio_standard_error": 0.001473676156805268,
+          "ci95": [
+            1.0526967276592012,
+            1.058795443741646
+          ],
+          "fixed_total_substitution_logit_difference": 0.10154149946873692,
+          "fixed_total_substitution_difference_ci95": [
+            0.09615785740510366,
+            0.10692514153237018
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.1068758521986388
+        },
+        {
+          "numerator": "wood",
+          "denominator": "ore",
+          "ratio": 0.9031121770246335,
+          "log_ratio_standard_error": 0.0013233797086916643,
+          "ci95": [
+            0.9007727411211726,
+            0.9054576887784134
+          ],
+          "fixed_total_substitution_logit_difference": -0.206323488258789,
+          "fixed_total_substitution_difference_ci95": [
+            -0.21161988984541938,
+            -0.2010270866721586
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.8135698534151781
+        },
+        {
+          "numerator": "brick",
+          "denominator": "wood",
+          "ratio": 1.2519779276472327,
+          "log_ratio_standard_error": 0.0015163796719757918,
+          "ci95": [
+            1.2482625111541463,
+            1.2557044029677642
+          ],
+          "fixed_total_substitution_logit_difference": 0.48460029255783454,
+          "fixed_total_substitution_difference_ci95": [
+            0.4782364546941591,
+            0.49096413042151
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.6235259437325344
+        },
+        {
+          "numerator": "brick",
+          "denominator": "brick",
+          "ratio": 1.0,
+          "log_ratio_standard_error": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "fixed_total_substitution_logit_difference": 0.0,
+          "fixed_total_substitution_difference_ci95": [
+            0.0,
+            0.0
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0
+        },
+        {
+          "numerator": "brick",
+          "denominator": "sheep",
+          "ratio": 1.6215653399741474,
+          "log_ratio_standard_error": 0.0014210960528125616,
+          "ci95": [
+            1.6170550828831012,
+            1.6260881769823794
+          ],
+          "fixed_total_substitution_logit_difference": 0.9229330125955184,
+          "fixed_total_substitution_difference_ci95": [
+            0.91767476097157,
+            0.9281912642194668
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 2.516660973979887
+        },
+        {
+          "numerator": "brick",
+          "denominator": "wheat",
+          "ratio": 1.3217652830278201,
+          "log_ratio_standard_error": 0.0014895915061991815,
+          "ci95": [
+            1.3179119565926725,
+            1.3256298758639906
+          ],
+          "fixed_total_substitution_logit_difference": 0.5861417920265715,
+          "fixed_total_substitution_difference_ci95": [
+            0.5801842683815038,
+            0.5920993156716391
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.7970416625355485
+        },
+        {
+          "numerator": "brick",
+          "denominator": "ore",
+          "ratio": 1.1306765118242814,
+          "log_ratio_standard_error": 0.0013714598541389143,
+          "ci95": [
+            1.1276413210244987,
+            1.1337198722281923
+          ],
+          "fixed_total_substitution_logit_difference": 0.27827680429904555,
+          "fixed_total_substitution_difference_ci95": [
+            0.27226495306554116,
+            0.28428865553254995
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.3208517640582167
+        },
+        {
+          "numerator": "sheep",
+          "denominator": "wood",
+          "ratio": 0.7720798519701914,
+          "log_ratio_standard_error": 0.0013330753087578903,
+          "ci95": [
+            0.7700652105412505,
+            0.7740997640957323
+          ],
+          "fixed_total_substitution_logit_difference": -0.43833272003768387,
+          "fixed_total_substitution_difference_ci95": [
+            -0.44278454811809836,
+            -0.43388089195726937
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.6451111057541713
+        },
+        {
+          "numerator": "sheep",
+          "denominator": "brick",
+          "ratio": 0.616688070069346,
+          "log_ratio_standard_error": 0.0014210960528125616,
+          "ci95": [
+            0.6149728004638435,
+            0.618408123869885
+          ],
+          "fixed_total_substitution_logit_difference": -0.9229330125955184,
+          "fixed_total_substitution_difference_ci95": [
+            -0.9281912642194668,
+            -0.91767476097157
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.39735189218537625
+        },
+        {
+          "numerator": "sheep",
+          "denominator": "sheep",
+          "ratio": 1.0,
+          "log_ratio_standard_error": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "fixed_total_substitution_logit_difference": 0.0,
+          "fixed_total_substitution_difference_ci95": [
+            0.0,
+            0.0
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0
+        },
+        {
+          "numerator": "sheep",
+          "denominator": "wheat",
+          "ratio": 0.8151168814750893,
+          "log_ratio_standard_error": 0.0016534199552298717,
+          "ci95": [
+            0.8124796536652065,
+            0.8177626694630514
+          ],
+          "fixed_total_substitution_logit_difference": -0.33679122056894695,
+          "fixed_total_substitution_difference_ci95": [
+            -0.34221917066032304,
+            -0.33136327047757086
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.7140579049444545
+        },
+        {
+          "numerator": "sheep",
+          "denominator": "ore",
+          "ratio": 0.6972747159496563,
+          "log_ratio_standard_error": 0.0014441273105671236,
+          "ci95": [
+            0.6953039138652337,
+            0.6992511041681111
+          ],
+          "fixed_total_substitution_logit_difference": -0.6446562082964729,
+          "fixed_total_substitution_difference_ci95": [
+            -0.6498876903571623,
+            -0.6394247262357834
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.5248429477449246
+        },
+        {
+          "numerator": "wheat",
+          "denominator": "wood",
+          "ratio": 0.9472014008260812,
+          "log_ratio_standard_error": 0.001473676156805268,
+          "ci95": [
+            0.9444694968332407,
+            0.9499412069263494
+          ],
+          "fixed_total_substitution_logit_difference": -0.10154149946873692,
+          "fixed_total_substitution_difference_ci95": [
+            -0.10692514153237018,
+            -0.09615785740510366
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.9034436861312437
+        },
+        {
+          "numerator": "wheat",
+          "denominator": "brick",
+          "ratio": 0.756563977614286,
+          "log_ratio_standard_error": 0.0014895915061991815,
+          "ci95": [
+            0.7543583757481639,
+            0.7587760282450116
+          ],
+          "fixed_total_substitution_logit_difference": -0.5861417920265715,
+          "fixed_total_substitution_difference_ci95": [
+            -0.5920993156716391,
+            -0.5801842683815038
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.5564701257894282
+        },
+        {
+          "numerator": "wheat",
+          "denominator": "sheep",
+          "ratio": 1.226817923572303,
+          "log_ratio_standard_error": 0.0016534199552298717,
+          "ci95": [
+            1.2228486788918926,
+            1.2308000520245197
+          ],
+          "fixed_total_substitution_logit_difference": 0.33679122056894695,
+          "fixed_total_substitution_difference_ci95": [
+            0.33136327047757086,
+            0.34221917066032304
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.4004466487599327
+        },
+        {
+          "numerator": "wheat",
+          "denominator": "wheat",
+          "ratio": 1.0,
+          "log_ratio_standard_error": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "fixed_total_substitution_logit_difference": 0.0,
+          "fixed_total_substitution_difference_ci95": [
+            0.0,
+            0.0
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0
+        },
+        {
+          "numerator": "wheat",
+          "denominator": "ore",
+          "ratio": 0.8554291191808246,
+          "log_ratio_standard_error": 0.0018154499231636252,
+          "ci95": [
+            0.8523907260401814,
+            0.8584783428392048
+          ],
+          "fixed_total_substitution_logit_difference": -0.3078649877275259,
+          "fixed_total_substitution_difference_ci95": [
+            -0.3148736140404763,
+            -0.3008563614145755
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.7350145472946641
+        },
+        {
+          "numerator": "ore",
+          "denominator": "wood",
+          "ratio": 1.1072821576767686,
+          "log_ratio_standard_error": 0.0013233797086916643,
+          "ci95": [
+            1.1044138366632428,
+            1.1101579281310416
+          ],
+          "fixed_total_substitution_logit_difference": 0.206323488258789,
+          "fixed_total_substitution_difference_ci95": [
+            0.2010270866721586,
+            0.21161988984541938
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.2291507555279135
+        },
+        {
+          "numerator": "ore",
+          "denominator": "brick",
+          "ratio": 0.8844262612182131,
+          "log_ratio_standard_error": 0.0013714598541389143,
+          "ci95": [
+            0.88205210519475,
+            0.8868068075861815
+          ],
+          "fixed_total_substitution_logit_difference": -0.27827680429904555,
+          "fixed_total_substitution_difference_ci95": [
+            -0.28428865553254995,
+            -0.27226495306554116
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.7570872275080861
+        },
+        {
+          "numerator": "ore",
+          "denominator": "sheep",
+          "ratio": 1.434154970954376,
+          "log_ratio_standard_error": 0.0014441273105671236,
+          "ci95": [
+            1.4301014242797452,
+            1.4382200071921696
+          ],
+          "fixed_total_substitution_logit_difference": 0.6446562082964729,
+          "fixed_total_substitution_difference_ci95": [
+            0.6394247262357834,
+            0.6498876903571623
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.9053318793682321
+        },
+        {
+          "numerator": "ore",
+          "denominator": "wheat",
+          "ratio": 1.1690039274763282,
+          "log_ratio_standard_error": 0.0018154499231636252,
+          "ci95": [
+            1.164851750007749,
+            1.173170905607507
+          ],
+          "fixed_total_substitution_logit_difference": 0.3078649877275259,
+          "fixed_total_substitution_difference_ci95": [
+            0.3008563614145755,
+            0.3148736140404763
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.3605172900055602
+        },
+        {
+          "numerator": "ore",
+          "denominator": "ore",
+          "ratio": 1.0,
+          "log_ratio_standard_error": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "fixed_total_substitution_logit_difference": 0.0,
+          "fixed_total_substitution_difference_ci95": [
+            0.0,
+            0.0
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0
+        }
+      ]
+    },
+    {
+      "stage": "A2",
+      "train_boards": 80000,
+      "held_out_r2": 0.6851163524855581,
+      "raw_coefficients": [
+        1.9760248838896017,
+        2.235797312180617,
+        1.8013234447459239,
+        2.0154968613700692,
+        2.1298076074696652
+      ],
+      "coefficient_covariance": [
+        [
+          5.54328666437783e-06,
+          -1.5023471500872496e-06,
+          6.091777365066212e-07,
+          8.693026682429123e-07,
+          1.054876331467002e-06
+        ],
+        [
+          -1.5023471500872496e-06,
+          6.451415117800326e-06,
+          -5.259393738774278e-07,
+          -5.92102112689981e-07,
+          8.543697136196135e-08
+        ],
+        [
+          6.091777365066212e-07,
+          -5.259393738774278e-07,
+          3.7072925354894467e-06,
+          -5.833237364502087e-07,
+          3.762901749822044e-07
+        ],
+        [
+          8.693026682429123e-07,
+          -5.92102112689981e-07,
+          -5.833237364502087e-07,
+          7.753948164250624e-06,
+          -2.1282802610308683e-06
+        ],
+        [
+          1.054876331467002e-06,
+          8.543697136196135e-08,
+          3.762901749822044e-07,
+          -2.1282802610308683e-06,
+          7.381223837414033e-06
+        ]
+      ],
+      "covariance_eigenvalues": [
+        3.2948052180911965e-06,
+        3.9724399399493075e-06,
+        5.5869083205164414e-06,
+        8.142949098557149e-06,
+        9.840063742218156e-06
+      ],
+      "ratios": [
+        {
+          "numerator": "wood",
+          "denominator": "wood",
+          "ratio": 1.0,
+          "log_ratio_standard_error": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "fixed_total_substitution_logit_difference": 0.0,
+          "fixed_total_substitution_difference_ci95": [
+            0.0,
+            0.0
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0
+        },
+        {
+          "numerator": "wood",
+          "denominator": "brick",
+          "ratio": 0.8838121743523994,
+          "log_ratio_standard_error": 0.001841291305298548,
+          "ci95": [
+            0.8806283642702318,
+            0.8870074951319856
+          ],
+          "fixed_total_substitution_logit_difference": -0.25977242829101543,
+          "fixed_total_substitution_difference_ci95": [
+            -0.2673631833513265,
+            -0.25218167323070434
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.7712270752981276
+        },
+        {
+          "numerator": "wood",
+          "denominator": "sheep",
+          "ratio": 1.0969850471070284,
+          "log_ratio_standard_error": 0.0014899371762026354,
+          "ci95": [
+            1.093786278749355,
+            1.1001931702346461
+          ],
+          "fixed_total_substitution_logit_difference": 0.17470143914367786,
+          "fixed_total_substitution_difference_ci95": [
+            0.16914667031992722,
+            0.1802562079674285
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.1908906102095533
+        },
+        {
+          "numerator": "wood",
+          "denominator": "wheat",
+          "ratio": 0.9804157583983357,
+          "log_ratio_standard_error": 0.0017005598318836793,
+          "ci95": [
+            0.9771534370943928,
+            0.9836889712776303
+          ],
+          "fixed_total_substitution_logit_difference": -0.03947197748046749,
+          "fixed_total_substitution_difference_ci95": [
+            -0.04613545999471832,
+            -0.03280849496621666
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.9612968915740876
+        },
+        {
+          "numerator": "wood",
+          "denominator": "ore",
+          "ratio": 0.9277950163006665,
+          "log_ratio_standard_error": 0.0015954867235588232,
+          "ci95": [
+            0.9248982433425187,
+            0.9307008619255985
+          ],
+          "fixed_total_substitution_logit_difference": -0.1537827235800635,
+          "fixed_total_substitution_difference_ci95": [
+            -0.16022822176823728,
+            -0.14733722539188973
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.8574583062440558
+        },
+        {
+          "numerator": "brick",
+          "denominator": "wood",
+          "ratio": 1.1314621239888842,
+          "log_ratio_standard_error": 0.001841291305298548,
+          "ci95": [
+            1.1273861895058748,
+            1.1355527945419863
+          ],
+          "fixed_total_substitution_logit_difference": 0.25977242829101543,
+          "fixed_total_substitution_difference_ci95": [
+            0.25218167323070434,
+            0.2673631833513265
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.2966349756502484
+        },
+        {
+          "numerator": "brick",
+          "denominator": "brick",
+          "ratio": 1.0,
+          "log_ratio_standard_error": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "fixed_total_substitution_logit_difference": 0.0,
+          "fixed_total_substitution_difference_ci95": [
+            0.0,
+            0.0
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0
+        },
+        {
+          "numerator": "brick",
+          "denominator": "sheep",
+          "ratio": 1.2411970313837644,
+          "log_ratio_standard_error": 0.0016414389401105622,
+          "ci95": [
+            1.2372103168363635,
+            1.2451965924881865
+          ],
+          "fixed_total_substitution_logit_difference": 0.4344738674346933,
+          "fixed_total_substitution_difference_ci95": [
+            0.4279114741200979,
+            0.4410362607492887
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.5441504173711738
+        },
+        {
+          "numerator": "brick",
+          "denominator": "wheat",
+          "ratio": 1.1093032963895537,
+          "log_ratio_standard_error": 0.0018606932967165648,
+          "ci95": [
+            1.1052651550490817,
+            1.1133561912807108
+          ],
+          "fixed_total_substitution_logit_difference": 0.22030045081054794,
+          "fixed_total_substitution_difference_ci95": [
+            0.21261160240210028,
+            0.2279892992189956
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.2464511715988267
+        },
+        {
+          "numerator": "brick",
+          "denominator": "ore",
+          "ratio": 1.0497649197698538,
+          "log_ratio_standard_error": 0.0016976266782119198,
+          "ci95": [
+            1.0462778548935034,
+            1.0532636064361474
+          ],
+          "fixed_total_substitution_logit_difference": 0.10598970471095193,
+          "fixed_total_substitution_difference_ci95": [
+            0.09874532014678902,
+            0.11323408927511483
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.1118104300378646
+        },
+        {
+          "numerator": "sheep",
+          "denominator": "wood",
+          "ratio": 0.9115894538737812,
+          "log_ratio_standard_error": 0.0014899371762026354,
+          "ci95": [
+            0.9089312922990814,
+            0.9142553892186407
+          ],
+          "fixed_total_substitution_logit_difference": -0.17470143914367786,
+          "fixed_total_substitution_difference_ci95": [
+            -0.1802562079674285,
+            -0.16914667031992722
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.8397076871939031
+        },
+        {
+          "numerator": "sheep",
+          "denominator": "brick",
+          "ratio": 0.8056738573449029,
+          "log_ratio_standard_error": 0.0016414389401105622,
+          "ci95": [
+            0.8030860396122448,
+            0.8082700139108705
+          ],
+          "fixed_total_substitution_logit_difference": -0.4344738674346933,
+          "fixed_total_substitution_difference_ci95": [
+            -0.4410362607492887,
+            -0.4279114741200979
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.6476053036999089
+        },
+        {
+          "numerator": "sheep",
+          "denominator": "sheep",
+          "ratio": 1.0,
+          "log_ratio_standard_error": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "fixed_total_substitution_logit_difference": 0.0,
+          "fixed_total_substitution_difference_ci95": [
+            0.0,
+            0.0
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0
+        },
+        {
+          "numerator": "sheep",
+          "denominator": "wheat",
+          "ratio": 0.8937366657675878,
+          "log_ratio_standard_error": 0.0018364853064655555,
+          "ci95": [
+            0.8905254924301124,
+            0.8969594183740354
+          ],
+          "fixed_total_substitution_logit_difference": -0.21417341662414535,
+          "fixed_total_substitution_difference_ci95": [
+            -0.22113829368031288,
+            -0.20720853956797783
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.8072083895303653
+        },
+        {
+          "numerator": "sheep",
+          "denominator": "ore",
+          "ratio": 0.8457681522163405,
+          "log_ratio_standard_error": 0.00160424616814969,
+          "ci95": [
+            0.8431130096838377,
+            0.8484316563584815
+          ],
+          "fixed_total_substitution_logit_difference": -0.32848416272374137,
+          "fixed_total_substitution_difference_ci95": [
+            -0.3347853588487203,
+            -0.32218296659876244
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.7200143312013976
+        },
+        {
+          "numerator": "wheat",
+          "denominator": "wood",
+          "ratio": 1.0199754455534846,
+          "log_ratio_standard_error": 0.0017005598318836793,
+          "ci95": [
+            1.0165814898800631,
+            1.023380732276338
+          ],
+          "fixed_total_substitution_logit_difference": 0.03947197748046749,
+          "fixed_total_substitution_difference_ci95": [
+            0.03280849496621666,
+            0.04613545999471832
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0402613477325797
+        },
+        {
+          "numerator": "wheat",
+          "denominator": "brick",
+          "ratio": 0.9014667163206826,
+          "log_ratio_standard_error": 0.0018606932967165648,
+          "ci95": [
+            0.8981851520937647,
+            0.9047602699060867
+          ],
+          "fixed_total_substitution_logit_difference": -0.22030045081054794,
+          "fixed_total_substitution_difference_ci95": [
+            -0.2279892992189956,
+            -0.21261160240210028
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.8022777167574859
+        },
+        {
+          "numerator": "wheat",
+          "denominator": "sheep",
+          "ratio": 1.1188978121885014,
+          "log_ratio_standard_error": 0.0018364853064655555,
+          "ci95": [
+            1.1148776405210747,
+            1.1229324803169283
+          ],
+          "fixed_total_substitution_logit_difference": 0.21417341662414535,
+          "fixed_total_substitution_difference_ci95": [
+            0.20720853956797783,
+            0.22113829368031288
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.2388374711786643
+        },
+        {
+          "numerator": "wheat",
+          "denominator": "wheat",
+          "ratio": 1.0,
+          "log_ratio_standard_error": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "fixed_total_substitution_logit_difference": 0.0,
+          "fixed_total_substitution_difference_ci95": [
+            0.0,
+            0.0
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0
+        },
+        {
+          "numerator": "wheat",
+          "denominator": "ore",
+          "ratio": 0.9463281351335749,
+          "log_ratio_standard_error": 0.0021278197193817187,
+          "ci95": [
+            0.942389739097827,
+            0.9502829903503719
+          ],
+          "fixed_total_substitution_logit_difference": -0.11431074609959602,
+          "fixed_total_substitution_difference_ci95": [
+            -0.12294165230646734,
+            -0.1056798398927247
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.8919807332779367
+        },
+        {
+          "numerator": "ore",
+          "denominator": "wood",
+          "ratio": 1.0778242849236586,
+          "log_ratio_standard_error": 0.0015954867235588232,
+          "ci95": [
+            1.0744590887463275,
+            1.0812000208650725
+          ],
+          "fixed_total_substitution_logit_difference": 0.1537827235800635,
+          "fixed_total_substitution_difference_ci95": [
+            0.14733722539188973,
+            0.16022822176823728
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.1662374633471366
+        },
+        {
+          "numerator": "ore",
+          "denominator": "brick",
+          "ratio": 0.9525942248281988,
+          "log_ratio_standard_error": 0.0016976266782119198,
+          "ci95": [
+            0.9494299374718059,
+            0.9557690582123486
+          ],
+          "fixed_total_substitution_logit_difference": -0.10598970471095193,
+          "fixed_total_substitution_difference_ci95": [
+            -0.11323408927511483,
+            -0.09874532014678902
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 0.8994339079603195
+        },
+        {
+          "numerator": "ore",
+          "denominator": "sheep",
+          "ratio": 1.1823571239700785,
+          "log_ratio_standard_error": 0.00160424616814969,
+          "ci95": [
+            1.1786453186955077,
+            1.1860806185104342
+          ],
+          "fixed_total_substitution_logit_difference": 0.32848416272374137,
+          "fixed_total_substitution_difference_ci95": [
+            0.32218296659876244,
+            0.3347853588487203
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.3888612443747133
+        },
+        {
+          "numerator": "ore",
+          "denominator": "wheat",
+          "ratio": 1.0567159137235724,
+          "log_ratio_standard_error": 0.0021278197193817187,
+          "ci95": [
+            1.0523181096099568,
+            1.061132096957385
+          ],
+          "fixed_total_substitution_logit_difference": 0.11431074609959602,
+          "fixed_total_substitution_difference_ci95": [
+            0.1056798398927247,
+            0.12294165230646734
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.1211004483528515
+        },
+        {
+          "numerator": "ore",
+          "denominator": "ore",
+          "ratio": 1.0,
+          "log_ratio_standard_error": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "fixed_total_substitution_logit_difference": 0.0,
+          "fixed_total_substitution_difference_ci95": [
+            0.0,
+            0.0
+          ],
+          "implied_softmax_odds_multiplier_for_substitution": 1.0
+        }
+      ]
+    }
+  ]
+}

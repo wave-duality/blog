@@ -29,16 +29,84 @@
 }
 
 /* Post content styles */
+.post-content {
+  --article-rule: #e7e5e1;
+  --article-muted: #6f6d68;
+  --article-surface: #fafaf8;
+}
+
 .post-content p {
   margin-bottom: 1.2rem;
   line-height: 1.75;
 }
 
+.post-content :is(h1, h2, h3, h4, h5, h6) {
+  color: #242321;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  text-wrap: balance;
+  scroll-margin-top: 2rem;
+}
+
+.post-content h2 {
+  font-size: clamp(1.55rem, 2.6vw, 1.85rem);
+  margin: 3.5rem 0 1.25rem;
+}
+
+.post-content > h2 {
+  border-top: 1px solid var(--article-rule);
+  padding-top: 1.75rem;
+}
+
+.post-content > h2:first-child {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
 .post-content h3 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin: 2rem 0 1rem;
+  font-size: clamp(1.25rem, 2.2vw, 1.45rem);
+  margin: 2.65rem 0 1rem;
+}
+
+.post-content h4 {
+  font-size: 1.08em;
+  margin: 2rem 0 0.8rem;
   letter-spacing: -0.01em;
+}
+
+.post-content :is(h5, h6) {
+  font-size: 1em;
+  margin: 1.75rem 0 0.75rem;
+  letter-spacing: 0;
+}
+
+.post-content hr {
+  width: 4rem;
+  border: 0;
+  border-top: 1px solid #c9c6c0;
+  margin: 3.25rem auto;
+}
+
+/* A Markdown divider already supplies the break before a section heading. */
+.post-content > hr + h2 {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* Numbered experiments use a quiet, short rule within the larger section. */
+.post-content > h3[id^="section-experiment-"] {
+  margin-top: 3.5rem;
+}
+
+.post-content > h3[id^="section-experiment-"]::before {
+  content: "";
+  display: block;
+  width: 3rem;
+  border-top: 1px solid #cecbc5;
+  margin-bottom: 1.5rem;
 }
 
 .post-content ul,
@@ -166,17 +234,14 @@
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* Print styles */
-.post-content h2 {
-  font-size: 1.45rem;
-  font-weight: 600;
-  margin: 2.3rem 0 1rem;
-}
-
 .post-content a {
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration-color: #b7b3ac;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.17em;
 }
+
+.post-content a:hover { text-decoration-color: currentColor; }
 
 .post-content img {
   max-width: 100%;
@@ -198,10 +263,13 @@
 }
 
 .post-content blockquote {
-  border-left: 2px solid #ccc;
-  padding-left: 1.25rem;
-  color: #555;
+  border-left: 2px solid #c9c6c0;
+  margin: 1.75rem 0;
+  padding: 0.15rem 0 0.15rem 1.35rem;
+  color: #56534e;
 }
+
+.post-content blockquote > :last-child { margin-bottom: 0; }
 
 .post-content .katex-display {
   overflow-x: auto;
@@ -219,11 +287,8 @@
 
 .article-layout {
   width: 100%;
+  max-width: 48rem;
   margin-inline: auto;
-}
-
-@media (min-width: 768px) {
-  .article-layout { width: 85%; }
 }
 
 .paper-article {
@@ -233,22 +298,39 @@
   overflow-wrap: break-word;
 }
 
-.article-header { margin: 1.5rem 0 1.25rem; }
-.article-header h1 { font-size: clamp(1.9rem, 3vw, 2.5rem); font-weight: 600; }
-.article-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 1.25rem; color: #777; font-size: 0.85rem; }
-.article-meta time, .article-meta > div { margin: 0; font-size: inherit; }
-.article-sections { border-block: 1px solid #e5e5e5; padding: 0.85rem 0; margin-bottom: 2rem; font-size: 0.9rem; }
-.article-sections-label { color: #888; font-size: 0.75rem; }
-.article-sections ul { display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem; list-style: none; margin-top: 0.25rem; }
-.article-sections a { text-decoration: underline; text-decoration-color: #ccc; text-underline-offset: 4px; }
-.article-sections a:hover { text-decoration-color: #333; }
-.article-sections a:focus-visible { outline: 2px solid #555; outline-offset: 4px; }
-.post-content :is(h1,h2,h3,h4,h5,h6) { scroll-margin-top: 1.5rem; }
-.post-content details { margin: 0.65rem 0; padding: 0 1rem; border: 1px solid #ddd; border-radius: 4px; background: #fafafa; font-size: 0.92rem; line-height: 1.5; }
-.post-content details summary { cursor: pointer; padding: 0.65rem 0; line-height: 1.4; }
+.article-header { margin: 2rem 0 1.75rem; }
+.article-header h1 {
+  font-size: clamp(2.35rem, 4.5vw, 3.25rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 1.1;
+  text-wrap: balance;
+  margin-bottom: 1rem;
+}
+.article-meta {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.article-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 1.1rem; color: #73716c; font-size: 0.78rem; line-height: 1.5; }
+.article-meta time, .article-meta > div { margin: 0; color: inherit; font-size: inherit; }
+.post-content details { margin: 0.8rem 0; padding: 0 1.1rem; border: 1px solid var(--article-rule); border-radius: 7px; background: var(--article-surface); font-size: 0.94em; line-height: 1.6; }
+.post-content details summary { cursor: pointer; position: relative; padding: 0.85rem 0 0.85rem 1.2rem; line-height: 1.45; list-style: none; }
+.post-content details summary::-webkit-details-marker { display: none; }
+.post-content details summary::before {
+  content: "";
+  position: absolute;
+  left: 0.05rem;
+  top: calc(0.85rem + 0.45em);
+  width: 0.35rem;
+  height: 0.35rem;
+  border-right: 1px solid #7c7871;
+  border-bottom: 1px solid #7c7871;
+  transform: rotate(-45deg);
+}
+.post-content details[open] > summary::before { transform: rotate(45deg); }
+.post-content details summary:hover { color: #615b50; }
 .post-content details summary:focus-visible { outline: 2px solid #777; outline-offset: 3px; }
 .post-content details[open] { padding-bottom: 0.75rem; }
-.post-content details[open] summary { border-bottom: 1px solid #e5e5e5; margin-bottom: 0.75rem; }
+.post-content details[open] > summary { border-bottom: 1px solid var(--article-rule); margin-bottom: 0.9rem; }
 .post-content details p { margin-bottom: 0.55rem; line-height: 1.5; }
 .post-content details :is(ul,ol) { margin-top: 0.35rem; margin-bottom: 0.6rem; }
 .paper-article .post-content details li, .post-content details li { margin-bottom: 0.2rem; padding-left: 0.1rem; }
@@ -271,20 +353,19 @@
 .paper-abstract { margin: 0 0 3rem; font-size: 0.95em; }
 .paper-abstract h2 { text-align: center; font-weight: 600; margin-bottom: 0.75rem; }
 .paper-abstract p { white-space: pre-line; }
-.paper-article .post-content h2 {
-  font-size: 1.4rem;
-  margin-top: 2.8rem;
-  text-wrap: balance;
-}
-.paper-article .post-content > h2:first-child { margin-top: 0; }
 .paper-article .post-content p { text-wrap: pretty; }
 .paper-article .post-content li { padding-left: 0.3rem; margin-bottom: 0.9rem; }
 .paper-article .post-content li > p:last-child { margin-bottom: 0; }
-.paper-article .post-content h3 { font-weight: 600; }
 
 @media (max-width: 640px) {
   .paper-article { font-size: 1.025rem; }
-  .article-header { margin-top: 1rem; }
+  .article-header { margin-top: 1.5rem; }
+  .post-content > h2 { margin-top: 2.75rem; padding-top: 1.4rem; }
+  .post-content > h2:first-child,
+  .post-content > hr + h2 { margin-top: 0; padding-top: 0; }
+  .post-content > h3[id^="section-experiment-"] { margin-top: 2.75rem; }
+  .post-content > h3[id^="section-experiment-"]::before { margin-bottom: 1.25rem; }
+  .post-content details { padding-inline: 0.85rem; }
 }
 
 @media print {
@@ -311,4 +392,352 @@
   max-width: 100%;
   border: 0;
   margin: 1.5rem 0;
+}
+
+/* Catan experiment section: display math and numeric tables. */
+.paper-article .post-content #section-model-behavior-and-interpretability-experiments ~ p {
+  margin-block: 0 1.25rem;
+}
+
+.paper-article .post-content #section-model-behavior-and-interpretability-experiments ~ p:has(> em:only-child) {
+  color: #666;
+  font-size: 0.9em;
+  line-height: 1.55;
+  margin: 1.75rem auto 0.5rem;
+  text-align: center;
+}
+
+.paper-article .post-content #section-model-behavior-and-interpretability-experiments ~ table,
+.paper-article .post-content #section-model-behavior-and-interpretability-experiments ~ details table {
+  font-size: 0.94em;
+  font-variant-numeric: tabular-nums lining-nums;
+  margin: 1rem auto 1.8rem;
+  max-width: 100%;
+  width: fit-content;
+}
+
+.paper-article .post-content #section-model-behavior-and-interpretability-experiments ~ table :is(th, td),
+.paper-article .post-content #section-model-behavior-and-interpretability-experiments ~ details table :is(th, td) {
+  line-height: 1.55;
+  padding: 0.65rem 0.85rem;
+}
+
+.paper-article .post-content #section-model-behavior-and-interpretability-experiments ~ table :is(th, td):not(:first-child),
+.paper-article .post-content #section-model-behavior-and-interpretability-experiments ~ details table :is(th, td):not(:first-child) {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.paper-article .post-content #section-model-behavior-and-interpretability-experiments ~ table thead,
+.paper-article .post-content #section-model-behavior-and-interpretability-experiments ~ details table thead {
+  background: #f6f6f3;
+}
+
+.paper-article .post-content #section-model-behavior-and-interpretability-experiments ~ .katex-display,
+.paper-article .post-content #section-model-behavior-and-interpretability-experiments ~ details .katex-display {
+  margin: 1.9rem 0;
+  padding: 0.65rem 0;
+  text-align: center;
+}
+
+.paper-article .post-content #section-model-behavior-and-interpretability-experiments ~ .katex-display > .katex,
+.paper-article .post-content #section-model-behavior-and-interpretability-experiments ~ details .katex-display > .katex {
+  text-align: center;
+}
+
+.paper-article .post-content #section-model-behavior-and-interpretability-experiments ~ details {
+  font-size: 0.93em;
+  line-height: 1.65;
+  margin: 1rem auto;
+  padding-inline: 1.15rem;
+}
+
+.paper-article .post-content #section-model-behavior-and-interpretability-experiments ~ details summary {
+  line-height: 1.55;
+  padding-block: 0.85rem;
+}
+
+.paper-article .post-content #section-model-behavior-and-interpretability-experiments ~ details p {
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 640px) {
+  .paper-article .post-content #section-model-behavior-and-interpretability-experiments ~ details {
+    padding-inline: 0.75rem;
+  }
+}
+
+/* The contents overlay does not change the article's reading width. */
+.article-contents {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 40;
+  width: 0;
+  pointer-events: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #54564f;
+}
+.article-contents button { cursor: pointer; font: inherit; color: inherit; }
+.article-contents button:focus-visible,
+.article-contents a:focus-visible { outline: 2px solid #7b8b70; outline-offset: 3px; }
+.article-contents-edge { display: none; }
+.article-contents-trigger {
+  position: fixed;
+  left: 1rem;
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 44px;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid #e2e3dc;
+  border-radius: 8px;
+  background: rgba(255, 255, 253, 0.96);
+  box-shadow: 0 2px 10px rgb(35 39 28 / 6%);
+  pointer-events: auto;
+}
+.article-contents-trigger-label { font-size: 0.75rem; font-weight: 500; }
+.article-contents-marks { display: none; }
+.article-contents-panel {
+  position: fixed;
+  left: 1rem;
+  bottom: calc(max(1rem, env(safe-area-inset-bottom)) + 3.5rem);
+  width: min(19.5rem, calc(100vw - 2rem));
+  max-height: min(75dvh, 46rem);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e4e5de;
+  border-radius: 10px;
+  background: #fffffd;
+  box-shadow: 0 8px 32px rgb(35 39 28 / 9%), 0 2px 6px rgb(35 39 28 / 3%);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(7px);
+  transition: opacity 160ms ease, transform 180ms ease, visibility 180ms;
+  pointer-events: none;
+  overflow: hidden;
+}
+.article-contents[data-open="true"] .article-contents-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.article-contents-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 0.75rem 0.9rem 1.2rem;
+  border-bottom: 1px solid #eeeee8;
+  flex: 0 0 auto;
+}
+.article-contents-eyebrow {
+  font-size: 0.61rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #888a80;
+}
+.article-contents-header p {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  font-size: 1.08rem;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+  color: #32362d;
+  margin-top: 0.25rem;
+  max-width: 22ch;
+}
+.article-contents-close {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  background: none;
+  border-radius: 5px;
+}
+.article-contents-close:hover { background: #f1f2ed; }
+.article-contents-list {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #d6dacd transparent;
+  padding: 0.75rem 0.8rem 1rem;
+}
+.article-contents-list ol { list-style: none; margin: 0; padding: 0; }
+.article-contents-group + .article-contents-group { margin-top: 0.25rem; }
+.article-contents-list a {
+  display: block;
+  padding: 0.48rem 0.65rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #66695f;
+  font-size: 0.79rem;
+  line-height: 1.45;
+  transition: color 120ms ease, background 120ms ease;
+}
+.article-contents-group > a { font-weight: 500; color: #3d4236; }
+.article-contents-group > ol {
+  margin: 0.15rem 0 0.6rem 0.65rem;
+  padding-left: 0.55rem;
+  border-left: 1px solid #e6e8df;
+}
+.article-contents-group > ol a { font-size: 0.745rem; padding-block: 0.4rem; }
+.article-contents-list a:hover { background: #f4f5ef; color: #323a29; }
+.article-contents-list a[aria-current="location"] {
+  color: #435b36;
+  background: #eef2e8;
+  box-shadow: inset 2px 0 #7f946e;
+}
+.article-contents-fallback { display: flex; flex-wrap: wrap; gap: 0.6rem 1rem; margin-block: 1.5rem; font-size: 0.85rem; }
+@media (min-width: 40rem) and (hover: hover) and (pointer: fine) {
+  .article-contents-edge {
+    display: block;
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: clamp(12px, calc((100vw - 48rem) / 2 - 2rem), 72px);
+    pointer-events: auto;
+  }
+  .article-contents-trigger {
+    left: 0.75rem;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    min-width: 32px;
+    padding: 0.6rem 0.4rem;
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+    color: #9b9e91;
+    opacity: 0.8;
+    transition: opacity 160ms ease;
+  }
+  .article-contents-trigger:hover,
+  .article-contents-trigger:focus-visible { opacity: 1; }
+  .article-contents-trigger-label { display: none; }
+  .article-contents-marks { display: flex; flex-direction: column; gap: 9px; align-items: flex-start; }
+  .article-contents-marks > span {
+    display: block;
+    width: 12px;
+    height: 2px;
+    border-radius: 2px;
+    background: #d3d6cb;
+    transition: width 160ms ease, background 160ms ease;
+  }
+  .article-contents-marks > span[data-active="true"] { width: 20px; background: #73875f; }
+  .article-contents-panel {
+    left: 0.75rem;
+    top: 2rem;
+    bottom: 2rem;
+    width: 19rem;
+    max-height: none;
+    border: 0;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    transform: translateX(-7px);
+  }
+  .article-contents[data-open="true"] .article-contents-panel { transform: translateX(0); }
+  .article-contents-header {
+    margin: 0 0 0.2rem 4px;
+    padding: 0.2rem 0.75rem 0.9rem 0.75rem;
+    border-bottom: 0;
+    border-left: 2px solid #858585;
+  }
+  .article-contents-header > div {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.55rem;
+  }
+  .article-contents-header p {
+    margin: 0;
+    color: #303030;
+    font-size: 1.3rem;
+    line-height: 1.15;
+    font-weight: 500;
+    font-variant: small-caps;
+    letter-spacing: 0.015em;
+  }
+  .article-contents-eyebrow {
+    color: #8a8a8a;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  .article-contents-close { color: #929292; }
+  .article-contents-close:hover { color: #333; background: #f7f7f7; }
+  .article-contents-list {
+    min-height: 0;
+    padding: 0 0.75rem 1rem 4px;
+    scrollbar-color: #dedede transparent;
+  }
+  .article-contents-list > ol { border-left: 1px solid #dedede; }
+  .article-contents-group + .article-contents-group { margin-top: 0; }
+  .article-contents-list a {
+    position: relative;
+    padding: 0.5rem 0.35rem 0.5rem 0.75rem;
+    border-radius: 0;
+    color: #7b7b7b;
+    font-size: 0.86rem;
+    line-height: 1.35;
+    font-weight: 400;
+  }
+  .article-contents-list a::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: calc(0.5rem + 0.55em);
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #969696;
+    box-shadow: 0 0 0 4px #fff;
+  }
+  .article-contents-group > ol {
+    margin: 0 0 0.1rem 1rem;
+    padding-left: 0;
+    border: 0;
+  }
+  .article-contents-group > ol a { font-size: 0.82rem; padding-block: 0.5rem; }
+  .article-contents-group > ol a::before { left: calc(-1rem - 2px); }
+  .article-contents-list a:hover { color: #292929; background: transparent; }
+  .article-contents-list a[aria-current="location"] {
+    color: #292929;
+    background: transparent;
+    box-shadow: none;
+    font-weight: 500;
+  }
+  .article-contents-list a[aria-current="location"]::before {
+    background: #454545;
+    outline: 1px solid #454545;
+  }
+  .article-contents-marks > span { background: #d6d6d6; }
+  .article-contents-marks > span[data-active="true"] { background: #777; }
+  .article-contents a:focus-visible,
+  .article-contents button:focus-visible { outline-color: #777; }
+
+  .article-contents[data-open="true"] .article-contents-trigger { opacity: 0; pointer-events: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .article-contents *, .article-contents *::before { transition: none !important; }
+}
+@media print {
+  .article-contents, .article-contents-fallback { display: none !important; }
+}
+
+/* Give the article title the same generous pacing as the margin outline. */
+@media screen and (min-width: 64rem) {
+  .article-header { margin-top: 5rem; margin-bottom: 4rem; }
+  .article-header h1 { font-size: 3.5rem; }
 }

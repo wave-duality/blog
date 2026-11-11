@@ -1,0 +1,52 @@
+{
+  "schema": "opening-policy-baseline-protocol-v1",
+  "created_utc": "2026-11-05T17:50:32.703572+00:00",
+  "boards": 10000,
+  "seed_start": 5500000,
+  "seed_end": 5509999,
+  "chunk_boards": 16,
+  "max_turns": 500,
+  "resources": [
+    "wood",
+    "brick",
+    "sheep",
+    "wheat",
+    "ore"
+  ],
+  "resource_weights": [
+    1.7747200306413893,
+    2.1109165217163217,
+    1.7631846016123944,
+    1.9765829979081666,
+    2.119340805671246
+  ],
+  "coefficient_source": "/Users/owenzhang/CatanRL/run/analysis/opening-study-100k-20261029/analysis/results.json",
+  "coefficient_source_sha256": "6cdc05910d2f40fc49086e17f0b79e76783ebbe62557675310dfbcb8f8a1392a",
+  "model_sha256": "fbc5209b17a14a1d7b649087efdb1503185c7dfab9d9f5b443d0957431272158",
+  "script_sha256": "1daa7dd36067278e790255374389a7d83f6b4e5fb6ef2a9b79321eddb0bcbe7d",
+  "helper_sha256": "384135eb9f824651c2f098cc2c6926d2e4caf90e3b54d464e5d2c786494b3dee",
+  "rule_definitions": {
+    "network": "Highest legal frozen Generation 37 logit.",
+    "max_pips": "Highest sum of adjacent production pips; exact ties choose lowest corner index.",
+    "resource_weighted": "Highest weighted sum of adjacent resource pips, using fixed A1 five-resource additive-regression coefficients at every setup stage; exact ties choose lowest corner index."
+  },
+  "intervention": "For each board and tested seat, only that seat's two setup settlements follow the assigned rule. Opponent settlements, all opening roads and all later actions use the same frozen greedy network. No search, exploration or resignation.",
+  "comparison": "Three rules x two tested seats per board. Network controls are intentionally duplicated and must produce identical full game histories. Each board begins each condition with the same generator seed, including the chance RNG state; later actions can consume different random events.",
+  "primary_estimand": "Seat-balanced probability of the tested seat winning, and its paired difference from network controls, averaged over fresh independently seeded boards.",
+  "uncertainty": "Paired differences first average A and B within each board. Normal paired-SE and 10000 board-bootstrap percentile 95% intervals. Bootstrap seed 411237. Two exploratory heuristic comparisons, pointwise intervals.",
+  "censoring": "500-turn cap fixed before outcomes; report terminal counts and sharp 0/1 bounds for missing outcomes. Complete-pair estimates exclude a board only when a required condition is capped.",
+  "runtime_policy": "Fixed sample of 10000 new boards authorized before any fresh-cohort outcomes. Four workers execute the unchanged 16-board chunks; concurrency validated against prior full histories. No sample-size or policy tuning based on new outcomes.",
+  "expansion": {
+    "prior_protocol_sha256": "51be74174af9060a8135863658877d9bd933784a00ed82c613c5d1275b3329e8",
+    "prior_boards": 1024,
+    "prior_seed_start": 5400000,
+    "prior_seed_end": 5401023,
+    "workers": 4,
+    "logical_cpus": 10,
+    "torch_threads_per_worker": 1,
+    "torch_interop_threads_per_worker": 1,
+    "chunk_policy": "Original play() and original 16-board chunks; no change to inference batch membership.",
+    "orchestrator_sha256": "0d9424a956c3e3793d0359a4e18aa6e659c0b0911c8aa96f5e234f2b9bb1f8e4",
+    "independent_fresh_cohort": true
+  }
+}

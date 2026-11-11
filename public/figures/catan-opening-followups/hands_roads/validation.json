@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "independent_single_row_decisions": 256,
+  "original_seed_boards_rechecked": 128,
+  "all_source_board_distribution_checks_pass": true,
+  "max_saved_preference_error": 1.0763343495368005e-06,
+  "unique_board_counts": {
+    "hands": 2000,
+    "roads": 2000,
+    "factorial": 1000,
+    "readiness": 1000
+  },
+  "summary_recomputed_from_saved_cases": true,
+  "patch_controls": {
+    "hands-patches.json": {
+      "n": 512,
+      "max_control_error": 0.0
+    },
+    "roads-patches.json": {
+      "n": 512,
+      "max_control_error": 0.0
+    }
+  },
+  "script_sha256": "5dad47903eccf0d5310e88a814079963c0eca850743b46bac3d295fbfb18b1c2",
+  "native_sources": {
+    "catan/src/py.rs": "edeade9812690d08d1f5d2bfbf77c6f6723c13ac92eab56483beb6b07e5d4b4c",
+    "catan/src/rules.rs": "88899579d56f351506ab0640f60349d62bbffdbc4b9b3a4b5103ddd177b70b44",
+    "catan/src/features.rs": "0a0a9a22a08be8a5310c4ecf6deaec4d56b3f1599e3f4061c777dd842801dbd6",
+    "catan/src/state.rs": "d4a90b2ff102e10df6fac643b0ef60e7ae99b8a197fdbbbf941efd4a95afcdf5"
+  }
+}

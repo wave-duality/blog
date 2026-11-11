@@ -1,0 +1,133 @@
+{
+  "schema": "opening-remote-fixed-optimism-results-v1",
+  "sample": 500,
+  "results": {
+    "all": {
+      "aligned_fraction": {
+        "n": 500,
+        "mean": 0.458,
+        "ci95": [
+          0.4145386728630147,
+          0.5014613271369853
+        ]
+      },
+      "signed_logit_change": {
+        "n": 500,
+        "mean": -0.06624992513656616,
+        "ci95": [
+          -0.11842346880414029,
+          -0.014076381468992046
+        ]
+      },
+      "absolute_logit_change": {
+        "n": 500,
+        "mean": 0.419257182598114,
+        "ci95": [
+          0.3816489964537438,
+          0.45686536874248423
+        ]
+      }
+    },
+    "proxy_favors_original_favorite": {
+      "aligned_fraction": {
+        "n": 250,
+        "mean": 0.4,
+        "ci95": [
+          0.33915091692135035,
+          0.4608490830786497
+        ]
+      },
+      "signed_logit_change": {
+        "n": 250,
+        "mean": -0.10991511535644531,
+        "ci95": [
+          -0.18717446063815596,
+          -0.03265577007473468
+        ]
+      },
+      "absolute_logit_change": {
+        "n": 250,
+        "mean": 0.4261451606750488,
+        "ci95": [
+          0.368233554374389,
+          0.48405676697570865
+        ]
+      }
+    },
+    "proxy_favors_original_runner_up": {
+      "aligned_fraction": {
+        "n": 250,
+        "mean": 0.516,
+        "ci95": [
+          0.4539279699500668,
+          0.5780720300499332
+        ]
+      },
+      "signed_logit_change": {
+        "n": 250,
+        "mean": -0.022584734916687013,
+        "ci95": [
+          -0.09272251504958305,
+          0.047553045216209025
+        ]
+      },
+      "absolute_logit_change": {
+        "n": 250,
+        "mean": 0.4123692045211792,
+        "ci95": [
+          0.36437182421812747,
+          0.46036658482423093
+        ]
+      }
+    }
+  },
+  "focal_ranking_reversed": {
+    "n": 500,
+    "mean": 0.142,
+    "ci95": [
+      0.11142876017810871,
+      0.17257123982189126
+    ]
+  },
+  "any_greedy_choice_changed": {
+    "n": 500,
+    "mean": 0.166,
+    "ci95": [
+      0.1333780428828906,
+      0.19862195711710942
+    ]
+  },
+  "proxy_change_logit_change_pearson": -0.11377337696758333,
+  "proxy_change_logit_change_r2": 0.01294438130660782,
+  "validation": {
+    "exhaustive_boards": 40,
+    "exhaustive_objectives": 160,
+    "focal_vertex_max_error": 0.0,
+    "focal_hex_max_error": 0.0,
+    "all_path_max_error": 0.0,
+    "global_max_error": 0.0,
+    "native_states": 1000
+  },
+  "methods": {
+    "utility": "sum_r beta_A1,r * (pips_A1,r + pips_A2,r); a production-quality proxy, not game value.",
+    "intervention": "Swap different resources on equal-number tiles touching neither original top-two A1 candidates. Each focal optimistic pair score exactly unchanged. Relative worst-reply score changes by at least0.1 proxy units.",
+    "selection": "Fixed random permutation of existing20k heldout boards; per board maximize absolute proxy-margin change, tile-ID tie breaks; select250 positive and250 negative proxy changes, with no donor-network evaluation during selection. Source top-two candidates are network-defined.",
+    "limitation": "Remote swaps also change opponent opportunities and other global context. Alignment with this proxy does not identify a minimax algorithm. Direction balancing makes the sample diagnostic, not prevalence-representative.",
+    "uncertainty": "Normal95% intervals for conditional selected-board means; overall means use equal-weight direction strata and stratified standard errors."
+  },
+  "weights": [
+    1.7747200306413893,
+    2.1109165217163217,
+    1.7631846016123944,
+    1.9765829979081666,
+    2.119340805671246
+  ],
+  "screened": 1423,
+  "provenance": {
+    "checkpoint_sha256": "fbc5209b17a14a1d7b649087efdb1503185c7dfab9d9f5b443d0957431272158",
+    "manifest_sha256": "2efcfc0fcf3a56ea5c8e5546ceee175f82f55d8583178d440782fb092bf390b9",
+    "regression_results_sha256": "6cdc05910d2f40fc49086e17f0b79e76783ebbe62557675310dfbcb8f8a1392a",
+    "script_sha256": "0f77ccbad24d5ba660a04a2065fb17f5744579e8f080d1a66a00067db69604be"
+  },
+  "evaluation_seconds": 0.49524866603314877
+}

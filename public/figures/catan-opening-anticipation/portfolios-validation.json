@@ -1,0 +1,8 @@
+{
+  "native_legal_reply_sequences": 20,
+  "a2_proxy_feature_reconstruction_max_error": 3.552713678800501e-15,
+  "old_exact_pip_metric_agrees_all_54000_first_shard_choices": true,
+  "baseline_regression_parity": true,
+  "script_hashes_match": true,
+  "main_exact_exhaustive_cases": 300
+}

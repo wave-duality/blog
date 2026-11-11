@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "boards": 1000,
+  "model_stage_comparisons": 20,
+  "max_absolute_r2_difference": 3.763089728714419e-09,
+  "max_absolute_raw_coefficient_difference": 8.093027631161931e-06,
+  "all_top_choice_agreements_match": true,
+  "original_metrics_sha256": "8eef596e4a12909b37b2f56756de5147ec8c3fab08da644c625242d3de5a80c0",
+  "scale_analysis_sha256": "a2430c35f2770cc4adf054f136ed1964bc55b5b06b8e877ad814662e1510dac5",
+  "note": "Same saved original1000-board candidates reencoded in compact float32 shards. No new policy evaluations or changed histories. All20 original stage/model combinations compared."
+}

@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "scope": "Independent verification without importing either analysis module or their helpers.",
+  "contrasts_verified": 28,
+  "unique_heldout_boards": 20000,
+  "df": 19999,
+  "maximum_absolute_reconstruction_differences": {
+    "paired_t": 5.684341886080802e-14,
+    "delta_r2": 5.551115123125783e-17,
+    "delta_r2_se": 5.421010862427522e-20,
+    "mean_mse_gain": 1.7763568394002505e-15,
+    "mse_gain_se": 3.469446951953614e-18,
+    "ci95": 5.551115123125783e-17,
+    "r2": 1.1102230246251565e-16
+  },
+  "holm_validation": "27 Student-tail upper bounds remain below 0.001 after multiplication by all 28 tests; remaining p is largest and its Holm factor is 1.",
+  "largest_two_sided_p_direct_density_integration": 0.023188872157059944,
+  "largest_p_contrast": {
+    "stage": "A1",
+    "reduced": "resource_coverage_ports_numbers",
+    "full": "full_context",
+    "paired_t": -2.270483165996779,
+    "delta_r2": -2.1939413020822385e-05
+  },
+  "positive_holm_significant_contrasts": 27,
+  "negative_holm_significant_contrasts": 1,
+  "raw_candidate_validation": {
+    "sampled_board_seeds": [
+      4100017,
+      4100535,
+      4100999,
+      4150006,
+      4150561,
+      4150997,
+      4199009,
+      4199503,
+      4199993
+    ],
+    "shards_checked": 3,
+    "board_model_errors_checked": 252,
+    "max_absolute_mse_difference": 7.105427357601002e-15,
+    "max_absolute_target_variance_difference": 2.842170943040401e-14
+  }
+}

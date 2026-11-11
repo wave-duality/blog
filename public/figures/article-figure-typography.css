@@ -1,0 +1,23 @@
+/* Shared with every Catan article figure. Match the article's serif stack. */
+:root {
+  --article-figure-font: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  --article-figure-code-font: "SF Mono", Monaco, Consolas, monospace;
+}
+
+/* A figure is a separate document: article CSS cannot reach its labels,
+   form controls, or SVG text. Override the older per-figure font choices. */
+body,
+html > body,
+body :not(pre, code, kbd, samp, .mono, .code, .katex, math):not(pre *, code *, kbd *, samp *, .mono *, .code *, .katex *, math *) {
+  font-family: var(--article-figure-font) !important;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body :is(pre, code, kbd, samp, .mono, .code),
+body :is(pre, code, kbd, samp, .mono, .code) * {
+  font-family: var(--article-figure-code-font) !important;
+}

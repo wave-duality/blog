@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="547.2pt" height="266.4pt" viewBox="0 0 547.2 266.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<title>Different opening resources lead to different building patterns</title><desc>Across 2,048 paired boards, wood and brick openings produce more roads and settlements by turn40; ore and wheat openings produce more cities and development cards. Exact means and paired intervals are in the adjacent article dropdown.</desc><style>text{font-family:"Palatino Linotype","Book Antiqua",Palatino,Georgia,serif!important}</style>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-04T16:22:23.265349</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 266.4 
+L 547.2 266.4 
+L 547.2 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 128.592 223.776 
+L 525.312 223.776 
+L 525.312 45.288 
+L 128.592 45.288 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 128.592 223.776 
+L 128.592 45.288 
+" clip-path="url(#pa3c3a7219d)" style="fill: none; stroke: #eeece7; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 13px; font-family: 'Palatino'; text-anchor: middle; fill: #6f6d68" x="128.592" y="242.2335" transform="rotate(-0 128.592 242.2335)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 256.566194 223.776 
+L 256.566194 45.288 
+" clip-path="url(#pa3c3a7219d)" style="fill: none; stroke: #eeece7; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 13px; font-family: 'Palatino'; text-anchor: middle; fill: #6f6d68" x="256.566194" y="242.2335" transform="rotate(-0 256.566194 242.2335)">1</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 384.540387 223.776 
+L 384.540387 45.288 
+" clip-path="url(#pa3c3a7219d)" style="fill: none; stroke: #eeece7; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 13px; font-family: 'Palatino'; text-anchor: middle; fill: #6f6d68" x="384.540387" y="242.2335" transform="rotate(-0 384.540387 242.2335)">2</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 512.514581 223.776 
+L 512.514581 45.288 
+" clip-path="url(#pa3c3a7219d)" style="fill: none; stroke: #eeece7; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="font-size: 13px; font-family: 'Palatino'; text-anchor: middle; fill: #6f6d68" x="512.514581" y="242.2335" transform="rotate(-0 512.514581 242.2335)">3</text>
+     </g>
+    </g>
+    <g id="text_5">
+     <text style="font-size: 13px; font-family: 'Palatino'; text-anchor: middle; fill: #56534e" x="326.952" y="263.272094" transform="rotate(-0 326.952 263.272094)">Actions by turn 40</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_9"/>
+     <g id="text_6">
+      <text style="font-size: 13px; font-family: 'Palatino'; text-anchor: end; fill: #282725" x="119.592" y="70.892006" transform="rotate(-0 119.592 70.892006)">Roads</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_10"/>
+     <g id="text_7">
+      <text style="font-size: 13px; font-family: 'Palatino'; text-anchor: end; fill: #282725" x="119.592" y="116.471169" transform="rotate(-0 119.592 116.471169)">Settlements</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_11"/>
+     <g id="text_8">
+      <text style="font-size: 13px; font-family: 'Palatino'; text-anchor: end; fill: #282725" x="119.592" y="162.050331" transform="rotate(-0 119.592 162.050331)">Cities</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_12"/>
+     <g id="text_9">
+      <text style="font-size: 13px; font-family: 'Palatino'; text-anchor: end; fill: #282725" x="119.592" y="207.629494" transform="rotate(-0 119.592 207.629494)">Development cards</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 128.592 223.776 
+L 525.312 223.776 
+" style="fill: none; stroke: #d7d4ce; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 128.592 53.401091 
+L 473.959855 53.401091 
+L 473.959855 64.795882 
+L 128.592 64.795882 
+z
+" clip-path="url(#pa3c3a7219d)" style="fill: #8aa68c"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 128.592 98.980253 
+L 301.682096 98.980253 
+L 301.682096 110.375044 
+L 128.592 110.375044 
+z
+" clip-path="url(#pa3c3a7219d)" style="fill: #8aa68c"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 128.592 144.559416 
+L 242.381554 144.559416 
+L 242.381554 155.954206 
+L 128.592 155.954206 
+z
+" clip-path="url(#pa3c3a7219d)" style="fill: #8aa68c"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 128.592 190.138578 
+L 243.068915 190.138578 
+L 243.068915 201.533369 
+L 128.592 201.533369 
+z
+" clip-path="url(#pa3c3a7219d)" style="fill: #8aa68c"/>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 12px; font-family: 'Palatino'; text-anchor: start; fill: #282725" x="480.998436" y="61.810674" transform="rotate(-0 480.998436 61.810674)">2.70</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 12px; font-family: 'Palatino'; text-anchor: start; fill: #282725" x="308.720676" y="107.389836" transform="rotate(-0 308.720676 107.389836)">1.35</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 12px; font-family: 'Palatino'; text-anchor: start; fill: #282725" x="249.420135" y="152.968999" transform="rotate(-0 249.420135 152.968999)">0.89</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 12px; font-family: 'Palatino'; text-anchor: start; fill: #282725" x="250.107496" y="198.548161" transform="rotate(-0 250.107496 198.548161)">0.89</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 128.592 67.530631 
+L 386.602471 67.530631 
+L 386.602471 78.925422 
+L 128.592 78.925422 
+z
+" clip-path="url(#pa3c3a7219d)" style="fill: #c3a46b"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 128.592 113.109794 
+L 262.502496 113.109794 
+L 262.502496 124.504584 
+L 128.592 124.504584 
+z
+" clip-path="url(#pa3c3a7219d)" style="fill: #c3a46b"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 128.592 158.688956 
+L 285.560347 158.688956 
+L 285.560347 170.083747 
+L 128.592 170.083747 
+z
+" clip-path="url(#pa3c3a7219d)" style="fill: #c3a46b"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 128.592 204.268118 
+L 331.86351 204.268118 
+L 331.86351 215.662909 
+L 128.592 215.662909 
+z
+" clip-path="url(#pa3c3a7219d)" style="fill: #c3a46b"/>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 12px; font-family: 'Palatino'; text-anchor: start; fill: #282725" x="393.641052" y="75.940214" transform="rotate(-0 393.641052 75.940214)">2.02</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 12px; font-family: 'Palatino'; text-anchor: start; fill: #282725" x="269.541077" y="121.519376" transform="rotate(-0 269.541077 121.519376)">1.05</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 12px; font-family: 'Palatino'; text-anchor: start; fill: #282725" x="292.598927" y="167.098539" transform="rotate(-0 292.598927 167.098539)">1.23</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 12px; font-family: 'Palatino'; text-anchor: start; fill: #282725" x="338.90209" y="212.677701" transform="rotate(-0 338.90209 212.677701)">1.59</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_12">
+     <path d="M 131.4576 29.397495 
+L 145.8576 29.397495 
+L 145.8576 20.997495 
+L 131.4576 20.997495 
+z
+" style="fill: #8aa68c"/>
+    </g>
+    <g id="text_18">
+     <text style="font-size: 12px; font-family: 'Palatino'; text-anchor: start; fill: #282725" x="155.4576" y="29.397495" transform="rotate(-0 155.4576 29.397495)">More wood / brick</text>
+    </g>
+    <g id="patch_13">
+     <path d="M 278.82135 29.397495 
+L 293.22135 29.397495 
+L 293.22135 20.997495 
+L 278.82135 20.997495 
+z
+" style="fill: #c3a46b"/>
+    </g>
+    <g id="text_19">
+     <text style="font-size: 12px; font-family: 'Palatino'; text-anchor: start; fill: #282725" x="302.82135" y="29.397495" transform="rotate(-0 302.82135 29.397495)">More ore / wheat</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pa3c3a7219d">
+   <rect x="128.592" y="45.288" width="396.72" height="178.488"/>
+  </clipPath>
+ </defs>
+</svg>

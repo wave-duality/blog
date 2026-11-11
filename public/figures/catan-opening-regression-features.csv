@@ -1,0 +1,51 @@
+name,unit,definition,formula,models
+total_pips,production pips,"Expected production numerator: cards per roll = pips / 36, ignoring robber and bank shortage.",sum_r P_r(v),total_pips
+wood_pips,production pips,Candidate settlement production pips for wood.,P_wood(v): sum of pip(number) over touching wood hexes,resource_pips;resource_coverage;resource_coverage_ports;resource_coverage_ports_numbers;full_context
+brick_pips,production pips,Candidate settlement production pips for brick.,P_brick(v): sum of pip(number) over touching brick hexes,resource_pips;resource_coverage;resource_coverage_ports;resource_coverage_ports_numbers;full_context
+sheep_pips,production pips,Candidate settlement production pips for sheep.,P_sheep(v): sum of pip(number) over touching sheep hexes,resource_pips;resource_coverage;resource_coverage_ports;resource_coverage_ports_numbers;full_context
+wheat_pips,production pips,Candidate settlement production pips for wheat.,P_wheat(v): sum of pip(number) over touching wheat hexes,resource_pips;resource_coverage;resource_coverage_ports;resource_coverage_ports_numbers;full_context
+ore_pips,production pips,Candidate settlement production pips for ore.,P_ore(v): sum of pip(number) over touching ore hexes,resource_pips;resource_coverage;resource_coverage_ports;resource_coverage_ports_numbers;full_context
+adjacent_hexes,hexes,"Number of touching hexes, including desert; coastal/interior control.","count of all hexes touching v, including desert",resource_coverage;resource_coverage_ports;resource_coverage_ports_numbers;full_context
+local_resource_count,resource types,Distinct producing resources touched by this candidate.,sum_r 1[P_r(v) > 0],resource_coverage;resource_coverage_ports;resource_coverage_ports_numbers;full_context
+new_resource_types,resource types,Resources added that existing own settlements do not produce.,sum_r 1[P_r(v) > 0 and O_r = 0],resource_coverage;resource_coverage_ports;resource_coverage_ports_numbers;full_context
+new_resource_pips,production pips,Candidate pips in resources missing from existing own settlements.,sum_r P_r(v) * 1[O_r = 0],resource_coverage;resource_coverage_ports;resource_coverage_ports_numbers;full_context
+combined_resource_count,resource types,Distinct resources after adding this candidate to existing own settlements.,sum_r 1[C_r(v) > 0],
+all_five_covered,"indicator, 0 or 1",One if the combined own portfolio produces all five resources.,1[all five C_r(v) > 0],resource_coverage;resource_coverage_ports;resource_coverage_ports_numbers;full_context
+combined_total_pips,production pips,"Sum of candidate and existing own settlement pips, counting each settlement.",sum_r C_r(v),
+combined_concentration_hhi,dimensionless resource-share concentration,"Sum of squared resource shares; 1 means one-resource concentration, 0.2 means five equal shares.",sum_r (C_r(v) / sum_s C_s(v))^2; zero if total is zero,resource_coverage;resource_coverage_ports;resource_coverage_ports_numbers;full_context
+combined_resource_entropy,nats,Natural-log entropy of combined resource pip shares; zero when concentrated in one resource.,"-sum_r q_r log(q_r), q_r = C_r / sum_s C_s; zero shares contribute zero",
+combined_wood_pips,production pips,Own portfolio production pips after adding the candidate for wood.,C_wood(v) = P_wood(v) + O_wood,
+wood_starting_cards,cards,Cards of this resource granted immediately if this is the actor's second settlement; first placements receive zero.,count of touching producing wood hexes if this is the actor's second settlement; otherwise 0,
+combined_brick_pips,production pips,Own portfolio production pips after adding the candidate for brick.,C_brick(v) = P_brick(v) + O_brick,
+brick_starting_cards,cards,Cards of this resource granted immediately if this is the actor's second settlement; first placements receive zero.,count of touching producing brick hexes if this is the actor's second settlement; otherwise 0,
+combined_sheep_pips,production pips,Own portfolio production pips after adding the candidate for sheep.,C_sheep(v) = P_sheep(v) + O_sheep,
+sheep_starting_cards,cards,Cards of this resource granted immediately if this is the actor's second settlement; first placements receive zero.,count of touching producing sheep hexes if this is the actor's second settlement; otherwise 0,
+combined_wheat_pips,production pips,Own portfolio production pips after adding the candidate for wheat.,C_wheat(v) = P_wheat(v) + O_wheat,
+wheat_starting_cards,cards,Cards of this resource granted immediately if this is the actor's second settlement; first placements receive zero.,count of touching producing wheat hexes if this is the actor's second settlement; otherwise 0,
+combined_ore_pips,production pips,Own portfolio production pips after adding the candidate for ore.,C_ore(v) = P_ore(v) + O_ore,
+ore_starting_cards,cards,Cards of this resource granted immediately if this is the actor's second settlement; first placements receive zero.,count of touching producing ore hexes if this is the actor's second settlement; otherwise 0,
+direct_port,"indicator, 0 or 1",One if the candidate touches any port.,1[v is a corner served by any port],resource_coverage_ports;resource_coverage_ports_numbers;full_context
+generic_port,"indicator, 0 or 1",One if the candidate touches a generic 3:1 port.,1[v is a corner served by a generic 3:1 port],resource_coverage_ports;resource_coverage_ports_numbers;full_context
+wood_port,"indicator, 0 or 1",One if the candidate touches the wood 2:1 port.,1[v is served by the specialized wood 2:1 port],
+brick_port,"indicator, 0 or 1",One if the candidate touches the brick 2:1 port.,1[v is served by the specialized brick 2:1 port],
+sheep_port,"indicator, 0 or 1",One if the candidate touches the sheep 2:1 port.,1[v is served by the specialized sheep 2:1 port],
+wheat_port,"indicator, 0 or 1",One if the candidate touches the wheat 2:1 port.,1[v is served by the specialized wheat 2:1 port],
+ore_port,"indicator, 0 or 1",One if the candidate touches the ore 2:1 port.,1[v is served by the specialized ore 2:1 port],
+port_matching_combined_pips,production pips,"Combined own pips in the specialized port resource, zero unless this candidate directly touches that port.",C_r(v) if v directly touches the specialized r port; otherwise 0,resource_coverage_ports;resource_coverage_ports_numbers;full_context
+nearest_port_distance,graph edges,"Shortest geometric edge distance from this candidate to any port corner; ignores ownership, road direction, cost and blocking.","min_{u served by any port} d(v,u)",resource_coverage_ports;resource_coverage_ports_numbers;full_context
+nearest_generic_port_distance,graph edges,Shortest geometric edge distance to any generic 3:1 port corner.,"min_{u served by a generic port} d(v,u)",resource_coverage_ports;resource_coverage_ports_numbers;full_context
+wood_port_distance,graph edges,Shortest geometric edge distance to the wood port.,"min_{u served by wood port} d(v,u)",
+brick_port_distance,graph edges,Shortest geometric edge distance to the brick port.,"min_{u served by brick port} d(v,u)",
+sheep_port_distance,graph edges,Shortest geometric edge distance to the sheep port.,"min_{u served by sheep port} d(v,u)",
+wheat_port_distance,graph edges,Shortest geometric edge distance to the wheat port.,"min_{u served by wheat port} d(v,u)",
+ore_port_distance,graph edges,Shortest geometric edge distance to the ore port.,"min_{u served by ore port} d(v,u)",
+matched_port_potential,production pips per (1 + edge distance),"Maximum over resources of combined resource pips / (1 + geometric port distance); already owned ports use distance zero. A descriptive interaction, not a trade-value model.","max_r C_r(v) / (1 + D_r(v)); D_r = geometric distance to resource-r port, or 0 if already owned",resource_coverage_ports;resource_coverage_ports_numbers;full_context
+unique_local_numbers,distinct producing dice outcomes,Distinct dice outcomes producing cards at this candidate.,sum_n 1[c_n(v) > 0],resource_coverage_ports_numbers;full_context
+unique_combined_numbers,distinct producing dice outcomes,Distinct dice outcomes producing cards for the combined own portfolio.,sum_n 1[c_n(v) + o_n > 0],resource_coverage_ports_numbers;full_context
+pips_overlapping_owned_numbers,production pips,Candidate pips on number outcomes already collected by an own settlement.,sum_n c_n(v) * 1[o_n > 0] * pip(n),resource_coverage_ports_numbers;full_context
+combined_production_variance,cards squared per dice roll,"Variance in total cards per roll, counting shared numbers exactly; ignores robber and bank shortage.",sum_n q_n (c_n(v)+o_n)^2 - (sum_n q_n (c_n(v)+o_n))^2,resource_coverage_ports_numbers;full_context
+combined_zero_production_probability,"probability, 0 to 1","Probability of collecting zero cards on a dice roll, including seven; ignores robber and bank shortage.","sum_n q_n * 1[c_n(v)+o_n = 0], including n=7",
+best_expansion_pips_two_roads,production pips,"Highest-pip currently distance-rule-open corner exactly two geometric edges away; excludes cost, direction and competition.","max total_pips(u) over d(v,u)=2 and u currently open by the settlement distance rule; 0 if no such u",full_context
+opponent_proximity,inverse (1 + graph edges),1/(1 + closest opponent settlement edge distance); zero if no opponent settlement yet.,"1 / (1 + min_{u opponent settlement} d(v,u)); 0 if none",full_context
+own_proximity,inverse (1 + graph edges),1/(1 + closest own settlement edge distance); zero if no own settlement yet.,"1 / (1 + min_{u own settlement} d(v,u)); 0 if none",full_context
+desert_adjacency,"indicator, 0 or 1",One if this candidate touches the desert.,1[any hex touching v is desert],

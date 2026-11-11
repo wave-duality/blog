@@ -1,0 +1,41 @@
+{
+  "status": "complete",
+  "experiments": [
+    12,
+    14
+  ],
+  "boards_observational": 100000,
+  "a1_candidates_exact_fallback": 5400000,
+  "opponent_relocation_pairs": 2000,
+  "remote_context_pairs": 1000,
+  "continuation_pairs": 1024,
+  "continuation_games": 2048,
+  "all_continuation_games_terminal": true,
+  "model_sha256": "fbc5209b17a14a1d7b649087efdb1503185c7dfab9d9f5b443d0957431272158",
+  "sources": {
+    "opening_followup_blocking_fallback.py": "00799f370bfde011e83ce3893bd78f8cdec1e6dd6804e92675580d6dc7e9d669",
+    "opening_followup_opponent_relocation.py": "d9c951cb7cc632e2419bb007ddcb96a71231f5c06d15cc16db369247defd16b7",
+    "opening_followup_denial_continuations.py": "2d10d01971ca7c87223454764a735f98ba895949e8d7651dda4ec5a1fbcfdee6",
+    "opening_followup_remote_context.py": "9701cfd122203acb78ec65b6042d48d796a5ccd4665a559e4cb9e3dd5d684f5d"
+  },
+  "outputs": {
+    "results.json": "49bfa0f7b29bf1d4e2d9496807c4619158981854ce542d59e4fb68e31f8a6706",
+    "opponent-relocation.json": "4a01520c769b23dc261b644f5baca315bb725bf23c76966556a462ce51e49e45",
+    "remote-context.json": "bbfcefed90de0d177ff996acb9e81c54fb2fc8969b0d4f0c2c9ccc8678180c23",
+    "remote-context-pairs.json": "febef40b5d5d53bfe446d1ed5cd20a18c45311ac73dde3a3aeeb30beae0aae6e",
+    "fallback-exhaustive-validation.json": "304cb7eaafc88be2ad080c51826bef78aa3892ffac6081f2e8f550e0084bf9d0",
+    "continuations/results.json": "9e77c055f6e272d707ab3c7b2c3712add085915d4a433e0c7ab045d0e7ee5d31",
+    "continuations/pairs.json": "c608258cd7db0b1c81a2d032b4f1e089bc65f7545bd974989b06a667bc7a3534",
+    "article.md": "099bccda04e42124c6ca084e956d051d2d7d06dd75a0a1eb559d64fbe35ca5b0"
+  },
+  "dependencies": [
+    "opening_followup_plans.py (evaluate, observation)",
+    "opening_study_scale_analysis.py",
+    "opening_engine.py",
+    "feature_dictionary.py",
+    "train.py",
+    "gnn.py",
+    "catan_rl native extension"
+  ],
+  "runtime_notes": "CPU, one PyTorch thread for all fresh inference. No search, network training or checkpoint mutation. All scripts runnable from repository root; continuation runner resumes complete chunks."
+}

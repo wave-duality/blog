@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-11-11T01:44:02.703740+00:00",
+  "source": "/Users/owenzhang/CatanRL/run/analysis/opening-baseline-10k-20261105/main",
+  "model": "/Users/owenzhang/CatanRL/run/scale/gen37.pt",
+  "model_sha256": "fbc5209b17a14a1d7b649087efdb1503185c7dfab9d9f5b443d0957431272158",
+  "selection_fixed_before_new_predictions": true,
+  "eligibility": "First saved action decision in Phase::Play with more than one legal action per distinct regular turn; all post-roll turns, no opponent hidden-card requirement.",
+  "selection": "For m eligible turns select n=min(16,m), indices floor(i*m/n), i=0,...,n-1, in chronological order; uses no predictions or outcomes.",
+  "weighting": "One unit of total weight per game; each selected position receives 1/n_selected.",
+  "labels": "Saved final win of the actor at the sampled decision; original greedy Gen37-versus-Gen37 continuation.",
+  "scope": "10,000 existing unique completed network controls; duplicated tested-seat controls verified then deduplicated.",
+  "excluded": "Setup, pre-roll, chance, forced-only turns, and non-Play subdecisions.",
+  "value_conversion": "p=(1+raw_actor_value)/2, no recalibration or fitting.",
+  "training_target": "Gen37 target is 35% actual outcome plus 65% search value, gamma=1; this measures empirical calibration under the saved greedy policy, not optimal-play probabilities.",
+  "uncertainty": "Whole-game nonparametric bootstrap from per-game sufficient statistics; pointwise 95% percentile intervals.",
+  "cpu_threads": 1,
+  "fresh_games": 0,
+  "search_simulations": 0,
+  "pilot_limit": 0,
+  "bootstrap_replicates": 5000
+}

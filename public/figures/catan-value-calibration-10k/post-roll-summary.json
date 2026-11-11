@@ -1,0 +1,273 @@
+{
+  "unique_games": 10000,
+  "positions": 160000,
+  "total_game_weight": 10000.0,
+  "positions_per_game_min": 16,
+  "positions_per_game_max": 16,
+  "games_without_eligible_positions": 0,
+  "actor_positions": {
+    "0": 80806,
+    "1": 79194
+  },
+  "predicted_actor_win_probability": {
+    "estimate": 0.5013648366188972,
+    "game_cluster_bootstrap_ci95": [
+      0.49981743728530453,
+      0.5029855292378034
+    ]
+  },
+  "observed_actor_win_rate": {
+    "estimate": 0.514825,
+    "game_cluster_bootstrap_ci95": [
+      0.51215,
+      0.51736265625
+    ]
+  },
+  "mean_residual_observed_minus_predicted": {
+    "estimate": 0.013460163381102758,
+    "game_cluster_bootstrap_ci95": [
+      0.011376402610493292,
+      0.015471951362682828
+    ]
+  },
+  "brier_score": {
+    "estimate": 0.14855134734946673,
+    "game_cluster_bootstrap_ci95": [
+      0.14618076979666367,
+      0.15093007801900504
+    ]
+  },
+  "constant_50_percent_brier": 0.25,
+  "fitted_constant_probability": 0.514825,
+  "fitted_constant_brier": {
+    "estimate": 0.24978021937499997,
+    "game_cluster_bootstrap_ci95": [
+      0.24969853816699217,
+      0.2498523775
+    ]
+  },
+  "leave_one_game_out_constant_brier": {
+    "estimate": 0.24978383158569759,
+    "note": "Auxiliary diagnostic only: each game's constant is fitted to all other games. No interval reported; the primary fitted-constant baseline is re-estimated within each bootstrap draw."
+  },
+  "brier_improvement_over_fitted_constant": {
+    "estimate": 0.10122887202553324,
+    "game_cluster_bootstrap_ci95": [
+      0.09882235798204997,
+      0.10358484287297515
+    ]
+  },
+  "outcome_r2": {
+    "estimate": 0.40527177163519235,
+    "game_cluster_bootstrap_ci95": [
+      0.39567274758249343,
+      0.41470494713727424
+    ]
+  },
+  "outcome_r2_definition": "1 - equal-game-weighted Brier / variance of the actor-win labels; constant baseline is the equal-game-weighted observed mean.",
+  "bootstrap": {
+    "unit": "entire game",
+    "replicates": 5000,
+    "seed": 2026111038,
+    "intervals": "pointwise percentile 95%; mean baseline re-estimated per bootstrap draw"
+  },
+  "probability_bands": [
+    {
+      "lower": 0.0,
+      "upper": 0.1,
+      "upper_inclusive": false,
+      "position_count": 22070,
+      "supporting_games": 7218,
+      "sum_equal_game_position_weights": 1379.375,
+      "mean_predicted_probability": 0.03716598412922512,
+      "observed_win_rate": 0.026687811508835525,
+      "observed_win_rate_game_cluster_ci95": [
+        0.023312022075505347,
+        0.030258231201507085
+      ],
+      "residual_game_cluster_ci95": [
+        -0.013846773402364138,
+        -0.006922912418572209
+      ]
+    },
+    {
+      "lower": 0.1,
+      "upper": 0.2,
+      "upper_inclusive": false,
+      "position_count": 11632,
+      "supporting_games": 6564,
+      "sum_equal_game_position_weights": 727.0,
+      "mean_predicted_probability": 0.1489837665618122,
+      "observed_win_rate": 0.14305364511691884,
+      "observed_win_rate_game_cluster_ci95": [
+        0.13364160697531433,
+        0.15268822097298734
+      ],
+      "residual_game_cluster_ci95": [
+        -0.015403493889721825,
+        0.0036582389497419416
+      ]
+    },
+    {
+      "lower": 0.2,
+      "upper": 0.3,
+      "upper_inclusive": false,
+      "position_count": 12201,
+      "supporting_games": 6764,
+      "sum_equal_game_position_weights": 762.5625,
+      "mean_predicted_probability": 0.2519214331234159,
+      "observed_win_rate": 0.2453077616588804,
+      "observed_win_rate_game_cluster_ci95": [
+        0.23518288613811889,
+        0.25554272702911823
+      ],
+      "residual_game_cluster_ci95": [
+        -0.01656816030550351,
+        0.003580566264542944
+      ]
+    },
+    {
+      "lower": 0.3,
+      "upper": 0.4,
+      "upper_inclusive": false,
+      "position_count": 15573,
+      "supporting_games": 7591,
+      "sum_equal_game_position_weights": 973.3125,
+      "mean_predicted_probability": 0.35249030741719484,
+      "observed_win_rate": 0.35279008540422524,
+      "observed_win_rate_game_cluster_ci95": [
+        0.34330130991219665,
+        0.362334978970546
+      ],
+      "residual_game_cluster_ci95": [
+        -0.009112970473730827,
+        0.009833340547364962
+      ]
+    },
+    {
+      "lower": 0.4,
+      "upper": 0.5,
+      "upper_inclusive": false,
+      "position_count": 19325,
+      "supporting_games": 7640,
+      "sum_equal_game_position_weights": 1207.8125,
+      "mean_predicted_probability": 0.45083313920541473,
+      "observed_win_rate": 0.4639068564036222,
+      "observed_win_rate_game_cluster_ci95": [
+        0.455994851016765,
+        0.47164786404410397
+      ],
+      "residual_game_cluster_ci95": [
+        0.005291737386648391,
+        0.020773370673643866
+      ]
+    },
+    {
+      "lower": 0.5,
+      "upper": 0.6,
+      "upper_inclusive": false,
+      "position_count": 18638,
+      "supporting_games": 7956,
+      "sum_equal_game_position_weights": 1164.875,
+      "mean_predicted_probability": 0.5488671375400651,
+      "observed_win_rate": 0.5785492005579997,
+      "observed_win_rate_game_cluster_ci95": [
+        0.5704862075223196,
+        0.5865041706008373
+      ],
+      "residual_game_cluster_ci95": [
+        0.02167119366056112,
+        0.03769807518789715
+      ]
+    },
+    {
+      "lower": 0.6,
+      "upper": 0.7,
+      "upper_inclusive": false,
+      "position_count": 14356,
+      "supporting_games": 7385,
+      "sum_equal_game_position_weights": 897.25,
+      "mean_predicted_probability": 0.6479922507231234,
+      "observed_win_rate": 0.6940651992198384,
+      "observed_win_rate_game_cluster_ci95": [
+        0.6841656488955673,
+        0.7038377273545907
+      ],
+      "residual_game_cluster_ci95": [
+        0.03608381189202299,
+        0.05585952010167471
+      ]
+    },
+    {
+      "lower": 0.7,
+      "upper": 0.8,
+      "upper_inclusive": false,
+      "position_count": 11163,
+      "supporting_games": 6516,
+      "sum_equal_game_position_weights": 697.6875,
+      "mean_predicted_probability": 0.7486638102153504,
+      "observed_win_rate": 0.7835707247155782,
+      "observed_win_rate_game_cluster_ci95": [
+        0.7732502082942408,
+        0.7936178584096341
+      ],
+      "residual_game_cluster_ci95": [
+        0.024514793710223557,
+        0.04492082496770771
+      ]
+    },
+    {
+      "lower": 0.8,
+      "upper": 0.9,
+      "upper_inclusive": false,
+      "position_count": 11056,
+      "supporting_games": 6505,
+      "sum_equal_game_position_weights": 691.0,
+      "mean_predicted_probability": 0.850777088703558,
+      "observed_win_rate": 0.8838639652677279,
+      "observed_win_rate_game_cluster_ci95": [
+        0.8750917134570773,
+        0.8921555648157495
+      ],
+      "residual_game_cluster_ci95": [
+        0.02435100126535072,
+        0.04132378025523194
+      ]
+    },
+    {
+      "lower": 0.9,
+      "upper": 1.0,
+      "upper_inclusive": true,
+      "position_count": 23986,
+      "supporting_games": 7443,
+      "sum_equal_game_position_weights": 1499.125,
+      "mean_predicted_probability": 0.9628065526373619,
+      "observed_win_rate": 0.975610772950888,
+      "observed_win_rate_game_cluster_ci95": [
+        0.9725516535435257,
+        0.9786440454701981
+      ],
+      "residual_game_cluster_ci95": [
+        0.009811726598213286,
+        0.0157991576214899
+      ]
+    }
+  ],
+  "validation": {
+    "all_saved_histories_legally_replayed": true,
+    "all_10000_terminal_results_checked": true,
+    "terminal_result_checks": 10000,
+    "terminal_turn_checks": 10000,
+    "unique_seed_turn_pairs": 160000,
+    "information_boundary_checks": 160000,
+    "each_encoding_equal_across_two_PlayerView_samples_and_referee": true,
+    "native_vs_python_actor_view_checks": 103,
+    "native_vs_python_max_absolute_observation_error": 0.0,
+    "single_vs_batch_value_max_absolute_error": 1.9371509552001953e-07,
+    "inference_seconds": 117.1704998749774
+  },
+  "interpretation": "Gen37 target is 35% actual outcome plus 65% search value, gamma=1; this measures empirical calibration under the saved greedy policy, not optimal-play probabilities.",
+  "scope": "First saved action decision in Phase::Play with more than one legal action per distinct regular turn; all post-roll turns, no opponent hidden-card requirement.",
+  "weighting": "One unit of total weight per game; each selected position receives 1/n_selected.",
+  "elapsed_seconds": 122.55215474986471
+}

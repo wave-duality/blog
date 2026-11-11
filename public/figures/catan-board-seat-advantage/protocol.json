@@ -1,0 +1,40 @@
+{
+  "analysis": "Exploratory analysis of existing outcomes; not a preregistered fresh-outcome experiment.",
+  "cohort": "Exactly one original Generation37 greedy network-vs-network control per seed; tested_seat=0. No search.",
+  "boards": 10000,
+  "seed_start": 5500000,
+  "seed_end": 5509999,
+  "source_protocol_sha256": "d6dd67efd5a19bf9a6a4f8917ea7bcc783a45de72df1ef1270d57b5bb74a52fc",
+  "primary_features": [
+    "desert_center",
+    "desert_inner_ring",
+    "compatible_first_pick_premium",
+    "maximum_corner_pips",
+    "corner_pip_std"
+  ],
+  "desert": "Hex graph distance from the unique central hex: center=0, inner ring=1, coast=2.",
+  "compatible_first_pick_premium": "For each tied maximum-total-pip A1 corner a, subtract half the maximum combined total pips of a mutually legal B1/B2 pair after a; average over tied a. This omits A2 and is a site-scarcity descriptor, not a game-theoretic seat advantage.",
+  "descriptive_features": [
+    "raw first-minus-second gap",
+    "raw first-minus-mean(second,third) gap",
+    "number of tied maximum-pip corners",
+    "standard deviation across all54 corner pip totals"
+  ],
+  "subgroup_bins": {
+    "premium": [
+      "0",
+      "(0,0.5]",
+      "(0.5,1]",
+      ">1"
+    ],
+    "maximum_pips": [
+      "<=11",
+      "12",
+      ">=13"
+    ]
+  },
+  "model": "Unpenalized additive logistic regression, standardized inputs, robust sandwich standard errors. Coast is the desert reference. Holm correction across five coefficient tests.",
+  "validation": "Deterministic SHA256(seed + board-seat-20261110) ordering; first8000train,last2000test. Training-only scales and constant win-rate baseline. Paired test-board bootstrap intervals for Brier/logloss improvements,5000resamples.",
+  "subgroup_uncertainty": "95%Wilson intervals, pointwise exploratory. Center/coast difference uses stratified board bootstrap.",
+  "limitation": "One stochastic trajectory per board estimates associations across board types under this policy, not individual-board win probabilities or a causal effect of moving the desert."
+}

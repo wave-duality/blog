@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "games": 60000,
+  "boards": 10000,
+  "opening_action_legality_checks": 480000,
+  "independent_frozen_policy_checks": 3520,
+  "independent_chance_checks": 35895,
+  "replayed_boards": 64,
+  "full_native_game_replays": 320,
+  "control_replays_identical": true,
+  "model_sha256": "fbc5209b17a14a1d7b649087efdb1503185c7dfab9d9f5b443d0957431272158",
+  "compiled_engine_sha256": "99afa16950ae524491ac1e46191812bd7ad04025526ebabcd2c55bf818bfc834",
+  "compiled_runtime_identical_to_1024_cohort": true,
+  "preflight_sha256": "b11b2225d97af5237da0f2a664797f8398055db0c4aa7042fb2d7c37332f206c",
+  "protocol_sha256": "d6dd67efd5a19bf9a6a4f8917ea7bcc783a45de72df1ef1270d57b5bb74a52fc",
+  "validation_script_sha256": "e4dfc031a7ad0812d1943a488771f7b918f21ca9e4f467cffbd0c94a2ff371f1",
+  "terminal_games": 60000,
+  "truncated_games": 0
+}

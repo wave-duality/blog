@@ -1,0 +1,227 @@
+{
+  "schema": "opening-policy-baseline-results-v1",
+  "protocol_sha256": "51be74174af9060a8135863658877d9bd933784a00ed82c613c5d1275b3329e8",
+  "model_sha256": "fbc5209b17a14a1d7b649087efdb1503185c7dfab9d9f5b443d0957431272158",
+  "boards": 1024,
+  "games": 6144,
+  "terminal_games": 6144,
+  "truncated_games": 0,
+  "duplicated_control_games": 1024,
+  "distinct_condition_trajectories": 5120,
+  "all_control_replays_identical": true,
+  "seconds": 339.63302341569215,
+  "metrics": {
+    "network": {
+      "seat_balanced_win_rate": {
+        "mean": 0.5,
+        "standard_error": 0.0,
+        "normal_ci95": [
+          0.5,
+          0.5
+        ],
+        "bootstrap_ci95": [
+          0.5,
+          0.5
+        ],
+        "boards": 1024
+      },
+      "difference_from_network": {
+        "mean": 0.0,
+        "standard_error": 0.0,
+        "normal_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "boards": 1024
+      },
+      "by_seat": {
+        "0": {
+          "win_rate": 0.5673828125,
+          "network_control_win_rate": 0.5673828125,
+          "paired_difference": {
+            "mean": 0.0,
+            "standard_error": 0.0,
+            "normal_ci95": [
+              0.0,
+              0.0
+            ],
+            "bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "boards": 1024
+          }
+        },
+        "1": {
+          "win_rate": 0.4326171875,
+          "network_control_win_rate": 0.4326171875,
+          "paired_difference": {
+            "mean": 0.0,
+            "standard_error": 0.0,
+            "normal_ci95": [
+              0.0,
+              0.0
+            ],
+            "bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "boards": 1024
+          }
+        }
+      },
+      "censored_difference_bounds": [
+        0.0,
+        0.0
+      ],
+      "own_settlement_disagreement_with_network": 0.0
+    },
+    "max_pips": {
+      "seat_balanced_win_rate": {
+        "mean": 0.3115234375,
+        "standard_error": 0.01006512234492762,
+        "normal_ci95": [
+          0.2917957977039419,
+          0.3312510772960581
+        ],
+        "bootstrap_ci95": [
+          0.2919921875,
+          0.33154296875
+        ],
+        "boards": 1024
+      },
+      "difference_from_network": {
+        "mean": -0.1884765625,
+        "standard_error": 0.01006512234492762,
+        "normal_ci95": [
+          -0.20820420229605813,
+          -0.16874892270394187
+        ],
+        "bootstrap_ci95": [
+          -0.2080078125,
+          -0.16845703125
+        ],
+        "boards": 1024
+      },
+      "by_seat": {
+        "0": {
+          "win_rate": 0.349609375,
+          "network_control_win_rate": 0.5673828125,
+          "paired_difference": {
+            "mean": -0.2177734375,
+            "standard_error": 0.01875398406468787,
+            "normal_ci95": [
+              -0.25453124626678825,
+              -0.18101562873321178
+            ],
+            "bootstrap_ci95": [
+              -0.2548828125,
+              -0.18063964843750036
+            ],
+            "boards": 1024
+          }
+        },
+        "1": {
+          "win_rate": 0.2734375,
+          "network_control_win_rate": 0.4326171875,
+          "paired_difference": {
+            "mean": -0.1591796875,
+            "standard_error": 0.018513644266718705,
+            "normal_ci95": [
+              -0.19546643026276866,
+              -0.12289294473723134
+            ],
+            "bootstrap_ci95": [
+              -0.1943359375,
+              -0.123046875
+            ],
+            "boards": 1024
+          }
+        }
+      },
+      "censored_difference_bounds": [
+        -0.1884765625,
+        -0.1884765625
+      ],
+      "own_settlement_disagreement_with_network": 0.691650390625
+    },
+    "resource_weighted": {
+      "seat_balanced_win_rate": {
+        "mean": 0.3623046875,
+        "standard_error": 0.010389978072430136,
+        "normal_ci95": [
+          0.34194033047803696,
+          0.38266904452196304
+        ],
+        "bootstrap_ci95": [
+          0.34228515625,
+          0.3828247070312498
+        ],
+        "boards": 1024
+      },
+      "difference_from_network": {
+        "mean": -0.1376953125,
+        "standard_error": 0.010389978072430136,
+        "normal_ci95": [
+          -0.15805966952196307,
+          -0.11733095547803693
+        ],
+        "bootstrap_ci95": [
+          -0.15771484375,
+          -0.11717529296875018
+        ],
+        "boards": 1024
+      },
+      "by_seat": {
+        "0": {
+          "win_rate": 0.39453125,
+          "network_control_win_rate": 0.5673828125,
+          "paired_difference": {
+            "mean": -0.1728515625,
+            "standard_error": 0.01930501051359259,
+            "normal_ci95": [
+              -0.21068938310664148,
+              -0.13501374189335852
+            ],
+            "bootstrap_ci95": [
+              -0.2099609375,
+              -0.134765625
+            ],
+            "boards": 1024
+          }
+        },
+        "1": {
+          "win_rate": 0.330078125,
+          "network_control_win_rate": 0.4326171875,
+          "paired_difference": {
+            "mean": -0.1025390625,
+            "standard_error": 0.018595439616934016,
+            "normal_ci95": [
+              -0.13898612414919068,
+              -0.06609200085080932
+            ],
+            "bootstrap_ci95": [
+              -0.138671875,
+              -0.06640625
+            ],
+            "boards": 1024
+          }
+        }
+      },
+      "censored_difference_bounds": [
+        -0.1376953125,
+        -0.1376953125
+      ],
+      "own_settlement_disagreement_with_network": 0.631103515625
+    }
+  },
+  "turn_summary": {
+    "mean": 77.82584635416667,
+    "max": 146
+  },
+  "analysis": "A controlled opening-policy ablation under fixed greedy Generation37 continuation. The resource-weighted baseline is the existing A1 score approximation applied at both settlements of either seat; no stage-specific tuning or coverage rule. Pointwise board-cluster intervals account for shared board and seats. Later stochastic streams may diverge after different actions."
+}

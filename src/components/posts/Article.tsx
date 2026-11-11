@@ -1,4 +1,5 @@
 import PostContent from "./PostContent";
+import ArticleContents from "./ArticleContents";
 import ReadingTime from "./ReadingTime";
 import type { ArticleSection } from "@/lib/markdown";
 
@@ -24,14 +25,7 @@ export default function Article(post: ArticleProps) {
         <ReadingTime tokens={post.tokenCount} />
         </div>
       </header>
-      {post.sections.length > 0 && (
-        <nav className="article-sections" aria-label="Article sections">
-          <span className="article-sections-label">On this page</span>
-          <ul>{post.sections.map(section => (
-            <li key={section.id}><a href={`#${section.id}`}>{section.title}</a></li>
-          ))}</ul>
-        </nav>
-      )}
+      <ArticleContents title={post.title} sections={post.sections} />
       {post.paper && post.abstract && (
         <section className="paper-abstract" aria-label="Abstract">
           <h2>Abstract</h2>

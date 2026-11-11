@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "source": "/Users/owenzhang/CatanRL/run/analysis/opening-anticipation-20261102/lookahead",
+  "results_sha256": "4b2b9291bb0fae4b586a9c3aae586db7b1ef3f0a5687d19f35a99f2ef2724ddf",
+  "counts": {
+    "checks": 95707,
+    "boards": 128,
+    "a1_candidates": 776,
+    "branches": 12416,
+    "aggregate_checks": 3104,
+    "legal_native_steps": 18624,
+    "histories_replayed": 2328
+  },
+  "histories_by_mode": {
+    "best": 776,
+    "worst": 776,
+    "greedy": 776
+  },
+  "distinct_histories": 2204,
+  "max_aggregate_discrepancy": 0.0,
+  "default_seed": 4172414,
+  "default_policy": {
+    "vertex": 44,
+    "root_rank": 1,
+    "root_probability": 0.5653924936132623,
+    "optimistic": 0.20067931711673737,
+    "worst_case": -0.10724648088216782,
+    "policy_weighted": 0.027634901672935204,
+    "greedy_B_policy_A2": -0.003692222759127617
+  },
+  "default_optimistic_winner": {
+    "vertex": 40,
+    "root_rank": 3,
+    "root_probability": 0.09244375516159388,
+    "optimistic": 0.5583217144012451,
+    "worst_case": -0.14561878144741058,
+    "policy_weighted": -0.0503239933486193,
+    "greedy_B_policy_A2": -0.14368081092834473
+  },
+  "errors": [],
+  "scope": "Independent native legality and stored-data agreement audit; no model reinference or browser rendering checks."
+}

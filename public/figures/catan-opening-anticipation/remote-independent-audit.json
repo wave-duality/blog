@@ -1,0 +1,43 @@
+{
+  "independent_audit": true,
+  "boards": 500,
+  "unique_boards": 500,
+  "full_exhaustive_objectives": 2000,
+  "max_abs_errors": {
+    "exhaustive_worst": 1.4210854715202004e-14,
+    "saved_optimism": 1.4210854715202004e-14,
+    "fixed_optimism": 0.0,
+    "fixed_focal_quality": 0.0,
+    "witness_value": 0.0,
+    "proxy_delta": 1.4210854715202004e-14
+  },
+  "sign_counts": {
+    "1": 250,
+    "0": 250
+  },
+  "native_subset_seeds": [
+    4191902,
+    4106643,
+    4166846,
+    4166206,
+    4166969,
+    4160360,
+    4185686,
+    4116726,
+    4175718,
+    4100097,
+    4155138,
+    4117757
+  ],
+  "native_raw_input_max_errors": {
+    "focal_vertices": 0.0,
+    "focal_hexes": 0.0,
+    "all_paths": 0.0,
+    "global": 0.0
+  },
+  "aligned_count": 229,
+  "signed_logit_change": -0.06624992513656616,
+  "mean_absolute_logit_change": 0.419257182598114,
+  "pearson": -0.11377337696758333,
+  "source_top_two_recovered": true
+}

@@ -1,0 +1,458 @@
+{
+  "schema": "matched-gen37-opening-value-calibration-v1",
+  "created_utc": "2026-11-11T01:40:58.055742+00:00",
+  "model": "/Users/owenzhang/CatanRL/run/scale/gen37.pt",
+  "model_sha256": "fbc5209b17a14a1d7b649087efdb1503185c7dfab9d9f5b443d0957431272158",
+  "script_sha256": "6216344908015b1de2dcf17359c1bc97d0a3950fbde728701e530c1fe6015fa9",
+  "source_protocol_sha256": "d6dd67efd5a19bf9a6a4f8917ea7bcc783a45de72df1ef1270d57b5bb74a52fc",
+  "source_manifest_sha256": "b809d77f96d9d4dc78c4512bcb96fb95aa1cb2237b40f0320a4e068b7fc7621e",
+  "per_board_npz_sha256": "92f811f75e655115c5af634ddb24b7863ebb16a3885b8a678b0c5141656cd450",
+  "per_board_json_sha256": "954526a1c6774197adfdbb092d8efe4b96b195236780181c3ae79dc1aea1ae66",
+  "runtime": {
+    "seconds": 12.44789420813322,
+    "device": "cpu",
+    "batch": 64,
+    "torch_threads": 1,
+    "torch_interop_threads": 1,
+    "torch_version": "2.13.0",
+    "numpy_version": "2.5.2",
+    "python_version": "3.14.2 (main, Dec  5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.4.4.1)]",
+    "catan_rl_module": "/Users/owenzhang/CatanRL/.venv/lib/python3.14/site-packages/catan_rl/__init__.py"
+  },
+  "source_code_sha256": {
+    "train.py": "c0d54c731dad202ebaae889a4b9adabf22cb1187c2a792040dc625bd58a5ab44",
+    "gnn.py": "95436b2276e48eb0a232b37b7fd38bc0962230d62628aa5dac7448f8db8692d4",
+    "catan/src/py.rs": "568cf6ff6c0659abc9bb60505996f9962029548625426078d79c107d43e3f0e0",
+    "catan/src/features.rs": "0a0a9a22a08be8a5310c4ecf6deaec4d56b3f1599e3f4061c777dd842801dbd6"
+  },
+  "validation": {
+    "source_rows_checked": 60000,
+    "unique_control_games": 10000,
+    "duplicate_control_histories_and_outcomes_checked": 10000,
+    "all_six_condition_board_arrays_identical_per_seed": true,
+    "deduplication": "Retain rule=network, tested_seat=0; verify tested_seat=1 has identical history/outcome.",
+    "seed_regenerated_board_arrays_exactly_equal_saved": 10000,
+    "legacy_canonical_discards_false_all_observations": true,
+    "checkpoint_canonical_discards": false,
+    "network_evaluated_root_positions": 10000,
+    "batched_forward_calls": 157,
+    "search_simulations": 0,
+    "new_game_trajectories": 0,
+    "root_state": "Empty board, A/P0 to act before A1; original board generator verified against all saved arrays."
+  },
+  "summary": {
+    "boards": 10000,
+    "a_wins": 5475,
+    "b_wins": 4525,
+    "observed_a_win_rate": 0.5475,
+    "observed_a_win_rate_wilson_ci95": [
+      0.5377281182426684,
+      0.5572354019121172
+    ],
+    "mean_implied_a_probability": 0.5006148186776641,
+    "mean_raw_a_value": 0.0012296373553283048,
+    "mean_implied_b_probability": 0.49938518132233584,
+    "paired_residual_y_minus_p": {
+      "mean": 0.04688518132233585,
+      "standard_error": 0.0049757086889679605,
+      "normal_ci95": [
+        0.037132971494395636,
+        0.056637391150276065
+      ],
+      "board_bootstrap_percentile_ci95": [
+        0.03714258673381402,
+        0.056757026984593756
+      ],
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 2026111037
+    },
+    "predictions": {
+      "mean_sampling_interval_across_boards": {
+        "mean": 0.5006148186776641,
+        "standard_error": 0.00015807819316840992,
+        "normal_ci95": [
+          0.5003049911123129,
+          0.5009246462430154
+        ]
+      },
+      "standard_deviation": 0.01580781931684099,
+      "percentiles": {
+        "0": 0.41671349853277206,
+        "1": 0.4583213896304369,
+        "5": 0.47243898287415503,
+        "10": 0.4799445802345872,
+        "25": 0.4907965196762234,
+        "50": 0.5017841326771304,
+        "75": 0.5121009713038802,
+        "90": 0.5198391601443291,
+        "95": 0.5238881492987275,
+        "99": 0.5318086913600564,
+        "100": 0.5459645688533783
+      },
+      "max_minus_min": 0.12925107032060623,
+      "p95_minus_p05": 0.05144916642457248,
+      "p90_minus_p10": 0.03989457990974188,
+      "a_favored_boards": 5446,
+      "minimum": {
+        "seed": 5506609,
+        "implied_a_probability": 0.41671349853277206,
+        "observed_a_won": 0
+      },
+      "maximum": {
+        "seed": 5502680,
+        "implied_a_probability": 0.5459645688533783,
+        "observed_a_won": 1
+      }
+    },
+    "brier": {
+      "original_gen37": 0.24975023212538344,
+      "constant_0_5": 0.25,
+      "constant_fitted_sample_mean": 0.24774375,
+      "fitted_constant_value": 0.5475,
+      "constant_leave_one_out_sample_mean": 0.24779330618330359,
+      "gen37_minus_constant_0_5_paired": {
+        "mean": -0.0002497678746165415,
+        "standard_error": 0.00015809729540130314,
+        "normal_ci95": [
+          -0.0005596328796562855,
+          6.009713042320257e-05
+        ]
+      },
+      "gen37_minus_constant_fitted_mean_paired_descriptive": {
+        "mean": 0.0020064821253834575,
+        "standard_error": 0.0004931550080253398,
+        "normal_ci95": [
+          0.00103991607085823,
+          0.002973048179908685
+        ]
+      },
+      "fitted_baseline_caveat": "The .5475 constant is fit to these same outcomes; its score and paired interval are descriptive in-sample comparisons, not held-out estimates."
+    },
+    "discrimination_descriptive": {
+      "auc": 0.5162299755291506,
+      "pearson_prediction_outcome_correlation": 0.028063880909976923
+    },
+    "calibration_deciles": [
+      {
+        "bin": 1,
+        "count": 1000,
+        "a_wins": 515,
+        "implied_p_min": 0.41671349853277206,
+        "implied_p_max": 0.47993240132927895,
+        "implied_p_mean": 0.4701904946565628,
+        "observed_a_win_rate": 0.515,
+        "observed_a_win_rate_wilson_ci95": [
+          0.4840260675164033,
+          0.5458591297290302
+        ],
+        "paired_residual_y_minus_p": {
+          "mean": 0.044809505343437195,
+          "standard_error": 0.0158167553507171,
+          "normal_ci95": [
+            0.01380923450375049,
+            0.0758097761831239
+          ]
+        }
+      },
+      {
+        "bin": 2,
+        "count": 1000,
+        "a_wins": 537,
+        "implied_p_min": 0.4799459334462881,
+        "implied_p_max": 0.4878125498071313,
+        "implied_p_mean": 0.484179572804831,
+        "observed_a_win_rate": 0.537,
+        "observed_a_win_rate_wilson_ci95": [
+          0.5060124890263216,
+          0.5677043308457475
+        ],
+        "paired_residual_y_minus_p": {
+          "mean": 0.05282042719516903,
+          "standard_error": 0.015776239127628208,
+          "normal_ci95": [
+            0.02189956669352614,
+            0.08374128769681191
+          ]
+        }
+      },
+      {
+        "bin": 3,
+        "count": 1000,
+        "a_wins": 559,
+        "implied_p_min": 0.48781418055295944,
+        "implied_p_max": 0.4934124811552465,
+        "implied_p_mean": 0.49071288729878143,
+        "observed_a_win_rate": 0.559,
+        "observed_a_win_rate_wilson_ci95": [
+          0.5280590840830492,
+          0.5894893584156553
+        ],
+        "paired_residual_y_minus_p": {
+          "mean": 0.06828711270121858,
+          "standard_error": 0.01570923762491491,
+          "normal_ci95": [
+            0.03749757273180382,
+            0.09907665267063334
+          ]
+        }
+      },
+      {
+        "bin": 4,
+        "count": 1000,
+        "a_wins": 537,
+        "implied_p_min": 0.49341261154040694,
+        "implied_p_max": 0.4976866932120174,
+        "implied_p_mean": 0.49548863450763747,
+        "observed_a_win_rate": 0.537,
+        "observed_a_win_rate_wilson_ci95": [
+          0.5060124890263216,
+          0.5677043308457475
+        ],
+        "paired_residual_y_minus_p": {
+          "mean": 0.04151136549236253,
+          "standard_error": 0.015773960984190392,
+          "normal_ci95": [
+            0.010594970069809372,
+            0.07242776091491568
+          ]
+        }
+      },
+      {
+        "bin": 5,
+        "count": 1000,
+        "a_wins": 535,
+        "implied_p_min": 0.4976908431854099,
+        "implied_p_max": 0.5017827822593972,
+        "implied_p_mean": 0.4997647256080236,
+        "observed_a_win_rate": 0.535,
+        "observed_a_win_rate_wilson_ci95": [
+          0.5040112456567101,
+          0.5657208812493011
+        ],
+        "paired_residual_y_minus_p": {
+          "mean": 0.03523527439197642,
+          "standard_error": 0.01577887516785586,
+          "normal_ci95": [
+            0.004309247346425536,
+            0.0661613014375273
+          ]
+        }
+      },
+      {
+        "bin": 6,
+        "count": 1000,
+        "a_wins": 547,
+        "implied_p_min": 0.5017854830948636,
+        "implied_p_max": 0.505759468767792,
+        "implied_p_mean": 0.5038123824415961,
+        "observed_a_win_rate": 0.547,
+        "observed_a_win_rate_wilson_ci95": [
+          0.5160261711771321,
+          0.5776141135252257
+        ],
+        "paired_residual_y_minus_p": {
+          "mean": 0.04318761755840387,
+          "standard_error": 0.015749361412686014,
+          "normal_ci95": [
+            0.012319436410034416,
+            0.07405579870677333
+          ]
+        }
+      },
+      {
+        "bin": 7,
+        "count": 1000,
+        "a_wins": 546,
+        "implied_p_min": 0.505763566121459,
+        "implied_p_max": 0.5098545011132956,
+        "implied_p_mean": 0.5077418587021529,
+        "observed_a_win_rate": 0.546,
+        "observed_a_win_rate_wilson_ci95": [
+          0.5150242420441904,
+          0.5766236961751385
+        ],
+        "paired_residual_y_minus_p": {
+          "mean": 0.038258141297847034,
+          "standard_error": 0.015751826058226823,
+          "normal_ci95": [
+            0.007385129532982936,
+            0.06913115306271113
+          ]
+        }
+      },
+      {
+        "bin": 8,
+        "count": 1000,
+        "a_wins": 553,
+        "implied_p_min": 0.5098570408299565,
+        "implied_p_max": 0.5143609195947647,
+        "implied_p_mean": 0.5120990211702883,
+        "observed_a_win_rate": 0.553,
+        "observed_a_win_rate_wilson_ci95": [
+          0.5220403713020199,
+          0.5835539922985113
+        ],
+        "paired_residual_y_minus_p": {
+          "mean": 0.04090097882971168,
+          "standard_error": 0.015730667965421233,
+          "normal_ci95": [
+            0.010069436164728093,
+            0.07173252149469526
+          ]
+        }
+      },
+      {
+        "bin": 9,
+        "count": 1000,
+        "a_wins": 571,
+        "implied_p_min": 0.5143623221665621,
+        "implied_p_max": 0.5198383200913668,
+        "implied_p_mean": 0.516853368836455,
+        "observed_a_win_rate": 0.571,
+        "observed_a_win_rate_wilson_ci95": [
+          0.5401101233129566,
+          0.6013464769820944
+        ],
+        "paired_residual_y_minus_p": {
+          "mean": 0.054146631163544956,
+          "standard_error": 0.01565927079920928,
+          "normal_ci95": [
+            0.023455024372935018,
+            0.08483823795415489
+          ]
+        }
+      },
+      {
+        "bin": 10,
+        "count": 1000,
+        "a_wins": 575,
+        "implied_p_min": 0.5198467206209898,
+        "implied_p_max": 0.5459645688533783,
+        "implied_p_mean": 0.5253052407503128,
+        "observed_a_win_rate": 0.575,
+        "observed_a_win_rate_wilson_ci95": [
+          0.5441311933323346,
+          0.6052947928948321
+        ],
+        "paired_residual_y_minus_p": {
+          "mean": 0.04969475924968719,
+          "standard_error": 0.015642605673236897,
+          "normal_ci95": [
+            0.01903581550578095,
+            0.08035370299359343
+          ]
+        }
+      }
+    ],
+    "calibration_quintiles": [
+      {
+        "bin": 1,
+        "count": 2000,
+        "a_wins": 1052,
+        "implied_p_min": 0.41671349853277206,
+        "implied_p_max": 0.4878125498071313,
+        "implied_p_mean": 0.4771850337306969,
+        "observed_a_win_rate": 0.526,
+        "observed_a_win_rate_wilson_ci95": [
+          0.5040876687901621,
+          0.5478126447512128
+        ],
+        "paired_residual_y_minus_p": {
+          "mean": 0.048814966269303116,
+          "standard_error": 0.011167384650848718,
+          "normal_ci95": [
+            0.026927294552134225,
+            0.070702637986472
+          ]
+        }
+      },
+      {
+        "bin": 2,
+        "count": 2000,
+        "a_wins": 1096,
+        "implied_p_min": 0.48781418055295944,
+        "implied_p_max": 0.4976866932120174,
+        "implied_p_mean": 0.4931007609032094,
+        "observed_a_win_rate": 0.548,
+        "observed_a_win_rate_wilson_ci95": [
+          0.5261168502605843,
+          0.5696991132004156
+        ],
+        "paired_residual_y_minus_p": {
+          "mean": 0.05489923909679055,
+          "standard_error": 0.011132258514936435,
+          "normal_ci95": [
+            0.03308041334092579,
+            0.07671806485265531
+          ]
+        }
+      },
+      {
+        "bin": 3,
+        "count": 2000,
+        "a_wins": 1082,
+        "implied_p_min": 0.4976908431854099,
+        "implied_p_max": 0.505759468767792,
+        "implied_p_mean": 0.5017885540248098,
+        "observed_a_win_rate": 0.541,
+        "observed_a_win_rate_wilson_ci95": [
+          0.5191029354502809,
+          0.5627398666726565
+        ],
+        "paired_residual_y_minus_p": {
+          "mean": 0.03921144597519015,
+          "standard_error": 0.011144486195084707,
+          "normal_ci95": [
+            0.0173686544066203,
+            0.06105423754375999
+          ]
+        }
+      },
+      {
+        "bin": 4,
+        "count": 2000,
+        "a_wins": 1099,
+        "implied_p_min": 0.505763566121459,
+        "implied_p_max": 0.5143609195947647,
+        "implied_p_mean": 0.5099204399362206,
+        "observed_a_win_rate": 0.5495,
+        "observed_a_win_rate_wilson_ci95": [
+          0.5276203963829182,
+          0.5711898159362376
+        ],
+        "paired_residual_y_minus_p": {
+          "mean": 0.03957956006377936,
+          "standard_error": 0.011127999841887897,
+          "normal_ci95": [
+            0.01776908115371166,
+            0.06139003897384705
+          ]
+        }
+      },
+      {
+        "bin": 5,
+        "count": 2000,
+        "a_wins": 1146,
+        "implied_p_min": 0.5143623221665621,
+        "implied_p_max": 0.5459645688533783,
+        "implied_p_mean": 0.5210793047933839,
+        "observed_a_win_rate": 0.573,
+        "observed_a_win_rate_wilson_ci95": [
+          0.5512021364471109,
+          0.5945179746498261
+        ],
+        "paired_residual_y_minus_p": {
+          "mean": 0.051920695206616074,
+          "standard_error": 0.011064229687104826,
+          "normal_ci95": [
+            0.030235203503211745,
+            0.07360618691002041
+          ]
+        }
+      }
+    ],
+    "decile_expected_absolute_calibration_error": 0.04688518132233587,
+    "calibration_note": "Bins are equal-count groups sorted only by predicted probability. Intervals are pointwise. Binned observed rates estimate group averages under frozen greedy Generation 37 continuation. One existing stochastic game per board does not identify that individual board's win probability.",
+    "interpretation": "p=(1+v)/2 is the original value head's implied A probability before any placement. It was not fit/calibrated here and was not trained specifically to predict this greedy-vs-greedy evaluation protocol. A mean match does not prove board-level calibration."
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "description": "Post-outcome descriptive summaries of the tested seat's completed opening; not additional inferential tests.",
+  "resources": [
+    "wood",
+    "brick",
+    "sheep",
+    "wheat",
+    "ore"
+  ],
+  "rules": {
+    "network": {
+      "mean_total_pips": 21.97412109375,
+      "mean_resource_types": 4.4609375,
+      "all_five_fraction": 0.501953125,
+      "mean_resource_pips": [
+        4.728515625,
+        4.05517578125,
+        3.75,
+        5.255859375,
+        4.1845703125
+      ]
+    },
+    "max_pips": {
+      "mean_total_pips": 23.19384765625,
+      "mean_resource_types": 3.671875,
+      "all_five_fraction": 0.0986328125,
+      "mean_resource_pips": [
+        5.53759765625,
+        3.544921875,
+        5.8115234375,
+        4.9453125,
+        3.3544921875
+      ]
+    },
+    "resource_weighted": {
+      "mean_total_pips": 23.1005859375,
+      "mean_resource_types": 3.75439453125,
+      "all_five_fraction": 0.11767578125,
+      "mean_resource_pips": [
+        4.43310546875,
+        4.67626953125,
+        4.36376953125,
+        5.2666015625,
+        4.36083984375
+      ]
+    }
+  }
+}

@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="763.2pt" height="633.6pt" viewBox="0 0 763.2 633.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 633.6 
+L 763.2 633.6 
+L 763.2 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.136 430.848 
+L 721.224 430.848 
+L 721.224 136.224 
+L 80.136 136.224 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="mf3814977aa" d="M 0 0 
+L 0 3.5 
+" style="stroke: #66635e; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mf3814977aa" x="80.136" y="430.848" style="fill: #66635e; stroke: #66635e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="80.136" y="447.721047" transform="rotate(-0 80.136 447.721047)">0%</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#mf3814977aa" x="144.2448" y="430.848" style="fill: #66635e; stroke: #66635e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="144.2448" y="447.721047" transform="rotate(-0 144.2448 447.721047)">10%</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#mf3814977aa" x="208.3536" y="430.848" style="fill: #66635e; stroke: #66635e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="208.3536" y="447.721047" transform="rotate(-0 208.3536 447.721047)">20%</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mf3814977aa" x="272.4624" y="430.848" style="fill: #66635e; stroke: #66635e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="272.4624" y="447.721047" transform="rotate(-0 272.4624 447.721047)">30%</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#mf3814977aa" x="336.5712" y="430.848" style="fill: #66635e; stroke: #66635e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="336.5712" y="447.721047" transform="rotate(-0 336.5712 447.721047)">40%</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mf3814977aa" x="400.68" y="430.848" style="fill: #66635e; stroke: #66635e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="400.68" y="447.721047" transform="rotate(-0 400.68 447.721047)">50%</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#mf3814977aa" x="464.7888" y="430.848" style="fill: #66635e; stroke: #66635e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="464.7888" y="447.721047" transform="rotate(-0 464.7888 447.721047)">60%</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mf3814977aa" x="528.8976" y="430.848" style="fill: #66635e; stroke: #66635e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="528.8976" y="447.721047" transform="rotate(-0 528.8976 447.721047)">70%</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#mf3814977aa" x="593.0064" y="430.848" style="fill: #66635e; stroke: #66635e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="593.0064" y="447.721047" transform="rotate(-0 593.0064 447.721047)">80%</text>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mf3814977aa" x="657.1152" y="430.848" style="fill: #66635e; stroke: #66635e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="657.1152" y="447.721047" transform="rotate(-0 657.1152 447.721047)">90%</text>
+     </g>
+    </g>
+    <g id="xtick_11">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#mf3814977aa" x="721.224" y="430.848" style="fill: #66635e; stroke: #66635e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="721.224" y="447.721047" transform="rotate(-0 721.224 447.721047)">100%</text>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #262522" x="400.68" y="470.922219" transform="rotate(-0 400.68 470.922219)">Implied winning probability, p = (v + 1) / 2</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_12">
+      <path d="M 80.136 430.848 
+L 721.224 430.848 
+" clip-path="url(#p8e304747cc)" style="fill: none; stroke: #e7e4df; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_13">
+      <defs>
+       <path id="me03ba828d5" d="M 0 0 
+L -3.5 0 
+" style="stroke: #66635e; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#me03ba828d5" x="80.136" y="430.848" style="fill: #66635e; stroke: #66635e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #66635e" x="73.136" y="435.784523" transform="rotate(-0 73.136 435.784523)">0%</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_14">
+      <path d="M 80.136 373.078588 
+L 721.224 373.078588 
+" clip-path="url(#p8e304747cc)" style="fill: none; stroke: #e7e4df; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#me03ba828d5" x="80.136" y="373.078588" style="fill: #66635e; stroke: #66635e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #66635e" x="73.136" y="378.015112" transform="rotate(-0 73.136 378.015112)">20%</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_16">
+      <path d="M 80.136 315.309176 
+L 721.224 315.309176 
+" clip-path="url(#p8e304747cc)" style="fill: none; stroke: #e7e4df; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#me03ba828d5" x="80.136" y="315.309176" style="fill: #66635e; stroke: #66635e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #66635e" x="73.136" y="320.2457" transform="rotate(-0 73.136 320.2457)">40%</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_18">
+      <path d="M 80.136 257.539765 
+L 721.224 257.539765 
+" clip-path="url(#p8e304747cc)" style="fill: none; stroke: #e7e4df; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#me03ba828d5" x="80.136" y="257.539765" style="fill: #66635e; stroke: #66635e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #66635e" x="73.136" y="262.476288" transform="rotate(-0 73.136 262.476288)">60%</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_20">
+      <path d="M 80.136 199.770353 
+L 721.224 199.770353 
+" clip-path="url(#p8e304747cc)" style="fill: none; stroke: #e7e4df; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#me03ba828d5" x="80.136" y="199.770353" style="fill: #66635e; stroke: #66635e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #66635e" x="73.136" y="204.706876" transform="rotate(-0 73.136 204.706876)">80%</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_22">
+      <path d="M 80.136 142.000941 
+L 721.224 142.000941 
+" clip-path="url(#p8e304747cc)" style="fill: none; stroke: #e7e4df; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#me03ba828d5" x="80.136" y="142.000941" style="fill: #66635e; stroke: #66635e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #66635e" x="73.136" y="146.937465" transform="rotate(-0 73.136 146.937465)">100%</text>
+     </g>
+    </g>
+    <g id="text_19">
+     <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #262522" x="31.72975" y="283.536" transform="rotate(-90 31.72975 283.536)">Acting player’s observed win rate</text>
+    </g>
+   </g>
+   <g id="line2d_24">
+    <path d="M 80.136 430.848 
+L 721.224 142.000941 
+" clip-path="url(#p8e304747cc)" style="fill: none; stroke-dasharray: 7.5,6; stroke-dashoffset: 0; stroke: #aaa49b; stroke-width: 1.5"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 80.136 430.848 
+L 80.136 136.224 
+" style="fill: none; stroke: #a6a19a; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 80.136 430.848 
+L 721.224 430.848 
+" style="fill: none; stroke: #a6a19a; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="LineCollection_1">
+    <path d="M 101.39415 429.25046 
+L 101.39415 425.792045 
+" clip-path="url(#p8e304747cc)" style="fill: none; stroke: #526d50; stroke-width: 1.4"/>
+    <path d="M 175.565624 410.837665 
+L 175.565624 395.831497 
+" clip-path="url(#p8e304747cc)" style="fill: none; stroke: #526d50; stroke-width: 1.4"/>
+    <path d="M 240.148041 381.288866 
+L 240.148041 358.25772 
+" clip-path="url(#p8e304747cc)" style="fill: none; stroke: #526d50; stroke-width: 1.4"/>
+    <path d="M 304.091646 351.537262 
+L 304.091646 328.022984 
+" clip-path="url(#p8e304747cc)" style="fill: none; stroke: #526d50; stroke-width: 1.4"/>
+    <path d="M 367.982359 308.391443 
+L 367.982359 286.128082 
+" clip-path="url(#p8e304747cc)" style="fill: none; stroke: #526d50; stroke-width: 1.4"/>
+    <path d="M 431.537508 276.764017 
+L 431.537508 251.094918 
+" clip-path="url(#p8e304747cc)" style="fill: none; stroke: #526d50; stroke-width: 1.4"/>
+    <path d="M 496.194983 240.942074 
+L 496.194983 216.01975 
+" clip-path="url(#p8e304747cc)" style="fill: none; stroke: #526d50; stroke-width: 1.4"/>
+    <path d="M 561.200202 196.424079 
+L 561.200202 175.831703 
+" clip-path="url(#p8e304747cc)" style="fill: none; stroke: #526d50; stroke-width: 1.4"/>
+    <path d="M 626.557305 171.192636 
+L 626.557305 156.474293 
+" clip-path="url(#p8e304747cc)" style="fill: none; stroke: #526d50; stroke-width: 1.4"/>
+    <path d="M 698.745573 147.873909 
+L 698.745573 143.472401 
+" clip-path="url(#p8e304747cc)" style="fill: none; stroke: #526d50; stroke-width: 1.4"/>
+   </g>
+   <g id="line2d_25">
+    <defs>
+     <path id="mee556ea201" d="M 4 0 
+L -4 -0 
+" style="stroke: #526d50; stroke-width: 0.7"/>
+    </defs>
+    <g clip-path="url(#p8e304747cc)">
+     <use xlink:href="#mee556ea201" x="101.39415" y="429.25046" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+     <use xlink:href="#mee556ea201" x="175.565624" y="410.837665" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+     <use xlink:href="#mee556ea201" x="240.148041" y="381.288866" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+     <use xlink:href="#mee556ea201" x="304.091646" y="351.537262" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+     <use xlink:href="#mee556ea201" x="367.982359" y="308.391443" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+     <use xlink:href="#mee556ea201" x="431.537508" y="276.764017" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+     <use xlink:href="#mee556ea201" x="496.194983" y="240.942074" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+     <use xlink:href="#mee556ea201" x="561.200202" y="196.424079" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+     <use xlink:href="#mee556ea201" x="626.557305" y="171.192636" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+     <use xlink:href="#mee556ea201" x="698.745573" y="147.873909" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="line2d_26">
+    <g clip-path="url(#p8e304747cc)">
+     <use xlink:href="#mee556ea201" x="101.39415" y="425.792045" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+     <use xlink:href="#mee556ea201" x="175.565624" y="395.831497" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+     <use xlink:href="#mee556ea201" x="240.148041" y="358.25772" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+     <use xlink:href="#mee556ea201" x="304.091646" y="328.022984" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+     <use xlink:href="#mee556ea201" x="367.982359" y="286.128082" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+     <use xlink:href="#mee556ea201" x="431.537508" y="251.094918" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+     <use xlink:href="#mee556ea201" x="496.194983" y="216.01975" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+     <use xlink:href="#mee556ea201" x="561.200202" y="175.831703" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+     <use xlink:href="#mee556ea201" x="626.557305" y="156.474293" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+     <use xlink:href="#mee556ea201" x="698.745573" y="143.472401" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #526d50" x="104.39415" y="413.666847" transform="rotate(-0 104.39415 413.666847)">1.1%</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #526d50" x="178.565624" y="423.706726" transform="rotate(-0 178.565624 423.706726)">9.4%</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #526d50" x="243.148041" y="389.959588" transform="rotate(-0 243.148041 389.959588)">21.1%</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #526d50" x="307.091646" y="359.869984" transform="rotate(-0 307.091646 359.869984)">31.5%</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #526d50" x="365.982359" y="285.13648" transform="rotate(-0 365.982359 285.13648)">46.3%</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #526d50" x="429.537508" y="251.95869" transform="rotate(-0 429.537508 251.95869)">57.8%</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #526d50" x="494.194983" y="216.402482" transform="rotate(-0 494.194983 216.402482)">70.1%</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #526d50" x="559.200202" y="173.86223" transform="rotate(-0 559.200202 173.86223)">84.8%</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #526d50" x="624.557305" y="151.447232" transform="rotate(-0 624.557305 151.447232)">92.6%</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #526d50" x="674.745573" y="167.42617" transform="rotate(-0 674.745573 167.42617)">98.8%</text>
+   </g>
+   <g id="line2d_27">
+    <path d="M 101.39415 427.666847 
+L 175.565624 403.706726 
+L 240.148041 369.959588 
+L 304.091646 339.869984 
+L 367.982359 297.13648 
+L 431.537508 263.95869 
+L 496.194983 228.402482 
+L 561.200202 185.86223 
+L 626.557305 163.447232 
+L 698.745573 145.42617 
+" clip-path="url(#p8e304747cc)" style="fill: none; stroke: #526d50; stroke-width: 1.8; stroke-linecap: square"/>
+    <defs>
+     <path id="m49dd28bbbc" d="M 0 3.35 
+C 0.88843 3.35 1.740593 2.997023 2.368808 2.368808 
+C 2.997023 1.740593 3.35 0.88843 3.35 0 
+C 3.35 -0.88843 2.997023 -1.740593 2.368808 -2.368808 
+C 1.740593 -2.997023 0.88843 -3.35 0 -3.35 
+C -0.88843 -3.35 -1.740593 -2.997023 -2.368808 -2.368808 
+C -2.997023 -1.740593 -3.35 -0.88843 -3.35 0 
+C -3.35 0.88843 -2.997023 1.740593 -2.368808 2.368808 
+C -1.740593 2.997023 -0.88843 3.35 0 3.35 
+z
+" style="stroke: #ffffff; stroke-width: 0.7"/>
+    </defs>
+    <g clip-path="url(#p8e304747cc)">
+     <use xlink:href="#m49dd28bbbc" x="101.39415" y="427.666847" style="fill: #526d50; stroke: #ffffff; stroke-width: 0.7"/>
+     <use xlink:href="#m49dd28bbbc" x="175.565624" y="403.706726" style="fill: #526d50; stroke: #ffffff; stroke-width: 0.7"/>
+     <use xlink:href="#m49dd28bbbc" x="240.148041" y="369.959588" style="fill: #526d50; stroke: #ffffff; stroke-width: 0.7"/>
+     <use xlink:href="#m49dd28bbbc" x="304.091646" y="339.869984" style="fill: #526d50; stroke: #ffffff; stroke-width: 0.7"/>
+     <use xlink:href="#m49dd28bbbc" x="367.982359" y="297.13648" style="fill: #526d50; stroke: #ffffff; stroke-width: 0.7"/>
+     <use xlink:href="#m49dd28bbbc" x="431.537508" y="263.95869" style="fill: #526d50; stroke: #ffffff; stroke-width: 0.7"/>
+     <use xlink:href="#m49dd28bbbc" x="496.194983" y="228.402482" style="fill: #526d50; stroke: #ffffff; stroke-width: 0.7"/>
+     <use xlink:href="#m49dd28bbbc" x="561.200202" y="185.86223" style="fill: #526d50; stroke: #ffffff; stroke-width: 0.7"/>
+     <use xlink:href="#m49dd28bbbc" x="626.557305" y="163.447232" style="fill: #526d50; stroke: #ffffff; stroke-width: 0.7"/>
+     <use xlink:href="#m49dd28bbbc" x="698.745573" y="145.42617" style="fill: #526d50; stroke: #ffffff; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="legend_1">
+    <g id="LineCollection_2">
+     <path d="M 101.036 156.824293 
+L 101.036 145.824293 
+" style="fill: none; stroke: #526d50; stroke-width: 1.4"/>
+    </g>
+    <g id="line2d_28">
+     <g>
+      <use xlink:href="#mee556ea201" x="101.036" y="156.824293" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+     </g>
+    </g>
+    <g id="line2d_29">
+     <g>
+      <use xlink:href="#mee556ea201" x="101.036" y="145.824293" style="fill: #526d50; stroke: #526d50; stroke-width: 0.7"/>
+     </g>
+    </g>
+    <g id="line2d_30">
+     <path d="M 90.036 151.324293 
+L 112.036 151.324293 
+" style="fill: none; stroke: #526d50; stroke-width: 1.8; stroke-linecap: square"/>
+    </g>
+    <g id="line2d_31">
+     <g>
+      <use xlink:href="#m49dd28bbbc" x="101.036" y="151.324293" style="fill: #526d50; stroke: #ffffff; stroke-width: 0.7"/>
+     </g>
+    </g>
+    <g id="text_30">
+     <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #262522" x="120.836" y="155.174293" transform="rotate(-0 120.836 155.174293)">Observed win rate · 95% interval</text>
+    </g>
+    <g id="line2d_32">
+     <path d="M 90.036 168.925367 
+L 101.036 168.925367 
+L 112.036 168.925367 
+" style="fill: none; stroke-dasharray: 7.5,6; stroke-dashoffset: 0; stroke: #aaa49b; stroke-width: 1.5"/>
+    </g>
+    <g id="text_31">
+     <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #262522" x="120.836" y="172.775367" transform="rotate(-0 120.836 172.775367)">Perfect calibration</text>
+    </g>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="text_32">
+    <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #66635e" x="80.136" y="495.019008" transform="rotate(-0 80.136 495.019008)">Raw sample counts by implied-probability bin</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="112.1904" y="510.757632" transform="rotate(-0 112.1904 510.757632)">0–10%</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #262522" x="112.1904" y="532.908288" transform="rotate(-0 112.1904 532.908288)">3,059</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="112.1904" y="555.058944" transform="rotate(-0 112.1904 555.058944)">640</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="176.2992" y="510.757632" transform="rotate(-0 176.2992 510.757632)">10–20%</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #262522" x="176.2992" y="532.908288" transform="rotate(-0 176.2992 532.908288)">1,042</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="176.2992" y="555.058944" transform="rotate(-0 176.2992 555.058944)">494</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="240.408" y="510.757632" transform="rotate(-0 240.408 510.757632)">20–30%</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #262522" x="240.408" y="532.908288" transform="rotate(-0 240.408 532.908288)">828</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="240.408" y="555.058944" transform="rotate(-0 240.408 555.058944)">432</text>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="304.5168" y="510.757632" transform="rotate(-0 304.5168 510.757632)">30–40%</text>
+   </g>
+   <g id="text_43">
+    <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #262522" x="304.5168" y="532.908288" transform="rotate(-0 304.5168 532.908288)">890</text>
+   </g>
+   <g id="text_44">
+    <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="304.5168" y="555.058944" transform="rotate(-0 304.5168 555.058944)">444</text>
+   </g>
+   <g id="text_45">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="368.6256" y="510.757632" transform="rotate(-0 368.6256 510.757632)">40–50%</text>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #262522" x="368.6256" y="532.908288" transform="rotate(-0 368.6256 532.908288)">943</text>
+   </g>
+   <g id="text_47">
+    <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="368.6256" y="555.058944" transform="rotate(-0 368.6256 555.058944)">410</text>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="432.7344" y="510.757632" transform="rotate(-0 432.7344 510.757632)">50–60%</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #262522" x="432.7344" y="532.908288" transform="rotate(-0 432.7344 532.908288)">758</text>
+   </g>
+   <g id="text_50">
+    <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="432.7344" y="555.058944" transform="rotate(-0 432.7344 555.058944)">397</text>
+   </g>
+   <g id="text_51">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="496.8432" y="510.757632" transform="rotate(-0 496.8432 510.757632)">60–70%</text>
+   </g>
+   <g id="text_52">
+    <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #262522" x="496.8432" y="532.908288" transform="rotate(-0 496.8432 532.908288)">800</text>
+   </g>
+   <g id="text_53">
+    <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="496.8432" y="555.058944" transform="rotate(-0 496.8432 555.058944)">402</text>
+   </g>
+   <g id="text_54">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="560.952" y="510.757632" transform="rotate(-0 560.952 510.757632)">70–80%</text>
+   </g>
+   <g id="text_55">
+    <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #262522" x="560.952" y="532.908288" transform="rotate(-0 560.952 532.908288)">724</text>
+   </g>
+   <g id="text_56">
+    <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="560.952" y="555.058944" transform="rotate(-0 560.952 555.058944)">412</text>
+   </g>
+   <g id="text_57">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="625.0608" y="510.757632" transform="rotate(-0 625.0608 510.757632)">80–90%</text>
+   </g>
+   <g id="text_58">
+    <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #262522" x="625.0608" y="532.908288" transform="rotate(-0 625.0608 532.908288)">857</text>
+   </g>
+   <g id="text_59">
+    <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="625.0608" y="555.058944" transform="rotate(-0 625.0608 555.058944)">437</text>
+   </g>
+   <g id="text_60">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="689.1696" y="510.757632" transform="rotate(-0 689.1696 510.757632)">90–100%</text>
+   </g>
+   <g id="text_61">
+    <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #262522" x="689.1696" y="532.908288" transform="rotate(-0 689.1696 532.908288)">2,329</text>
+   </g>
+   <g id="text_62">
+    <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #66635e" x="689.1696" y="555.058944" transform="rotate(-0 689.1696 555.058944)">583</text>
+   </g>
+   <g id="text_63">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #262522" x="72.442944" y="532.908288" transform="rotate(-0 72.442944 532.908288)">Positions</text>
+   </g>
+   <g id="text_64">
+    <text style="font-size: 9px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #66635e" x="72.442944" y="555.058944" transform="rotate(-0 72.442944 555.058944)">Games</text>
+   </g>
+  </g>
+  <g id="text_65">
+   <text style="font-size: 21px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #262522" x="80.136" y="24.7104" transform="rotate(-0 80.136 24.7104)">Implied probabilities and recorded wins</text>
+  </g>
+  <g id="text_66">
+   <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #66635e" x="80.136" y="48.1536" transform="rotate(-0 80.136 48.1536)">Generation 37 · 12,230 positions from 776 games · ten probability bins</text>
+  </g>
+  <g id="text_67">
+   <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #66635e" x="80.136" y="80.4672" transform="rotate(-0 80.136 80.4672)">Brier score</text>
+  </g>
+  <g id="text_68">
+   <text style="font-size: 19px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #262522" x="80.136" y="103.2768" transform="rotate(-0 80.136 103.2768)">0.0998</text>
+  </g>
+  <g id="text_69">
+   <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #66635e" x="248.04" y="80.4672" transform="rotate(-0 248.04 80.4672)">Constant baseline</text>
+  </g>
+  <g id="text_70">
+   <text style="font-size: 19px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #262522" x="248.04" y="103.2768" transform="rotate(-0 248.04 103.2768)">0.2488</text>
+  </g>
+  <g id="text_71">
+   <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #66635e" x="415.944" y="80.4672" transform="rotate(-0 415.944 80.4672)">Brier skill / outcome R²</text>
+  </g>
+  <g id="text_72">
+   <text style="font-size: 19px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #262522" x="415.944" y="103.2768" transform="rotate(-0 415.944 103.2768)">0.599</text>
+  </g>
+  <g id="text_73">
+   <text style="font-size: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #66635e" x="602.928" y="80.4672" transform="rotate(-0 602.928 80.4672)">10-bin ECE</text>
+  </g>
+  <g id="text_74">
+   <text style="font-size: 19px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #262522" x="602.928" y="103.2768" transform="rotate(-0 602.928 103.2768)">3.69 pp</text>
+  </g>
+  <g id="text_75">
+   <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #66635e" x="80.136" y="590.5152" transform="rotate(-0 80.136 590.5152)">Each game has equal weight and can contribute to several bins. Intervals resample whole games.</text>
+  </g>
+  <g id="text_76">
+   <text style="font-size: 10px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: start; fill: #66635e" x="80.136" y="606.3552" transform="rotate(-0 80.136 606.3552)">Points use each bin’s mean prediction. Selected post-checkpoint corpus; no calibration model was fitted.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p8e304747cc">
+   <rect x="80.136" y="136.224" width="641.088" height="294.624"/>
+  </clipPath>
+ </defs>
+</svg>

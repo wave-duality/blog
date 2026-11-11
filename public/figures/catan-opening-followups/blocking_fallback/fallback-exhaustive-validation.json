@@ -1,0 +1,10 @@
+{
+  "boards": 4,
+  "all_54_a1_corners_each": true,
+  "a1_cases": 216,
+  "proxy_objectives": 2,
+  "min_unordered_b1_b2_pairs": 1160,
+  "max_unordered_b1_b2_pairs": 1209,
+  "agrees_exactly": true,
+  "note": "Unordered pairs exhaust both orders because settlement availability depends only on occupied vertices. Native legality independently checked in main results."
+}

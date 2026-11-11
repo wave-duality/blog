@@ -50,7 +50,7 @@ L 0 3.5
       </g>
      </g>
      <g id="text_1">
-      <text style="font-size: 12px; font-family: 'Palatino', 'Palatino Linotype', 'DejaVu Serif', serif; text-anchor: middle; fill: #555555" x="107.773596" y="229.670463" transform="rotate(-0 107.773596 229.670463)">−1 to −0.6</text>
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #555555" x="107.773596" y="229.670463" transform="rotate(-0 107.773596 229.670463)">−1 to −0.6</text>
      </g>
     </g>
     <g id="xtick_2">
@@ -60,7 +60,7 @@ L 0 3.5
       </g>
      </g>
      <g id="text_2">
-      <text style="font-size: 12px; font-family: 'Palatino', 'Palatino Linotype', 'DejaVu Serif', serif; text-anchor: middle; fill: #555555" x="257.756622" y="229.670463" transform="rotate(-0 257.756622 229.670463)">−0.6 to −0.2</text>
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #555555" x="257.756622" y="229.670463" transform="rotate(-0 257.756622 229.670463)">−0.6 to −0.2</text>
      </g>
     </g>
     <g id="xtick_3">
@@ -70,7 +70,7 @@ L 0 3.5
       </g>
      </g>
      <g id="text_3">
-      <text style="font-size: 12px; font-family: 'Palatino', 'Palatino Linotype', 'DejaVu Serif', serif; text-anchor: middle; fill: #555555" x="407.739648" y="229.670463" transform="rotate(-0 407.739648 229.670463)">−0.2 to +0.2</text>
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #555555" x="407.739648" y="229.670463" transform="rotate(-0 407.739648 229.670463)">−0.2 to +0.2</text>
      </g>
     </g>
     <g id="xtick_4">
@@ -80,7 +80,7 @@ L 0 3.5
       </g>
      </g>
      <g id="text_4">
-      <text style="font-size: 12px; font-family: 'Palatino', 'Palatino Linotype', 'DejaVu Serif', serif; text-anchor: middle; fill: #555555" x="557.722675" y="229.670463" transform="rotate(-0 557.722675 229.670463)">+0.2 to +0.6</text>
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #555555" x="557.722675" y="229.670463" transform="rotate(-0 557.722675 229.670463)">+0.2 to +0.6</text>
      </g>
     </g>
     <g id="xtick_5">
@@ -90,11 +90,11 @@ L 0 3.5
       </g>
      </g>
      <g id="text_5">
-      <text style="font-size: 12px; font-family: 'Palatino', 'Palatino Linotype', 'DejaVu Serif', serif; text-anchor: middle; fill: #555555" x="707.705701" y="229.670463" transform="rotate(-0 707.705701 229.670463)">+0.6 to +1</text>
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #555555" x="707.705701" y="229.670463" transform="rotate(-0 707.705701 229.670463)">+0.6 to +1</text>
      </g>
     </g>
     <g id="text_6">
-     <text style="font-size: 12px; font-family: 'Palatino', 'Palatino Linotype', 'DejaVu Serif', serif; text-anchor: middle; fill: #242424" x="407.739648" y="252.871635" transform="rotate(-0 407.739648 252.871635)">Gen37 raw value range for the acting player</text>
+     <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #242424" x="407.739648" y="252.871635" transform="rotate(-0 407.739648 252.871635)">Generation 37 raw value range for the acting player</text>
     </g>
    </g>
    <g id="matplotlib.axis_2">
@@ -115,7 +115,7 @@ L -3.5 0
       </g>
      </g>
      <g id="text_7">
-      <text style="font-size: 12px; font-family: 'Palatino', 'Palatino Linotype', 'DejaVu Serif', serif; text-anchor: end; fill: #555555" x="48.279537" y="217.73394" transform="rotate(-0 48.279537 217.73394)">0%</text>
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="48.279537" y="217.73394" transform="rotate(-0 48.279537 217.73394)">0%</text>
      </g>
     </g>
     <g id="ytick_2">
@@ -130,7 +130,7 @@ L 760.19976 171.825286
       </g>
      </g>
      <g id="text_8">
-      <text style="font-size: 12px; font-family: 'Palatino', 'Palatino Linotype', 'DejaVu Serif', serif; text-anchor: end; fill: #555555" x="48.279537" y="176.761809" transform="rotate(-0 48.279537 176.761809)">20%</text>
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="48.279537" y="176.761809" transform="rotate(-0 48.279537 176.761809)">20%</text>
      </g>
     </g>
     <g id="ytick_3">
@@ -145,7 +145,7 @@ L 760.19976 130.853155
       </g>
      </g>
      <g id="text_9">
-      <text style="font-size: 12px; font-family: 'Palatino', 'Palatino Linotype', 'DejaVu Serif', serif; text-anchor: end; fill: #555555" x="48.279537" y="135.789679" transform="rotate(-0 48.279537 135.789679)">40%</text>
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="48.279537" y="135.789679" transform="rotate(-0 48.279537 135.789679)">40%</text>
      </g>
     </g>
     <g id="ytick_4">
@@ -160,7 +160,7 @@ L 760.19976 89.881025
       </g>
      </g>
      <g id="text_10">
-      <text style="font-size: 12px; font-family: 'Palatino', 'Palatino Linotype', 'DejaVu Serif', serif; text-anchor: end; fill: #555555" x="48.279537" y="94.817548" transform="rotate(-0 48.279537 94.817548)">60%</text>
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="48.279537" y="94.817548" transform="rotate(-0 48.279537 94.817548)">60%</text>
      </g>
     </g>
     <g id="ytick_5">
@@ -175,7 +175,7 @@ L 760.19976 48.908894
       </g>
      </g>
      <g id="text_11">
-      <text style="font-size: 12px; font-family: 'Palatino', 'Palatino Linotype', 'DejaVu Serif', serif; text-anchor: end; fill: #555555" x="48.279537" y="53.845417" transform="rotate(-0 48.279537 53.845417)">80%</text>
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="48.279537" y="53.845417" transform="rotate(-0 48.279537 53.845417)">80%</text>
      </g>
     </g>
     <g id="ytick_6">
@@ -190,11 +190,11 @@ L 760.19976 7.936763
       </g>
      </g>
      <g id="text_12">
-      <text style="font-size: 12px; font-family: 'Palatino', 'Palatino Linotype', 'DejaVu Serif', serif; text-anchor: end; fill: #555555" x="48.279537" y="12.873287" transform="rotate(-0 48.279537 12.873287)">100%</text>
+      <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: end; fill: #555555" x="48.279537" y="12.873287" transform="rotate(-0 48.279537 12.873287)">100%</text>
      </g>
     </g>
     <g id="text_13">
-     <text style="font-size: 12px; font-family: 'Palatino', 'Palatino Linotype', 'DejaVu Serif', serif; text-anchor: middle; fill: #242424" x="12.873287" y="110.36709" transform="rotate(-90 12.873287 110.36709)">Acting player’s observed win rate</text>
+     <text style="font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #242424" x="12.873287" y="110.36709" transform="rotate(-90 12.873287 110.36709)">Acting player’s observed win rate</text>
     </g>
    </g>
    <g id="LineCollection_1">
@@ -276,19 +276,19 @@ L 760.19976 212.797416
 " style="fill: none; stroke: #999999; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="text_14">
-    <text style="font-weight: 700; font-size: 12px; font-family: 'Palatino', 'Palatino Linotype', 'DejaVu Serif', serif; text-anchor: middle; fill: #242424" x="107.773596" y="191.308017" transform="rotate(-0 107.773596 191.308017)">3.2%</text>
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #242424" x="107.773596" y="191.308017" transform="rotate(-0 107.773596 191.308017)">3.2%</text>
    </g>
    <g id="text_15">
-    <text style="font-weight: 700; font-size: 12px; font-family: 'Palatino', 'Palatino Linotype', 'DejaVu Serif', serif; text-anchor: middle; fill: #242424" x="257.756622" y="143.549698" transform="rotate(-0 257.756622 143.549698)">26.5%</text>
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #242424" x="257.756622" y="143.549698" transform="rotate(-0 257.756622 143.549698)">26.5%</text>
    </g>
    <g id="text_16">
-    <text style="font-weight: 700; font-size: 12px; font-family: 'Palatino', 'Palatino Linotype', 'DejaVu Serif', serif; text-anchor: middle; fill: #242424" x="407.739648" y="92.473895" transform="rotate(-0 407.739648 92.473895)">51.4%</text>
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #242424" x="407.739648" y="92.473895" transform="rotate(-0 407.739648 92.473895)">51.4%</text>
    </g>
    <g id="text_17">
-    <text style="font-weight: 700; font-size: 12px; font-family: 'Palatino', 'Palatino Linotype', 'DejaVu Serif', serif; text-anchor: middle; fill: #242424" x="557.722675" y="39.892704" transform="rotate(-0 557.722675 39.892704)">77.1%</text>
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #242424" x="557.722675" y="39.892704" transform="rotate(-0 557.722675 39.892704)">77.1%</text>
    </g>
    <g id="text_18">
-    <text style="font-weight: 700; font-size: 12px; font-family: 'Palatino', 'Palatino Linotype', 'DejaVu Serif', serif; text-anchor: middle; fill: #242424" x="707.705701" y="37.784119" transform="rotate(-0 707.705701 37.784119)">97.1%</text>
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; text-anchor: middle; fill: #242424" x="707.705701" y="37.784119" transform="rotate(-0 707.705701 37.784119)">97.1%</text>
    </g>
   </g>
  </g>

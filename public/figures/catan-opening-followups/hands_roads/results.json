@@ -1,0 +1,363 @@
+{
+  "schema": "opening-hands-roads-v1",
+  "checkpoint_sha256": "fbc5209b17a14a1d7b649087efdb1503185c7dfab9d9f5b443d0957431272158",
+  "seed": 2026110213,
+  "script_sha256": "5dad47903eccf0d5310e88a814079963c0eca850743b46bac3d295fbfb18b1c2",
+  "screen": {
+    "boards": 100000,
+    "different_starting_card_count": 3167,
+    "identical_A_hands": 651,
+    "eligible_equal_size_different_A_hand": 96182,
+    "eligible_contested_edge_geometry": 21225
+  },
+  "sample_selection": "Uniform seeded permutation among geometrically eligible whole boards, without looking at intervention scores.",
+  "uncertainty": "95% whole-board normal intervals for paired means, Wilson intervals for frequencies, whole-board percentile bootstrap for patch projection.",
+  "dice": "One shared roll per paired board, drawn with exact dice frequencies conditional on not rolling 7; same roll under all counterfactuals.",
+  "inference": "Frozen Generation 37 direct network. Zero future-state simulations; the native 0-simulation dummy callback extracts legality only.",
+  "source": "opening-study-100k-20261029: seeds 4100000 through 4199999, original greedy openings; interventions replayed natively.",
+  "hands": {
+    "pre_roll_value_delta": {
+      "n": 2000,
+      "mean": -0.01679956388124265,
+      "ci95": [
+        -0.020572519411498423,
+        -0.013026608350986872
+      ]
+    },
+    "pre_roll_absolute_value_delta": {
+      "n": 2000,
+      "mean": 0.0698710222209338,
+      "ci95": [
+        0.06754817831663792,
+        0.07219386612522968
+      ]
+    },
+    "post_roll_value_delta": {
+      "n": 2000,
+      "mean": -0.018333225108624902,
+      "ci95": [
+        -0.02232203868654308,
+        -0.014344411530706725
+      ]
+    },
+    "post_roll_absolute_value_delta": {
+      "n": 2000,
+      "mean": 0.07398698466544738,
+      "ci95": [
+        0.07153001697319411,
+        0.07644395235770066
+      ]
+    },
+    "choice_changed": {
+      "n": 2000,
+      "count": 206,
+      "rate": 0.103,
+      "ci95": [
+        0.09043054135255413,
+        0.11709165002225314
+      ]
+    },
+    "category_changed": {
+      "n": 2000,
+      "count": 206,
+      "rate": 0.103,
+      "ci95": [
+        0.09043054135255413,
+        0.11709165002225314
+      ]
+    },
+    "total_variation": {
+      "n": 2000,
+      "mean": 0.14151505942255738,
+      "ci95": [
+        0.13046880662546625,
+        0.1525613122196485
+      ]
+    },
+    "common_mask_total_variation": {
+      "n": 2000,
+      "mean": 0.005986727711505471,
+      "ci95": [
+        0.004445246606366697,
+        0.007528208816644244
+      ]
+    },
+    "common_mask_choice_changed": {
+      "n": 2000,
+      "count": 8,
+      "rate": 0.004,
+      "ci95": [
+        0.002028222209821939,
+        0.007873558449886893
+      ]
+    },
+    "same_legal_set": {
+      "n": 2000,
+      "count": 643,
+      "rate": 0.3215,
+      "ci95": [
+        0.3013895082500113,
+        0.3422949027333718
+      ]
+    },
+    "original_action_categories": {
+      "end turn": 1835,
+      "road": 164,
+      "development card": 1
+    },
+    "swapped_action_categories": {
+      "end turn": 1906,
+      "road": 93,
+      "development card": 1
+    },
+    "global_patch": {
+      "n": 512,
+      "pooled_effect_projection": 1.1051524176118233,
+      "ci95": [
+        1.053663116157363,
+        1.1561444189085919
+      ],
+      "formula": "sum(delta_full * delta_patch) / sum(delta_full^2)",
+      "note": "Effect alignment diagnostic, not a bounded causal fraction or a semantic neuron identification."
+    }
+  },
+  "roads": {
+    "race_preference_away": {
+      "n": 2000,
+      "mean": 0.39846441968832313,
+      "ci95": [
+        0.3819485758430239,
+        0.4149802635336224
+      ]
+    },
+    "race_preference_toward": {
+      "n": 2000,
+      "mean": 0.35915084451785695,
+      "ci95": [
+        0.34295869457319217,
+        0.37534299446252173
+      ]
+    },
+    "race_preference_delta": {
+      "n": 2000,
+      "mean": -0.03931357517046619,
+      "ci95": [
+        -0.04293037836847671,
+        -0.035696771972455674
+      ]
+    },
+    "race_logit_margin_delta": {
+      "n": 2000,
+      "mean": -0.45197464382648467,
+      "ci95": [
+        -0.4770133288284009,
+        -0.4269359588245684
+      ]
+    },
+    "race_chosen_away": {
+      "n": 2000,
+      "count": 797,
+      "rate": 0.3985,
+      "ci95": [
+        0.3772570819939158,
+        0.4201320928789884
+      ]
+    },
+    "race_chosen_toward": {
+      "n": 2000,
+      "count": 707,
+      "rate": 0.3535,
+      "ci95": [
+        0.3328473290252137,
+        0.37471438643173655
+      ]
+    },
+    "any_choice_changed": {
+      "n": 2000,
+      "count": 140,
+      "rate": 0.07,
+      "ci95": [
+        0.0596223997514783,
+        0.08202632138496284
+      ]
+    },
+    "two_changed_path_embeddings_patch": {
+      "n": 512,
+      "pooled_effect_projection": 0.07293566052034081,
+      "ci95": [
+        0.05176306871359636,
+        0.09496132506253725
+      ],
+      "formula": "sum(delta_full * delta_patch) / sum(delta_full^2)",
+      "note": "Effect alignment diagnostic, not a bounded causal fraction or a semantic neuron identification."
+    },
+    "all_path_embeddings_patch": {
+      "n": 512,
+      "pooled_effect_projection": 0.36310105105212986,
+      "ci95": [
+        0.3350535761334475,
+        0.3904861754611258
+      ],
+      "formula": "sum(delta_full * delta_patch) / sum(delta_full^2)",
+      "note": "Effect alignment diagnostic, not a bounded causal fraction or a semantic neuron identification."
+    },
+    "all_vertex_embeddings_patch": {
+      "n": 512,
+      "pooled_effect_projection": 0.5590711949740054,
+      "ci95": [
+        0.5301676430318661,
+        0.588368022179766
+      ],
+      "formula": "sum(delta_full * delta_patch) / sum(delta_full^2)",
+      "note": "Effect alignment diagnostic, not a bounded causal fraction or a semantic neuron identification."
+    },
+    "same_board_hand_factorial": {
+      "screened_geometry_boards": 21225,
+      "eligible_boards": 1575,
+      "n": 1000,
+      "selection": "Across all geometric pairs, one outcome-blind non-7 roll per board; require different A hands after swapping A1/A2 and >=1 wood+brick in both. Uniform random sample of eligible boards; native legal replay verifies contested edge legal in all four conditions.",
+      "interaction_preference": {
+        "n": 1000,
+        "mean": 0.00013952217448119365,
+        "ci95": [
+          -0.0030666444084597676,
+          0.0033456887574221553
+        ]
+      },
+      "absolute_interaction_preference": {
+        "n": 1000,
+        "mean": 0.01088489246573382,
+        "ci95": [
+          0.00775057160803984,
+          0.0140192133234278
+        ]
+      },
+      "hand_swap_changes_choice_under_threat": {
+        "n": 1000,
+        "count": 52,
+        "rate": 0.052,
+        "ci95": [
+          0.039872841792417534,
+          0.06755605934098838
+        ]
+      },
+      "threat_effect_original": {
+        "n": 1000,
+        "mean": 0.001973004922105961,
+        "ci95": [
+          -0.0009643764960276333,
+          0.004910386340239555
+        ]
+      },
+      "threat_effect_swapped": {
+        "n": 1000,
+        "mean": 0.0021125270965871553,
+        "ci95": [
+          -0.00036788839696897963,
+          0.00459294259014329
+        ]
+      }
+    },
+    "opponent_starting_hand_readiness": {
+      "screened_geometry_boards": 21225,
+      "eligible_boards": 12057,
+      "n": 1000,
+      "selection": "Swap B1/B2 piece pairs, preserving total starting-card count; require exactly one B starting hand to contain wood+brick. Cross road orientation x B hand readiness. Uniform score-independent sample; all four setup histories native legal.",
+      "interaction": {
+        "n": 1000,
+        "mean": -0.01966095745566875,
+        "ci95": [
+          -0.022455947030610927,
+          -0.01686596788072657
+        ]
+      },
+      "threat_effect_B_unready": {
+        "n": 1000,
+        "mean": -0.031279829349266146,
+        "ci95": [
+          -0.03613364317033845,
+          -0.02642601552819384
+        ]
+      },
+      "threat_effect_B_ready": {
+        "n": 1000,
+        "mean": -0.0509407868049349,
+        "ci95": [
+          -0.056523197002985144,
+          -0.04535837660688465
+        ]
+      },
+      "B_readiness_changes_choice_under_threat": {
+        "n": 1000,
+        "count": 73,
+        "rate": 0.073,
+        "ci95": [
+          0.058458786926264744,
+          0.09080938446651277
+        ]
+      },
+      "A_unready": {
+        "interaction": {
+          "n": 682,
+          "mean": -0.02384193058618982,
+          "ci95": [
+            -0.027307317191589763,
+            -0.020376543980789877
+          ]
+        },
+        "threat_effect_B_unready": {
+          "n": 682,
+          "mean": -0.0388045414433324,
+          "ci95": [
+            -0.044681202969809056,
+            -0.03292787991685575
+          ]
+        },
+        "threat_effect_B_ready": {
+          "n": 682,
+          "mean": -0.06264647202952224,
+          "ci95": [
+            -0.06939719117508338,
+            -0.05589575288396111
+          ]
+        }
+      },
+      "A_ready": {
+        "interaction": {
+          "n": 318,
+          "mean": -0.010694216339268212,
+          "ci95": [
+            -0.015239590324902214,
+            -0.006148842353634211
+          ]
+        },
+        "threat_effect_B_unready": {
+          "n": 318,
+          "mean": -0.015141924795325286,
+          "ci95": [
+            -0.023492774765975322,
+            -0.006791074824675249
+          ]
+        },
+        "threat_effect_B_ready": {
+          "n": 318,
+          "mean": -0.025836141134593496,
+          "ci95": [
+            -0.0351993197358672,
+            -0.016472962533319792
+          ]
+        }
+      }
+    }
+  },
+  "validation": {
+    "native_legal_masks": 8000,
+    "network_rows": 20000,
+    "all_child_visits_zero": true,
+    "all_openings_replayed": true,
+    "hands_spatial_inputs_equal_before_roll": true,
+    "roads_global_inputs_equal_at_road_choice": true,
+    "patch_identity_and_full_controls_pass": true
+  },
+  "elapsed_seconds": 19.96396493911743
+}

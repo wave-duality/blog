@@ -1,0 +1,48 @@
+{
+  "description": "Descriptive summaries of completed opening portfolios; not additional outcome tests.",
+  "resources": [
+    "wood",
+    "brick",
+    "sheep",
+    "wheat",
+    "ore"
+  ],
+  "rules": {
+    "network": {
+      "mean_total_pips": 21.9574,
+      "mean_resource_types": 4.461,
+      "all_five_fraction": 0.50755,
+      "mean_resource_pips": [
+        4.73,
+        4.10575,
+        3.7269,
+        5.23385,
+        4.1609
+      ]
+    },
+    "max_pips": {
+      "mean_total_pips": 23.2154,
+      "mean_resource_types": 3.686,
+      "all_five_fraction": 0.1014,
+      "mean_resource_pips": [
+        5.3926,
+        3.64155,
+        5.88235,
+        4.92455,
+        3.37435
+      ]
+    },
+    "resource_weighted": {
+      "mean_total_pips": 23.11075,
+      "mean_resource_types": 3.74895,
+      "all_five_fraction": 0.1186,
+      "mean_resource_pips": [
+        4.26555,
+        4.67105,
+        4.48205,
+        5.2181,
+        4.474
+      ]
+    }
+  }
+}

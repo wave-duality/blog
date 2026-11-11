@@ -1,0 +1,27 @@
+{
+  "javascript_syntax": "passed with node --check",
+  "controls_and_svg_smoke_test": {
+    "environment": "Node VM with a minimal document/element stand-in; no browser layout assertions",
+    "boards": 128,
+    "a1_candidates": 776,
+    "mode_cases": 2328,
+    "render_calls": 3233,
+    "default_seed": 4172414,
+    "default_a1_corner": 44,
+    "default_mode": "worst",
+    "selected_rows_and_values": "passed",
+    "resize_message_shape": "passed"
+  },
+  "native_history_validation": "layout/viewer-history-audit.json",
+  "files": {
+    "catan-opening-anticipation.html": {
+      "bytes": 633451,
+      "sha256": "bf82f9db7143a3a49489c53c1751e5e34fff9155cbbdc9dfe83e95fb196cd6a6"
+    },
+    "catan-opening-anticipation-examples.json": {
+      "bytes": 1438653,
+      "sha256": "a971c0babb73b374b1f776c9759e03e3ff76de10215b9e6a544da06044d09f8d"
+    }
+  },
+  "visual_qa": "Root owns browser checks; inspect desktop/mobile layout, label placement, table scrolling, and iframe resize in the article."
+}

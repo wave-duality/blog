@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "games": 6144,
+  "opening_action_legality_checks": 49152,
+  "independent_frozen_policy_checks": 880,
+  "independent_chance_checks": 385,
+  "replayed_boards": 16,
+  "control_replays_identical": true,
+  "model_sha256": "fbc5209b17a14a1d7b649087efdb1503185c7dfab9d9f5b443d0957431272158",
+  "source_sha256": {
+    "gnn.py": "95436b2276e48eb0a232b37b7fd38bc0962230d62628aa5dac7448f8db8692d4",
+    "train.py": "c0d54c731dad202ebaae889a4b9adabf22cb1187c2a792040dc625bd58a5ab44",
+    "catan/src/features.rs": "0a0a9a22a08be8a5310c4ecf6deaec4d56b3f1599e3f4061c777dd842801dbd6",
+    "catan/src/board.rs": "60544e353da11b7f88f590c8c2d12c6f2861ccbfe4c8ebb3ab2b541a3feb2114",
+    "catan/src/rules.rs": "88899579d56f351506ab0640f60349d62bbffdbc4b9b3a4b5103ddd177b70b44",
+    "catan/src/state.rs": "d4a90b2ff102e10df6fac643b0ef60e7ae99b8a197fdbbbf941efd4a95afcdf5",
+    "catan/src/py.rs": "edeade9812690d08d1f5d2bfbf77c6f6723c13ac92eab56483beb6b07e5d4b4c"
+  },
+  "compiled_engine_sha256": "99afa16950ae524491ac1e46191812bd7ad04025526ebabcd2c55bf818bfc834",
+  "source_matches_100k_study": true,
+  "protocol_sha256": "51be74174af9060a8135863658877d9bd933784a00ed82c613c5d1275b3329e8",
+  "validation_script_sha256": "06d28f471497adb4618fa26288992a1ca7957a37e45c7d6d30544bfcc27047b2"
+}

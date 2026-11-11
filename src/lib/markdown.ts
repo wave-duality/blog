@@ -10,7 +10,7 @@ import type { Root, Element } from "hast";
 import { withBasePath } from "./site";
 import { normalizeLatex } from "./latex";
 
-export interface ArticleSection { id: string; title: string }
+export interface ArticleSection { id: string; title: string; level: number }
 
 function articleSections() {
   return (tree: Root, file: { data: Record<string, unknown> }) => {
@@ -30,7 +30,8 @@ function articleSections() {
       while (used.has(id)) id = `${base}-${suffix++}`;
       used.add(id);
       heading.properties.id = id;
-      if (Number(heading.tagName.slice(1)) === level) sections.push({ id, title });
+      const headingLevel = Number(heading.tagName.slice(1));
+      if (headingLevel <= level + 1) sections.push({ id, title, level: headingLevel });
     }
     file.data.sections = sections;
   };

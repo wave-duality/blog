@@ -1,0 +1,157 @@
+{
+  "schema": "opening-opponent-relocation-v1",
+  "boards": 2000,
+  "heldout_boards_scanned": 3348,
+  "model_sha256": "fbc5209b17a14a1d7b649087efdb1503185c7dfab9d9f5b443d0957431272158",
+  "source_manifest_sha256": "2efcfc0fcf3a56ea5c8e5546ceee175f82f55d8583178d440782fb092bf390b9",
+  "source_script_sha256": "d9c951cb7cc632e2419bb007ddcb96a71231f5c06d15cc16db369247defd16b7",
+  "validation": {
+    "native_legal_histories": 4000,
+    "common_legal_only": true,
+    "identity_max_absolute_error": 0.0,
+    "all_embeddings_positive_control_max_absolute_error": 0.0,
+    "manual_forward_max_absolute_error": 0.0
+  },
+  "results": {
+    "all": {
+      "directional_transfer": {
+        "value": 0.1426828770014388,
+        "ci95": [
+          0.13567680868196383,
+          0.14968894532091379
+        ]
+      },
+      "boards": 2000,
+      "choice_changed": {
+        "n": 2000,
+        "mean": 0.2095,
+        "ci95": [
+          0.1916604192093363,
+          0.2273395807906637
+        ]
+      },
+      "patch_changes_source_choice": {
+        "n": 2000,
+        "mean": 0.0885,
+        "ci95": [
+          0.07604936029329909,
+          0.1009506397067009
+        ]
+      },
+      "patch_matches_donor_choice": {
+        "n": 2000,
+        "mean": 0.822,
+        "ci95": [
+          0.8052317552671708,
+          0.8387682447328291
+        ]
+      },
+      "mean_centered_logit_rms_change": {
+        "n": 2000,
+        "mean": 0.989626492379989,
+        "ci95": [
+          0.9760205542791003,
+          1.0032324304808777
+        ]
+      },
+      "policy_total_variation": {
+        "n": 2000,
+        "mean": 0.1951330300781423,
+        "ci95": [
+          0.18534711409971638,
+          0.20491894605656824
+        ]
+      },
+      "patch_policy_total_variation": {
+        "n": 2000,
+        "mean": 0.08285825861390982,
+        "ci95": [
+          0.07758495901127675,
+          0.08813155821654288
+        ]
+      },
+      "fraction_of_squared_change_explained": {
+        "value": 0.09446060581111293,
+        "ci95": [
+          0.08212299038741665,
+          0.10679822123480921
+        ]
+      }
+    },
+    "exact_resource_vector": {
+      "directional_transfer": {
+        "value": 0.09881874078944615,
+        "ci95": [
+          0.07411234573772266,
+          0.12352513584116964
+        ]
+      },
+      "boards": 171,
+      "choice_changed": {
+        "n": 171,
+        "mean": 0.13450292397660818,
+        "ci95": [
+          0.08321415260159774,
+          0.1857916953516186
+        ]
+      },
+      "patch_changes_source_choice": {
+        "n": 171,
+        "mean": 0.04093567251461988,
+        "ci95": [
+          0.01115061356550779,
+          0.07072073146373198
+        ]
+      },
+      "patch_matches_donor_choice": {
+        "n": 171,
+        "mean": 0.8713450292397661,
+        "ci95": [
+          0.8210144423554827,
+          0.9216756161240495
+        ]
+      },
+      "mean_centered_logit_rms_change": {
+        "n": 171,
+        "mean": 0.7532639318723452,
+        "ci95": [
+          0.7193338742124049,
+          0.7871939895322855
+        ]
+      },
+      "policy_total_variation": {
+        "n": 171,
+        "mean": 0.12215427436435387,
+        "ci95": [
+          0.09760353448065445,
+          0.1467050142480533
+        ]
+      },
+      "patch_policy_total_variation": {
+        "n": 171,
+        "mean": 0.03641017591778449,
+        "ci95": [
+          0.026513650142065255,
+          0.046306701693503725
+        ]
+      },
+      "fraction_of_squared_change_explained": {
+        "value": 0.08557001197185976,
+        "ci95": [
+          0.044454192786693776,
+          0.12668583115702575
+        ]
+      }
+    }
+  },
+  "methods": {
+    "selection": "First2000 eligible held-out boards in original corpus order. Alternative opponent A1 matches total production and adjacent hex count, preferring exact five-resource vector matches; farthest geometric alternative then lowest vertex ID breaks ties. Neither alternative selection nor eligibility uses network responses.",
+    "setting": "B choosing B2. Same board and own B1 settlement/road. Move opponent A1 and its road; use smallest incident road at the new site. Both complete histories replayed by native engine. Scores/choices compared only over common legal settlements.",
+    "intervention": "Patch post-ReLU input vertex embeddings at both old/new A1 vertices and path embeddings at both old/new road locations from the relocated history into the original history. Retain all other embeddings from original, then rerun every message-passing block and settlement head.",
+    "interpretation": "A controlled sensitivity/activation-intervention test for location-specific opponent information. Moved piece rows contain all their encoded local features, not exclusively ownership. Hybrid activations need not correspond to a legal encoded state. This establishes computational sensitivity, not an identified denial neuron or strategic intent.",
+    "directional_transfer": "mean_board(dot(patched centered score change, full centered score change)/legal_count) / mean_board(full centered score change squared/legal_count). Signed directional projection, not a percentage of a uniquely identified concept.",
+    "explanation_metric": "1 - mean_board_MSE(full centered score change - patched centered score change)/mean_board_MSE(full centered score change). Can be negative; not a percentage of a uniquely identified causal pathway.",
+    "controls": "Identity patch source into itself and full donor-embedding positive control; separate manual-forward agreement test. Whole-board95% normal or delta-method intervals; one paired intervention per board."
+  },
+  "elapsed_seconds": 3.771254457999021
+}

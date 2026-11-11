@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "matched_pairs": 2048,
+  "native_opening_checks": 2048,
+  "independent_first_decision_checks": 21,
+  "all_games_terminal": true,
+  "max_terminal_turn": 144,
+  "minimum_terminal_turn": 39,
+  "model_sha256": "fbc5209b17a14a1d7b649087efdb1503185c7dfab9d9f5b443d0957431272158",
+  "script_sha256": "384135eb9f824651c2f098cc2c6926d2e4caf90e3b54d464e5d2c786494b3dee",
+  "validation_sha256": "c6e7a43d21c44e14c9ffb276dfcb4c7888401f6a54d367ad033c1be07cb44499"
+}

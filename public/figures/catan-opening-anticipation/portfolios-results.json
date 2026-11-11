@@ -1,0 +1,2079 @@
+{
+  "schema": "opening-anticipation-portfolios-v1",
+  "boards": 100000,
+  "train_boards": 80000,
+  "test_boards": 20000,
+  "source": "/Users/owenzhang/CatanRL/run/analysis/opening-study-100k-20261029",
+  "source_manifest_sha256": "2efcfc0fcf3a56ea5c8e5546ceee175f82f55d8583178d440782fb092bf390b9",
+  "analysis_sha256": "b784a2da43052b6a81298ed96d46f8d921e32c5bd2eaa6cef3dabc8a6b94ced7",
+  "coefficients": {
+    "weighted_pips": {
+      "wood_pips": 1.7747200306413893,
+      "brick_pips": 2.1109165217163217,
+      "sheep_pips": 1.7631846016123944,
+      "wheat_pips": 1.9765829979081666,
+      "ore_pips": 2.119340805671246
+    },
+    "local": {
+      "wood_pips": 1.6579256849242294,
+      "brick_pips": 1.971107357536983,
+      "sheep_pips": 1.6465211883386155,
+      "wheat_pips": 1.860077397132649,
+      "ore_pips": 1.9795662681615636,
+      "adjacent_hexes": -0.40084436540066093,
+      "local_resource_count": 0.8890490347269413,
+      "new_resource_types": 0.0,
+      "new_resource_pips": 0.0,
+      "all_five_covered": 0.0,
+      "combined_concentration_hhi": -0.9101900561844655
+    },
+    "a2_preference": {
+      "wood_pips": 1.0672337772436071,
+      "brick_pips": 1.2913866706880677,
+      "sheep_pips": 0.7934603789742131,
+      "wheat_pips": 1.2143424808969014,
+      "ore_pips": 1.253432848818058,
+      "adjacent_hexes": 0.8962519763782681,
+      "local_resource_count": 1.668814800681821,
+      "new_resource_types": 0.24504095677384233,
+      "new_resource_pips": 0.388459381010577,
+      "all_five_covered": 2.740078778907919,
+      "combined_concentration_hhi": -12.02685494964573
+    }
+  },
+  "validation": {
+    "pips": {
+      "cases": 100,
+      "all_exact": true,
+      "minimum_pairs": 1160
+    },
+    "weighted_pips": {
+      "cases": 100,
+      "all_exact": true,
+      "minimum_pairs": 1160
+    },
+    "a2_preference": {
+      "cases": 100,
+      "all_exact": true,
+      "minimum_pairs": 1160
+    }
+  },
+  "objectives": {
+    "pips": "Total pips of A1 and A2; ignores resource mix, ports, numbers and game value.",
+    "weighted_pips": "Total resource pips of A1 and A2 weighted by the frozen A1 resource-only regression; logit-scale production proxy, not game value.",
+    "a2_preference": "Fixed training-only A2 coverage-regression score, with the unidentifiable A1-specific intercept set to zero. Cross-A1 comparisons depend on this convention and cannot establish state value."
+  },
+  "near_best_thresholds": {
+    "pips": 1,
+    "weighted_pips": 1.9489489915099036,
+    "a2_preference": 1
+  },
+  "regression_feature_convention": "For production objectives, added optimistic/worst features contain A2 production only; A1 production is already controlled. Descriptive objective comparisons retain combined A1+A2 production.",
+  "models": {
+    "local": {
+      "r2": 0.874307526663304,
+      "r2_ci95": [
+        0.8739378366431146,
+        0.8746772166834934
+      ],
+      "choice_agreement": {
+        "n": 20000,
+        "mean": 0.59275,
+        "ci95": [
+          0.5859405775435375,
+          0.5995594224564625
+        ]
+      },
+      "coefficients": {
+        "wood_pips": 1.6579256849242294,
+        "brick_pips": 1.971107357536983,
+        "sheep_pips": 1.6465211883386155,
+        "wheat_pips": 1.860077397132649,
+        "ore_pips": 1.9795662681615636,
+        "adjacent_hexes": -0.40084436540066093,
+        "local_resource_count": 0.8890490347269413,
+        "new_resource_types": 0.0,
+        "new_resource_pips": 0.0,
+        "all_five_covered": 0.0,
+        "combined_concentration_hhi": -0.9101900561844655
+      }
+    },
+    "local_optimistic": {
+      "r2": 0.8803713109122779,
+      "r2_ci95": [
+        0.8800203378342867,
+        0.8807222839902692
+      ],
+      "choice_agreement": {
+        "n": 20000,
+        "mean": 0.5804,
+        "ci95": [
+          0.5735604836439002,
+          0.5872395163560998
+        ]
+      },
+      "coefficients": {
+        "wood_pips": 1.6153750815481553,
+        "brick_pips": 1.9059186560005266,
+        "sheep_pips": 1.5780766187638078,
+        "wheat_pips": 1.8164222264400394,
+        "ore_pips": 1.9092746536852192,
+        "adjacent_hexes": -0.3624224685852729,
+        "local_resource_count": 0.9216696393776287,
+        "new_resource_types": 0.0,
+        "new_resource_pips": 0.0,
+        "all_five_covered": 0.0,
+        "combined_concentration_hhi": -0.683433539381657,
+        "pips_optimistic": -0.5335858073246796,
+        "weighted_pips_optimistic": -0.8242869915204142,
+        "a2_preference_optimistic": 0.18480462556184693
+      }
+    },
+    "local_robust": {
+      "r2": 0.8823202627698855,
+      "r2_ci95": [
+        0.8819469751982427,
+        0.8826935503415283
+      ],
+      "choice_agreement": {
+        "n": 20000,
+        "mean": 0.5995,
+        "ci95": [
+          0.5927089050166596,
+          0.6062910949833404
+        ]
+      },
+      "coefficients": {
+        "wood_pips": 1.5977759423376379,
+        "brick_pips": 1.877110595621552,
+        "sheep_pips": 1.5694724901970394,
+        "wheat_pips": 1.797778081540227,
+        "ore_pips": 1.8829319743145103,
+        "adjacent_hexes": -0.35181345519062257,
+        "local_resource_count": 0.9855543545805328,
+        "new_resource_types": 0.0,
+        "new_resource_pips": 0.0,
+        "all_five_covered": 0.0,
+        "combined_concentration_hhi": -0.7046784840332578,
+        "pips_worst": -0.5145592533979835,
+        "weighted_pips_worst": -0.7479368406435739,
+        "a2_preference_worst": 0.2615655072184731
+      }
+    },
+    "local_both": {
+      "r2": 0.8874430558890423,
+      "r2_ci95": [
+        0.8870900969975132,
+        0.8877960147805714
+      ],
+      "choice_agreement": {
+        "n": 20000,
+        "mean": 0.5918,
+        "ci95": [
+          0.5849881052134813,
+          0.5986118947865187
+        ]
+      },
+      "coefficients": {
+        "wood_pips": 1.5616321023662505,
+        "brick_pips": 1.8206375972981645,
+        "sheep_pips": 1.5109387932773417,
+        "wheat_pips": 1.7594344267764686,
+        "ore_pips": 1.821895923578394,
+        "adjacent_hexes": -0.3191795699980472,
+        "local_resource_count": 1.0093935706944357,
+        "new_resource_types": 0.0,
+        "new_resource_pips": 0.0,
+        "all_five_covered": 0.0,
+        "combined_concentration_hhi": -0.5069393010597065,
+        "pips_optimistic": -0.41527402758100773,
+        "weighted_pips_optimistic": -0.7885459824579103,
+        "a2_preference_optimistic": 0.17135126014991622,
+        "pips_worst": -0.4368831876061818,
+        "weighted_pips_worst": -0.7361798263470932,
+        "a2_preference_worst": 0.23795161562112097
+      }
+    },
+    "full": {
+      "r2": 0.9369373601207194,
+      "r2_ci95": [
+        0.9366871048180425,
+        0.9371876154233962
+      ],
+      "choice_agreement": {
+        "n": 20000,
+        "mean": 0.62035,
+        "ci95": [
+          0.613624043623673,
+          0.627075956376327
+        ]
+      },
+      "coefficients": {
+        "wood_pips": 3.824162729322668,
+        "brick_pips": 4.175972231123647,
+        "sheep_pips": 3.827943400974283,
+        "wheat_pips": 4.103816365221553,
+        "ore_pips": 4.266432015143626,
+        "adjacent_hexes": 0.6323418432155737,
+        "local_resource_count": 1.0068555293515353,
+        "new_resource_types": 0.0,
+        "new_resource_pips": 0.0,
+        "all_five_covered": 0.0,
+        "combined_concentration_hhi": 2.055345613453168,
+        "direct_port": -0.37344925808183316,
+        "generic_port": 2.355954426617105,
+        "port_matching_combined_pips": 0.06475018931718457,
+        "nearest_port_distance": -0.40607747766704694,
+        "nearest_generic_port_distance": -0.04610596152300132,
+        "matched_port_potential": -1.8347477505602203,
+        "unique_local_numbers": 0.15195409235922086,
+        "unique_combined_numbers": 0.0,
+        "pips_overlapping_owned_numbers": 0.0,
+        "combined_production_variance": -127.99253631103176,
+        "best_expansion_pips_two_roads": -0.07506817170061611,
+        "opponent_proximity": 0.0,
+        "own_proximity": 0.0,
+        "wood_owned_production_interaction": 0.0,
+        "brick_owned_production_interaction": 0.0,
+        "sheep_owned_production_interaction": 0.0,
+        "wheat_owned_production_interaction": 0.0,
+        "ore_owned_production_interaction": 0.0,
+        "wood_missing_resource_interaction": 0.0,
+        "brick_missing_resource_interaction": 0.0,
+        "sheep_missing_resource_interaction": 0.0,
+        "wheat_missing_resource_interaction": 0.0,
+        "ore_missing_resource_interaction": 0.0,
+        "wood_owned_port_interaction": 0.0,
+        "brick_owned_port_interaction": 0.0,
+        "sheep_owned_port_interaction": 0.0,
+        "wheat_owned_port_interaction": 0.0,
+        "ore_owned_port_interaction": 0.0,
+        "wood_port": 1.4807662497894194,
+        "brick_port": 0.5928981110686639,
+        "sheep_port": 1.5410036509150533,
+        "wheat_port": 0.6452971076720808,
+        "ore_port": 0.0,
+        "wood_port_access_interaction": 1.719849774846919,
+        "brick_port_access_interaction": 1.663052414905819,
+        "sheep_port_access_interaction": 1.7763537199271326,
+        "wheat_port_access_interaction": 1.6451647130290983,
+        "ore_port_access_interaction": 1.5694483473176977,
+        "wood_starting_cards": 0.0,
+        "brick_starting_cards": 0.0,
+        "sheep_starting_cards": 0.0,
+        "wheat_starting_cards": 0.0,
+        "ore_starting_cards": 0.0,
+        "wood_board_scarcity_interaction": -0.004793577062041678,
+        "brick_board_scarcity_interaction": 0.03241611153904692,
+        "sheep_board_scarcity_interaction": 0.03819759808867493,
+        "wheat_board_scarcity_interaction": 0.08844016183108346,
+        "ore_board_scarcity_interaction": 0.1174679935656856
+      }
+    },
+    "full_optimistic": {
+      "r2": 0.938707306878606,
+      "r2_ci95": [
+        0.9384712030466837,
+        0.9389434107105283
+      ],
+      "choice_agreement": {
+        "n": 20000,
+        "mean": 0.62315,
+        "ci95": [
+          0.6164337862379937,
+          0.6298662137620062
+        ]
+      },
+      "coefficients": {
+        "wood_pips": 3.7818255128773957,
+        "brick_pips": 4.122243553356068,
+        "sheep_pips": 3.7643187229611796,
+        "wheat_pips": 4.065554946383207,
+        "ore_pips": 4.208782670442191,
+        "adjacent_hexes": 0.6069122772306438,
+        "local_resource_count": 0.9774305398750454,
+        "new_resource_types": 0.0,
+        "new_resource_pips": 0.0,
+        "all_five_covered": 0.0,
+        "combined_concentration_hhi": 2.112492861992092,
+        "direct_port": -0.34940741305116224,
+        "generic_port": 2.360998854721628,
+        "port_matching_combined_pips": 0.0678235827676803,
+        "nearest_port_distance": -0.3724898722004816,
+        "nearest_generic_port_distance": -0.04537223416140376,
+        "matched_port_potential": -1.8550803265362157,
+        "unique_local_numbers": 0.17930898916031637,
+        "unique_combined_numbers": 0.0,
+        "pips_overlapping_owned_numbers": 0.0,
+        "combined_production_variance": -126.90398592937689,
+        "best_expansion_pips_two_roads": -0.05498900400577689,
+        "opponent_proximity": 0.0,
+        "own_proximity": 0.0,
+        "wood_owned_production_interaction": 0.0,
+        "brick_owned_production_interaction": 0.0,
+        "sheep_owned_production_interaction": 0.0,
+        "wheat_owned_production_interaction": 0.0,
+        "ore_owned_production_interaction": 0.0,
+        "wood_missing_resource_interaction": 0.0,
+        "brick_missing_resource_interaction": 0.0,
+        "sheep_missing_resource_interaction": 0.0,
+        "wheat_missing_resource_interaction": 0.0,
+        "ore_missing_resource_interaction": 0.0,
+        "wood_owned_port_interaction": 0.0,
+        "brick_owned_port_interaction": 0.0,
+        "sheep_owned_port_interaction": 0.0,
+        "wheat_owned_port_interaction": 0.0,
+        "ore_owned_port_interaction": 0.0,
+        "wood_port": 1.4843113925775446,
+        "brick_port": 0.594696627919482,
+        "sheep_port": 1.544019436271476,
+        "wheat_port": 0.647508623114202,
+        "ore_port": 0.0,
+        "wood_port_access_interaction": 1.7335761637844975,
+        "brick_port_access_interaction": 1.6806649926478263,
+        "sheep_port_access_interaction": 1.7893003327205623,
+        "wheat_port_access_interaction": 1.662202107810235,
+        "ore_port_access_interaction": 1.5866003504294535,
+        "wood_starting_cards": 0.0,
+        "brick_starting_cards": 0.0,
+        "sheep_starting_cards": 0.0,
+        "wheat_starting_cards": 0.0,
+        "ore_starting_cards": 0.0,
+        "wood_board_scarcity_interaction": -0.01059184866913725,
+        "brick_board_scarcity_interaction": 0.023730541959131553,
+        "sheep_board_scarcity_interaction": 0.03331266290477347,
+        "wheat_board_scarcity_interaction": 0.0825966001274365,
+        "ore_board_scarcity_interaction": 0.10893528265518553,
+        "pips_optimistic": 0.048277920009665805,
+        "weighted_pips_optimistic": -0.40823041803219673,
+        "a2_preference_optimistic": 0.1567896242224986
+      }
+    },
+    "full_robust": {
+      "r2": 0.9380495613978437,
+      "r2_ci95": [
+        0.9377991725597273,
+        0.93829995023596
+      ],
+      "choice_agreement": {
+        "n": 20000,
+        "mean": 0.62685,
+        "ci95": [
+          0.6201470267087891,
+          0.633552973291211
+        ]
+      },
+      "coefficients": {
+        "wood_pips": 3.6880397981993203,
+        "brick_pips": 4.01961828811962,
+        "sheep_pips": 3.6830774506410333,
+        "wheat_pips": 3.966259567581436,
+        "ore_pips": 4.108619111765748,
+        "adjacent_hexes": 0.6109378078353289,
+        "local_resource_count": 1.0206422657994203,
+        "new_resource_types": 0.0,
+        "new_resource_pips": 0.0,
+        "all_five_covered": 0.0,
+        "combined_concentration_hhi": 1.9967690086445453,
+        "direct_port": -0.3455419892861033,
+        "generic_port": 2.3635607337068936,
+        "port_matching_combined_pips": 0.06535036844623641,
+        "nearest_port_distance": -0.37585507397046025,
+        "nearest_generic_port_distance": -0.04424229689019261,
+        "matched_port_potential": -1.7932275666692952,
+        "unique_local_numbers": 0.19115186557447297,
+        "unique_combined_numbers": 0.0,
+        "pips_overlapping_owned_numbers": 0.0,
+        "combined_production_variance": -122.11797324412792,
+        "best_expansion_pips_two_roads": -0.06268757039409346,
+        "opponent_proximity": 0.0,
+        "own_proximity": 0.0,
+        "wood_owned_production_interaction": 0.0,
+        "brick_owned_production_interaction": 0.0,
+        "sheep_owned_production_interaction": 0.0,
+        "wheat_owned_production_interaction": 0.0,
+        "ore_owned_production_interaction": 0.0,
+        "wood_missing_resource_interaction": 0.0,
+        "brick_missing_resource_interaction": 0.0,
+        "sheep_missing_resource_interaction": 0.0,
+        "wheat_missing_resource_interaction": 0.0,
+        "ore_missing_resource_interaction": 0.0,
+        "wood_owned_port_interaction": 0.0,
+        "brick_owned_port_interaction": 0.0,
+        "sheep_owned_port_interaction": 0.0,
+        "wheat_owned_port_interaction": 0.0,
+        "ore_owned_port_interaction": 0.0,
+        "wood_port": 1.4827681055899733,
+        "brick_port": 0.591851689181126,
+        "sheep_port": 1.544592195776646,
+        "wheat_port": 0.6466779386140775,
+        "ore_port": 0.0,
+        "wood_port_access_interaction": 1.6768051679597866,
+        "brick_port_access_interaction": 1.6243503291593044,
+        "sheep_port_access_interaction": 1.7334767013539423,
+        "wheat_port_access_interaction": 1.6050397305629756,
+        "ore_port_access_interaction": 1.5310454340800954,
+        "wood_starting_cards": 0.0,
+        "brick_starting_cards": 0.0,
+        "sheep_starting_cards": 0.0,
+        "wheat_starting_cards": 0.0,
+        "ore_starting_cards": 0.0,
+        "wood_board_scarcity_interaction": -0.009924474046844269,
+        "brick_board_scarcity_interaction": 0.025243652000035238,
+        "sheep_board_scarcity_interaction": 0.033941154338981726,
+        "wheat_board_scarcity_interaction": 0.082971253663698,
+        "ore_board_scarcity_interaction": 0.11039419472515483,
+        "pips_worst": -0.17104052750551124,
+        "weighted_pips_worst": -0.3718014492185299,
+        "a2_preference_worst": 0.14369025502438823
+      }
+    },
+    "full_both": {
+      "r2": 0.9397709064313482,
+      "r2_ci95": [
+        0.9395338664665666,
+        0.9400079463961298
+      ],
+      "choice_agreement": {
+        "n": 20000,
+        "mean": 0.62895,
+        "ci95": [
+          0.6222547279337522,
+          0.6356452720662478
+        ]
+      },
+      "coefficients": {
+        "wood_pips": 3.644335251313178,
+        "brick_pips": 3.9642831411429245,
+        "sheep_pips": 3.619080867240731,
+        "wheat_pips": 3.9256278528241824,
+        "ore_pips": 4.049477536067776,
+        "adjacent_hexes": 0.5863211869085632,
+        "local_resource_count": 0.9908680815595298,
+        "new_resource_types": 0.0,
+        "new_resource_pips": 0.0,
+        "all_five_covered": 0.0,
+        "combined_concentration_hhi": 2.0530356433953267,
+        "direct_port": -0.32367367872088965,
+        "generic_port": 2.368539733788139,
+        "port_matching_combined_pips": 0.0682652129074908,
+        "nearest_port_distance": -0.344326326176855,
+        "nearest_generic_port_distance": -0.04355876858595279,
+        "matched_port_potential": -1.8125129356429757,
+        "unique_local_numbers": 0.21722137061399427,
+        "unique_combined_numbers": 0.0,
+        "pips_overlapping_owned_numbers": 0.0,
+        "combined_production_variance": -120.93226884522713,
+        "best_expansion_pips_two_roads": -0.04337138194872271,
+        "opponent_proximity": 0.0,
+        "own_proximity": 0.0,
+        "wood_owned_production_interaction": 0.0,
+        "brick_owned_production_interaction": 0.0,
+        "sheep_owned_production_interaction": 0.0,
+        "wheat_owned_production_interaction": 0.0,
+        "ore_owned_production_interaction": 0.0,
+        "wood_missing_resource_interaction": 0.0,
+        "brick_missing_resource_interaction": 0.0,
+        "sheep_missing_resource_interaction": 0.0,
+        "wheat_missing_resource_interaction": 0.0,
+        "ore_missing_resource_interaction": 0.0,
+        "wood_owned_port_interaction": 0.0,
+        "brick_owned_port_interaction": 0.0,
+        "sheep_owned_port_interaction": 0.0,
+        "wheat_owned_port_interaction": 0.0,
+        "ore_owned_port_interaction": 0.0,
+        "wood_port": 1.4865970749087836,
+        "brick_port": 0.5936887091354288,
+        "sheep_port": 1.5478038191840275,
+        "wheat_port": 0.6489680614026704,
+        "ore_port": 0.0,
+        "wood_port_access_interaction": 1.68954550030384,
+        "brick_port_access_interaction": 1.6413574645581657,
+        "sheep_port_access_interaction": 1.7454152566964223,
+        "wheat_port_access_interaction": 1.6212714171141946,
+        "ore_port_access_interaction": 1.5475744144967274,
+        "wood_starting_cards": 0.0,
+        "brick_starting_cards": 0.0,
+        "sheep_starting_cards": 0.0,
+        "wheat_starting_cards": 0.0,
+        "ore_starting_cards": 0.0,
+        "wood_board_scarcity_interaction": -0.015310394707955761,
+        "brick_board_scarcity_interaction": 0.017203949414648877,
+        "sheep_board_scarcity_interaction": 0.029398318904477392,
+        "wheat_board_scarcity_interaction": 0.07759388083303848,
+        "ore_board_scarcity_interaction": 0.10250202606904024,
+        "pips_optimistic": 0.08203201111353074,
+        "weighted_pips_optimistic": -0.4181955066486109,
+        "a2_preference_optimistic": 0.1543826081275136,
+        "pips_worst": -0.14420529814674468,
+        "weighted_pips_worst": -0.3868667673732567,
+        "a2_preference_worst": 0.13389881972163178
+      }
+    },
+    "full_both_backups": {
+      "r2": 0.9398758379148671,
+      "r2_ci95": [
+        0.9396372582591175,
+        0.9401144175706166
+      ],
+      "choice_agreement": {
+        "n": 20000,
+        "mean": 0.6319,
+        "ci95": [
+          0.6252157753567107,
+          0.6385842246432893
+        ]
+      },
+      "coefficients": {
+        "wood_pips": 3.494321063286986,
+        "brick_pips": 3.812571081750795,
+        "sheep_pips": 3.465861979477942,
+        "wheat_pips": 3.776329200964374,
+        "ore_pips": 3.8970009130115786,
+        "adjacent_hexes": 0.5960448427933394,
+        "local_resource_count": 0.9908530164144016,
+        "new_resource_types": 0.0,
+        "new_resource_pips": 0.0,
+        "all_five_covered": 0.0,
+        "combined_concentration_hhi": 2.042442734769236,
+        "direct_port": -0.32675915220629914,
+        "generic_port": 2.368845980163566,
+        "port_matching_combined_pips": 0.06598944564117691,
+        "nearest_port_distance": -0.3476078995169748,
+        "nearest_generic_port_distance": -0.043353298198601335,
+        "matched_port_potential": -1.7784442291304365,
+        "unique_local_numbers": 0.23713023819660253,
+        "unique_combined_numbers": 0.0,
+        "pips_overlapping_owned_numbers": 0.0,
+        "combined_production_variance": -114.37517502533214,
+        "best_expansion_pips_two_roads": -0.05323837172532186,
+        "opponent_proximity": 0.0,
+        "own_proximity": 0.0,
+        "wood_owned_production_interaction": 0.0,
+        "brick_owned_production_interaction": 0.0,
+        "sheep_owned_production_interaction": 0.0,
+        "wheat_owned_production_interaction": 0.0,
+        "ore_owned_production_interaction": 0.0,
+        "wood_missing_resource_interaction": 0.0,
+        "brick_missing_resource_interaction": 0.0,
+        "sheep_missing_resource_interaction": 0.0,
+        "wheat_missing_resource_interaction": 0.0,
+        "ore_missing_resource_interaction": 0.0,
+        "wood_owned_port_interaction": 0.0,
+        "brick_owned_port_interaction": 0.0,
+        "sheep_owned_port_interaction": 0.0,
+        "wheat_owned_port_interaction": 0.0,
+        "ore_owned_port_interaction": 0.0,
+        "wood_port": 1.487128952082686,
+        "brick_port": 0.5935489654279619,
+        "sheep_port": 1.5483933509694872,
+        "wheat_port": 0.6491345862119027,
+        "ore_port": 0.0,
+        "wood_port_access_interaction": 1.6575824802803876,
+        "brick_port_access_interaction": 1.6098205976270934,
+        "sheep_port_access_interaction": 1.7139875389470063,
+        "wheat_port_access_interaction": 1.5898154493642562,
+        "ore_port_access_interaction": 1.516335399211099,
+        "wood_starting_cards": 0.0,
+        "brick_starting_cards": 0.0,
+        "sheep_starting_cards": 0.0,
+        "wheat_starting_cards": 0.0,
+        "ore_starting_cards": 0.0,
+        "wood_board_scarcity_interaction": -0.01629212278829904,
+        "brick_board_scarcity_interaction": 0.015705334404459356,
+        "sheep_board_scarcity_interaction": 0.02863590993829848,
+        "wheat_board_scarcity_interaction": 0.07649777561004721,
+        "ore_board_scarcity_interaction": 0.10092625599700786,
+        "pips_optimistic": -0.5343497550525302,
+        "weighted_pips_optimistic": -0.5321217555144045,
+        "a2_preference_optimistic": 0.1925622031703639,
+        "pips_worst": -0.0996538132393393,
+        "weighted_pips_worst": -0.3462199577412003,
+        "a2_preference_worst": 0.12326831368763314,
+        "pips_near_best_count": -0.18677492584371858,
+        "weighted_pips_near_best_count": -0.14359899591764727,
+        "a2_preference_near_best_count": 0.13213182407953747
+      }
+    },
+    "full_production_optimistic": {
+      "r2": 0.9369935488167958,
+      "r2_ci95": [
+        0.9367407073467576,
+        0.9372463902868339
+      ],
+      "choice_agreement": {
+        "n": 20000,
+        "mean": 0.62335,
+        "ci95": [
+          0.6166344912607096,
+          0.6300655087392903
+        ]
+      },
+      "coefficients": {
+        "wood_pips": 3.7354524982845954,
+        "brick_pips": 4.072874774346978,
+        "sheep_pips": 3.7395242132915776,
+        "wheat_pips": 4.007635700322208,
+        "ore_pips": 4.163086764567027,
+        "adjacent_hexes": 0.6245710019655362,
+        "local_resource_count": 1.0064478454137524,
+        "new_resource_types": 0.0,
+        "new_resource_pips": 0.0,
+        "all_five_covered": 0.0,
+        "combined_concentration_hhi": 2.0213198445426683,
+        "direct_port": -0.37248146295708096,
+        "generic_port": 2.3580406261160745,
+        "port_matching_combined_pips": 0.06395294094587149,
+        "nearest_port_distance": -0.40134226161612907,
+        "nearest_generic_port_distance": -0.04574150346258487,
+        "matched_port_potential": -1.82048518310826,
+        "unique_local_numbers": 0.1775507922768397,
+        "unique_combined_numbers": 0.0,
+        "pips_overlapping_owned_numbers": 0.0,
+        "combined_production_variance": -123.76062840931219,
+        "best_expansion_pips_two_roads": -0.07565770414783804,
+        "opponent_proximity": 0.0,
+        "own_proximity": 0.0,
+        "wood_owned_production_interaction": 0.0,
+        "brick_owned_production_interaction": 0.0,
+        "sheep_owned_production_interaction": 0.0,
+        "wheat_owned_production_interaction": 0.0,
+        "ore_owned_production_interaction": 0.0,
+        "wood_missing_resource_interaction": 0.0,
+        "brick_missing_resource_interaction": 0.0,
+        "sheep_missing_resource_interaction": 0.0,
+        "wheat_missing_resource_interaction": 0.0,
+        "ore_missing_resource_interaction": 0.0,
+        "wood_owned_port_interaction": 0.0,
+        "brick_owned_port_interaction": 0.0,
+        "sheep_owned_port_interaction": 0.0,
+        "wheat_owned_port_interaction": 0.0,
+        "ore_owned_port_interaction": 0.0,
+        "wood_port": 1.4838640838093125,
+        "brick_port": 0.5928007682585295,
+        "sheep_port": 1.544306172856887,
+        "wheat_port": 0.646863087606411,
+        "ore_port": 0.0,
+        "wood_port_access_interaction": 1.7038085148773667,
+        "brick_port_access_interaction": 1.6521773495153087,
+        "sheep_port_access_interaction": 1.7600417279000267,
+        "wheat_port_access_interaction": 1.6312315787966736,
+        "ore_port_access_interaction": 1.5581484860620225,
+        "wood_starting_cards": 0.0,
+        "brick_starting_cards": 0.0,
+        "sheep_starting_cards": 0.0,
+        "wheat_starting_cards": 0.0,
+        "ore_starting_cards": 0.0,
+        "wood_board_scarcity_interaction": -0.0050030091217860735,
+        "brick_board_scarcity_interaction": 0.03265357093959345,
+        "sheep_board_scarcity_interaction": 0.03797196057096647,
+        "wheat_board_scarcity_interaction": 0.08842046471099596,
+        "ore_board_scarcity_interaction": 0.11772524011423657,
+        "pips_optimistic": 0.05991356581429228,
+        "weighted_pips_optimistic": -0.35920778203351317
+      }
+    },
+    "full_production_both": {
+      "r2": 0.9374867937854744,
+      "r2_ci95": [
+        0.9372269992303699,
+        0.9377465883405789
+      ],
+      "choice_agreement": {
+        "n": 20000,
+        "mean": 0.6276,
+        "ci95": [
+          0.6208997616169293,
+          0.6343002383830708
+        ]
+      },
+      "coefficients": {
+        "wood_pips": 3.5862407715197415,
+        "brick_pips": 3.9134110307688315,
+        "sheep_pips": 3.5908073553208966,
+        "wheat_pips": 3.8521220019061686,
+        "ore_pips": 4.0033626450514035,
+        "adjacent_hexes": 0.6113308369865719,
+        "local_resource_count": 1.0060307888105327,
+        "new_resource_types": 0.0,
+        "new_resource_pips": 0.0,
+        "all_five_covered": 0.0,
+        "combined_concentration_hhi": 1.97154643528961,
+        "direct_port": -0.3699900053633889,
+        "generic_port": 2.363634510031224,
+        "port_matching_combined_pips": 0.06324685431337819,
+        "nearest_port_distance": -0.39458622051368686,
+        "nearest_generic_port_distance": -0.04457030443697887,
+        "matched_port_potential": -1.7761822278354844,
+        "unique_local_numbers": 0.2034341256496995,
+        "unique_combined_numbers": 0.0,
+        "pips_overlapping_owned_numbers": 0.0,
+        "combined_production_variance": -117.22870179175544,
+        "best_expansion_pips_two_roads": -0.07003789509520272,
+        "opponent_proximity": 0.0,
+        "own_proximity": 0.0,
+        "wood_owned_production_interaction": 0.0,
+        "brick_owned_production_interaction": 0.0,
+        "sheep_owned_production_interaction": 0.0,
+        "wheat_owned_production_interaction": 0.0,
+        "ore_owned_production_interaction": 0.0,
+        "wood_missing_resource_interaction": 0.0,
+        "brick_missing_resource_interaction": 0.0,
+        "sheep_missing_resource_interaction": 0.0,
+        "wheat_missing_resource_interaction": 0.0,
+        "ore_missing_resource_interaction": 0.0,
+        "wood_owned_port_interaction": 0.0,
+        "brick_owned_port_interaction": 0.0,
+        "sheep_owned_port_interaction": 0.0,
+        "wheat_owned_port_interaction": 0.0,
+        "ore_owned_port_interaction": 0.0,
+        "wood_port": 1.4870704053086603,
+        "brick_port": 0.5928292604258655,
+        "sheep_port": 1.5475219875982378,
+        "wheat_port": 0.6484961560239996,
+        "ore_port": 0.0,
+        "wood_port_access_interaction": 1.6592116413298503,
+        "brick_port_access_interaction": 1.6128037331326663,
+        "sheep_port_access_interaction": 1.7155918949192082,
+        "wheat_port_access_interaction": 1.5898447645356448,
+        "ore_port_access_interaction": 1.5187218640767597,
+        "wood_starting_cards": 0.0,
+        "brick_starting_cards": 0.0,
+        "sheep_starting_cards": 0.0,
+        "wheat_starting_cards": 0.0,
+        "ore_starting_cards": 0.0,
+        "wood_board_scarcity_interaction": -0.005159327580246384,
+        "brick_board_scarcity_interaction": 0.03278013791873662,
+        "sheep_board_scarcity_interaction": 0.03786961516873578,
+        "wheat_board_scarcity_interaction": 0.08848229395448988,
+        "ore_board_scarcity_interaction": 0.11785268238731803,
+        "pips_optimistic": 0.1014752913738846,
+        "weighted_pips_optimistic": -0.36222396450166555,
+        "pips_worst": -0.13567123973485026,
+        "weighted_pips_worst": -0.35357547302004694
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "reduced": "local",
+      "full": "local_optimistic",
+      "delta_r2": 0.006063784248973848,
+      "ci95": [
+        0.005925831715493115,
+        0.0062017367824545805
+      ],
+      "t": 86.68656216912827,
+      "df": 19999,
+      "p": 0.0,
+      "p_string": "5.21651984876954e-1388",
+      "mean_squared_error_reduction": 0.2616084803528247,
+      "holm_p": 0
+    },
+    {
+      "reduced": "local",
+      "full": "local_robust",
+      "delta_r2": 0.008012736106581493,
+      "ci95": [
+        0.00784150543252464,
+        0.008183966780638346
+      ],
+      "t": 91.85189023926304,
+      "df": 19999,
+      "p": 0.0,
+      "p_string": "3.34631773176532e-1531",
+      "mean_squared_error_reduction": 0.3456916721048784,
+      "holm_p": 0
+    },
+    {
+      "reduced": "local_optimistic",
+      "full": "local_both",
+      "delta_r2": 0.007071744976764368,
+      "ci95": [
+        0.006913797694341325,
+        0.0072296922591874105
+      ],
+      "t": 87.84562924389317,
+      "df": 19999,
+      "p": 0.0,
+      "p_string": "7.94223208632256e-1420",
+      "mean_squared_error_reduction": 0.30509470338215305,
+      "holm_p": 0
+    },
+    {
+      "reduced": "local_robust",
+      "full": "local_both",
+      "delta_r2": 0.005122793119156722,
+      "ci95": [
+        0.004991442735671986,
+        0.005254143502641459
+      ],
+      "t": 76.84404911540605,
+      "df": 19999,
+      "p": 0.0,
+      "p_string": "3.48158957371913e-1126",
+      "mean_squared_error_reduction": 0.22101151163009936,
+      "holm_p": 0
+    },
+    {
+      "reduced": "full",
+      "full": "full_optimistic",
+      "delta_r2": 0.0017699467578866862,
+      "ci95": [
+        0.0017065733409230843,
+        0.0018333201748502882
+      ],
+      "t": 54.74843411731708,
+      "df": 19999,
+      "p": 0.0,
+      "p_string": "5.12890081488954e-609",
+      "mean_squared_error_reduction": 0.0763604149858238,
+      "holm_p": 0
+    },
+    {
+      "reduced": "full",
+      "full": "full_robust",
+      "delta_r2": 0.0011122012771243588,
+      "ci95": [
+        0.0010510082283963246,
+        0.001173394325852393
+      ],
+      "t": 35.599040457381406,
+      "df": 19999,
+      "p": 3.4832093893130875e-269,
+      "p_string": "3.48320938931309e-269",
+      "mean_squared_error_reduction": 0.04798344960974043,
+      "holm_p": 1.7416046946565439e-268
+    },
+    {
+      "reduced": "full_optimistic",
+      "full": "full_both",
+      "delta_r2": 0.0010635995527421263,
+      "ci95": [
+        0.001004537902281292,
+        0.0011226612032029606
+      ],
+      "t": 35.276067652328614,
+      "df": 19999,
+      "p": 1.6698026300643863e-264,
+      "p_string": "1.66980263006439e-264",
+      "mean_squared_error_reduction": 0.04588663634328651,
+      "holm_p": 6.679210520257545e-264
+    },
+    {
+      "reduced": "full_robust",
+      "full": "full_both",
+      "delta_r2": 0.0017213450335044538,
+      "ci95": [
+        0.0016589893175362918,
+        0.0017837007494726157
+      ],
+      "t": 54.12469390176115,
+      "df": 19999,
+      "p": 0.0,
+      "p_string": "3.60944868973809e-596",
+      "mean_squared_error_reduction": 0.07426360171936988,
+      "holm_p": 0
+    },
+    {
+      "reduced": "full_both",
+      "full": "full_both_backups",
+      "delta_r2": 0.00010493148351896475,
+      "ci95": [
+        6.812132682895735e-05,
+        0.00014174164020897215
+      ],
+      "t": 5.587389817517481,
+      "df": 19999,
+      "p": 2.3351022879615584e-08,
+      "p_string": "2.33510228796156e-8",
+      "mean_squared_error_reduction": 0.00452703539859771,
+      "holm_p": 4.670204575923117e-08
+    },
+    {
+      "reduced": "full",
+      "full": "full_production_optimistic",
+      "delta_r2": 5.6188696076459416e-05,
+      "ci95": [
+        2.7791593574509936e-05,
+        8.458579857840889e-05
+      ],
+      "t": 3.8789870671723157,
+      "df": 19999,
+      "p": 0.00010522817592592569,
+      "p_string": "0.000105228175925926",
+      "mean_squared_error_reduction": 0.002424136280253837,
+      "holm_p": 0.00010522817592592569
+    },
+    {
+      "reduced": "full_production_optimistic",
+      "full": "full_production_both",
+      "delta_r2": 0.0004932449686785941,
+      "ci95": [
+        0.00044174938496728327,
+        0.000544740552389905
+      ],
+      "t": 18.771158953884175,
+      "df": 19999,
+      "p": 6.081465944683172e-78,
+      "p_string": "6.08146594468317e-78",
+      "mean_squared_error_reduction": 0.02127995677278922,
+      "holm_p": 1.824439783404952e-77
+    }
+  ],
+  "summaries": {
+    "all": {
+      "boards": 100000,
+      "differs_from_local": {
+        "n": 100000,
+        "mean": 0.40865,
+        "ci95": [
+          0.4056031693575935,
+          0.41169683064240653
+        ]
+      },
+      "local_score_sacrifice": {
+        "n": 100000,
+        "mean": 0.48432982227339016,
+        "ci95": [
+          0.47882111333694927,
+          0.48983853120983106
+        ]
+      },
+      "total_pip_sacrifice_vs_local": {
+        "n": 100000,
+        "mean": 0.23834,
+        "ci95": [
+          0.2347392233218912,
+          0.2419407766781088
+        ]
+      },
+      "objectives": {
+        "pips": {
+          "chosen_worst": {
+            "n": 100000,
+            "mean": 22.40437,
+            "ci95": [
+              22.39797797615764,
+              22.41076202384236
+            ]
+          },
+          "local_worst": {
+            "n": 100000,
+            "mean": 22.64747,
+            "ci95": [
+              22.641548242882372,
+              22.653391757117625
+            ]
+          },
+          "worst_gain_over_local": {
+            "n": 100000,
+            "mean": -0.2431,
+            "ci95": [
+              -0.2470465248262326,
+              -0.23915347517376742
+            ]
+          },
+          "chosen_optimistic": {
+            "n": 100000,
+            "mean": 23.91409,
+            "ci95": [
+              23.90755152783144,
+              23.920628472168563
+            ]
+          },
+          "local_optimistic": {
+            "n": 100000,
+            "mean": 24.06368,
+            "ci95": [
+              24.057538539012317,
+              24.069821460987686
+            ]
+          },
+          "optimistic_gain_over_local": {
+            "n": 100000,
+            "mean": -0.14959,
+            "ci95": [
+              -0.15235260951736918,
+              -0.14682739048263083
+            ]
+          },
+          "chosen_matches_worst_optimum": {
+            "n": 100000,
+            "mean": 0.63803,
+            "ci95": [
+              0.6350514348680847,
+              0.6410085651319153
+            ]
+          },
+          "local_matches_worst_optimum": {
+            "n": 100000,
+            "mean": 0.80522,
+            "ci95": [
+              0.8027654057082458,
+              0.8076745942917543
+            ]
+          },
+          "chosen_worst_regret": {
+            "n": 100000,
+            "mean": 0.46315,
+            "ci95": [
+              0.45887410222870845,
+              0.46742589777129157
+            ]
+          },
+          "local_worst_regret": {
+            "n": 100000,
+            "mean": 0.22005,
+            "ci95": [
+              0.21710868073843345,
+              0.22299131926156654
+            ]
+          },
+          "local_sacrifice_with_worst_gain": {
+            "n": 100000,
+            "mean": 0.03138,
+            "ci95": [
+              0.03029942865101528,
+              0.03246057134898472
+            ]
+          },
+          "on_differing_boards": {
+            "n": 40865,
+            "worst_gain": {
+              "n": 40865,
+              "mean": -0.594885598923284,
+              "ci95": [
+                -0.6034643653687918,
+                -0.5863068324777762
+              ]
+            },
+            "wins": {
+              "n": 40865,
+              "mean": 0.08021534320323015,
+              "ci95": [
+                0.07758174536788304,
+                0.08284894103857726
+              ]
+            },
+            "ties": {
+              "n": 40865,
+              "mean": 0.39390676618132875,
+              "ci95": [
+                0.3891693221576683,
+                0.3986442102049892
+              ]
+            }
+          },
+          "ideal_complement_survives_recorded_B": {
+            "n": 100000,
+            "mean": 0.42348,
+            "ci95": [
+              0.4204175154690986,
+              0.42654248453090143
+            ]
+          },
+          "best_remaining_rank_after_B": {
+            "n": 100000,
+            "mean": 2.17038,
+            "ci95": [
+              2.162082223135784,
+              2.1786777768642165
+            ]
+          },
+          "loss_after_recorded_B": {
+            "n": 100000,
+            "mean": 0.83619,
+            "ci95": [
+              0.8308363062824928,
+              0.8415436937175071
+            ]
+          },
+          "worst_case_loss": {
+            "n": 100000,
+            "mean": 1.50972,
+            "ci95": [
+              1.5046264601854007,
+              1.5148135398145992
+            ]
+          },
+          "actual_A2_regret_vs_best_available": {
+            "n": 100000,
+            "mean": 1.12072,
+            "ci95": [
+              1.1134957836744495,
+              1.1279442163255504
+            ]
+          },
+          "near_best_locations": {
+            "n": 100000,
+            "mean": 4.72765,
+            "ci95": [
+              4.712884338139522,
+              4.742415661860478
+            ]
+          },
+          "worst_survivor_rank": {
+            "n": 100000,
+            "mean": 3.56208,
+            "ci95": [
+              3.5523947422483433,
+              3.5717652577516565
+            ]
+          },
+          "recorded_B_worst_gap": {
+            "n": 100000,
+            "mean": 0.67353,
+            "ci95": [
+              0.6688173028901057,
+              0.6782426971098943
+            ]
+          }
+        },
+        "weighted_pips": {
+          "chosen_worst": {
+            "n": 100000,
+            "mean": 43.75844260234369,
+            "ci95": [
+              43.74580027403601,
+              43.77108493065138
+            ]
+          },
+          "local_worst": {
+            "n": 100000,
+            "mean": 44.325713574773346,
+            "ci95": [
+              44.313785314015966,
+              44.337641835530725
+            ]
+          },
+          "worst_gain_over_local": {
+            "n": 100000,
+            "mean": -0.5672709724296507,
+            "ci95": [
+              -0.5744836514613416,
+              -0.5600582933979599
+            ]
+          },
+          "chosen_optimistic": {
+            "n": 100000,
+            "mean": 46.80331305703225,
+            "ci95": [
+              46.78922283482719,
+              46.817403279237304
+            ]
+          },
+          "local_optimistic": {
+            "n": 100000,
+            "mean": 47.093758303778486,
+            "ci95": [
+              47.08013997948282,
+              47.10737662807415
+            ]
+          },
+          "optimistic_gain_over_local": {
+            "n": 100000,
+            "mean": -0.29044524674624694,
+            "ci95": [
+              -0.2952373754881967,
+              -0.2856531180042972
+            ]
+          },
+          "chosen_matches_worst_optimum": {
+            "n": 100000,
+            "mean": 0.4893,
+            "ci95": [
+              0.48620171903162723,
+              0.4923982809683728
+            ]
+          },
+          "local_matches_worst_optimum": {
+            "n": 100000,
+            "mean": 0.72181,
+            "ci95": [
+              0.71903263814172,
+              0.7245873618582799
+            ]
+          },
+          "chosen_worst_regret": {
+            "n": 100000,
+            "mean": 0.8142401522275727,
+            "ci95": [
+              0.8068805081833399,
+              0.8215997962718056
+            ]
+          },
+          "local_worst_regret": {
+            "n": 100000,
+            "mean": 0.2469691797979219,
+            "ci95": [
+              0.24349618044780869,
+              0.2504421791480351
+            ]
+          },
+          "local_sacrifice_with_worst_gain": {
+            "n": 100000,
+            "mean": 0.05073,
+            "ci95": [
+              0.049369878919933545,
+              0.05209012108006645
+            ]
+          },
+          "on_differing_boards": {
+            "n": 40865,
+            "worst_gain": {
+              "n": 40865,
+              "mean": -1.3881585034372954,
+              "ci95": [
+                -1.4024555567169406,
+                -1.3738614501576503
+              ]
+            },
+            "wins": {
+              "n": 40865,
+              "mean": 0.13179982870427015,
+              "ci95": [
+                0.12852004646506068,
+                0.13507961094347962
+              ]
+            },
+            "ties": {
+              "n": 40865,
+              "mean": 0.020335250214119662,
+              "ci95": [
+                0.018966761707542964,
+                0.02170373872069636
+              ]
+            }
+          },
+          "ideal_complement_survives_recorded_B": {
+            "n": 100000,
+            "mean": 0.22048,
+            "ci95": [
+              0.2179105007588708,
+              0.2230494992411292
+            ]
+          },
+          "best_remaining_rank_after_B": {
+            "n": 100000,
+            "mean": 2.86773,
+            "ci95": [
+              2.85823556118032,
+              2.8772244388196797
+            ]
+          },
+          "loss_after_recorded_B": {
+            "n": 100000,
+            "mean": 1.8139776369901799,
+            "ci95": [
+              1.8037235893464008,
+              1.824231684633959
+            ]
+          },
+          "worst_case_loss": {
+            "n": 100000,
+            "mean": 3.0448704546885543,
+            "ci95": [
+              3.035457982700322,
+              3.0542829266767866
+            ]
+          },
+          "actual_A2_regret_vs_best_available": {
+            "n": 100000,
+            "mean": 2.062313549305375,
+            "ci95": [
+              2.049133240083478,
+              2.075493858527272
+            ]
+          },
+          "near_best_locations": {
+            "n": 100000,
+            "mean": 3.07687,
+            "ci95": [
+              3.0665705270426225,
+              3.0871694729573775
+            ]
+          },
+          "worst_survivor_rank": {
+            "n": 100000,
+            "mean": 4.73915,
+            "ci95": [
+              4.731138603194226,
+              4.747161396805775
+            ]
+          },
+          "recorded_B_worst_gap": {
+            "n": 100000,
+            "mean": 1.2308928176983747,
+            "ci95": [
+              1.2227157076579767,
+              1.2390699277387727
+            ]
+          }
+        },
+        "a2_preference": {
+          "chosen_worst": {
+            "n": 100000,
+            "mean": 18.352458393252494,
+            "ci95": [
+              18.342169177596986,
+              18.362747608908002
+            ]
+          },
+          "local_worst": {
+            "n": 100000,
+            "mean": 18.07297997371396,
+            "ci95": [
+              18.063475396348576,
+              18.082484551079343
+            ]
+          },
+          "worst_gain_over_local": {
+            "n": 100000,
+            "mean": 0.2794784195385339,
+            "ci95": [
+              0.2712952557773314,
+              0.28766158329973646
+            ]
+          },
+          "chosen_optimistic": {
+            "n": 100000,
+            "mean": 22.661858168618178,
+            "ci95": [
+              22.649320961870373,
+              22.674395375365982
+            ]
+          },
+          "local_optimistic": {
+            "n": 100000,
+            "mean": 22.29376348930998,
+            "ci95": [
+              22.28157892802024,
+              22.30594805059972
+            ]
+          },
+          "optimistic_gain_over_local": {
+            "n": 100000,
+            "mean": 0.3680946793081936,
+            "ci95": [
+              0.359197785649489,
+              0.3769915729668982
+            ]
+          },
+          "chosen_matches_worst_optimum": {
+            "n": 100000,
+            "mean": 0.04266,
+            "ci95": [
+              0.041407453693523166,
+              0.04391254630647683
+            ]
+          },
+          "local_matches_worst_optimum": {
+            "n": 100000,
+            "mean": 0.02688,
+            "ci95": [
+              0.02587758376013534,
+              0.027882416239864663
+            ]
+          },
+          "chosen_worst_regret": {
+            "n": 100000,
+            "mean": 2.987508356114519,
+            "ci95": [
+              2.9771630757385723,
+              2.9978536364904653
+            ]
+          },
+          "local_worst_regret": {
+            "n": 100000,
+            "mean": 3.266986775653054,
+            "ci95": [
+              3.2568368185756214,
+              3.2771367327304866
+            ]
+          },
+          "local_sacrifice_with_worst_gain": {
+            "n": 100000,
+            "mean": 0.24816,
+            "ci95": [
+              0.24548281201919325,
+              0.25083718798080673
+            ]
+          },
+          "on_differing_boards": {
+            "n": 40865,
+            "worst_gain": {
+              "n": 40865,
+              "mean": 0.6839065692855352,
+              "ci95": [
+                0.6645416504963311,
+                0.7032714880747393
+              ]
+            },
+            "wins": {
+              "n": 40865,
+              "mean": 0.6105224519760186,
+              "ci95": [
+                0.6057945366857371,
+                0.6152503672663001
+              ]
+            },
+            "ties": {
+              "n": 40865,
+              "mean": 0.03467514988376361,
+              "ci95": [
+                0.03290127260951345,
+                0.03644902715801378
+              ]
+            }
+          },
+          "ideal_complement_survives_recorded_B": {
+            "n": 100000,
+            "mean": 0.3396,
+            "ci95": [
+              0.3366648004268912,
+              0.34253519957310885
+            ]
+          },
+          "best_remaining_rank_after_B": {
+            "n": 100000,
+            "mean": 2.39491,
+            "ci95": [
+              2.386204017750475,
+              2.4036159822495247
+            ]
+          },
+          "loss_after_recorded_B": {
+            "n": 100000,
+            "mean": 1.8803559013667048,
+            "ci95": [
+              1.8673083551276783,
+              1.8934034476057313
+            ]
+          },
+          "worst_case_loss": {
+            "n": 100000,
+            "mean": 4.309399775365679,
+            "ci95": [
+              4.296930033270774,
+              4.321869517460584
+            ]
+          },
+          "actual_A2_regret_vs_best_available": {
+            "n": 100000,
+            "mean": 1.0228526456907265,
+            "ci95": [
+              1.0125013621852998,
+              1.0332039291961532
+            ]
+          },
+          "near_best_locations": {
+            "n": 100000,
+            "mean": 1.66715,
+            "ci95": [
+              1.6615410464906228,
+              1.672758953509377
+            ]
+          },
+          "worst_survivor_rank": {
+            "n": 100000,
+            "mean": 5.13028,
+            "ci95": [
+              5.122296463245443,
+              5.138263536754557
+            ]
+          },
+          "recorded_B_worst_gap": {
+            "n": 100000,
+            "mean": 2.4290438739989746,
+            "ci95": [
+              2.4172472195912227,
+              2.4408405284067265
+            ]
+          }
+        }
+      }
+    },
+    "heldout": {
+      "boards": 20000,
+      "differs_from_local": {
+        "n": 20000,
+        "mean": 0.40725,
+        "ci95": [
+          0.40044057754353746,
+          0.41405942245646254
+        ]
+      },
+      "local_score_sacrifice": {
+        "n": 20000,
+        "mean": 0.4776240265129797,
+        "ci95": [
+          0.46549504737762626,
+          0.48975300564833313
+        ]
+      },
+      "total_pip_sacrifice_vs_local": {
+        "n": 20000,
+        "mean": 0.2352,
+        "ci95": [
+          0.22720371198412925,
+          0.24319628801587073
+        ]
+      },
+      "objectives": {
+        "pips": {
+          "chosen_worst": {
+            "n": 20000,
+            "mean": 22.4026,
+            "ci95": [
+              22.3882656621453,
+              22.4169343378547
+            ]
+          },
+          "local_worst": {
+            "n": 20000,
+            "mean": 22.6461,
+            "ci95": [
+              22.632811930173443,
+              22.65938806982656
+            ]
+          },
+          "worst_gain_over_local": {
+            "n": 20000,
+            "mean": -0.2435,
+            "ci95": [
+              -0.2523906386707521,
+              -0.23460936132924787
+            ]
+          },
+          "chosen_optimistic": {
+            "n": 20000,
+            "mean": 23.9099,
+            "ci95": [
+              23.895288487773648,
+              23.924511512226353
+            ]
+          },
+          "local_optimistic": {
+            "n": 20000,
+            "mean": 24.06165,
+            "ci95": [
+              24.047894609335533,
+              24.075405390664468
+            ]
+          },
+          "optimistic_gain_over_local": {
+            "n": 20000,
+            "mean": -0.15175,
+            "ci95": [
+              -0.15792360435814995,
+              -0.14557639564185004
+            ]
+          },
+          "chosen_matches_worst_optimum": {
+            "n": 20000,
+            "mean": 0.6418,
+            "ci95": [
+              0.635154822315761,
+              0.648445177684239
+            ]
+          },
+          "local_matches_worst_optimum": {
+            "n": 20000,
+            "mean": 0.8075,
+            "ci95": [
+              0.8020357497193558,
+              0.8129642502806442
+            ]
+          },
+          "chosen_worst_regret": {
+            "n": 20000,
+            "mean": 0.4599,
+            "ci95": [
+              0.4503330885763226,
+              0.46946691142367736
+            ]
+          },
+          "local_worst_regret": {
+            "n": 20000,
+            "mean": 0.2164,
+            "ci95": [
+              0.2099057129562161,
+              0.22289428704378392
+            ]
+          },
+          "local_sacrifice_with_worst_gain": {
+            "n": 20000,
+            "mean": 0.0321,
+            "ci95": [
+              0.02965706612362538,
+              0.03454293387637462
+            ]
+          },
+          "on_differing_boards": {
+            "n": 8145,
+            "worst_gain": {
+              "n": 8145,
+              "mean": -0.5979128299570289,
+              "ci95": [
+                -0.6173207691638182,
+                -0.5785048907502396
+              ]
+            },
+            "wins": {
+              "n": 8145,
+              "mean": 0.08201350521792511,
+              "ci95": [
+                0.07605427667461095,
+                0.08797273376123926
+              ]
+            },
+            "ties": {
+              "n": 8145,
+              "mean": 0.3911602209944751,
+              "ci95": [
+                0.3805613877384946,
+                0.4017590542504556
+              ]
+            }
+          },
+          "ideal_complement_survives_recorded_B": {
+            "n": 20000,
+            "mean": 0.42255,
+            "ci95": [
+              0.4157039479505973,
+              0.4293960520494027
+            ]
+          },
+          "best_remaining_rank_after_B": {
+            "n": 20000,
+            "mean": 2.17445,
+            "ci95": [
+              2.155886611587317,
+              2.1930133884126835
+            ]
+          },
+          "loss_after_recorded_B": {
+            "n": 20000,
+            "mean": 0.83535,
+            "ci95": [
+              0.8233927932117482,
+              0.8473072067882519
+            ]
+          },
+          "worst_case_loss": {
+            "n": 20000,
+            "mean": 1.5073,
+            "ci95": [
+              1.4958809543379656,
+              1.5187190456620345
+            ]
+          },
+          "actual_A2_regret_vs_best_available": {
+            "n": 20000,
+            "mean": 1.1271,
+            "ci95": [
+              1.1109061787184633,
+              1.1432938212815367
+            ]
+          },
+          "near_best_locations": {
+            "n": 20000,
+            "mean": 4.73575,
+            "ci95": [
+              4.702791398342606,
+              4.768708601657394
+            ]
+          },
+          "worst_survivor_rank": {
+            "n": 20000,
+            "mean": 3.5609,
+            "ci95": [
+              3.5392359099290664,
+              3.582564090070934
+            ]
+          },
+          "recorded_B_worst_gap": {
+            "n": 20000,
+            "mean": 0.67195,
+            "ci95": [
+              0.6614686649591562,
+              0.6824313350408439
+            ]
+          }
+        },
+        "weighted_pips": {
+          "chosen_worst": {
+            "n": 20000,
+            "mean": 43.74755062361282,
+            "ci95": [
+              43.71914126423219,
+              43.77595998299344
+            ]
+          },
+          "local_worst": {
+            "n": 20000,
+            "mean": 44.31335639786634,
+            "ci95": [
+              44.2865404917279,
+              44.34017230400479
+            ]
+          },
+          "worst_gain_over_local": {
+            "n": 20000,
+            "mean": -0.5658057742535286,
+            "ci95": [
+              -0.5819476779609287,
+              -0.5496638705461285
+            ]
+          },
+          "chosen_optimistic": {
+            "n": 20000,
+            "mean": 46.78904614625514,
+            "ci95": [
+              46.75774373698427,
+              46.82034855552601
+            ]
+          },
+          "local_optimistic": {
+            "n": 20000,
+            "mean": 47.07947626520787,
+            "ci95": [
+              47.04919000793731,
+              47.109762522478434
+            ]
+          },
+          "optimistic_gain_over_local": {
+            "n": 20000,
+            "mean": -0.29043011895273596,
+            "ci95": [
+              -0.3011486622383352,
+              -0.2797115756671367
+            ]
+          },
+          "chosen_matches_worst_optimum": {
+            "n": 20000,
+            "mean": 0.49095,
+            "ci95": [
+              0.4840214428450192,
+              0.4978785571549808
+            ]
+          },
+          "local_matches_worst_optimum": {
+            "n": 20000,
+            "mean": 0.72405,
+            "ci95": [
+              0.7178549697841554,
+              0.7302450302158445
+            ]
+          },
+          "chosen_worst_regret": {
+            "n": 20000,
+            "mean": 0.8070854055599328,
+            "ci95": [
+              0.7906437285624247,
+              0.8235270825574409
+            ]
+          },
+          "local_worst_regret": {
+            "n": 20000,
+            "mean": 0.2412796313064042,
+            "ci95": [
+              0.2336254820772379,
+              0.2489337805355705
+            ]
+          },
+          "local_sacrifice_with_worst_gain": {
+            "n": 20000,
+            "mean": 0.0511,
+            "ci95": [
+              0.04804813987951217,
+              0.05415186012048783
+            ]
+          },
+          "on_differing_boards": {
+            "n": 8145,
+            "worst_gain": {
+              "n": 8145,
+              "mean": -1.3893327790141892,
+              "ci95": [
+                -1.4214492372635519,
+                -1.3572163207648265
+              ]
+            },
+            "wins": {
+              "n": 8145,
+              "mean": 0.13370165745856355,
+              "ci95": [
+                0.12631017848483392,
+                0.14109313643229318
+              ]
+            },
+            "ties": {
+              "n": 8145,
+              "mean": 0.020994475138121547,
+              "ci95": [
+                0.017880792889416207,
+                0.024108157386826888
+              ]
+            }
+          },
+          "ideal_complement_survives_recorded_B": {
+            "n": 20000,
+            "mean": 0.2146,
+            "ci95": [
+              0.20891010492133588,
+              0.22028989507866414
+            ]
+          },
+          "best_remaining_rank_after_B": {
+            "n": 20000,
+            "mean": 2.8795,
+            "ci95": [
+              2.8583061060163617,
+              2.9006938939836386
+            ]
+          },
+          "loss_after_recorded_B": {
+            "n": 20000,
+            "mean": 1.817907962149894,
+            "ci95": [
+              1.7950773348420976,
+              1.8407385894576902
+            ]
+          },
+          "worst_case_loss": {
+            "n": 20000,
+            "mean": 3.0414955226423195,
+            "ci95": [
+              3.020451286532473,
+              3.062539758752166
+            ]
+          },
+          "actual_A2_regret_vs_best_available": {
+            "n": 20000,
+            "mean": 2.0655094431260697,
+            "ci95": [
+              2.0360885278030145,
+              2.094930358449125
+            ]
+          },
+          "near_best_locations": {
+            "n": 20000,
+            "mean": 3.07755,
+            "ci95": [
+              3.0546503872787425,
+              3.1004496127212575
+            ]
+          },
+          "worst_survivor_rank": {
+            "n": 20000,
+            "mean": 4.7406,
+            "ci95": [
+              4.722655914448046,
+              4.758544085551954
+            ]
+          },
+          "recorded_B_worst_gap": {
+            "n": 20000,
+            "mean": 1.2235875604924256,
+            "ci95": [
+              1.2054711259831334,
+              1.2417039950017177
+            ]
+          }
+        },
+        "a2_preference": {
+          "chosen_worst": {
+            "n": 20000,
+            "mean": 18.34516618093257,
+            "ci95": [
+              18.321976797094877,
+              18.368355564770262
+            ]
+          },
+          "local_worst": {
+            "n": 20000,
+            "mean": 18.052453394575636,
+            "ci95": [
+              18.031126860366236,
+              18.073779928785036
+            ]
+          },
+          "worst_gain_over_local": {
+            "n": 20000,
+            "mean": 0.2927127863569348,
+            "ci95": [
+              0.2742470134010746,
+              0.31117855931279503
+            ]
+          },
+          "chosen_optimistic": {
+            "n": 20000,
+            "mean": 22.640575798926655,
+            "ci95": [
+              22.61268868566638,
+              22.66846291218693
+            ]
+          },
+          "local_optimistic": {
+            "n": 20000,
+            "mean": 22.283562988980034,
+            "ci95": [
+              22.25644070663794,
+              22.31068527132213
+            ]
+          },
+          "optimistic_gain_over_local": {
+            "n": 20000,
+            "mean": 0.3570128099466218,
+            "ci95": [
+              0.33733705656762086,
+              0.3766885633256228
+            ]
+          },
+          "chosen_matches_worst_optimum": {
+            "n": 20000,
+            "mean": 0.0437,
+            "ci95": [
+              0.040866770551489434,
+              0.04653322944851057
+            ]
+          },
+          "local_matches_worst_optimum": {
+            "n": 20000,
+            "mean": 0.02775,
+            "ci95": [
+              0.0254735169529929,
+              0.0300264830470071
+            ]
+          },
+          "chosen_worst_regret": {
+            "n": 20000,
+            "mean": 2.9853779918395213,
+            "ci95": [
+              2.962035995605917,
+              3.0087199880731257
+            ]
+          },
+          "local_worst_regret": {
+            "n": 20000,
+            "mean": 3.278090778196457,
+            "ci95": [
+              3.255302870557407,
+              3.3008786858355066
+            ]
+          },
+          "local_sacrifice_with_worst_gain": {
+            "n": 20000,
+            "mean": 0.2505,
+            "ci95": [
+              0.24449471484161472,
+              0.2565052851583853
+            ]
+          },
+          "on_differing_boards": {
+            "n": 8145,
+            "worst_gain": {
+              "n": 8145,
+              "mean": 0.7187545398574212,
+              "ci95": [
+                0.6750320103769768,
+                0.7624770693378656
+              ]
+            },
+            "wins": {
+              "n": 8145,
+              "mean": 0.6182934315531,
+              "ci95": [
+                0.6077424869790318,
+                0.6288443761271683
+              ]
+            },
+            "ties": {
+              "n": 8145,
+              "mean": 0.034008594229588705,
+              "ci95": [
+                0.030072094916131838,
+                0.03794509354304557
+              ]
+            }
+          },
+          "ideal_complement_survives_recorded_B": {
+            "n": 20000,
+            "mean": 0.34405,
+            "ci95": [
+              0.33746599578683856,
+              0.3506340042131615
+            ]
+          },
+          "best_remaining_rank_after_B": {
+            "n": 20000,
+            "mean": 2.38425,
+            "ci95": [
+              2.3647692952736197,
+              2.4037307047263807
+            ]
+          },
+          "loss_after_recorded_B": {
+            "n": 20000,
+            "mean": 1.8584151230806383,
+            "ci95": [
+              1.8293530370220017,
+              1.8874772091392749
+            ]
+          },
+          "worst_case_loss": {
+            "n": 20000,
+            "mean": 4.2954096179940855,
+            "ci95": [
+              4.26759273991785,
+              4.323226496070321
+            ]
+          },
+          "actual_A2_regret_vs_best_available": {
+            "n": 20000,
+            "mean": 1.0237722873089574,
+            "ci95": [
+              1.0006213631445418,
+              1.046923211473373
+            ]
+          },
+          "near_best_locations": {
+            "n": 20000,
+            "mean": 1.6599,
+            "ci95": [
+              1.6475019922020018,
+              1.672298007797998
+            ]
+          },
+          "worst_survivor_rank": {
+            "n": 20000,
+            "mean": 5.1226,
+            "ci95": [
+              5.104754357635001,
+              5.140445642364999
+            ]
+          },
+          "recorded_B_worst_gap": {
+            "n": 20000,
+            "mean": 2.436994494913447,
+            "ci95": [
+              2.410633918249163,
+              2.463355071577731
+            ]
+          }
+        }
+      }
+    }
+  },
+  "elapsed_seconds": 85.69037991703954,
+  "limitations": [
+    "Worst replies minimize A future-site proxy rather than maximizing B win probability.",
+    "Only settlement legality is enumerated; roads are immaterial to setup settlement legality but matter to game value.",
+    "Recorded B responses apply only to the actual chosen A1; no counterfactual opponent inference is made for alternative A1.",
+    "No neuron tracing or proof of explicit search/computation inside the frozen policy.",
+    "Paired test boards are independent; candidate corners within a board are not treated as independent samples.",
+    "Intervals describe board sampling conditional on fixed training fits; they omit training-set/model uncertainty."
+  ]
+}

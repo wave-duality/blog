@@ -1,0 +1,1464 @@
+{
+  "schema": "opening-followup-ports-numbers-v1",
+  "created_utc": "2026-11-02T18:49:20.946681+00:00",
+  "checkpoint_sha256": "fbc5209b17a14a1d7b649087efdb1503185c7dfab9d9f5b443d0957431272158",
+  "configuration": {
+    "corpus": "/Users/owenzhang/CatanRL/run/analysis/opening-study-100k-20261029",
+    "out": "/Users/owenzhang/CatanRL/run/analysis/opening-followups-20261102/ports_numbers",
+    "samples": 2000,
+    "patch_samples": 128,
+    "batch_size": 32,
+    "screen_boards": 0,
+    "reuse_selection": true
+  },
+  "corpus_screen": {
+    "schema": "opening-followup-selection-v1",
+    "rng_seed": 110237,
+    "screened_boards": 100000,
+    "counters": {
+      "ports": {
+        "B2": {
+          "boards": 100000,
+          "eligible_boards": 34659,
+          "eligible_contrasts": 169175
+        },
+        "A2": {
+          "boards": 100000,
+          "eligible_boards": 27399,
+          "eligible_contrasts": 118001
+        }
+      },
+      "numbers": {
+        "B2": {
+          "boards": 100000,
+          "eligible_boards": 34741,
+          "eligible_contrasts": 41191
+        },
+        "A2": {
+          "boards": 100000,
+          "eligible_boards": 19666,
+          "eligible_contrasts": 21373
+        }
+      }
+    },
+    "source_shards": [
+      {
+        "path": "shards/shard-00000.npz",
+        "sha256": "3d4c0ca2fb7569ad74938c3e044f6c31c2baf5c4308aa025fda738589242e126"
+      },
+      {
+        "path": "shards/shard-00001.npz",
+        "sha256": "141c7c62248de3e6496727992883aebb06eb2c0252158cb3a26e73eff3914eb7"
+      },
+      {
+        "path": "shards/shard-00002.npz",
+        "sha256": "e8c55dd7848642ee37013c8f867a629e6b176e30688b24b8696ced2034f4fc62"
+      },
+      {
+        "path": "shards/shard-00003.npz",
+        "sha256": "99516d4d6a0692b767852d822f7fff69b5aad264b2d8a6e9a118a4650b117472"
+      },
+      {
+        "path": "shards/shard-00004.npz",
+        "sha256": "4cae87d476fde9b427fe73bf2d053f4c5405d0e800c390ad69a0b2d7013b6435"
+      },
+      {
+        "path": "shards/shard-00005.npz",
+        "sha256": "f706c8daa21154583775523d3356b06113ec3734a1c13f53c2a3f799f7bc853f"
+      },
+      {
+        "path": "shards/shard-00006.npz",
+        "sha256": "eba10ac39c250a484ace1c1f0dce2f68a7873fd37d2dfca00d5796b0f46fb77e"
+      },
+      {
+        "path": "shards/shard-00007.npz",
+        "sha256": "7168cf2ef1edd6eb365d040fde0a8dcb4f9022ff06edf99fb34cfc689b424c8d"
+      },
+      {
+        "path": "shards/shard-00008.npz",
+        "sha256": "9ae614e22628976514257320c7632c8714c891012b8bd52447ce287499ae975a"
+      },
+      {
+        "path": "shards/shard-00009.npz",
+        "sha256": "6d3e73b7c2bf0f38f12abe6dfdf683b2f3774458e96a84c8e5490ca65c6c9d6e"
+      },
+      {
+        "path": "shards/shard-00010.npz",
+        "sha256": "acf0d48d56095867f1ae3187e4aac2282ec3665146a4e99ed6a5bf9c16905310"
+      },
+      {
+        "path": "shards/shard-00011.npz",
+        "sha256": "919004cf40c0684d9c25606a08304c0d660d5a92578fc62cc6eb085707f491a5"
+      },
+      {
+        "path": "shards/shard-00012.npz",
+        "sha256": "64cfdfdb590ac25dec1f29f4660e764bc69e906ae6b727b5c352c8d203ef3fc3"
+      },
+      {
+        "path": "shards/shard-00013.npz",
+        "sha256": "5aaf474dbdfaa1d9c396ea1572b9579a764e5ff3696a16dd8fc8f064226b6f05"
+      },
+      {
+        "path": "shards/shard-00014.npz",
+        "sha256": "21afabd9c51dc8e2420e49cfaef188a66f23b8cd2d4f6b729e3bb76d1a990fdc"
+      },
+      {
+        "path": "shards/shard-00015.npz",
+        "sha256": "b45b1b99fe7191f24efceca024beed562702370389427ae78d095fcae4040bde"
+      },
+      {
+        "path": "shards/shard-00016.npz",
+        "sha256": "0b6732556196761d20f6f6bf4092c2939e6dc253d888e7efa08bd85c9d7a19b2"
+      },
+      {
+        "path": "shards/shard-00017.npz",
+        "sha256": "9e6a31298dbabbf39a30969828aea6d26fc89a2c99cc97452fb9f36f24d8137c"
+      },
+      {
+        "path": "shards/shard-00018.npz",
+        "sha256": "7c4edab678781b17aec7fca8d7768be1dd5fb2b6c86d923c61c1602f58b705b3"
+      },
+      {
+        "path": "shards/shard-00019.npz",
+        "sha256": "822a2b7635d91867f3cd52d30102cdfd407b19cd6544ca4acbb1f02cfafe45b1"
+      },
+      {
+        "path": "shards/shard-00020.npz",
+        "sha256": "e0486df950d91229f5b5241c19f20433ca527166581c8f37bee3587cffc64cfa"
+      },
+      {
+        "path": "shards/shard-00021.npz",
+        "sha256": "97370f54ae1ccc2e994a721693e2accd603bd6affbfce108c54258e2419ab8d7"
+      },
+      {
+        "path": "shards/shard-00022.npz",
+        "sha256": "8de75ee6f76edbd32523fa8c422c1a368fc9514b1aa249f256443f52f8a1acaf"
+      },
+      {
+        "path": "shards/shard-00023.npz",
+        "sha256": "38e31df0265bb998e998412e77f1c87840997141b1aba1208361debc1d47db49"
+      },
+      {
+        "path": "shards/shard-00024.npz",
+        "sha256": "d19afa48aa5a7d9a46aa469570fccad2923b3ba13034ea683252a423a40d0253"
+      },
+      {
+        "path": "shards/shard-00025.npz",
+        "sha256": "def8262db8cf75007d61c1605a1b83e569f6ebacc30bc404711839950afe6b3b"
+      },
+      {
+        "path": "shards/shard-00026.npz",
+        "sha256": "0142b23286fcd3995fec3fb09c35a663a8733a47060a67603d8d180578f9b1ff"
+      },
+      {
+        "path": "shards/shard-00027.npz",
+        "sha256": "29f8b29bb15ca0fe0c2422d7031ad56b923d7c14e064c73eabedb0ab4b15402f"
+      },
+      {
+        "path": "shards/shard-00028.npz",
+        "sha256": "6319b316b63c86e790fe728abb033136cac950eb391965e75295df28dfebf132"
+      },
+      {
+        "path": "shards/shard-00029.npz",
+        "sha256": "ce6591422f5972857566e5f0c52af27cdf04f58ff18575da5f055bb9163ad98e"
+      },
+      {
+        "path": "shards/shard-00030.npz",
+        "sha256": "8f0fb5d30600a56d243c5e391c7d3c21d0757d5128971293f50944e3e7af649a"
+      },
+      {
+        "path": "shards/shard-00031.npz",
+        "sha256": "5af67faf7e9f1c7f7c161fc62f82148017dc50faabe4838d67f670171ab4f200"
+      },
+      {
+        "path": "shards/shard-00032.npz",
+        "sha256": "21e8a6476733cbe393145a6274ab3ae546f652a9584d863a7f1eb90d3d99f663"
+      },
+      {
+        "path": "shards/shard-00033.npz",
+        "sha256": "7e129707368977cf600f6a2e6ad12f0332ba0e7beb898366557bd1d9df056c80"
+      },
+      {
+        "path": "shards/shard-00034.npz",
+        "sha256": "8f26455e7a42371dcacb8bcd04a08085021479fe3e88946d69cda76ff17d5af2"
+      },
+      {
+        "path": "shards/shard-00035.npz",
+        "sha256": "f73c00ae7c040231b7279b98260a76c52fc56e085e16173027fa31b8ad48939c"
+      },
+      {
+        "path": "shards/shard-00036.npz",
+        "sha256": "ed6526b6a3614fcde6b1ab24860f42137db12f0c7e0f7fc5b14a9839931f51ad"
+      },
+      {
+        "path": "shards/shard-00037.npz",
+        "sha256": "6db76e55036a7bb5f16f1b3b7d5e7b008ac0feb01a89b5d28dd14465c976c61d"
+      },
+      {
+        "path": "shards/shard-00038.npz",
+        "sha256": "93d383c8b7cc1012b866e0ee64a0ef5dc0410ad8f035310dd3164179999a6371"
+      },
+      {
+        "path": "shards/shard-00039.npz",
+        "sha256": "a5e8e81a08d13e68d4e778c18ebb857d373b36687033b76b508f8164f463cc46"
+      },
+      {
+        "path": "shards/shard-00040.npz",
+        "sha256": "f1b07ffdf7e32f878ff303147c9ed5b8e70359299166b3c3d07a4a4b9eb1229e"
+      },
+      {
+        "path": "shards/shard-00041.npz",
+        "sha256": "373871969eaff8321f546f763eb2f199f6c04cb16f8a996a56dffee614fd5d95"
+      },
+      {
+        "path": "shards/shard-00042.npz",
+        "sha256": "086f034106180111a2812bcacade890e85e0ced65217eb98d4f62fb0f3073e05"
+      },
+      {
+        "path": "shards/shard-00043.npz",
+        "sha256": "0f309bc87e2a263f4af7fe880b93fa0deeacf8f73430702f2e32e133470637b1"
+      },
+      {
+        "path": "shards/shard-00044.npz",
+        "sha256": "179840f3db0763f78c4980b1f16e195bf517c43eb0c9da28b0c662cb35d3e695"
+      },
+      {
+        "path": "shards/shard-00045.npz",
+        "sha256": "a3f4dc4d8c1455ca04a5d3e2c8c5b5eb452022bd882a357fbe2d0f2031304049"
+      },
+      {
+        "path": "shards/shard-00046.npz",
+        "sha256": "8c3f4118ec1b5125267dbc868712f1f5ffa029343d7eeff6a217c90243402f99"
+      },
+      {
+        "path": "shards/shard-00047.npz",
+        "sha256": "f0dac83dc4d741fbcdd7bd3437bf2af6e9a0cf83cd4355ae4f072c62574270f4"
+      },
+      {
+        "path": "shards/shard-00048.npz",
+        "sha256": "9533e3765cdad73ea7b49d41efacf35d071ea4036f47b5509448f5a976514cab"
+      },
+      {
+        "path": "shards/shard-00049.npz",
+        "sha256": "02e77fb303aafba6fc6a58386958680fd595adc33bb4ea9eeed9e12e0679f6ea"
+      },
+      {
+        "path": "shards/shard-00050.npz",
+        "sha256": "f814d377fc126b2ff43078ec848afcc10095ff7d5b39e1596412058223e79f17"
+      },
+      {
+        "path": "shards/shard-00051.npz",
+        "sha256": "b8fd365199f3774c0d27b98397fc92b226a34598e1171e4a3734c69738c8b42d"
+      },
+      {
+        "path": "shards/shard-00052.npz",
+        "sha256": "c983e9a96c7f8f3e3d3ed0e1519798b5a3a2191b8e97c26d6ff6c07be21550b1"
+      },
+      {
+        "path": "shards/shard-00053.npz",
+        "sha256": "efb3b97794ce38c1ed01d8c0edd8efd69b561f4df1076b199ee15a986b2ecd8f"
+      },
+      {
+        "path": "shards/shard-00054.npz",
+        "sha256": "df0e36c88ff8f09e975ff2c16e7626e4b8fdd33ff4ca0f5137fb7dac83cb2652"
+      },
+      {
+        "path": "shards/shard-00055.npz",
+        "sha256": "983620873365517b2c4e074d5fc083b591d1bfe311aa093cd5ea6f62a21a9f1e"
+      },
+      {
+        "path": "shards/shard-00056.npz",
+        "sha256": "bc4026801e9efa27e3be823ee52ec239e1b6ad715294608eabc408cdceda212d"
+      },
+      {
+        "path": "shards/shard-00057.npz",
+        "sha256": "3f27cbb1dc97a67b952c154784160e82f3ed9d55bb811f040cb89d41b011f167"
+      },
+      {
+        "path": "shards/shard-00058.npz",
+        "sha256": "2a5d237e60a36545a8201bc146204ee95029bcf4037b139edef45d351dec9e79"
+      },
+      {
+        "path": "shards/shard-00059.npz",
+        "sha256": "b639c4c73b10abf1c442a7a988aa631bc6693976edba07a39c8f43219a03e93b"
+      },
+      {
+        "path": "shards/shard-00060.npz",
+        "sha256": "8aead553eaa87e028df07ae1bc92c4db68bca0dd0d26e1afecc2f06af6ff758d"
+      },
+      {
+        "path": "shards/shard-00061.npz",
+        "sha256": "ca8b7ba8b3fe73e05eda6c4645d112134f2686a6eb8f37c5370003c94310e5d2"
+      },
+      {
+        "path": "shards/shard-00062.npz",
+        "sha256": "de4f6c74d3305b40fd078b4e194d9375210637e2a2f8d9786e2e8c58b47e56fa"
+      },
+      {
+        "path": "shards/shard-00063.npz",
+        "sha256": "ee004d8f765e8630d19edf21ce1afa3c314bcbe7ec6ffa46ef927db35b8b3eda"
+      },
+      {
+        "path": "shards/shard-00064.npz",
+        "sha256": "482be62a16bd1126ac13369eebde4a6224cc496bc583a882fd3a6fa7c05060c3"
+      },
+      {
+        "path": "shards/shard-00065.npz",
+        "sha256": "10a37b34ba5e25486310396d251f3e36f7bfa5a9dc04359516effe2776a52166"
+      },
+      {
+        "path": "shards/shard-00066.npz",
+        "sha256": "2fe9cfa5a191293b24808f633caaa3a4962fb89f67ae6c10325b39796a5c1b71"
+      },
+      {
+        "path": "shards/shard-00067.npz",
+        "sha256": "434211169f4a9b80933bf8a795540f152f88da791528a395d1567e933cd96f0e"
+      },
+      {
+        "path": "shards/shard-00068.npz",
+        "sha256": "d04b638551635b532160909b97f17c93dc186b3c4a51dd81d7c8cc9ee17ddb00"
+      },
+      {
+        "path": "shards/shard-00069.npz",
+        "sha256": "56b1bf30d6d14e5a2628dafa2324484505c6ccaee5fafb06fe37d9287950bfbc"
+      },
+      {
+        "path": "shards/shard-00070.npz",
+        "sha256": "de12d5cb66a04104311d14af427a0ec8319698401912254fe9af96ca37bda80d"
+      },
+      {
+        "path": "shards/shard-00071.npz",
+        "sha256": "09262c58e66fa3027d86cfc21abb3bbabcf14e14e99e958ee5e809ce7dc22b4a"
+      },
+      {
+        "path": "shards/shard-00072.npz",
+        "sha256": "db45d7b2ca594e2b4e385e1f8d937fba36defff5287c691d9b598b1e89fb69d3"
+      },
+      {
+        "path": "shards/shard-00073.npz",
+        "sha256": "afaa9f7e13eb5525a8ff99408464b78269fbe45e65e3bbb250ca355b9608de88"
+      },
+      {
+        "path": "shards/shard-00074.npz",
+        "sha256": "20e3ff1af697b8b9c209ce47114664b94a5633983f05204bea1b976d73a568dc"
+      },
+      {
+        "path": "shards/shard-00075.npz",
+        "sha256": "e1887b291d69b4ebee9f2ce49ad94d34d7fa9e6701e47ebe1787900216f7e6f1"
+      },
+      {
+        "path": "shards/shard-00076.npz",
+        "sha256": "530bb22485b55bfb32891123a86e30e41191cb30d9013159f87d738f17d02427"
+      },
+      {
+        "path": "shards/shard-00077.npz",
+        "sha256": "41db31c04eb4439f450ff5c2fbae70e1178a4ad9429aa4bd72ca5a184b26e905"
+      },
+      {
+        "path": "shards/shard-00078.npz",
+        "sha256": "30e64cc30dcc65abd243660d84b9198a6331c455a2d56d49c6f30936d45739db"
+      },
+      {
+        "path": "shards/shard-00079.npz",
+        "sha256": "5888aa826aa6aab41431250c2ff781b779271d5e3af855d1acca09a95284f567"
+      },
+      {
+        "path": "shards/shard-00080.npz",
+        "sha256": "e3bbc4609f8079253a8cfc5025806ff6d9ec655b6850534f829e5c7fd1d2058c"
+      },
+      {
+        "path": "shards/shard-00081.npz",
+        "sha256": "eb272d074db09cfaf0c1f3c4f8d902d6b7cabcfd7051604b7b644ffaae54cf12"
+      },
+      {
+        "path": "shards/shard-00082.npz",
+        "sha256": "30afa5dfec12043a0a72fbe962aee937e94c7c4fcbcfaeed0846aeb42b229bf1"
+      },
+      {
+        "path": "shards/shard-00083.npz",
+        "sha256": "246fe933b014ffbf12b4e2ac624cbef94d1b6e1abe314907fd56dc374899e937"
+      },
+      {
+        "path": "shards/shard-00084.npz",
+        "sha256": "6a185900c5e3f0999085e839a06e44e0148410cd0d4c4ca0230efc65607ccb37"
+      },
+      {
+        "path": "shards/shard-00085.npz",
+        "sha256": "1f0743e4ee38e151f475ff72c1ec3b425c33ec861d1afd46c181129d936cf3d3"
+      },
+      {
+        "path": "shards/shard-00086.npz",
+        "sha256": "11e9ed9b035305738dee34165d8a438f451b6eff2a81003a8910bca1df9483ff"
+      },
+      {
+        "path": "shards/shard-00087.npz",
+        "sha256": "43b60f97d149732650aefae33f75d49bcfe19988488c6356930aee156a949dc0"
+      },
+      {
+        "path": "shards/shard-00088.npz",
+        "sha256": "dd3f911285f13e899c6edee87ca609048e0a3d2367740cb81339e0cc4e2b8bf0"
+      },
+      {
+        "path": "shards/shard-00089.npz",
+        "sha256": "d1f23c58d9d5b6a8223cb5c227bd6b37828d7254a823394a5e76299c3a47a118"
+      },
+      {
+        "path": "shards/shard-00090.npz",
+        "sha256": "ff0c29c730a80f19f3b846e0ff50e9dfece4c43246083d1a08aa655248f086ec"
+      },
+      {
+        "path": "shards/shard-00091.npz",
+        "sha256": "0c70a94f0a963f527d3c75e14ccc4385b584d23f5124ff44238d6c8d4a9352a9"
+      },
+      {
+        "path": "shards/shard-00092.npz",
+        "sha256": "07e1e80d6f144452a54322fbaa0e6c2f3cc2f7a2d0988d6cdd9e01f25240e09f"
+      },
+      {
+        "path": "shards/shard-00093.npz",
+        "sha256": "51e3b405b7ac2c369563f93dea036229f6c682709b294f932bbfc0f6d81e688e"
+      },
+      {
+        "path": "shards/shard-00094.npz",
+        "sha256": "c2fcb1c438464612805ca62bc7b080d2c8f290f1d376c053da7a55d07a8fddde"
+      },
+      {
+        "path": "shards/shard-00095.npz",
+        "sha256": "ba06c30d05d0e91574e901779c7c1038ddc7ac8956467530fc601edbef6585ea"
+      },
+      {
+        "path": "shards/shard-00096.npz",
+        "sha256": "9bce5648172e74969d2b05ec0004ddd0abbc4d4c2a6e396d9c6f7b1f7c23aad6"
+      },
+      {
+        "path": "shards/shard-00097.npz",
+        "sha256": "02976d4d2d4602e103a4791c56bd0f6fbb9ac33dd01e31b15ebbe988c2c5d0e3"
+      },
+      {
+        "path": "shards/shard-00098.npz",
+        "sha256": "5d77ebf56a374a9c0846441de45b65f34bd9207dfdd0c3d754de08d4c72499d6"
+      },
+      {
+        "path": "shards/shard-00099.npz",
+        "sha256": "111f6c0900cf37a73e3da8d1434158c9877afb6f527833f08faae9e81f38c639"
+      }
+    ],
+    "screen_seconds": 17.85494637489319,
+    "sampling": "All eligible contrasts counted; one selected uniformly within each eligible board/stage, then a uniform reservoir of eligible boards per stage. No policy outputs used in eligibility/selection.",
+    "port_control_selection": {
+      "selected_by_stage": {
+        "A2": 1957,
+        "B2": 1954
+      },
+      "eligible_from": "The selected 2000 positions per stage of the main port study",
+      "comparator": "2:1 port for a resource absent from both production portfolios; its production remains zero before and after concentration."
+    }
+  },
+  "summary": {
+    "ports": {
+      "all": {
+        "rows": 4000,
+        "boards": 3947,
+        "statistics": {
+          "low_port_effect": {
+            "mean": -1.057088993512466,
+            "median": -0.9308162601221177,
+            "fraction_positive": 0.02508234101849506,
+            "ci95": [
+              -1.080094280604597,
+              -1.0341730393156028
+            ]
+          },
+          "high_port_effect": {
+            "mean": -0.9644758877303112,
+            "median": -0.853602571146828,
+            "fraction_positive": 0.027869267798327844,
+            "ci95": [
+              -0.9859058500791755,
+              -0.9426107049843098
+            ]
+          },
+          "interaction": {
+            "mean": 0.09261310578215487,
+            "median": 0.04894365817308444,
+            "fraction_positive": 0.5931086901444135,
+            "ci95": [
+              0.08222833750708769,
+              0.10283294476461567
+            ]
+          }
+        }
+      },
+      "by_stage": {
+        "B2": {
+          "rows": 2000,
+          "boards": 2000,
+          "statistics": {
+            "low_port_effect": {
+              "mean": -1.143019119514646,
+              "median": -1.0132309953155723,
+              "fraction_positive": 0.0165,
+              "ci95": [
+                -1.1735185391890606,
+                -1.1121441372157261
+              ]
+            },
+            "high_port_effect": {
+              "mean": -1.0569627305719955,
+              "median": -0.9279294842894465,
+              "fraction_positive": 0.0155,
+              "ci95": [
+                -1.0858442020761796,
+                -1.0279756706035386
+              ]
+            },
+            "interaction": {
+              "mean": 0.08605638894265052,
+              "median": 0.04738677561283122,
+              "fraction_positive": 0.599,
+              "ci95": [
+                0.07267484876209793,
+                0.09898854473124268
+              ]
+            }
+          }
+        },
+        "A2": {
+          "rows": 2000,
+          "boards": 2000,
+          "statistics": {
+            "low_port_effect": {
+              "mean": -0.9738167213728586,
+              "median": -0.8249982652210059,
+              "fraction_positive": 0.0335,
+              "ci95": [
+                -1.0055800817520264,
+                -0.9401075157711214
+              ]
+            },
+            "high_port_effect": {
+              "mean": -0.8743748082503439,
+              "median": -0.7602069481497717,
+              "fraction_positive": 0.04,
+              "ci95": [
+                -0.902457560933111,
+                -0.8428931984522993
+              ]
+            },
+            "interaction": {
+              "mean": 0.09944191312251463,
+              "median": 0.05031043480313002,
+              "fraction_positive": 0.589,
+              "ci95": [
+                0.08323505121157167,
+                0.11543378905613813
+              ]
+            }
+          }
+        }
+      },
+      "patches": {
+        "rows": 256,
+        "boards": 256,
+        "statistics": {
+          "interaction": {
+            "mean": 0.11206527396946195,
+            "median": 0.05972434083620559,
+            "fraction_positive": 0.6171875,
+            "ci95": [
+              0.06702940336444435,
+              0.15839685427669487
+            ]
+          },
+          "restore_target_port_interaction": {
+            "mean": 0.003967573301525126,
+            "median": 0.0011777398378938209,
+            "fraction_positive": 0.52734375,
+            "ci95": [
+              0.0008609425187002174,
+              0.007491291812786364
+            ]
+          },
+          "restore_remote_port_interaction": {
+            "mean": 0.10742509434577735,
+            "median": 0.05852206307260932,
+            "fraction_positive": 0.60546875,
+            "ci95": [
+              0.0636657947020051,
+              0.15220360312128364
+            ]
+          },
+          "restore_all_port_interaction": {
+            "mean": 0.0,
+            "median": 0.0,
+            "fraction_positive": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "patches_by_stage": {
+        "B2": {
+          "rows": 128,
+          "boards": 128,
+          "statistics": {
+            "interaction": {
+              "mean": 0.05291718043149194,
+              "median": 0.02919803238926999,
+              "fraction_positive": 0.578125,
+              "ci95": [
+                0.0087815096030127,
+                0.0998519244901238
+              ]
+            },
+            "restore_target_port_interaction": {
+              "mean": 0.0004985352724902956,
+              "median": 0.0004623920470474552,
+              "fraction_positive": 0.515625,
+              "ci95": [
+                -0.0032725937704473134,
+                0.004172868738740209
+              ]
+            },
+            "restore_remote_port_interaction": {
+              "mean": 0.05125566080940129,
+              "median": 0.03032997278323135,
+              "fraction_positive": 0.578125,
+              "ci95": [
+                0.006630402379179566,
+                0.09725503922189617
+              ]
+            },
+            "restore_all_port_interaction": {
+              "mean": 0.0,
+              "median": 0.0,
+              "fraction_positive": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        },
+        "A2": {
+          "rows": 128,
+          "boards": 128,
+          "statistics": {
+            "interaction": {
+              "mean": 0.17121336750743193,
+              "median": 0.10877642192338666,
+              "fraction_positive": 0.65625,
+              "ci95": [
+                0.09426152694447548,
+                0.25441489437087955
+              ]
+            },
+            "restore_target_port_interaction": {
+              "mean": 0.007436611330559957,
+              "median": 0.003321664035319305,
+              "fraction_positive": 0.5390625,
+              "ci95": [
+                0.002318492321199088,
+                0.012929873106936081
+              ]
+            },
+            "restore_remote_port_interaction": {
+              "mean": 0.1635945278821534,
+              "median": 0.11177285007740378,
+              "fraction_positive": 0.6328125,
+              "ci95": [
+                0.08850581330945247,
+                0.24416100758563797
+              ]
+            },
+            "restore_all_port_interaction": {
+              "mean": 0.0,
+              "median": 0.0,
+              "fraction_positive": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      },
+      "by_resource": {
+        "wood": {
+          "rows": 995,
+          "boards": 993,
+          "statistics": {
+            "low_port_effect": {
+              "mean": -0.9644822898435157,
+              "median": -0.9283481240272522,
+              "fraction_positive": 0.016112789526686808,
+              "ci95": [
+                -0.9950893358517734,
+                -0.9332814917320761
+              ]
+            },
+            "high_port_effect": {
+              "mean": -0.8774859580588741,
+              "median": -0.8274794189553507,
+              "fraction_positive": 0.015105740181268883,
+              "ci95": [
+                -0.9062576006663333,
+                -0.8483530700213329
+              ]
+            },
+            "interaction": {
+              "mean": 0.08699633178464157,
+              "median": 0.07408844530582481,
+              "fraction_positive": 0.6817724068479355,
+              "ci95": [
+                0.07359582521740099,
+                0.10056241471624405
+              ]
+            }
+          }
+        },
+        "brick": {
+          "rows": 438,
+          "boards": 438,
+          "statistics": {
+            "low_port_effect": {
+              "mean": -1.3341136862635121,
+              "median": -1.2441890237555993,
+              "fraction_positive": 0.0091324200913242,
+              "ci95": [
+                -1.406814712936026,
+                -1.2651104113299172
+              ]
+            },
+            "high_port_effect": {
+              "mean": -1.2796337357733176,
+              "median": -1.2247629860173102,
+              "fraction_positive": 0.01141552511415525,
+              "ci95": [
+                -1.3461832333182902,
+                -1.2171327606357667
+              ]
+            },
+            "interaction": {
+              "mean": 0.054479950490194606,
+              "median": 0.03600746511981123,
+              "fraction_positive": 0.54337899543379,
+              "ci95": [
+                0.026324421076896722,
+                0.0834205840762997
+              ]
+            }
+          }
+        },
+        "sheep": {
+          "rows": 1111,
+          "boards": 1106,
+          "statistics": {
+            "low_port_effect": {
+              "mean": -0.6322185871310333,
+              "median": -0.6007301713290967,
+              "fraction_positive": 0.012658227848101266,
+              "ci95": [
+                -0.6506960169076306,
+                -0.6129321441744952
+              ]
+            },
+            "high_port_effect": {
+              "mean": -0.6266111667243763,
+              "median": -0.5940768352250734,
+              "fraction_positive": 0.0045207956600361665,
+              "ci95": [
+                -0.6439836552032517,
+                -0.6084983214974932
+              ]
+            },
+            "interaction": {
+              "mean": 0.005607420406656996,
+              "median": -0.0011431527086145366,
+              "fraction_positive": 0.49638336347197104,
+              "ci95": [
+                -0.00444357637069162,
+                0.015328881569445564
+              ]
+            }
+          }
+        },
+        "wheat": {
+          "rows": 973,
+          "boards": 970,
+          "statistics": {
+            "low_port_effect": {
+              "mean": -1.3414752858841499,
+              "median": -1.3449060423522483,
+              "fraction_positive": 0.021649484536082474,
+              "ci95": [
+                -1.3836782079370087,
+                -1.29736837348617
+              ]
+            },
+            "high_port_effect": {
+              "mean": -1.2747569663352711,
+              "median": -1.2706814701142521,
+              "fraction_positive": 0.021649484536082474,
+              "ci95": [
+                -1.3174767264728149,
+                -1.2289467132368783
+              ]
+            },
+            "interaction": {
+              "mean": 0.06671831954887852,
+              "median": 0.032737245949942206,
+              "fraction_positive": 0.5381443298969072,
+              "ci95": [
+                0.04437243194007915,
+                0.08905239706660503
+              ]
+            }
+          }
+        },
+        "ore": {
+          "rows": 483,
+          "boards": 481,
+          "statistics": {
+            "low_port_effect": {
+              "mean": -1.40665693140739,
+              "median": -1.2392991681893664,
+              "fraction_positive": 0.09355509355509356,
+              "ci95": [
+                -1.5094197949876638,
+                -1.3010699421524252
+              ]
+            },
+            "high_port_effect": {
+              "mean": -1.016071126980721,
+              "median": -0.9094940423965454,
+              "fraction_positive": 0.13305613305613306,
+              "ci95": [
+                -1.1055623116337532,
+                -0.9248553297650903
+              ]
+            },
+            "interaction": {
+              "mean": 0.3905858044266687,
+              "median": 0.3300637369570527,
+              "fraction_positive": 0.7900207900207901,
+              "ci95": [
+                0.34479657454625645,
+                0.43838145640477694
+              ]
+            }
+          }
+        }
+      },
+      "production_shares": {
+        "rows": 4000,
+        "boards": 3947,
+        "statistics": {
+          "low_share": {
+            "mean": 0.38608771714026735,
+            "median": 0.38461538461538464,
+            "fraction_positive": 1.0,
+            "ci95": [
+              0.3840003409413459,
+              0.38832351494386447
+            ]
+          },
+          "high_share": {
+            "mean": 0.6275353637606369,
+            "median": 0.6153846153846154,
+            "fraction_positive": 1.0,
+            "ci95": [
+              0.624658777349617,
+              0.6303985528900642
+            ]
+          }
+        }
+      }
+    },
+    "numbers": {
+      "all": {
+        "rows": 4000,
+        "boards": 3962,
+        "statistics": {
+          "effect": {
+            "mean": -0.0011465943923516992,
+            "median": 0.0001387993494672557,
+            "fraction_positive": 0.5015143866733973,
+            "ci95": [
+              -0.0028966224034325336,
+              0.0006561671657606437
+            ]
+          }
+        }
+      },
+      "by_stage": {
+        "B2": {
+          "rows": 2000,
+          "boards": 2000,
+          "statistics": {
+            "effect": {
+              "mean": -0.000429808027545613,
+              "median": 0.0009139875570927103,
+              "fraction_positive": 0.505,
+              "ci95": [
+                -0.002947232118745639,
+                0.0021454673116840183
+              ]
+            }
+          }
+        },
+        "A2": {
+          "rows": 2000,
+          "boards": 2000,
+          "statistics": {
+            "effect": {
+              "mean": -0.0018101110170285193,
+              "median": -5.772709846496582e-05,
+              "fraction_positive": 0.4985,
+              "ci95": [
+                -0.0045989467928807355,
+                0.0008320152709632667
+              ]
+            }
+          }
+        }
+      },
+      "patches": {
+        "rows": 256,
+        "boards": 256,
+        "statistics": {
+          "effect": {
+            "mean": -0.0023974658106453556,
+            "median": -0.0012726883093518992,
+            "fraction_positive": 0.4921875,
+            "ci95": [
+              -0.010363348543760361,
+              0.005285999590705557
+            ]
+          },
+          "restore_hex_number_embeddings_effect": {
+            "mean": 0.000148432476756529,
+            "median": -0.0011128524939216788,
+            "fraction_positive": 0.4765625,
+            "ci95": [
+              -0.005537634870367193,
+              0.00581622702593457
+            ]
+          },
+          "restore_vertex_number_embeddings_effect": {
+            "mean": -0.0016677340764241085,
+            "median": -0.0006185372670493017,
+            "fraction_positive": 0.4921875,
+            "ci95": [
+              -0.0075361827023636896,
+              0.003909938018089998
+            ]
+          },
+          "restore_both_effect": {
+            "mean": -1.893417599646693e-07,
+            "median": -2.920627593105962e-07,
+            "fraction_positive": 0.43359375,
+            "ci95": [
+              -4.256304237151674e-07,
+              4.635638709039846e-08
+            ]
+          }
+        }
+      },
+      "patches_by_stage": {
+        "B2": {
+          "rows": 128,
+          "boards": 128,
+          "statistics": {
+            "effect": {
+              "mean": -0.00169507565442476,
+              "median": -0.0005599260330197975,
+              "fraction_positive": 0.4921875,
+              "ci95": [
+                -0.012916893976701867,
+                0.009320618245983547
+              ]
+            },
+            "restore_hex_number_embeddings_effect": {
+              "mean": 0.004975721449591292,
+              "median": 0.005827027559280218,
+              "fraction_positive": 0.5234375,
+              "ci95": [
+                -0.0034397817212932125,
+                0.01405021868723763
+              ]
+            },
+            "restore_vertex_number_embeddings_effect": {
+              "mean": -0.005691913313542716,
+              "median": -0.004129755496979026,
+              "fraction_positive": 0.453125,
+              "ci95": [
+                -0.01271912919085778,
+                0.0009638346677335735
+              ]
+            },
+            "restore_both_effect": {
+              "mean": -3.2299819094361304e-07,
+              "median": -3.8743019104003906e-07,
+              "fraction_positive": 0.390625,
+              "ci95": [
+                -6.247319590768803e-07,
+                -2.0206789471972356e-08
+              ]
+            }
+          }
+        },
+        "A2": {
+          "rows": 128,
+          "boards": 128,
+          "statistics": {
+            "effect": {
+              "mean": -0.0030998559668659513,
+              "median": -0.003757158915202119,
+              "fraction_positive": 0.4921875,
+              "ci95": [
+                -0.01408188241747357,
+                0.008588883328872456
+              ]
+            },
+            "restore_hex_number_embeddings_effect": {
+              "mean": -0.004678856496078234,
+              "median": -0.0035951713720958622,
+              "fraction_positive": 0.4296875,
+              "ci95": [
+                -0.011725955281872308,
+                0.00237203333410437
+              ]
+            },
+            "restore_vertex_number_embeddings_effect": {
+              "mean": 0.002356445160694499,
+              "median": 0.0015159050623578807,
+              "fraction_positive": 0.53125,
+              "ci95": [
+                -0.006755842320465782,
+                0.012032944995832467
+              ]
+            },
+            "restore_both_effect": {
+              "mean": -5.568532898572558e-08,
+              "median": -1.1920928955078125e-07,
+              "fraction_positive": 0.4765625,
+              "ci95": [
+                -4.276590577291712e-07,
+                3.0375590236657413e-07
+              ]
+            }
+          }
+        }
+      },
+      "by_pair": {
+        "3/11": {
+          "rows": 481,
+          "boards": 481,
+          "statistics": {
+            "effect": {
+              "mean": -0.005929729375505465,
+              "median": -0.0047879616419477244,
+              "fraction_positive": 0.46361746361746364,
+              "ci95": [
+                -0.011872561806948425,
+                0.0001086794462362909
+              ]
+            }
+          }
+        },
+        "4/10": {
+          "rows": 814,
+          "boards": 813,
+          "statistics": {
+            "effect": {
+              "mean": -0.0017881655934991988,
+              "median": -0.0036929845809936523,
+              "fraction_positive": 0.47232472324723246,
+              "ci95": [
+                -0.006317176049687475,
+                0.002548161162160419
+              ]
+            }
+          }
+        },
+        "5/9": {
+          "rows": 928,
+          "boards": 923,
+          "statistics": {
+            "effect": {
+              "mean": -0.001580513854477143,
+              "median": 0.002071189880370916,
+              "fraction_positive": 0.5222101841820151,
+              "ci95": [
+                -0.005732449175579446,
+                0.0025830104830716263
+              ]
+            }
+          }
+        },
+        "6/8": {
+          "rows": 1777,
+          "boards": 1770,
+          "statistics": {
+            "effect": {
+              "mean": 0.0007348127708035283,
+              "median": 0.001743614673614502,
+              "fraction_positive": 0.5163841807909605,
+              "ci95": [
+                -0.0016169623489335763,
+                0.0031297819803480843
+              ]
+            }
+          }
+        }
+      },
+      "by_direction": {
+        "low_to_high": {
+          "rows": 2060,
+          "boards": 2048,
+          "statistics": {
+            "effect": {
+              "mean": -0.0021211220033971277,
+              "median": -0.0010349651177721242,
+              "fraction_positive": 0.4921875,
+              "ci95": [
+                -0.004657252408693838,
+                0.0004015732179626513
+              ]
+            }
+          }
+        },
+        "high_to_low": {
+          "rows": 1940,
+          "boards": 1934,
+          "statistics": {
+            "effect": {
+              "mean": -0.0001676372980833449,
+              "median": 0.0014407833417262594,
+              "fraction_positive": 0.5124095139607032,
+              "ci95": [
+                -0.0028194973148310764,
+                0.002315515685147217
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ports_control": {
+      "all": {
+        "rows": 3911,
+        "boards": 3864,
+        "statistics": {
+          "low_port_effect": {
+            "mean": 0.18004148043697143,
+            "median": 0.12710008720164145,
+            "fraction_positive": 0.5965320910973085,
+            "ci95": [
+              0.15561113139003835,
+              0.2037930651942816
+            ]
+          },
+          "high_port_effect": {
+            "mean": 0.13908131094576331,
+            "median": 0.10555459410597301,
+            "fraction_positive": 0.5851449275362319,
+            "ci95": [
+              0.11756394088999596,
+              0.15822981688397375
+            ]
+          },
+          "interaction": {
+            "mean": -0.040960169491208134,
+            "median": -0.02339295200679592,
+            "fraction_positive": 0.44642857142857145,
+            "ci95": [
+              -0.05093394024506006,
+              -0.030298615123419848
+            ]
+          }
+        }
+      },
+      "by_stage": {
+        "B2": {
+          "rows": 1954,
+          "boards": 1954,
+          "statistics": {
+            "low_port_effect": {
+              "mean": 0.1804830649137775,
+              "median": 0.14218911586643834,
+              "fraction_positive": 0.6069600818833163,
+              "ci95": [
+                0.1468424711178432,
+                0.21312061841325955
+              ]
+            },
+            "high_port_effect": {
+              "mean": 0.14007828827206328,
+              "median": 0.12083211778239766,
+              "fraction_positive": 0.6008188331627431,
+              "ci95": [
+                0.11053300216945122,
+                0.16787231612266845
+              ]
+            },
+            "interaction": {
+              "mean": -0.040404776641714185,
+              "median": -0.02346611581742941,
+              "fraction_positive": 0.44114636642784033,
+              "ci95": [
+                -0.05362937281535664,
+                -0.027673802417287643
+              ]
+            }
+          }
+        },
+        "A2": {
+          "rows": 1957,
+          "boards": 1957,
+          "statistics": {
+            "low_port_effect": {
+              "mean": 0.17747545540448,
+              "median": 0.11187754074732403,
+              "fraction_positive": 0.5881451200817578,
+              "ci95": [
+                0.14295478998454592,
+                0.21089276002685126
+              ]
+            },
+            "high_port_effect": {
+              "mean": 0.1366622657147074,
+              "median": 0.08273172378540039,
+              "fraction_positive": 0.5682166581502299,
+              "ci95": [
+                0.10851624577631529,
+                0.1658148125887805
+              ]
+            },
+            "interaction": {
+              "mean": -0.04081318968977263,
+              "median": -0.021083950996398926,
+              "fraction_positive": 0.45477772100153296,
+              "ci95": [
+                -0.057479963578635856,
+                -0.024069266945848475
+              ]
+            }
+          }
+        }
+      },
+      "patches": {
+        "rows": 256,
+        "boards": 256,
+        "statistics": {
+          "interaction": {
+            "mean": -0.07274994509122953,
+            "median": -0.04890232920646609,
+            "fraction_positive": 0.4140625,
+            "ci95": [
+              -0.12036882059483536,
+              -0.024759315998094902
+            ]
+          },
+          "restore_target_port_interaction": {
+            "mean": -0.004034506207345618,
+            "median": -0.002583822856347062,
+            "fraction_positive": 0.43359375,
+            "ci95": [
+              -0.006960966167409787,
+              -0.0010556165895288638
+            ]
+          },
+          "restore_remote_port_interaction": {
+            "mean": -0.07027245121692352,
+            "median": -0.04408846659319732,
+            "fraction_positive": 0.40234375,
+            "ci95": [
+              -0.11665788159540932,
+              -0.023202774957174578
+            ]
+          },
+          "restore_all_port_interaction": {
+            "mean": 0.0,
+            "median": 0.0,
+            "fraction_positive": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "patches_by_stage": {
+        "B2": {
+          "rows": 128,
+          "boards": 128,
+          "statistics": {
+            "interaction": {
+              "mean": -0.054780353113252044,
+              "median": -0.04890232920646609,
+              "fraction_positive": 0.40625,
+              "ci95": [
+                -0.10884446840927643,
+                -0.005140039868995091
+              ]
+            },
+            "restore_target_port_interaction": {
+              "mean": -0.0017857724070975863,
+              "median": -0.0018093841416493284,
+              "fraction_positive": 0.453125,
+              "ci95": [
+                -0.005204667653913819,
+                0.00172770115393786
+              ]
+            },
+            "restore_remote_port_interaction": {
+              "mean": -0.05306292540987264,
+              "median": -0.044756223814828466,
+              "fraction_positive": 0.3828125,
+              "ci95": [
+                -0.10612262141008662,
+                -0.0038002699538968224
+              ]
+            },
+            "restore_all_port_interaction": {
+              "mean": 0.0,
+              "median": 0.0,
+              "fraction_positive": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        },
+        "A2": {
+          "rows": 128,
+          "boards": 128,
+          "statistics": {
+            "interaction": {
+              "mean": -0.09071953706920705,
+              "median": -0.050379700603938815,
+              "fraction_positive": 0.421875,
+              "ci95": [
+                -0.1715517970890283,
+                -0.0049450838795802605
+              ]
+            },
+            "restore_target_port_interaction": {
+              "mean": -0.00628324000759365,
+              "median": -0.002799610323027668,
+              "fraction_positive": 0.4140625,
+              "ci95": [
+                -0.01130507798605743,
+                -0.001585505460908857
+              ]
+            },
+            "restore_remote_port_interaction": {
+              "mean": -0.08748197702397441,
+              "median": -0.04102130723851127,
+              "fraction_positive": 0.421875,
+              "ci95": [
+                -0.16768949318521797,
+                -0.0032520506313420475
+              ]
+            },
+            "restore_all_port_interaction": {
+              "mean": 0.0,
+              "median": 0.0,
+              "fraction_positive": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      },
+      "production_shares": {
+        "rows": 3911,
+        "boards": 3864,
+        "statistics": {
+          "low_share": {
+            "mean": 0.38838039234161215,
+            "median": 0.38461538461538464,
+            "fraction_positive": 1.0,
+            "ci95": [
+              0.38625863190884907,
+              0.39055927088338627
+            ]
+          },
+          "high_share": {
+            "mean": 0.6297733842799902,
+            "median": 0.6153846153846154,
+            "fraction_positive": 1.0,
+            "ci95": [
+              0.627057037559763,
+              0.632498220104545
+            ]
+          }
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "ports": {
+      "positions": 4000,
+      "valid_board_forwards": 16000,
+      "patch_positions": 256,
+      "seconds": 11.460555749945343
+    },
+    "numbers": {
+      "positions": 4000,
+      "valid_board_forwards": 8000,
+      "patch_positions": 256,
+      "seconds": 7.36695704201702
+    },
+    "ports_control": {
+      "positions": 3911,
+      "valid_board_forwards": 15644,
+      "patch_positions": 256,
+      "seconds": 13.63259954098612
+    }
+  },
+  "validation": {
+    "global_vectors_hands_trade_rates_unchanged": true,
+    "all_native_replays_legal": true,
+    "resource_number_port_inventories_preserved": true,
+    "all_number_adjacency_restrictions_preserved": true,
+    "number_local_candidate_tiles_and_resource_pips_unchanged": true,
+    "port_local_candidate_tiles_unchanged": true,
+    "patch_identity_max_abs_error": 0.0,
+    "patch_full_restore_max_abs_error": 1.3828277587890625e-05
+  },
+  "estimand": "Mean within-board paired raw-logit contrast; board/stage sampled uniformly among eligible boards. Stage intervals resample board means; pooled intervals average repeated stages per board before resampling. 2000 percentile replicates.",
+  "caveats": [
+    "Frozen raw policy preferences, not win probabilities or strategically optimal choices.",
+    "Eligibility selects particular valid swaps and surviving legal corners; does not represent every random opening.",
+    "Remote reciprocal swaps necessarily alter global context. Port internal patches distinguish target from remote port pathways; number swaps still confound variance with number identity/remote context.",
+    "Port test is immediate ownership on placement, not proximity or future route feasibility; candidate starting resources are unchanged.",
+    "Internal hybrid activation patches are diagnostic interventions, not valid game states; pathway effects need not add or identify unique semantic neurons."
+  ],
+  "runtime": {
+    "numpy": "2.5.2",
+    "torch": "2.13.0",
+    "threads": 1,
+    "compiled_extensions": {
+      "catan_rl.abi3.so": "99afa16950ae524491ac1e46191812bd7ad04025526ebabcd2c55bf818bfc834"
+    }
+  },
+  "source_sha256": {
+    "opening_followup_ports_numbers.py": "92ae8d387ec8f56f9c8b005b04c06cdebd7b40d9a6138a4d0c2b38e2a8139951",
+    "opening_engine.py": "8fdee3513387115927d727540f47b3231b3c822347a919a2bcb75c7a1cd75b61",
+    "analyze_number_diversification.py": "5c1ecd3025df97563598df1793a169446fd77d4d2fa034493a0454d2fdf9d459",
+    "train.py": "c0d54c731dad202ebaae889a4b9adabf22cb1187c2a792040dc625bd58a5ab44",
+    "gnn.py": "95436b2276e48eb0a232b37b7fd38bc0962230d62628aa5dac7448f8db8692d4",
+    "catan/src/features.rs": "0a0a9a22a08be8a5310c4ecf6deaec4d56b3f1599e3f4061c777dd842801dbd6",
+    "viz/geometry.json": "a75ec92017f7eefe5978f1b0631e0ed87225d6f577cd9842c791b2615f07a0ae",
+    "viz/inference.py": "60b387f2b223e966fa99e16397dd6c7794200c282b0b7f9451aadd90d6d4e1ff"
+  },
+  "elapsed_evaluation_seconds": 34.26234520797152
+}

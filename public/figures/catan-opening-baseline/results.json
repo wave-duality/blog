@@ -1,0 +1,286 @@
+{
+  "schema": "opening-policy-baseline-results-v1",
+  "protocol_sha256": "d6dd67efd5a19bf9a6a4f8917ea7bcc783a45de72df1ef1270d57b5bb74a52fc",
+  "model_sha256": "fbc5209b17a14a1d7b649087efdb1503185c7dfab9d9f5b443d0957431272158",
+  "boards": 10000,
+  "games": 60000,
+  "terminal_games": 60000,
+  "truncated_games": 0,
+  "duplicated_control_games": 10000,
+  "distinct_condition_trajectories": 50000,
+  "distinct_experimental_conditions": 50000,
+  "all_control_replays_identical": true,
+  "seconds": 8915.984780045459,
+  "wall_seconds": 2234.318559916923,
+  "workers": 4,
+  "metrics": {
+    "network": {
+      "seat_balanced_win_rate": {
+        "mean": 0.5,
+        "standard_error": 0.0,
+        "normal_ci95": [
+          0.5,
+          0.5
+        ],
+        "bootstrap_ci95": [
+          0.5,
+          0.5
+        ],
+        "boards": 10000
+      },
+      "difference_from_network": {
+        "mean": 0.0,
+        "standard_error": 0.0,
+        "normal_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "boards": 10000
+      },
+      "by_seat": {
+        "0": {
+          "win_rate": 0.5475,
+          "network_control_win_rate": 0.5475,
+          "paired_difference": {
+            "mean": 0.0,
+            "standard_error": 0.0,
+            "normal_ci95": [
+              0.0,
+              0.0
+            ],
+            "bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "boards": 10000
+          }
+        },
+        "1": {
+          "win_rate": 0.4525,
+          "network_control_win_rate": 0.4525,
+          "paired_difference": {
+            "mean": 0.0,
+            "standard_error": 0.0,
+            "normal_ci95": [
+              0.0,
+              0.0
+            ],
+            "bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "boards": 10000
+          }
+        }
+      },
+      "censored_difference_bounds": [
+        0.0,
+        0.0
+      ],
+      "own_settlement_disagreement_with_network": 0.0
+    },
+    "max_pips": {
+      "seat_balanced_win_rate": {
+        "mean": 0.32455,
+        "standard_error": 0.0033196885069503614,
+        "normal_ci95": [
+          0.3180434105263773,
+          0.3310565894736227
+        ],
+        "bootstrap_ci95": [
+          0.31815,
+          0.33105
+        ],
+        "boards": 10000
+      },
+      "difference_from_network": {
+        "mean": -0.17545,
+        "standard_error": 0.0033196885069503614,
+        "normal_ci95": [
+          -0.1819565894736227,
+          -0.1689434105263773
+        ],
+        "bootstrap_ci95": [
+          -0.18185,
+          -0.16895
+        ],
+        "boards": 10000
+      },
+      "by_seat": {
+        "0": {
+          "win_rate": 0.3498,
+          "network_control_win_rate": 0.5475,
+          "paired_difference": {
+            "mean": -0.1977,
+            "standard_error": 0.006340780042641041,
+            "normal_ci95": [
+              -0.21012792888357643,
+              -0.18527207111642355
+            ],
+            "bootstrap_ci95": [
+              -0.2098,
+              -0.1854
+            ],
+            "boards": 10000
+          }
+        },
+        "1": {
+          "win_rate": 0.2993,
+          "network_control_win_rate": 0.4525,
+          "paired_difference": {
+            "mean": -0.1532,
+            "standard_error": 0.006089062626411953,
+            "normal_ci95": [
+              -0.16513456274776744,
+              -0.14126543725223256
+            ],
+            "bootstrap_ci95": [
+              -0.1651,
+              -0.1414
+            ],
+            "boards": 10000
+          }
+        }
+      },
+      "censored_difference_bounds": [
+        -0.17545,
+        -0.17545
+      ],
+      "own_settlement_disagreement_with_network": 0.691425
+    },
+    "resource_weighted": {
+      "seat_balanced_win_rate": {
+        "mean": 0.3557,
+        "standard_error": 0.003338242859130931,
+        "normal_ci95": [
+          0.34915704399610337,
+          0.36224295600389667
+        ],
+        "bootstrap_ci95": [
+          0.34925,
+          0.3621
+        ],
+        "boards": 10000
+      },
+      "difference_from_network": {
+        "mean": -0.1443,
+        "standard_error": 0.003338242859130931,
+        "normal_ci95": [
+          -0.15084295600389663,
+          -0.1377570439961034
+        ],
+        "bootstrap_ci95": [
+          -0.15075,
+          -0.1379
+        ],
+        "boards": 10000
+      },
+      "by_seat": {
+        "0": {
+          "win_rate": 0.3814,
+          "network_control_win_rate": 0.5475,
+          "paired_difference": {
+            "mean": -0.1661,
+            "standard_error": 0.006180202139885797,
+            "normal_ci95": [
+              -0.17821319619417617,
+              -0.15398680380582383
+            ],
+            "bootstrap_ci95": [
+              -0.178,
+              -0.1539
+            ],
+            "boards": 10000
+          }
+        },
+        "1": {
+          "win_rate": 0.33,
+          "network_control_win_rate": 0.4525,
+          "paired_difference": {
+            "mean": -0.1225,
+            "standard_error": 0.006057478378370859,
+            "normal_ci95": [
+              -0.13437265762160688,
+              -0.11062734237839311
+            ],
+            "bootstrap_ci95": [
+              -0.1342,
+              -0.1106
+            ],
+            "boards": 10000
+          }
+        }
+      },
+      "censored_difference_bounds": [
+        -0.1443,
+        -0.1443
+      ],
+      "own_settlement_disagreement_with_network": 0.6393
+    }
+  },
+  "network_matchups_by_seat": {
+    "max_pips": {
+      "A": {
+        "network_wins": 7007,
+        "games": 10000,
+        "network_win_rate": 0.7007,
+        "wilson_ci95": [
+          0.6916486410431494,
+          0.709597222010861
+        ]
+      },
+      "B": {
+        "network_wins": 6502,
+        "games": 10000,
+        "network_win_rate": 0.6502,
+        "wilson_ci95": [
+          0.6407967415660086,
+          0.65948790532344
+        ]
+      }
+    },
+    "resource_weighted": {
+      "A": {
+        "network_wins": 6700,
+        "games": 10000,
+        "network_win_rate": 0.67,
+        "wilson_ci95": [
+          0.6607202587518153,
+          0.6791491818021547
+        ]
+      },
+      "B": {
+        "network_wins": 6186,
+        "games": 10000,
+        "network_win_rate": 0.6186,
+        "wilson_ci95": [
+          0.6090360356004716,
+          0.628072879986004
+        ]
+      }
+    }
+  },
+  "network_selfplay_controls": {
+    "unique_games": 10000,
+    "first_player_wins": 5475,
+    "second_player_wins": 4525,
+    "first_player_win_rate": 0.5475,
+    "wilson_ci95": [
+      0.5377281182426684,
+      0.5572354019121172
+    ],
+    "policy": "Frozen greedy Generation37 both seats; no search or resignation; duplicate control replays excluded from counts."
+  },
+  "turn_summary": {
+    "mean": 78.30338333333333,
+    "max": 149,
+    "min": 36
+  },
+  "analysis": "Independent fresh10000-board cohort using exactly the earlier frozen opening interventions and greedy continuation protocol. No pooling with the earlier1024. Paired intervals average both seats within each board; common initial random streams may later diverge.",
+  "analysis_script_sha256": "3bae04144b1226f969cb84e8e1446661fc0115692f8d8672d1eb97bc7aa12e20",
+  "rollout_script_sha256": "1daa7dd36067278e790255374389a7d83f6b4e5fb6ef2a9b79321eddb0bcbe7d"
+}

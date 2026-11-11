@@ -1,0 +1,2666 @@
+{
+  "schema": "opening-blocking-fallback-v1",
+  "boards": 100000,
+  "model": {
+    "name": "Gen37",
+    "sha256": "fbc5209b17a14a1d7b649087efdb1503185c7dfab9d9f5b443d0957431272158",
+    "path": "/Users/owenzhang/CatanRL/run/scale/gen37.pt",
+    "mode": "greedy_network",
+    "search_simulations": 0
+  },
+  "source_manifest_sha256": "2efcfc0fcf3a56ea5c8e5546ceee175f82f55d8583178d440782fb092bf390b9",
+  "analysis_sha256": "00799f370bfde011e83ce3893bd78f8cdec1e6dd6804e92675580d6dc7e9d669",
+  "validation": {
+    "exhaustive_cases": 200,
+    "minimum_pairs": 1160,
+    "maximum_pairs": 1209,
+    "native_engine_legal_reply_checks": 20,
+    "exact_enumeration_agrees": true,
+    "setup_roads_do_not_change_settlement_legality": true
+  },
+  "stages": {
+    "A1": {
+      "train_boards": 80000,
+      "test_boards": 20000,
+      "models": {
+        "context": {
+          "r2": 0.9369373601207194,
+          "r2_ci95": [
+            0.9366871048180425,
+            0.9371876154233962
+          ],
+          "top_choice_agreement": {
+            "n": 20000,
+            "mean": 0.62035,
+            "ci95": [
+              0.613624043623673,
+              0.627075956376327
+            ]
+          },
+          "coefficients": [
+            {
+              "feature": "wood_pips",
+              "coefficient": 3.824162729322668,
+              "ci95": [
+                3.819303826901617,
+                3.8290216317437187
+              ]
+            },
+            {
+              "feature": "brick_pips",
+              "coefficient": 4.175972231123647,
+              "ci95": [
+                4.17098486465515,
+                4.180959597592144
+              ]
+            },
+            {
+              "feature": "sheep_pips",
+              "coefficient": 3.827943400974283,
+              "ci95": [
+                3.822999296644668,
+                3.8328875053038978
+              ]
+            },
+            {
+              "feature": "wheat_pips",
+              "coefficient": 4.103816365221553,
+              "ci95": [
+                4.098780583771455,
+                4.1088521466716506
+              ]
+            },
+            {
+              "feature": "ore_pips",
+              "coefficient": 4.266432015143626,
+              "ci95": [
+                4.261258481590967,
+                4.271605548696285
+              ]
+            },
+            {
+              "feature": "adjacent_hexes",
+              "coefficient": 0.6323418432155737,
+              "ci95": [
+                0.624029208506668,
+                0.6406544779244795
+              ]
+            },
+            {
+              "feature": "local_resource_count",
+              "coefficient": 1.0068555293515353,
+              "ci95": [
+                0.9997504225647819,
+                1.013960636138289
+              ]
+            },
+            {
+              "feature": "new_resource_types",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "new_resource_pips",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "all_five_covered",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "combined_concentration_hhi",
+              "coefficient": 2.055345613453168,
+              "ci95": [
+                2.04443262424973,
+                2.0662586026566054
+              ]
+            },
+            {
+              "feature": "direct_port",
+              "coefficient": -0.37344925808183316,
+              "ci95": [
+                -0.3820013331119394,
+                -0.3648971830517269
+              ]
+            },
+            {
+              "feature": "generic_port",
+              "coefficient": 2.355954426617105,
+              "ci95": [
+                2.3472339317484825,
+                2.364674921485727
+              ]
+            },
+            {
+              "feature": "port_matching_combined_pips",
+              "coefficient": 0.06475018931718457,
+              "ci95": [
+                0.06057479777616006,
+                0.06892558085820907
+              ]
+            },
+            {
+              "feature": "nearest_port_distance",
+              "coefficient": -0.40607747766704694,
+              "ci95": [
+                -0.41034005667854956,
+                -0.4018148986555443
+              ]
+            },
+            {
+              "feature": "nearest_generic_port_distance",
+              "coefficient": -0.04610596152300132,
+              "ci95": [
+                -0.04784709905011574,
+                -0.04436482399588689
+              ]
+            },
+            {
+              "feature": "matched_port_potential",
+              "coefficient": -1.8347477505602203,
+              "ci95": [
+                -1.8478482908135416,
+                -1.821647210306899
+              ]
+            },
+            {
+              "feature": "unique_local_numbers",
+              "coefficient": 0.1519540923592208,
+              "ci95": [
+                0.14217181043981997,
+                0.16173637427862164
+              ]
+            },
+            {
+              "feature": "unique_combined_numbers",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "pips_overlapping_owned_numbers",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "combined_production_variance",
+              "coefficient": -127.99253631103176,
+              "ci95": [
+                -128.24319339375313,
+                -127.74187922831038
+              ]
+            },
+            {
+              "feature": "best_expansion_pips_two_roads",
+              "coefficient": -0.07506817170061611,
+              "ci95": [
+                -0.07655384657837286,
+                -0.07358249682285936
+              ]
+            },
+            {
+              "feature": "opponent_proximity",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "own_proximity",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_owned_production_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "brick_owned_production_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "sheep_owned_production_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wheat_owned_production_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "ore_owned_production_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_missing_resource_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "brick_missing_resource_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "sheep_missing_resource_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wheat_missing_resource_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "ore_missing_resource_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_owned_port_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "brick_owned_port_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "sheep_owned_port_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wheat_owned_port_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "ore_owned_port_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_port",
+              "coefficient": 1.4807662497894194,
+              "ci95": [
+                1.4703807776465778,
+                1.491151721932261
+              ]
+            },
+            {
+              "feature": "brick_port",
+              "coefficient": 0.5928981110686639,
+              "ci95": [
+                0.5831569785278584,
+                0.6026392436094693
+              ]
+            },
+            {
+              "feature": "sheep_port",
+              "coefficient": 1.5410036509150533,
+              "ci95": [
+                1.5305433147451815,
+                1.5514639870849252
+              ]
+            },
+            {
+              "feature": "wheat_port",
+              "coefficient": 0.6452971076720808,
+              "ci95": [
+                0.6356809396680657,
+                0.6549132756760959
+              ]
+            },
+            {
+              "feature": "ore_port",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_port_access_interaction",
+              "coefficient": 1.719849774846919,
+              "ci95": [
+                1.7063641796361546,
+                1.7333353700576835
+              ]
+            },
+            {
+              "feature": "brick_port_access_interaction",
+              "coefficient": 1.663052414905819,
+              "ci95": [
+                1.6494571984805388,
+                1.6766476313310992
+              ]
+            },
+            {
+              "feature": "sheep_port_access_interaction",
+              "coefficient": 1.7763537199271326,
+              "ci95": [
+                1.762670133692116,
+                1.7900373061621493
+              ]
+            },
+            {
+              "feature": "wheat_port_access_interaction",
+              "coefficient": 1.6451647130290983,
+              "ci95": [
+                1.631194104716076,
+                1.6591353213421205
+              ]
+            },
+            {
+              "feature": "ore_port_access_interaction",
+              "coefficient": 1.5694483473176977,
+              "ci95": [
+                1.555195241508711,
+                1.5837014531266844
+              ]
+            },
+            {
+              "feature": "wood_starting_cards",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "brick_starting_cards",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "sheep_starting_cards",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wheat_starting_cards",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "ore_starting_cards",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_board_scarcity_interaction",
+              "coefficient": -0.004793577062041677,
+              "ci95": [
+                -0.005232419366737238,
+                -0.004354734757346115
+              ]
+            },
+            {
+              "feature": "brick_board_scarcity_interaction",
+              "coefficient": 0.03241611153904692,
+              "ci95": [
+                0.03178288918443607,
+                0.03304933389365777
+              ]
+            },
+            {
+              "feature": "sheep_board_scarcity_interaction",
+              "coefficient": 0.03819759808867493,
+              "ci95": [
+                0.03771717576249791,
+                0.038678020414851945
+              ]
+            },
+            {
+              "feature": "wheat_board_scarcity_interaction",
+              "coefficient": 0.08844016183108346,
+              "ci95": [
+                0.08768312084238318,
+                0.08919720281978373
+              ]
+            },
+            {
+              "feature": "ore_board_scarcity_interaction",
+              "coefficient": 0.11746799356568566,
+              "ci95": [
+                0.11659236723145772,
+                0.1183436198999136
+              ]
+            }
+          ]
+        },
+        "optimistic": {
+          "r2": 0.9379585436942001,
+          "r2_ci95": [
+            0.937713124048446,
+            0.9382039633399542
+          ],
+          "top_choice_agreement": {
+            "n": 20000,
+            "mean": 0.6315,
+            "ci95": [
+              0.6248142616788485,
+              0.6381857383211514
+            ]
+          },
+          "coefficients": [
+            {
+              "feature": "wood_pips",
+              "coefficient": 3.657010905749797,
+              "ci95": [
+                3.6520413561854053,
+                3.661980455314189
+              ]
+            },
+            {
+              "feature": "brick_pips",
+              "coefficient": 3.987356999035547,
+              "ci95": [
+                3.982267097149542,
+                3.9924469009215517
+              ]
+            },
+            {
+              "feature": "sheep_pips",
+              "coefficient": 3.660455245799237,
+              "ci95": [
+                3.655416427510448,
+                3.6654940640880262
+              ]
+            },
+            {
+              "feature": "wheat_pips",
+              "coefficient": 3.936690876407036,
+              "ci95": [
+                3.931561919862928,
+                3.941819832951144
+              ]
+            },
+            {
+              "feature": "ore_pips",
+              "coefficient": 4.07778385860851,
+              "ci95": [
+                4.072478780813804,
+                4.0830889364032155
+              ]
+            },
+            {
+              "feature": "adjacent_hexes",
+              "coefficient": 0.6772474600113495,
+              "ci95": [
+                0.6688602174347973,
+                0.6856347025879017
+              ]
+            },
+            {
+              "feature": "local_resource_count",
+              "coefficient": 0.5118134803079074,
+              "ci95": [
+                0.5027972252492777,
+                0.5208297353665371
+              ]
+            },
+            {
+              "feature": "new_resource_types",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "new_resource_pips",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "all_five_covered",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "combined_concentration_hhi",
+              "coefficient": 2.059984502431902,
+              "ci95": [
+                2.049521567547971,
+                2.0704474373158326
+              ]
+            },
+            {
+              "feature": "direct_port",
+              "coefficient": -0.3594954799288712,
+              "ci95": [
+                -0.3680699059743346,
+                -0.35092105388340783
+              ]
+            },
+            {
+              "feature": "generic_port",
+              "coefficient": 2.3724910324198216,
+              "ci95": [
+                2.3637537697696644,
+                2.381228295069979
+              ]
+            },
+            {
+              "feature": "port_matching_combined_pips",
+              "coefficient": 0.07226853479613309,
+              "ci95": [
+                0.06811923643459816,
+                0.07641783315766801
+              ]
+            },
+            {
+              "feature": "nearest_port_distance",
+              "coefficient": -0.4062974858626631,
+              "ci95": [
+                -0.41058339161414015,
+                -0.4020115801111861
+              ]
+            },
+            {
+              "feature": "nearest_generic_port_distance",
+              "coefficient": -0.04331927559596785,
+              "ci95": [
+                -0.045039113395235524,
+                -0.041599437796700174
+              ]
+            },
+            {
+              "feature": "matched_port_potential",
+              "coefficient": -1.7954376399028626,
+              "ci95": [
+                -1.8084020528989924,
+                -1.782473226906733
+              ]
+            },
+            {
+              "feature": "unique_local_numbers",
+              "coefficient": 0.2406894312859336,
+              "ci95": [
+                0.23074979338765936,
+                0.2506290691842078
+              ]
+            },
+            {
+              "feature": "unique_combined_numbers",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "pips_overlapping_owned_numbers",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "combined_production_variance",
+              "coefficient": -118.29487138582998,
+              "ci95": [
+                -118.54907779060274,
+                -118.04066498105722
+              ]
+            },
+            {
+              "feature": "best_expansion_pips_two_roads",
+              "coefficient": -0.07522403353588224,
+              "ci95": [
+                -0.07668141436100004,
+                -0.07376665271076444
+              ]
+            },
+            {
+              "feature": "opponent_proximity",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "own_proximity",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_owned_production_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "brick_owned_production_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "sheep_owned_production_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wheat_owned_production_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "ore_owned_production_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_missing_resource_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "brick_missing_resource_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "sheep_missing_resource_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wheat_missing_resource_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "ore_missing_resource_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_owned_port_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "brick_owned_port_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "sheep_owned_port_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wheat_owned_port_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "ore_owned_port_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_port",
+              "coefficient": 1.4861027212368954,
+              "ci95": [
+                1.4756802900931294,
+                1.4965251523806613
+              ]
+            },
+            {
+              "feature": "brick_port",
+              "coefficient": 0.5938155752069292,
+              "ci95": [
+                0.584046491268998,
+                0.6035846591448604
+              ]
+            },
+            {
+              "feature": "sheep_port",
+              "coefficient": 1.54444491613043,
+              "ci95": [
+                1.5339392384517152,
+                1.5549505938091446
+              ]
+            },
+            {
+              "feature": "wheat_port",
+              "coefficient": 0.6501743204341115,
+              "ci95": [
+                0.6405303648709106,
+                0.6598182759973124
+              ]
+            },
+            {
+              "feature": "ore_port",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_port_access_interaction",
+              "coefficient": 1.674848018202929,
+              "ci95": [
+                1.6614984739667333,
+                1.6881975624391248
+              ]
+            },
+            {
+              "feature": "brick_port_access_interaction",
+              "coefficient": 1.6268569654236027,
+              "ci95": [
+                1.6134097508895608,
+                1.6403041799576445
+              ]
+            },
+            {
+              "feature": "sheep_port_access_interaction",
+              "coefficient": 1.7323253486942232,
+              "ci95": [
+                1.7187765028647644,
+                1.745874194523682
+              ]
+            },
+            {
+              "feature": "wheat_port_access_interaction",
+              "coefficient": 1.600076188406158,
+              "ci95": [
+                1.5862602337868656,
+                1.6138921430254505
+              ]
+            },
+            {
+              "feature": "ore_port_access_interaction",
+              "coefficient": 1.533028483748663,
+              "ci95": [
+                1.5189584707521564,
+                1.5470984967451695
+              ]
+            },
+            {
+              "feature": "wood_starting_cards",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "brick_starting_cards",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "sheep_starting_cards",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wheat_starting_cards",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "ore_starting_cards",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_board_scarcity_interaction",
+              "coefficient": -0.003857235879585562,
+              "ci95": [
+                -0.004299298179298248,
+                -0.003415173579872876
+              ]
+            },
+            {
+              "feature": "brick_board_scarcity_interaction",
+              "coefficient": 0.03243442052242718,
+              "ci95": [
+                0.0318035816333126,
+                0.033065259411541766
+              ]
+            },
+            {
+              "feature": "sheep_board_scarcity_interaction",
+              "coefficient": 0.03916146198088294,
+              "ci95": [
+                0.03868980012330288,
+                0.039633123838463
+              ]
+            },
+            {
+              "feature": "wheat_board_scarcity_interaction",
+              "coefficient": 0.08938359705500636,
+              "ci95": [
+                0.0886483124940447,
+                0.09011888161596801
+              ]
+            },
+            {
+              "feature": "ore_board_scarcity_interaction",
+              "coefficient": 0.1174243328106293,
+              "ci95": [
+                0.11656229888736677,
+                0.11828636673389184
+              ]
+            },
+            {
+              "feature": "best_complement_pips",
+              "coefficient": -0.48894025472805147,
+              "ci95": [
+                -0.49927115431530755,
+                -0.4786093551407954
+              ]
+            },
+            {
+              "feature": "best_combined_coverage",
+              "coefficient": -0.1658726504622303,
+              "ci95": [
+                -0.1724274149309459,
+                -0.15931788599351468
+              ]
+            },
+            {
+              "feature": "all_five_complement_count",
+              "coefficient": 0.19634848080264386,
+              "ci95": [
+                0.1948282405558412,
+                0.19786872104944653
+              ]
+            }
+          ]
+        },
+        "robust": {
+          "r2": 0.9382667224426539,
+          "r2_ci95": [
+            0.9380173436818183,
+            0.9385161012034894
+          ],
+          "top_choice_agreement": {
+            "n": 20000,
+            "mean": 0.633,
+            "ci95": [
+              0.626319963461992,
+              0.639680036538008
+            ]
+          },
+          "coefficients": [
+            {
+              "feature": "wood_pips",
+              "coefficient": 3.5528934921271658,
+              "ci95": [
+                3.5478791522323467,
+                3.557907832021985
+              ]
+            },
+            {
+              "feature": "brick_pips",
+              "coefficient": 3.881785315138864,
+              "ci95": [
+                3.8766464060526755,
+                3.886924224225053
+              ]
+            },
+            {
+              "feature": "sheep_pips",
+              "coefficient": 3.5563705119583724,
+              "ci95": [
+                3.551293357750392,
+                3.561447666166353
+              ]
+            },
+            {
+              "feature": "wheat_pips",
+              "coefficient": 3.8323342661475777,
+              "ci95": [
+                3.8271419387174945,
+                3.837526593577661
+              ]
+            },
+            {
+              "feature": "ore_pips",
+              "coefficient": 3.9722585124692493,
+              "ci95": [
+                3.966901964991758,
+                3.9776150599467406
+              ]
+            },
+            {
+              "feature": "adjacent_hexes",
+              "coefficient": 0.664272315841719,
+              "ci95": [
+                0.6558875059540669,
+                0.6726571257293711
+              ]
+            },
+            {
+              "feature": "local_resource_count",
+              "coefficient": 0.4981494273640105,
+              "ci95": [
+                0.48894773782000417,
+                0.5073511169080168
+              ]
+            },
+            {
+              "feature": "new_resource_types",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "new_resource_pips",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "all_five_covered",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "combined_concentration_hhi",
+              "coefficient": 2.0186369468895755,
+              "ci95": [
+                2.0081346152385073,
+                2.0291392785406437
+              ]
+            },
+            {
+              "feature": "direct_port",
+              "coefficient": -0.3541538512060996,
+              "ci95": [
+                -0.3626967587192207,
+                -0.3456109436929785
+              ]
+            },
+            {
+              "feature": "generic_port",
+              "coefficient": 2.375368758089576,
+              "ci95": [
+                2.3666616963534577,
+                2.384075819825694
+              ]
+            },
+            {
+              "feature": "port_matching_combined_pips",
+              "coefficient": 0.07172206345116383,
+              "ci95": [
+                0.0675772546046557,
+                0.07586687229767196
+              ]
+            },
+            {
+              "feature": "nearest_port_distance",
+              "coefficient": -0.39841674445105657,
+              "ci95": [
+                -0.4027097846156232,
+                -0.39412370428648996
+              ]
+            },
+            {
+              "feature": "nearest_generic_port_distance",
+              "coefficient": -0.04250024903946081,
+              "ci95": [
+                -0.044224785689094194,
+                -0.04077571238982743
+              ]
+            },
+            {
+              "feature": "matched_port_potential",
+              "coefficient": -1.7666337930240859,
+              "ci95": [
+                -1.7796037200519552,
+                -1.7536638659962165
+              ]
+            },
+            {
+              "feature": "unique_local_numbers",
+              "coefficient": 0.2563425984401028,
+              "ci95": [
+                0.24636462581759908,
+                0.2663205710626066
+              ]
+            },
+            {
+              "feature": "unique_combined_numbers",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "pips_overlapping_owned_numbers",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "combined_production_variance",
+              "coefficient": -113.93860350450707,
+              "ci95": [
+                -114.19170101643607,
+                -113.68550599257807
+              ]
+            },
+            {
+              "feature": "best_expansion_pips_two_roads",
+              "coefficient": -0.07071035848223786,
+              "ci95": [
+                -0.07218091471725549,
+                -0.06923980224722023
+              ]
+            },
+            {
+              "feature": "opponent_proximity",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "own_proximity",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_owned_production_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "brick_owned_production_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "sheep_owned_production_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wheat_owned_production_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "ore_owned_production_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_missing_resource_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "brick_missing_resource_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "sheep_missing_resource_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wheat_missing_resource_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "ore_missing_resource_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_owned_port_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "brick_owned_port_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "sheep_owned_port_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wheat_owned_port_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "ore_owned_port_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_port",
+              "coefficient": 1.4860546522237186,
+              "ci95": [
+                1.4756787077304045,
+                1.4964305967170326
+              ]
+            },
+            {
+              "feature": "brick_port",
+              "coefficient": 0.5941398072706421,
+              "ci95": [
+                0.5844207215622441,
+                0.60385889297904
+              ]
+            },
+            {
+              "feature": "sheep_port",
+              "coefficient": 1.5448292038934825,
+              "ci95": [
+                1.53436961804921,
+                1.5552887897377552
+              ]
+            },
+            {
+              "feature": "wheat_port",
+              "coefficient": 0.6504913586327571,
+              "ci95": [
+                0.6408902474723783,
+                0.6600924697931358
+              ]
+            },
+            {
+              "feature": "ore_port",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_port_access_interaction",
+              "coefficient": 1.6469374404281083,
+              "ci95": [
+                1.6335815183533993,
+                1.6602933625028173
+              ]
+            },
+            {
+              "feature": "brick_port_access_interaction",
+              "coefficient": 1.5995322005895785,
+              "ci95": [
+                1.5860743141145934,
+                1.6129900870645635
+              ]
+            },
+            {
+              "feature": "sheep_port_access_interaction",
+              "coefficient": 1.7046664844700976,
+              "ci95": [
+                1.6911037145290124,
+                1.7182292544111828
+              ]
+            },
+            {
+              "feature": "wheat_port_access_interaction",
+              "coefficient": 1.572912681968109,
+              "ci95": [
+                1.559086304691639,
+                1.586739059244579
+              ]
+            },
+            {
+              "feature": "ore_port_access_interaction",
+              "coefficient": 1.5056573074332642,
+              "ci95": [
+                1.4915726315567235,
+                1.519741983309805
+              ]
+            },
+            {
+              "feature": "wood_starting_cards",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "brick_starting_cards",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "sheep_starting_cards",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wheat_starting_cards",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "ore_starting_cards",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_board_scarcity_interaction",
+              "coefficient": -0.003872553714880118,
+              "ci95": [
+                -0.004316630051335839,
+                -0.0034284773784243974
+              ]
+            },
+            {
+              "feature": "brick_board_scarcity_interaction",
+              "coefficient": 0.032356716005048206,
+              "ci95": [
+                0.0317199936097466,
+                0.03299343840034981
+              ]
+            },
+            {
+              "feature": "sheep_board_scarcity_interaction",
+              "coefficient": 0.03918483997970324,
+              "ci95": [
+                0.0387092820010383,
+                0.03966039795836818
+              ]
+            },
+            {
+              "feature": "wheat_board_scarcity_interaction",
+              "coefficient": 0.08941794243171149,
+              "ci95": [
+                0.08867783998700868,
+                0.0901580448764143
+              ]
+            },
+            {
+              "feature": "ore_board_scarcity_interaction",
+              "coefficient": 0.11735011330408525,
+              "ci95": [
+                0.1164815400219182,
+                0.1182186865862523
+              ]
+            },
+            {
+              "feature": "best_complement_pips",
+              "coefficient": -0.47314339881935197,
+              "ci95": [
+                -0.4836077039127993,
+                -0.46267909372590466
+              ]
+            },
+            {
+              "feature": "best_combined_coverage",
+              "coefficient": -0.16294420805464588,
+              "ci95": [
+                -0.16953562938523986,
+                -0.1563527867240519
+              ]
+            },
+            {
+              "feature": "all_five_complement_count",
+              "coefficient": 0.19152078369125855,
+              "ci95": [
+                0.189948088714136,
+                0.1930934786683811
+              ]
+            },
+            {
+              "feature": "worst_complement_pips",
+              "coefficient": -0.5529874730925496,
+              "ci95": [
+                -0.5609575121743282,
+                -0.545017434010771
+              ]
+            },
+            {
+              "feature": "worst_combined_coverage",
+              "coefficient": 0.06682933141209746,
+              "ci95": [
+                0.060960800906906754,
+                0.07269786191728816
+              ]
+            }
+          ]
+        }
+      },
+      "comparisons": [
+        {
+          "reduced": "context",
+          "full": "optimistic",
+          "delta_r2": 0.001021183573480749,
+          "ci95": [
+            0.0009687426691103417,
+            0.0010736244778511562
+          ]
+        },
+        {
+          "reduced": "optimistic",
+          "full": "robust",
+          "delta_r2": 0.0003081787484537818,
+          "ci95": [
+            0.00026794003836124955,
+            0.00034841745854631405
+          ]
+        },
+        {
+          "reduced": "context",
+          "full": "robust",
+          "delta_r2": 0.0013293623219345306,
+          "ci95": [
+            0.0012644334758680582,
+            0.001394291168001003
+          ]
+        }
+      ],
+      "matched": {
+        "eligible_boards": 54148,
+        "condition": "Same total pips, number of producing resources, and adjacent hex count",
+        "includes_chosen": true,
+        "minimum_pool_size": 2,
+        "features": {
+          "best_complement_pips": {
+            "n": 54148,
+            "mean": 0.0004940457136291004,
+            "ci95": [
+              -0.0014033388327908268,
+              0.0023914302600490274
+            ]
+          },
+          "worst_complement_pips": {
+            "n": 54148,
+            "mean": -0.027908753316893978,
+            "ci95": [
+              -0.0303818835538875,
+              -0.025435623079900455
+            ]
+          },
+          "best_combined_coverage": {
+            "n": 54148,
+            "mean": 0.02442771486965178,
+            "ci95": [
+              0.022893329391399982,
+              0.02596210034790358
+            ]
+          },
+          "worst_combined_coverage": {
+            "n": 54148,
+            "mean": 0.0682797500325387,
+            "ci95": [
+              0.06553606082247139,
+              0.071023439242606
+            ]
+          },
+          "all_five_complement_count": {
+            "n": 54148,
+            "mean": 0.47801526621335283,
+            "ci95": [
+              0.46434498175347805,
+              0.4916855506732276
+            ]
+          },
+          "worst_coverage_tiebreak_pips": {
+            "n": 54148,
+            "mean": -0.020436991619676114,
+            "ci95": [
+              -0.03310362495381952,
+              -0.00777035828553271
+            ]
+          }
+        }
+      },
+      "descriptive": {
+        "chosen_pip_loss": {
+          "n": 100000,
+          "mean": 1.50972,
+          "ci95": [
+            1.5046264601854007,
+            1.5148135398145992
+          ]
+        },
+        "chosen_coverage_loss": {
+          "n": 100000,
+          "mean": 0.51203,
+          "ci95": [
+            0.5089311625669494,
+            0.5151288374330506
+          ]
+        },
+        "any_all_five_complement": {
+          "n": 100000,
+          "mean": 0.93077,
+          "ci95": [
+            0.92919667437271,
+            0.9323433256272899
+          ]
+        },
+        "guaranteed_all_five": {
+          "n": 100000,
+          "mean": 0.41932,
+          "ci95": [
+            0.4162616197172347,
+            0.42237838028276536
+          ]
+        },
+        "chosen_combined_worst_pips": {
+          "n": 100000,
+          "mean": 22.40437,
+          "ci95": [
+            22.39797797615764,
+            22.41076202384236
+          ]
+        },
+        "maximal_robust_combined_pips": {
+          "n": 100000,
+          "mean": 22.86752,
+          "ci95": [
+            22.86187279528512,
+            22.87316720471488
+          ]
+        },
+        "matches_maximum_robust_combined_pips": {
+          "n": 100000,
+          "mean": 0.63803,
+          "ci95": [
+            0.6350514348680847,
+            0.6410085651319153
+          ]
+        }
+      }
+    },
+    "B2": {
+      "train_boards": 80000,
+      "test_boards": 20000,
+      "models": {
+        "context": {
+          "r2": 0.8726948687612703,
+          "r2_ci95": [
+            0.8721680281410328,
+            0.8732217093815079
+          ],
+          "top_choice_agreement": {
+            "n": 20000,
+            "mean": 0.5562,
+            "ci95": [
+              0.5493142208068694,
+              0.5630857791931306
+            ]
+          },
+          "coefficients": [
+            {
+              "feature": "wood_pips",
+              "coefficient": 1.677979195946022,
+              "ci95": [
+                1.668048804753895,
+                1.6879095871381489
+              ]
+            },
+            {
+              "feature": "brick_pips",
+              "coefficient": 1.8986699487556982,
+              "ci95": [
+                1.886741865267243,
+                1.9105980322441534
+              ]
+            },
+            {
+              "feature": "sheep_pips",
+              "coefficient": 1.2264212172845215,
+              "ci95": [
+                1.2188976539227803,
+                1.2339447806462627
+              ]
+            },
+            {
+              "feature": "wheat_pips",
+              "coefficient": 1.7602132198083364,
+              "ci95": [
+                1.7509114593409172,
+                1.7695149802757557
+              ]
+            },
+            {
+              "feature": "ore_pips",
+              "coefficient": 1.9203349951971405,
+              "ci95": [
+                1.9093324392297357,
+                1.9313375511645452
+              ]
+            },
+            {
+              "feature": "adjacent_hexes",
+              "coefficient": 0.9178877065312023,
+              "ci95": [
+                0.9087519810802491,
+                0.9270234319821555
+              ]
+            },
+            {
+              "feature": "local_resource_count",
+              "coefficient": 2.36752745844207,
+              "ci95": [
+                2.355566161592679,
+                2.379488755291461
+              ]
+            },
+            {
+              "feature": "new_resource_types",
+              "coefficient": 0.985867078755631,
+              "ci95": [
+                0.9716910576925492,
+                1.0000430998187126
+              ]
+            },
+            {
+              "feature": "new_resource_pips",
+              "coefficient": 0.12296899624341104,
+              "ci95": [
+                0.11278285527225104,
+                0.13315513721457103
+              ]
+            },
+            {
+              "feature": "all_five_covered",
+              "coefficient": 1.807266841019968,
+              "ci95": [
+                1.7863544576723112,
+                1.8281792243676247
+              ]
+            },
+            {
+              "feature": "combined_concentration_hhi",
+              "coefficient": 5.624658581302059,
+              "ci95": [
+                5.488619227818315,
+                5.760697934785803
+              ]
+            },
+            {
+              "feature": "direct_port",
+              "coefficient": 0.4723313766672411,
+              "ci95": [
+                0.4560775333036051,
+                0.4885852200308771
+              ]
+            },
+            {
+              "feature": "generic_port",
+              "coefficient": 1.7741115422986866,
+              "ci95": [
+                1.7583627955234096,
+                1.7898602890739637
+              ]
+            },
+            {
+              "feature": "port_matching_combined_pips",
+              "coefficient": 0.07524203307095667,
+              "ci95": [
+                0.07159185049860446,
+                0.07889221564330888
+              ]
+            },
+            {
+              "feature": "nearest_port_distance",
+              "coefficient": 0.2576738389989624,
+              "ci95": [
+                0.2497151568600023,
+                0.2656325211379225
+              ]
+            },
+            {
+              "feature": "nearest_generic_port_distance",
+              "coefficient": 0.02840091699367512,
+              "ci95": [
+                0.02573933179868755,
+                0.03106250218866269
+              ]
+            },
+            {
+              "feature": "matched_port_potential",
+              "coefficient": -0.10856881281464206,
+              "ci95": [
+                -0.11321024188882764,
+                -0.10392738374045649
+              ]
+            },
+            {
+              "feature": "unique_local_numbers",
+              "coefficient": 0.17418858470330637,
+              "ci95": [
+                0.14589168372202432,
+                0.2024854856845884
+              ]
+            },
+            {
+              "feature": "unique_combined_numbers",
+              "coefficient": -1.0376794966074179,
+              "ci95": [
+                -1.0601095113452064,
+                -1.0152494818696294
+              ]
+            },
+            {
+              "feature": "pips_overlapping_owned_numbers",
+              "coefficient": 3.7845065308075956,
+              "ci95": [
+                3.7669593927681544,
+                3.8020536688470368
+              ]
+            },
+            {
+              "feature": "combined_production_variance",
+              "coefficient": -73.4747638063757,
+              "ci95": [
+                -73.78574468262408,
+                -73.16378293012733
+              ]
+            },
+            {
+              "feature": "best_expansion_pips_two_roads",
+              "coefficient": 0.036924245073657026,
+              "ci95": [
+                0.03556134356257192,
+                0.03828714658474213
+              ]
+            },
+            {
+              "feature": "opponent_proximity",
+              "coefficient": -0.9130495619081214,
+              "ci95": [
+                -0.9666258077201764,
+                -0.8594733160960664
+              ]
+            },
+            {
+              "feature": "own_proximity",
+              "coefficient": -7.618706865963474,
+              "ci95": [
+                -7.6778095478944826,
+                -7.559604184032465
+              ]
+            },
+            {
+              "feature": "wood_owned_production_interaction",
+              "coefficient": -0.09000020172104031,
+              "ci95": [
+                -0.09169032752619519,
+                -0.08831007591588544
+              ]
+            },
+            {
+              "feature": "brick_owned_production_interaction",
+              "coefficient": -0.09754185167853625,
+              "ci95": [
+                -0.09972198591721339,
+                -0.09536171743985912
+              ]
+            },
+            {
+              "feature": "sheep_owned_production_interaction",
+              "coefficient": -0.05479315739796265,
+              "ci95": [
+                -0.05621332182779371,
+                -0.05337299296813159
+              ]
+            },
+            {
+              "feature": "wheat_owned_production_interaction",
+              "coefficient": -0.08665844035605524,
+              "ci95": [
+                -0.08822651639194101,
+                -0.08509036432016948
+              ]
+            },
+            {
+              "feature": "ore_owned_production_interaction",
+              "coefficient": -0.06524841001072261,
+              "ci95": [
+                -0.06725023508931968,
+                -0.06324658493212554
+              ]
+            },
+            {
+              "feature": "wood_missing_resource_interaction",
+              "coefficient": -0.10865599490935007,
+              "ci95": [
+                -0.1213265042880161,
+                -0.09598548553068405
+              ]
+            },
+            {
+              "feature": "brick_missing_resource_interaction",
+              "coefficient": -0.09163813630636099,
+              "ci95": [
+                -0.10532858532610975,
+                -0.07794768728661222
+              ]
+            },
+            {
+              "feature": "sheep_missing_resource_interaction",
+              "coefficient": 0.039286684256999785,
+              "ci95": [
+                0.027443269445326594,
+                0.051130099068672975
+              ]
+            },
+            {
+              "feature": "wheat_missing_resource_interaction",
+              "coefficient": 0.05654813287586648,
+              "ci95": [
+                0.04406313153024711,
+                0.06903313422148584
+              ]
+            },
+            {
+              "feature": "ore_missing_resource_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_owned_port_interaction",
+              "coefficient": 0.24662999175427613,
+              "ci95": [
+                0.17001059473559185,
+                0.3232493887729604
+              ]
+            },
+            {
+              "feature": "brick_owned_port_interaction",
+              "coefficient": 0.16284169699633133,
+              "ci95": [
+                -0.035374280592890495,
+                0.36105767458555316
+              ]
+            },
+            {
+              "feature": "sheep_owned_port_interaction",
+              "coefficient": 0.2924584646743121,
+              "ci95": [
+                0.21411622544084843,
+                0.37080070390777575
+              ]
+            },
+            {
+              "feature": "wheat_owned_port_interaction",
+              "coefficient": 0.014278604477719241,
+              "ci95": [
+                -0.08100268581753862,
+                0.1095598947729771
+              ]
+            },
+            {
+              "feature": "ore_owned_port_interaction",
+              "coefficient": -0.3240084601277132,
+              "ci95": [
+                -0.8828514848691552,
+                0.23483456461372876
+              ]
+            },
+            {
+              "feature": "wood_port",
+              "coefficient": 0.8027627526181543,
+              "ci95": [
+                0.7854545676209969,
+                0.8200709376153118
+              ]
+            },
+            {
+              "feature": "brick_port",
+              "coefficient": 0.3927419930469667,
+              "ci95": [
+                0.3757623517035206,
+                0.4097216343904128
+              ]
+            },
+            {
+              "feature": "sheep_port",
+              "coefficient": 0.8616955895028207,
+              "ci95": [
+                0.8445856023065719,
+                0.8788055766990694
+              ]
+            },
+            {
+              "feature": "wheat_port",
+              "coefficient": 0.4769459392587541,
+              "ci95": [
+                0.46042654688329054,
+                0.4934653316342177
+              ]
+            },
+            {
+              "feature": "ore_port",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_port_access_interaction",
+              "coefficient": -0.002839218484456006,
+              "ci95": [
+                -0.012227848640269377,
+                0.006549411671357365
+              ]
+            },
+            {
+              "feature": "brick_port_access_interaction",
+              "coefficient": -0.06541093112122642,
+              "ci95": [
+                -0.07583643141630839,
+                -0.05498543082614447
+              ]
+            },
+            {
+              "feature": "sheep_port_access_interaction",
+              "coefficient": 0.08892941106808819,
+              "ci95": [
+                0.08117814549170792,
+                0.09668067664446846
+              ]
+            },
+            {
+              "feature": "wheat_port_access_interaction",
+              "coefficient": -0.09233053539508095,
+              "ci95": [
+                -0.10254913767506167,
+                -0.08211193311510022
+              ]
+            },
+            {
+              "feature": "ore_port_access_interaction",
+              "coefficient": 0.016935747737835762,
+              "ci95": [
+                0.005476977383326092,
+                0.02839451809234543
+              ]
+            },
+            {
+              "feature": "wood_starting_cards",
+              "coefficient": 0.28805446031722176,
+              "ci95": [
+                0.26376733668900065,
+                0.31234158394544287
+              ]
+            },
+            {
+              "feature": "brick_starting_cards",
+              "coefficient": 0.955377265602983,
+              "ci95": [
+                0.9288623234487624,
+                0.9818922077572035
+              ]
+            },
+            {
+              "feature": "sheep_starting_cards",
+              "coefficient": 0.2748079718781866,
+              "ci95": [
+                0.25120235135110974,
+                0.2984135924052635
+              ]
+            },
+            {
+              "feature": "wheat_starting_cards",
+              "coefficient": -0.007750489775996401,
+              "ci95": [
+                -0.032744410414564926,
+                0.017243430862572125
+              ]
+            },
+            {
+              "feature": "ore_starting_cards",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_board_scarcity_interaction",
+              "coefficient": 0.01456454783633274,
+              "ci95": [
+                0.013557137996406895,
+                0.015571957676258585
+              ]
+            },
+            {
+              "feature": "brick_board_scarcity_interaction",
+              "coefficient": 0.03614385558368258,
+              "ci95": [
+                0.03488321861337694,
+                0.037404492553988214
+              ]
+            },
+            {
+              "feature": "sheep_board_scarcity_interaction",
+              "coefficient": 0.018331711306135028,
+              "ci95": [
+                0.017478984289605044,
+                0.01918443832266501
+              ]
+            },
+            {
+              "feature": "wheat_board_scarcity_interaction",
+              "coefficient": 0.06193393804196843,
+              "ci95": [
+                0.06083924790263478,
+                0.06302862818130209
+              ]
+            },
+            {
+              "feature": "ore_board_scarcity_interaction",
+              "coefficient": 0.08930220651654239,
+              "ci95": [
+                0.0878178749354029,
+                0.09078653809768188
+              ]
+            }
+          ]
+        },
+        "denial": {
+          "r2": 0.8891129627438282,
+          "r2_ci95": [
+            0.8886303337431108,
+            0.8895955917445456
+          ],
+          "top_choice_agreement": {
+            "n": 20000,
+            "mean": 0.58655,
+            "ci95": [
+              0.579724916508003,
+              0.5933750834919971
+            ]
+          },
+          "coefficients": [
+            {
+              "feature": "wood_pips",
+              "coefficient": 1.167603212652162,
+              "ci95": [
+                1.158190065536329,
+                1.177016359767995
+              ]
+            },
+            {
+              "feature": "brick_pips",
+              "coefficient": 1.3897267743578248,
+              "ci95": [
+                1.3787095388637487,
+                1.4007440098519008
+              ]
+            },
+            {
+              "feature": "sheep_pips",
+              "coefficient": 0.7117652018586738,
+              "ci95": [
+                0.7043652049840585,
+                0.719165198733289
+              ]
+            },
+            {
+              "feature": "wheat_pips",
+              "coefficient": 1.2679482620622522,
+              "ci95": [
+                1.259224001445966,
+                1.2766725226785385
+              ]
+            },
+            {
+              "feature": "ore_pips",
+              "coefficient": 1.4451453427579513,
+              "ci95": [
+                1.4345430939546147,
+                1.4557475915612879
+              ]
+            },
+            {
+              "feature": "adjacent_hexes",
+              "coefficient": 1.9041803889790394,
+              "ci95": [
+                1.893666055820366,
+                1.9146947221377129
+              ]
+            },
+            {
+              "feature": "local_resource_count",
+              "coefficient": 2.3748581883936497,
+              "ci95": [
+                2.363473183649536,
+                2.3862431931377635
+              ]
+            },
+            {
+              "feature": "new_resource_types",
+              "coefficient": 1.1275698545766628,
+              "ci95": [
+                1.1142398617256108,
+                1.1408998474277148
+              ]
+            },
+            {
+              "feature": "new_resource_pips",
+              "coefficient": 0.09625454239583836,
+              "ci95": [
+                0.08627611786405014,
+                0.10623296692762658
+              ]
+            },
+            {
+              "feature": "all_five_covered",
+              "coefficient": 1.549747154142451,
+              "ci95": [
+                1.5301001851583476,
+                1.5693941231265545
+              ]
+            },
+            {
+              "feature": "combined_concentration_hhi",
+              "coefficient": 4.687139845484992,
+              "ci95": [
+                4.5576032315798,
+                4.816676459390185
+              ]
+            },
+            {
+              "feature": "direct_port",
+              "coefficient": -0.2946317176701,
+              "ci95": [
+                -0.31071158908747715,
+                -0.27855184625272283
+              ]
+            },
+            {
+              "feature": "generic_port",
+              "coefficient": 1.8008729990575658,
+              "ci95": [
+                1.7856980843405388,
+                1.8160479137745928
+              ]
+            },
+            {
+              "feature": "port_matching_combined_pips",
+              "coefficient": 0.06780204822333018,
+              "ci95": [
+                0.06438821737352596,
+                0.0712158790731344
+              ]
+            },
+            {
+              "feature": "nearest_port_distance",
+              "coefficient": -0.5713711421162679,
+              "ci95": [
+                -0.5797087758178008,
+                -0.5630335084147351
+              ]
+            },
+            {
+              "feature": "nearest_generic_port_distance",
+              "coefficient": 0.025127893226154118,
+              "ci95": [
+                0.022628589528820152,
+                0.027627196923488084
+              ]
+            },
+            {
+              "feature": "matched_port_potential",
+              "coefficient": -0.08404012837635635,
+              "ci95": [
+                -0.08837812109804485,
+                -0.07970213565466785
+              ]
+            },
+            {
+              "feature": "unique_local_numbers",
+              "coefficient": -0.2225681073422369,
+              "ci95": [
+                -0.24890354149159655,
+                -0.19623267319287724
+              ]
+            },
+            {
+              "feature": "unique_combined_numbers",
+              "coefficient": -0.7960425715430358,
+              "ci95": [
+                -0.8166330916615242,
+                -0.7754520514245474
+              ]
+            },
+            {
+              "feature": "pips_overlapping_owned_numbers",
+              "coefficient": 2.539682202040843,
+              "ci95": [
+                2.523009436646391,
+                2.5563549674352952
+              ]
+            },
+            {
+              "feature": "combined_production_variance",
+              "coefficient": -49.90205996319559,
+              "ci95": [
+                -50.19762232122889,
+                -49.60649760516229
+              ]
+            },
+            {
+              "feature": "best_expansion_pips_two_roads",
+              "coefficient": -0.056854553866791356,
+              "ci95": [
+                -0.05825733681731112,
+                -0.05545177091627159
+              ]
+            },
+            {
+              "feature": "opponent_proximity",
+              "coefficient": -2.2565473576053656,
+              "ci95": [
+                -2.317749624976287,
+                -2.1953450902344445
+              ]
+            },
+            {
+              "feature": "own_proximity",
+              "coefficient": -9.261741265706569,
+              "ci95": [
+                -9.325363971942219,
+                -9.198118559470918
+              ]
+            },
+            {
+              "feature": "wood_owned_production_interaction",
+              "coefficient": -0.08151621144048243,
+              "ci95": [
+                -0.08314851468753763,
+                -0.07988390819342724
+              ]
+            },
+            {
+              "feature": "brick_owned_production_interaction",
+              "coefficient": -0.08731522238233924,
+              "ci95": [
+                -0.0893645603494059,
+                -0.08526588441527258
+              ]
+            },
+            {
+              "feature": "sheep_owned_production_interaction",
+              "coefficient": -0.044096228317628806,
+              "ci95": [
+                -0.04551271487678563,
+                -0.04267974175847198
+              ]
+            },
+            {
+              "feature": "wheat_owned_production_interaction",
+              "coefficient": -0.07896752060945963,
+              "ci95": [
+                -0.08047513574250255,
+                -0.07745990547641672
+              ]
+            },
+            {
+              "feature": "ore_owned_production_interaction",
+              "coefficient": -0.05886561736876299,
+              "ci95": [
+                -0.06084088686885214,
+                -0.056890347868673835
+              ]
+            },
+            {
+              "feature": "wood_missing_resource_interaction",
+              "coefficient": -0.09746274282214955,
+              "ci95": [
+                -0.10981578767562372,
+                -0.08510969796867537
+              ]
+            },
+            {
+              "feature": "brick_missing_resource_interaction",
+              "coefficient": -0.0756722285874857,
+              "ci95": [
+                -0.08880571025707676,
+                -0.06253874691789463
+              ]
+            },
+            {
+              "feature": "sheep_missing_resource_interaction",
+              "coefficient": 0.049178322793000384,
+              "ci95": [
+                0.037518175071467895,
+                0.06083847051453287
+              ]
+            },
+            {
+              "feature": "wheat_missing_resource_interaction",
+              "coefficient": 0.06162496145272493,
+              "ci95": [
+                0.0494617906876814,
+                0.07378813221776846
+              ]
+            },
+            {
+              "feature": "ore_missing_resource_interaction",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_owned_port_interaction",
+              "coefficient": 0.19876723057875814,
+              "ci95": [
+                0.1210168646692771,
+                0.2765175964882392
+              ]
+            },
+            {
+              "feature": "brick_owned_port_interaction",
+              "coefficient": 0.09876673202596067,
+              "ci95": [
+                -0.07234677025726421,
+                0.26988023430918556
+              ]
+            },
+            {
+              "feature": "sheep_owned_port_interaction",
+              "coefficient": 0.22528347053813905,
+              "ci95": [
+                0.14998293489014125,
+                0.30058400618613684
+              ]
+            },
+            {
+              "feature": "wheat_owned_port_interaction",
+              "coefficient": -0.05380783102285059,
+              "ci95": [
+                -0.1501297217482253,
+                0.04251405970252412
+              ]
+            },
+            {
+              "feature": "ore_owned_port_interaction",
+              "coefficient": -0.543096464012758,
+              "ci95": [
+                -1.2670140615001064,
+                0.1808211334745904
+              ]
+            },
+            {
+              "feature": "wood_port",
+              "coefficient": 0.7888950886706246,
+              "ci95": [
+                0.7720604743447039,
+                0.8057297029965453
+              ]
+            },
+            {
+              "feature": "brick_port",
+              "coefficient": 0.3924355098668994,
+              "ci95": [
+                0.37596141247916715,
+                0.40890960725463166
+              ]
+            },
+            {
+              "feature": "sheep_port",
+              "coefficient": 0.8448593729888659,
+              "ci95": [
+                0.8281886355943933,
+                0.8615301103833386
+              ]
+            },
+            {
+              "feature": "wheat_port",
+              "coefficient": 0.45838678283866185,
+              "ci95": [
+                0.44242519097189836,
+                0.47434837470542535
+              ]
+            },
+            {
+              "feature": "ore_port",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_port_access_interaction",
+              "coefficient": 0.021401601132596277,
+              "ci95": [
+                0.012634627478968924,
+                0.03016857478622363
+              ]
+            },
+            {
+              "feature": "brick_port_access_interaction",
+              "coefficient": -0.040349335921165796,
+              "ci95": [
+                -0.05014226064290854,
+                -0.030556411199423053
+              ]
+            },
+            {
+              "feature": "sheep_port_access_interaction",
+              "coefficient": 0.1075857506920459,
+              "ci95": [
+                0.09992208524915436,
+                0.11524941613493744
+              ]
+            },
+            {
+              "feature": "wheat_port_access_interaction",
+              "coefficient": -0.08014812567768606,
+              "ci95": [
+                -0.08972581026042847,
+                -0.07057044109494365
+              ]
+            },
+            {
+              "feature": "ore_port_access_interaction",
+              "coefficient": 0.02702824955075329,
+              "ci95": [
+                0.016013908217666233,
+                0.03804259088384035
+              ]
+            },
+            {
+              "feature": "wood_starting_cards",
+              "coefficient": 0.2937310918254429,
+              "ci95": [
+                0.27159967671338836,
+                0.3158625069374974
+              ]
+            },
+            {
+              "feature": "brick_starting_cards",
+              "coefficient": 0.9409166097657153,
+              "ci95": [
+                0.9169048370509912,
+                0.9649283824804394
+              ]
+            },
+            {
+              "feature": "sheep_starting_cards",
+              "coefficient": 0.30879896570342047,
+              "ci95": [
+                0.2868667530349129,
+                0.33073117837192806
+              ]
+            },
+            {
+              "feature": "wheat_starting_cards",
+              "coefficient": 0.012136302400703347,
+              "ci95": [
+                -0.010682357371374237,
+                0.034954962172780935
+              ]
+            },
+            {
+              "feature": "ore_starting_cards",
+              "coefficient": null,
+              "ci95": null,
+              "status": "omitted_constant_or_exact_dependency"
+            },
+            {
+              "feature": "wood_board_scarcity_interaction",
+              "coefficient": 0.014574758596162371,
+              "ci95": [
+                0.013610506182291742,
+                0.015539011010033
+              ]
+            },
+            {
+              "feature": "brick_board_scarcity_interaction",
+              "coefficient": 0.03732126051311962,
+              "ci95": [
+                0.03612338332703335,
+                0.03851913769920589
+              ]
+            },
+            {
+              "feature": "sheep_board_scarcity_interaction",
+              "coefficient": 0.021382584337408913,
+              "ci95": [
+                0.020547265557101554,
+                0.02221790311771627
+              ]
+            },
+            {
+              "feature": "wheat_board_scarcity_interaction",
+              "coefficient": 0.06399726278853266,
+              "ci95": [
+                0.06294003467344583,
+                0.06505449090361948
+              ]
+            },
+            {
+              "feature": "ore_board_scarcity_interaction",
+              "coefficient": 0.09231624950672859,
+              "ci95": [
+                0.09086799925951534,
+                0.09376449975394184
+              ]
+            },
+            {
+              "feature": "other_sites_denied",
+              "coefficient": -1.9661810054776387,
+              "ci95": [
+                -1.9736500057286714,
+                -1.958712005226606
+              ]
+            },
+            {
+              "feature": "other_denied_total_pips",
+              "coefficient": 0.1941406811568339,
+              "ci95": [
+                0.19306026660823575,
+                0.19522109570543203
+              ]
+            },
+            {
+              "feature": "best_reply_pips_loss",
+              "coefficient": 0.9830966989662374,
+              "ci95": [
+                0.962924086570095,
+                1.0032693113623798
+              ]
+            },
+            {
+              "feature": "best_reply_coverage_loss",
+              "coefficient": 0.16582929272421398,
+              "ci95": [
+                0.1309877554741606,
+                0.20067082997426736
+              ]
+            },
+            {
+              "feature": "top_quartile_sites_denied",
+              "coefficient": 0.5483348043932353,
+              "ci95": [
+                0.5419453988684684,
+                0.5547242099180023
+              ]
+            }
+          ]
+        }
+      },
+      "comparisons": [
+        {
+          "reduced": "context",
+          "full": "denial",
+          "delta_r2": 0.01641809398255783,
+          "ci95": [
+            0.016203699234039224,
+            0.016632488731076433
+          ]
+        }
+      ],
+      "matched": {
+        "eligible_boards": 7482,
+        "condition": "Exact five-resource production vector",
+        "includes_chosen": true,
+        "minimum_pool_size": 2,
+        "features": {
+          "other_sites_denied": {
+            "n": 7482,
+            "mean": 0.07358103893789539,
+            "ci95": [
+              0.06706016804489837,
+              0.08010190983089241
+            ]
+          },
+          "other_denied_total_pips": {
+            "n": 7482,
+            "mean": 1.2370400071282188,
+            "ci95": [
+              1.1739219920066541,
+              1.3001580222497835
+            ]
+          },
+          "best_reply_pips_loss": {
+            "n": 7482,
+            "mean": 0.057622739018087864,
+            "ci95": [
+              0.050977980373342086,
+              0.06426749766283364
+            ]
+          },
+          "best_reply_coverage_loss": {
+            "n": 7482,
+            "mean": 0.004210104250200482,
+            "ci95": [
+              0.002318846562318877,
+              0.006101361938082087
+            ]
+          },
+          "top_quartile_sites_denied": {
+            "n": 7482,
+            "mean": 0.1539806647064065,
+            "ci95": [
+              0.14467606297336408,
+              0.16328526643944893
+            ]
+          }
+        }
+      },
+      "descriptive": {
+        "production_sacrifice": {
+          "n": 100000,
+          "mean": 0.89694,
+          "ci95": [
+            0.8906823754076018,
+            0.9031976245923982
+          ]
+        },
+        "reply_pips_loss": {
+          "n": 100000,
+          "mean": 0.4185,
+          "ci95": [
+            0.41420288207298034,
+            0.42279711792701963
+          ]
+        },
+        "reply_coverage_loss": {
+          "n": 100000,
+          "mean": 0.03935,
+          "ci95": [
+            0.03814494956342035,
+            0.04055505043657966
+          ]
+        },
+        "sacrifices_any_pips": {
+          "n": 100000,
+          "mean": 0.55136,
+          "ci95": [
+            0.5482774020421565,
+            0.5544425979578435
+          ]
+        },
+        "reduces_opponents_best_pips": {
+          "n": 100000,
+          "mean": 0.31348,
+          "ci95": [
+            0.3106047091754304,
+            0.31635529082456953
+          ]
+        },
+        "sacrifices_pips_and_reduces_best_reply": {
+          "n": 100000,
+          "mean": 0.08971,
+          "ci95": [
+            0.08793882865738933,
+            0.09148117134261066
+          ]
+        }
+      }
+    }
+  },
+  "methods": {
+    "policy": "Frozen Generation37, no search, one original greedy trajectory per board.",
+    "fitting": "Original whole-board 80k/20k split, within-decision-centered legal logits; equal board weight; train-RMS standardized ridge alpha .001. Baseline is previous board-scarcity/context specification. Exact dependencies removed using train data.",
+    "uncertainty": "Whole-board normal/delta-method95% intervals. Coefficient sandwich includes uncertainty in RMS scaling, conditional on retained feature set. Held-out R\u00b2 uncertainty conditions on fitted coefficients. Descriptive comparisons use paired board means.",
+    "fallback": "For each A1, exactly minimize the best remaining legal A2 over all legal B1/B2 settlement pairs. Two objectives: total pips; lexicographic combined resource coverage then total pips. Closed neighborhoods encode the actual setup settlement rule. Roads do not change setup settlement availability; every valid settlement configuration admits incident starting roads.",
+    "fast_exact": "A pair that removes the best complement must contain a blocker in its closed neighborhood. Its second blocker must remove the best site surviving the first blocker. Checking these <=4x4 pairs attains the same optimum as full enumeration. Independently validated against every legal pair for200 cases.",
+    "denial": "At B2, compute damage to A2 availability after the candidate: count/sum of other removed corners, loss of the best remaining pip total and best resource coverage paired with A1, count of removed upper-quartile production sites. These are availability proxies, not estimates of opponent win probability.",
+    "limitation": "Correlations and proxy robustness do not establish strategic intent, optimal play, or advantage in actual continuation games. Tight intervals do not include uncertainty over trained policies."
+  },
+  "elapsed_seconds": 59.92873808403965
+}

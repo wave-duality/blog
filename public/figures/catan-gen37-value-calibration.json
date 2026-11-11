@@ -1,0 +1,296 @@
+{
+  "checkpoint": "Gen37",
+  "checkpoint_sha256": "fbc5209b17a14a1d7b649087efdb1503185c7dfab9d9f5b443d0957431272158",
+  "analysis_date": "2026-10-28",
+  "n_positions": 12230,
+  "n_games": 776,
+  "n_draw_positions": 0,
+  "transformation": "p = (v + 1) / 2; y = (outcome + 1) / 2; both use the acting player's perspective",
+  "interpretation": "Unfitted implied probabilities; descriptive selected-corpus audit, not a held-out calibration evaluation.",
+  "corpus": "Existing post-Gen37 Gen38-generation recovered games; Play-phase positions with hidden opponent development cards; at most16 evenly spaced eligible turns/game.",
+  "weighting": "Each game has equal total weight; its eligible positions share that weight.",
+  "bin_definition": "Ten fixed width probability bins [0, 0.1), ..., [0.9, 1]. Plot at weighted mean implied probability in each bin.",
+  "metrics": {
+    "brier": {
+      "estimate": 0.09981279196805823,
+      "ci95": [
+        0.09210295353647878,
+        0.10779769639491223
+      ]
+    },
+    "empirical_constant_brier": {
+      "estimate": 0.24879936295891714,
+      "ci95": [
+        0.2473344915129424,
+        0.24969193857224017
+      ]
+    },
+    "brier_skill": {
+      "estimate": 0.5988221562105054,
+      "ci95": [
+        0.5666070399744718,
+        0.6297451480144675
+      ]
+    },
+    "ece_10_bins": {
+      "estimate": 0.03685374102297297,
+      "ci95": [
+        0.02656826421928061,
+        0.048232391095807736
+      ]
+    },
+    "diagnostic_binned_r2": {
+      "estimate": 0.9877117775481766,
+      "ci95": [
+        0.9792003938461361,
+        0.992719451416037
+      ]
+    },
+    "prevalence": {
+      "estimate": 0.4653497901725994,
+      "ci95": [
+        0.4483714373219849,
+        0.4824483214290721
+      ]
+    }
+  },
+  "metric_definitions": {
+    "brier": "sum_i w_i (p_i-y_i)^2 / sum_i w_i; lower is better",
+    "empirical_constant_brier": "sum_i w_i (y_i-ybar)^2 / sum_i w_i = ybar(1-ybar); ybar estimated on this same corpus",
+    "brier_skill": "1 - Brier / empirical_constant_brier; exactly weighted per-position prediction R\u00b2 against binary outcomes and the corpus mean; not squared correlation or a fitted regression",
+    "ece_10_bins": "sum_b W_b abs(pbar_b-ybar_b) / sum_b W_b; depends on this binning",
+    "diagnostic_binned_r2": "1 - sum_b W_b (ybar_b-pbar_b)^2 / sum_b W_b (ybar_b-ybar)^2; diagnostic of bin averages only, not per-position prediction accuracy or a linear regression"
+  },
+  "bootstrap": {
+    "seed": 20261028,
+    "replicates": 10000,
+    "unit": "whole game",
+    "interval": "2.5th and 97.5th percentiles",
+    "baseline": "Corpus prevalence and the constant baseline are recalculated in each resample.",
+    "interpretation": "Sampling uncertainty within this selected game corpus only; does not capture model-training or opponent-distribution uncertainty; pointwise, not simultaneous, intervals."
+  },
+  "bins": [
+    {
+      "lower": 0.0,
+      "upper": 0.1,
+      "upper_inclusive": false,
+      "positions": 3059,
+      "contributing_games": 640,
+      "weight_sum": 198.6238788988789,
+      "weight_fraction": 0.2559586068284522,
+      "mean_implied_probability": 0.033159488014672264,
+      "mean_implied_probability_ci95": [
+        0.03155835531729522,
+        0.03480614306153743
+      ],
+      "observed_win_rate": 0.011013278021388729,
+      "observed_win_rate_ci95": [
+        0.005530748658013199,
+        0.017503915989566302
+      ]
+    },
+    {
+      "lower": 0.1,
+      "upper": 0.2,
+      "upper_inclusive": false,
+      "positions": 1042,
+      "contributing_games": 494,
+      "weight_sum": 65.89391025641025,
+      "weight_fraction": 0.08491483280465238,
+      "mean_implied_probability": 0.1488557332064052,
+      "mean_implied_probability_ci95": [
+        0.14701870466400063,
+        0.15064646855343022
+      ],
+      "observed_win_rate": 0.09396417123484234,
+      "observed_win_rate_ci95": [
+        0.06927657541996098,
+        0.12122852494593744
+      ]
+    },
+    {
+      "lower": 0.2,
+      "upper": 0.30000000000000004,
+      "upper_inclusive": false,
+      "positions": 828,
+      "contributing_games": 432,
+      "weight_sum": 51.90590659340659,
+      "weight_fraction": 0.06688905488841056,
+      "mean_implied_probability": 0.2495945028133542,
+      "mean_implied_probability_ci95": [
+        0.2474704396999628,
+        0.2517079938723134
+      ],
+      "observed_win_rate": 0.21079810342926453,
+      "observed_win_rate_ci95": [
+        0.17157569235472953,
+        0.25131043464138336
+      ]
+    },
+    {
+      "lower": 0.30000000000000004,
+      "upper": 0.4,
+      "upper_inclusive": false,
+      "positions": 890,
+      "contributing_games": 444,
+      "weight_sum": 55.877407314907316,
+      "weight_fraction": 0.07200696818931356,
+      "mean_implied_probability": 0.3493368248474363,
+      "mean_implied_probability_ci95": [
+        0.34727962580197724,
+        0.35135495626360796
+      ],
+      "observed_win_rate": 0.3149695079442982,
+      "observed_win_rate_ci95": [
+        0.2745769280309779,
+        0.3559842933211975
+      ]
+    },
+    {
+      "lower": 0.4,
+      "upper": 0.5,
+      "upper_inclusive": false,
+      "positions": 943,
+      "contributing_games": 410,
+      "weight_sum": 59.16154401154401,
+      "weight_fraction": 0.0762391031076598,
+      "mean_implied_probability": 0.4489966412140241,
+      "mean_implied_probability_ci95": [
+        0.44716968007852675,
+        0.4508137786190022
+      ],
+      "observed_win_rate": 0.46291459903241433,
+      "observed_win_rate_ci95": [
+        0.42394946851474713,
+        0.501026110516393
+      ]
+    },
+    {
+      "lower": 0.5,
+      "upper": 0.6000000000000001,
+      "upper_inclusive": false,
+      "positions": 758,
+      "contributing_games": 397,
+      "weight_sum": 47.593560606060606,
+      "weight_fraction": 0.06133190799750078,
+      "mean_implied_probability": 0.5481330294988173,
+      "mean_implied_probability_ci95": [
+        0.5460716507556825,
+        0.5501783625509367
+      ],
+      "observed_win_rate": 0.5777774240531012,
+      "observed_win_rate_ci95": [
+        0.5334448754640884,
+        0.6223123159767838
+      ]
+    },
+    {
+      "lower": 0.6000000000000001,
+      "upper": 0.7000000000000001,
+      "upper_inclusive": false,
+      "positions": 800,
+      "contributing_games": 402,
+      "weight_sum": 50.16009407259407,
+      "weight_fraction": 0.06463929648530163,
+      "mean_implied_probability": 0.6489888802138146,
+      "mean_implied_probability_ci95": [
+        0.6468941257331652,
+        0.6511219993774483
+      ],
+      "observed_win_rate": 0.7008744312769446,
+      "observed_win_rate_ci95": [
+        0.6574618643083755,
+        0.743743941082525
+      ]
+    },
+    {
+      "lower": 0.7000000000000001,
+      "upper": 0.8,
+      "upper_inclusive": false,
+      "positions": 724,
+      "contributing_games": 412,
+      "weight_sum": 45.333882783882785,
+      "weight_fraction": 0.05841995204108606,
+      "mean_implied_probability": 0.7503871581782658,
+      "mean_implied_probability_ci95": [
+        0.748314468909018,
+        0.7524584183079103
+      ],
+      "observed_win_rate": 0.8481504749053623,
+      "observed_win_rate_ci95": [
+        0.8115849323501637,
+        0.8828765594202158
+      ]
+    },
+    {
+      "lower": 0.8,
+      "upper": 0.9,
+      "upper_inclusive": false,
+      "positions": 857,
+      "contributing_games": 437,
+      "weight_sum": 53.8735680985681,
+      "weight_fraction": 0.06942470115794858,
+      "mean_implied_probability": 0.8523343202450845,
+      "mean_implied_probability_ci95": [
+        0.85018781250214,
+        0.8544809207854419
+      ],
+      "observed_win_rate": 0.9257520869476935,
+      "observed_win_rate_ci95": [
+        0.898937193754108,
+        0.9498926795203633
+      ]
+    },
+    {
+      "lower": 0.9,
+      "upper": 1.0,
+      "upper_inclusive": true,
+      "positions": 2329,
+      "contributing_games": 583,
+      "weight_sum": 147.57624736374737,
+      "weight_fraction": 0.19017557649967445,
+      "mean_implied_probability": 0.9649370653596715,
+      "mean_implied_probability_ci95": [
+        0.9632713295085656,
+        0.9665460999610082
+      ],
+      "observed_win_rate": 0.9881417231345734,
+      "observed_win_rate_ci95": [
+        0.9796675512883246,
+        0.9949057471949605
+      ]
+    }
+  ],
+  "limitations": [
+    "These games postdate original Gen37 training but are a selected convenience corpus, not a preregistered independent benchmark.",
+    "Games came from the canonical Gen38 data-generation run with neutral-prepared Gen37 and a frozen-opponent mixture; recovery/completion filters limit generalization.",
+    "Only Play-phase positions with at least one hidden opponent dev card are included.",
+    "The training value target mixes35% game result with65% search estimate, so raw values are not calibrated win probabilities.",
+    "Examples shown in the blog are illustrations selected by score, not a representative performance sample.",
+    "Implied probabilities use only the fixed algebraic transform; no calibration parameters are fitted.",
+    "Brier skill is a proper-score comparison on these recorded outcomes; the empirical constant baseline is retrospective, not a deployed or separately trained forecast.",
+    "Binned R\u00b2 suppresses individual binary-outcome noise and should not be interpreted as the fraction of per-position outcomes explained.",
+    "Calibration is a property of predicted probabilities and observed frequencies under these continuation policies; it does not establish causality or opening calibration.",
+    "The same game can contribute positions to multiple bins. Counts of contributing games across bins must not be added."
+  ],
+  "sources": [
+    {
+      "path": "run/analysis/blog-value-gen37/audit/row_results.npz",
+      "sha256": "825923233b88a999d6cacc44f46ee0b52d372116bc2ee1f4461f3972f8f619e8"
+    },
+    {
+      "path": "run/analysis/blog-value-gen37/audit/outcomes.json",
+      "sha256": "1024beed9171b20e0017a6fe3dfc24850703a19681c6d09abac8e9642e569a02"
+    },
+    {
+      "path": "run/analysis/blog-value-gen37/calibration-20261028/build.py",
+      "sha256": "ff49bb30658c7849e89aa92e027634da0f19da80a2aaec3c73369d989a121bb9"
+    }
+  ],
+  "verification": {
+    "game_weights_sum_to_one": true,
+    "brier_equals_prior_raw_value_mse_divided_by_four": true,
+    "merged_bins_match_previous_five_bin_audit": true,
+    "all_bootstrap_statistics_finite": true
+  }
+}
